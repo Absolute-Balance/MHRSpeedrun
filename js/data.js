@@ -254,5 +254,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtq39azl"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m57",
+    "weaponId": "bow",
+    "timeMs": 228530,
+    "author": "Slayall11",
+    "date": "2023-11-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1kw411K7j3",
+        "title": "【生庆/MHRS】弓箭 特别探究；怪异克服天彗龙 三无/TA+怪异炼化3分48"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtq3bpr0"
   }
 ];
