@@ -419,36 +419,62 @@
     });
   }
 
-  /* ================= 快速录入（空格子 / 单武器页入口） ================= */
+  /* ================= 快速录入 + 管理（空格子 / 单武器页入口） ================= */
   var entryCtx = null;
+  function hasToken() {
+    try { return !!localStorage.getItem(TOKEN_KEY); } catch (e) { return false; }
+  }
   function todayStr() {
     var d = new Date();
     return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
   }
-  function openEntry(ctx) {
+  function openEntry(ctx, editRec) {
     var m = mById[ctx.mid], w = wById[ctx.wid];
     if (!m || !w) return;
-    entryCtx = { mid: ctx.mid, wid: ctx.wid, quest: ctx.quest || null };
-    var task;
-    if (state.questType === 'raging') {
-      var q = (ctx.quest && qById[ctx.quest]) ? qById[ctx.quest] :
+    var qt = ctx.questType || state.questType;
+    var q = null;
+    if (qt === 'raging') {
+      q = (ctx.quest && qById[ctx.quest]) ? qById[ctx.quest] :
         CFG.ragingQuests.find(function (x) { return x.monsterFile === m.file; }) || null;
-      entryCtx.quest = q ? q.id : null;
-      task = q ? q.label : '烈祸袭来';
-    } else {
-      task = qtLabel(state.questType) + (m.tier ? ' · ' + m.tier : '');
+      ctx.quest = q ? q.id : null;
     }
+    entryCtx = {
+      mode: editRec ? 'edit' : 'add',
+      id: editRec ? editRec.id : null,
+      mid: ctx.mid,
+      wid: ctx.wid,
+      quest: ctx.quest || null,
+      questType: qt
+    };
+    var task = qt === 'raging' ? (q ? q.label : '烈祸袭来') : (qtLabel(qt) + (m.tier ? ' · ' + m.tier : ''));
     $('eTask').textContent = task + '　' + m.name + ' × ' + w.label;
     $('eWeapon').textContent = w.label;
     $('eAuthor').value = '';
     $('eTime').value = '';
     $('eDate').value = todayStr();
+    $('eTitle').value = '';
     $('eVideo').value = '';
     var ruleSel = $('eRule');
-    if (state.rule !== 'all' && ruleSel.querySelector('option[value="' + state.rule + '"]')) {
-      ruleSel.value = state.rule;
+    ruleSel.value = '';
+    try { $('eToken').value = localStorage.getItem(TOKEN_KEY) || ''; } catch (e) { }
+    if (editRec) {
+      $('entryTitle').textContent = '修改成绩';
+      ruleSel.value = editRec.rule || '';
+      $('eAuthor').value = editRec.author || '';
+      $('eTime').value = fmtTime(editRec.timeMs);
+      $('eDate').value = editRec.date || '';
+      var ev = editRec.videos && editRec.videos[0];
+      if (ev) {
+        $('eVideo').value = ev.url || '';
+        $('eTitle').value = ev.title || '';
+      }
+      var ep = $('ePlat');
+      if (ep.querySelector('option[value="' + editRec.platform + '"]')) ep.value = editRec.platform;
     } else {
-      ruleSel.value = '';
+      $('entryTitle').textContent = '录入成绩';
+      if (state.rule !== 'all' && ruleSel.querySelector('option[value="' + state.rule + '"]')) {
+        ruleSel.value = state.rule;
+      }
     }
     $('eMsg').textContent = '';
     $('entryModal').classList.remove('hidden');
@@ -457,6 +483,7 @@
   async function saveEntry() {
     var msg = $('eMsg');
     if (!entryCtx) return;
+    var qt = entryCtx.questType;
     var rule = $('eRule').value;
     var author = $('eAuthor').value.trim();
     var timeText = $('eTime').value.trim();
@@ -468,7 +495,7 @@
     if (ms == null) { msg.textContent = '用时格式不对（如 05\'02\'\'52 或 5:02.52）'; msg.style.color = 'var(--danger)'; return; }
     var date = normDate(dateText);
     if (!date) { msg.textContent = '日期格式不对（如 2026-9-6）'; msg.style.color = 'var(--danger)'; return; }
-    if (state.questType === 'raging' && !entryCtx.quest) {
+    if (qt === 'raging' && !entryCtx.quest) {
       msg.textContent = '烈祸袭来需要先确定具体任务（请从对应任务列进入）'; msg.style.color = 'var(--danger)'; return;
     }
     var m = mById[entryCtx.mid];
@@ -477,48 +504,97 @@
       videoUrl = biliVideo(video);
       if (!videoUrl) { msg.textContent = '视频仅支持 B 站（完整链接或 BV 号，自动补全）'; msg.style.color = 'var(--danger)'; return; }
     }
-    var rec = {
-      id: 'r' + Date.now().toString(36),
-      questType: state.questType,
-      quest: state.questType === 'raging' ? entryCtx.quest : null,
-      exStar: state.questType === 'raging' ? null : (m && m.tier && /^(EX\d|Apex)$/.test(m.tier) ? m.tier : null),
+    var videoTitle = $('eTitle').value.trim();
+    var token = '';
+    try { token = localStorage.getItem(TOKEN_KEY) || ''; } catch (e) { }
+    token = ($('eToken').value || '').trim() || token;
+    if (!token) {
+      msg.textContent = '还没有 GitHub 令牌：请在上方填入后重试（获取：Settings → Developer settings → Fine-grained tokens，Contents 读写）';
+      msg.style.color = 'var(--danger)';
+      $('eToken').focus();
+      return;
+    }
+    var baseRec = {
+      questType: qt,
+      quest: qt === 'raging' ? entryCtx.quest : null,
+      exStar: qt === 'raging' ? null : (m && m.tier && /^(EX\d|Apex)$/.test(m.tier) ? m.tier : null),
       rule: rule,
       monsterId: entryCtx.mid,
       weaponId: entryCtx.wid,
       timeMs: ms,
       author: author,
       date: date,
-      videos: videoUrl ? [{ site: 'bilibili', url: videoUrl, title: '' }] : [],
+      videos: videoUrl ? [{ site: 'bilibili', url: videoUrl, title: videoTitle }] : [],
       platform: $('ePlat').value || 'steam',
       note: ''
     };
-    var content = serializeData(RECORDS.concat(rec));
+    if (entryCtx.mode === 'edit') baseRec.id = entryCtx.id;
+    else baseRec.id = 'r' + Date.now().toString(36);
+    msg.textContent = '正在提交到 GitHub…';
+    msg.style.color = 'var(--text-dim)';
+    try {
+      var res = await ghTransform(token, function (base) {
+        if (entryCtx.mode === 'edit') {
+          var i = base.findIndex(function (x) { return x.id === entryCtx.id; });
+          if (i >= 0) base[i] = baseRec;
+          else base.push(baseRec);
+        } else {
+          base.push(baseRec);
+        }
+      });
+      try { localStorage.setItem(TOKEN_KEY, token); } catch (e) { }
+      if (applyDataFromText(res.text)) update();
+      msg.textContent = (entryCtx.mode === 'edit' ? '已修改' : '已录入') + '并保存 commit ' + res.sha.slice(0, 7) + '，本页已即时更新；线上约 1~2 分钟后刷新可见';
+      msg.style.color = 'var(--good)';
+      entryCtx = null;
+    } catch (e) {
+      msg.textContent = '保存失败：' + e.message;
+      msg.style.color = 'var(--danger)';
+    }
+  }
+
+  /* ---- 管理操作（仅令牌持有者可见） ---- */
+  function admHtml(recId) {
+    if (!hasToken()) return '';
+    return '<div class="adm-bar">' +
+      '<button type="button" class="btn btn-mini adm-edit" data-id="' + esc(recId) + '">✏️ 修改</button>' +
+      '<button type="button" class="btn btn-mini adm-del" data-id="' + esc(recId) + '">🗑 删除</button>' +
+      '</div>';
+  }
+  function bindAdmClicks(container) {
+    if (!container) return;
+    container.querySelectorAll('.adm-edit').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var id = b.dataset.id;
+        var rec = RECORDS.find(function (r) { return r.id === id; });
+        if (!rec) return;
+        openEntry({
+          mid: rec.monsterId,
+          wid: rec.weaponId,
+          quest: rec.quest || null,
+          questType: rec.questType
+        }, rec);
+      });
+    });
+    container.querySelectorAll('.adm-del').forEach(function (b) {
+      b.addEventListener('click', function () { deleteRecordId(b.dataset.id); });
+    });
+  }
+  async function deleteRecordId(id) {
+    if (!window.confirm('确定删除这条成绩吗？确认后将立即提交到 GitHub（可随时从 git 历史找回）。')) return;
     var token = '';
     try { token = localStorage.getItem(TOKEN_KEY) || ''; } catch (e) { }
-    if (token) {
-      msg.textContent = '正在提交到 GitHub…';
-      msg.style.color = 'var(--text-dim)';
-      try {
-        var res = await ghSaveRecords([rec], token);
-        if (applyDataFromText(res.text)) update();
-        msg.textContent = '已保存 commit ' + res.sha.slice(0, 7) + '，本页已即时更新；线上约 1~2 分钟后刷新可见（已自动刷新资源版本号）';
-        msg.style.color = 'var(--good)';
-        entryCtx = null;
-      } catch (e) {
-        msg.textContent = '保存失败：' + e.message;
-        msg.style.color = 'var(--danger)';
-      }
-      return;
+    if (!token) { window.alert('未找到 GitHub 令牌，无法保存删除。'); return; }
+    try {
+      var res = await ghTransform(token, function (base) {
+        var i = base.findIndex(function (x) { return x.id === id; });
+        if (i >= 0) base.splice(i, 1);
+      });
+      if (applyDataFromText(res.text)) update();
+      window.alert('已删除该成绩并保存（commit ' + res.sha.slice(0, 7) + '）');
+    } catch (e) {
+      window.alert('删除失败：' + e.message);
     }
-    /* 无令牌：转入批量录入弹窗，填令牌后保存 */
-    $('entryModal').classList.add('hidden');
-    $('impOut').value = content;
-    var impMsg = $('impMsg');
-    impMsg.textContent = '已生成 1 条（共 ' + (RECORDS.length + 1) + ' 条）。填好 GitHub 令牌后点「💾 保存到 GitHub」即直接上线；也可先下载。';
-    impMsg.style.color = 'var(--good)';
-    $('ghMsg').textContent = '';
-    $('importModal').classList.remove('hidden');
-    entryCtx = null;
   }
 
   /* ================= 玩家页（按日期时间线） ================= */
@@ -566,7 +642,7 @@
           '<span class="tag rule-' + esc(r.rule) + '">' + esc(ruleLabel(r.rule)) + '</span>' +
           '<span class="p-arr">▶</span>' +
           '</div>';
-        html += '<div class="detail-box">' + recordDetailHTML(r) + '</div>';
+        html += '<div class="detail-box">' + recordDetailHTML(r) + admHtml(r.id) + '</div>';
       });
     }
     var body = $('detailBody');
@@ -581,6 +657,7 @@
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); row.click(); }
       });
     });
+    bindAdmClicks(body);
   }
 
   /* ================= 怪物页（全武器最快） ================= */
@@ -637,7 +714,7 @@
       h += '<div class="ditem" style="grid-column:1/-1"><div class="dk">视频链接</div><div class="dv">';
       r.videos.forEach(function (v) {
         var si = siteInfo(v.site);
-        var ttl = v.title ? v.title : (si.label + ' · ' + r.author);
+        var ttl = v.title ? v.title : '打开视频';
         h += '<a class="vbtn" href="' + esc(v.url) + '" target="_blank" rel="noopener">' +
           '<span class="site ' + si.cls + '">' + esc(si.label) + '</span>' +
           '<span>' + esc(ttl) + '</span><span style="color:var(--text-dim);font-size:11px">↗</span></a>';
@@ -710,13 +787,14 @@
           var si = siteInfo(v.site);
           html += '<a class="vbtn" href="' + esc(v.url) + '" target="_blank" rel="noopener">' +
             '<span class="site ' + si.cls + '">' + esc(si.label) + '</span>' +
-            '<span>' + esc(v.title || (si.label + ' · ' + current.author)) + '</span>' +
+            '<span>' + esc(v.title || '打开视频') + '</span>' +
             '<span style="color:var(--text-dim);font-size:11px">↗</span></a>';
         });
       } else {
         html += '<span style="color:var(--text-dim);font-size:12px">暂无视频链接</span>';
       }
       html += '</div>';
+      html += admHtml(current.id);
     } else {
       html += '<div class="cur-time" style="color:var(--text-dim);font-size:22px">暂无成绩</div>' +
         '<div class="wv-sub" style="margin:0">该位置还没有成绩，可通过「＋ 录入成绩」添加。</div>';
@@ -735,7 +813,7 @@
           '<span class="h-date">' + esc(r.date) + '</span>' +
           '<span class="h-arr">▶</span>' +
           '</div>';
-        html += '<div class="detail-box">' + recordDetailHTML(r) + '</div>';
+        html += '<div class="detail-box">' + recordDetailHTML(r) + admHtml(r.id) + '</div>';
       });
     }
     var body = $('detailBody');
@@ -757,6 +835,7 @@
       });
     }
     bindAuthorClicks(body);
+    bindAdmClicks(body);
   }
 
   /* ================= 总刷新 ================= */
@@ -921,6 +1000,15 @@
     var sha = await ghSave(text, token);
     return { sha: sha, text: text };
   }
+  /* 通用变换式保存：读远端最新 → 按 fn 修改 → 提交 */
+  async function ghTransform(token, fn) {
+    var remote = await ghRead(GH.dataPath, token);
+    var base = (remote && parseArray(remote.text)) || RECORDS.slice();
+    fn(base);
+    var text = serializeData(base);
+    var sha = await ghSave(text, token);
+    return { sha: sha, text: text };
+  }
   function applyDataFromText(txt) {
     var arr = parseArray(txt);
     if (!arr) return false;
@@ -929,201 +1017,12 @@
     return true;
   }
 
-  /* ================= 录入 ================= */
-  function normWeapon(v) {
-    v = String(v).trim();
-    if (wById[v]) return v;
-    var hit = CFG.weapons.find(function (w) { return w.label === v || w.file === v; });
-    return hit ? hit.id : null;
-  }
-  function cleanName(s) { return String(s).replace(/[·・\s]/g, ''); }
-  function normMonster(v) {
-    v = String(v).trim();
-    if (mById[v]) return v;
-    var cv = cleanName(v).toLowerCase();
-    var hit = MONSTERS.find(function (m) {
-      return m.file === v || m.file === v + '.png' || cleanName(m.name).toLowerCase() === cv;
-    });
-    return hit ? hit.id : null;
-  }
-  function normQuestType(v) {
-    var low = String(v).trim().toLowerCase().replace(/\s+/g, '');
-    var map = {
-      '烈祸袭来': 'raging', '烈祸': 'raging', '烈祸来袭': 'raging', 'raging': 'raging', '大师任务': 'raging', '大师': 'raging',
-      '怪异探究lv300': 'anomaly300', '怪异探究': 'anomaly300', '怪异探究300': 'anomaly300', 'lv300': 'anomaly300', '300': 'anomaly300', '怪异': 'anomaly300', 'anomaly300': 'anomaly300',
-      '特别探究': 'special', '特别': 'special', 'special': 'special'
-    };
-    return map[low] || null;
-  }
-  function normEx(v) {
-    v = String(v).trim().toUpperCase().replace(/\s+/g, '');
-    if (v === 'APEX') return 'Apex';
-    var m = v.match(/^(?:EX)?([1-9])$/);
-    if (m) return 'EX' + m[1];
-    if (CFG.exStars.indexOf(v) >= 0) return v;
-    return null;
-  }
-  function normQuestExtra(v, qt) {
-    v = String(v).trim();
-    if (qt === 'raging') {
-      var low = v.toLowerCase().replace(/\s+/g, '');
-      if (qById[v]) return { quest: v };
-      var norm = function (s) { return s.toLowerCase().replace(/\s+/g, ''); };
-      var hits = CFG.ragingQuests.filter(function (q) {
-        return norm(q.label).indexOf(low) >= 0 || norm(q.shortLabel).indexOf(low) >= 0;
-      });
-      if (hits.length === 1) return { quest: hits[0].id };
-      if (hits.length > 1) {
-        hits.sort(function (a, b) { return b.label.length - a.label.length; });
-        return { quest: hits[0].id };
-      }
-      return null;
-    }
-    var ex = normEx(v);
-    return ex ? { ex: ex } : null;
-  }
-  function normRule(v) {
-    var low = String(v).trim().toLowerCase().replace(/\s+/g, '');
-    if (low === '三无' || low === '三无规则' || low === 'sanyou') return 'sanyou';
-    if (low === 'ta规则' || low === 'ta' || low === 'tarules') return 'ta';
-    if (low === '无限制' || low === '无限制规则' || low === 'free' || low === '不限' || low === 'freestyle') return 'free';
-    return null;
-  }
-  function parseImportLines(text) {
-    var lines = text.split(/\r?\n/);
-    var out = [], errors = [];
-    lines.forEach(function (line, idx) {
-      var ln = idx + 1;
-      if (!line.trim()) return;
-      if (/^\s*[#/]/.test(line)) return;
-      var f = line.split(/[,，]/).map(function (s) { return s.trim(); });
-      if (f.length < 8) { errors.push('第 ' + ln + ' 行：字段不足（至少 8 项，中英文逗号均可分隔）'); return; }
-      var mid = normMonster(f[0]);
-      if (!mid) { errors.push('第 ' + ln + ' 行：找不到怪物 “' + f[0] + '”'); return; }
-      var wid = normWeapon(f[1]);
-      if (!wid) { errors.push('第 ' + ln + ' 行：找不到武器 “' + f[1] + '”'); return; }
-      var qt = normQuestType(f[2]);
-      if (!qt) { errors.push('第 ' + ln + ' 行：任务类型无法识别 “' + f[2] + '”（烈祸袭来/怪异探究Lv300/特别探究）'); return; }
-      var extra = normQuestExtra(f[3], qt);
-      if (!extra) { errors.push('第 ' + ln + ' 行：' + qtLabel(qt) + ' 需要 EX/Apex 星级或烈祸任务 “' + f[3] + '”'); return; }
-      var rule = normRule(f[4]);
-      if (!rule) { errors.push('第 ' + ln + ' 行：规则无法识别 “' + f[4] + '”'); return; }
-      var ms = parseTime(f[5]);
-      if (ms == null) { errors.push('第 ' + ln + ' 行：用时识别失败 “' + f[5] + '”（支持 05\'02\'\'52 或 5:47.33 等写法）'); return; }
-      var date = normDate(f[7]);
-      if (!date) { errors.push('第 ' + ln + ' 行：日期识别失败 “' + f[7] + '”（支持 2026-9-6 / 2026.09.06）'); return; }
-      var videoUrl = '';
-      if (f[8]) {
-        videoUrl = biliVideo(f[8]);
-        if (!videoUrl) { errors.push('第 ' + ln + ' 行：视频仅支持 B 站（完整链接或 BV 号）'); return; }
-      }
-      var rec = {
-        id: 'r' + Date.now().toString(36) + '-' + (out.length + 1),
-        questType: qt,
-        quest: qt === 'raging' ? extra.quest : null,
-        exStar: qt === 'raging' ? null : (extra.ex || null),
-        rule: rule,
-        monsterId: mid,
-        weaponId: wid,
-        timeMs: ms,
-        author: f[6],
-        date: date,
-        videos: videoUrl ? [{ site: 'bilibili', url: videoUrl, title: '' }] : [],
-        platform: 'steam',
-        note: f[9] || ''
-      };
-      out.push(rec);
-    });
-    return { out: out, errors: errors };
-  }
   function serializeData(records) {
     var head = '/* ============================================================\n' +
       ' * data.js — 成绩数据（由页面「录入成绩」工具生成，可再手工修改）\n' +
       ' * 字段说明见 js/data.js 顶部注释。\n' +
       ' * ============================================================ */\n';
     return head + 'window.MHRS_RECORDS = ' + JSON.stringify(records, null, 2) + ';\n';
-  }
-  function setupImport() {
-    var modal = $('importModal');
-    $('openImportBtn').addEventListener('click', function () {
-      modal.classList.remove('hidden');
-      $('impMsg').textContent = '';
-      $('impOut').value = '';
-      $('ghMsg').textContent = '';
-      try { $('ghToken').value = localStorage.getItem(TOKEN_KEY) || ''; } catch (e) { }
-    });
-    $('importClose').addEventListener('click', function () { modal.classList.add('hidden'); });
-    modal.addEventListener('click', function (e) { if (e.target === modal) modal.classList.add('hidden'); });
-    $('impParse').addEventListener('click', function () {
-      var msg = $('impMsg');
-      var res = parseImportLines($('impInput').value);
-      if (res.errors.length) {
-        msg.textContent = res.errors.length + ' 处错误：\n' + res.errors.join('\n');
-        msg.style.color = 'var(--danger)';
-        $('impOut').value = '';
-        return;
-      }
-      if (!res.out.length) { msg.textContent = '没有可解析的内容。'; msg.style.color = 'var(--danger)'; return; }
-      var merged = RECORDS.concat(res.out);
-      var txt = serializeData(merged);
-      $('impOut').value = txt;
-      msg.textContent = '成功解析 ' + res.out.length + ' 条，现有 ' + RECORDS.length + ' 条 → 合并后共 ' + merged.length + ' 条。';
-      msg.style.color = 'var(--good)';
-    });
-    $('impDownload').addEventListener('click', function () {
-      var txt = $('impOut').value;
-      if (!txt) return;
-      var blob = new Blob([txt], { type: 'text/javascript;charset=utf-8' });
-      var a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = 'data.js';
-      document.body.appendChild(a);
-      a.click();
-      setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 300);
-    });
-    $('impCopy').addEventListener('click', function () {
-      var txt = $('impOut').value;
-      if (!txt) return;
-      function fallback() {
-        var ta = document.createElement('textarea');
-        ta.value = txt;
-        document.body.appendChild(ta);
-        ta.select();
-        try { document.execCommand('copy'); } catch (e) { }
-        ta.remove();
-      }
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(txt).catch(fallback);
-      } else fallback();
-    });
-    $('ghSave').addEventListener('click', async function () {
-      var g = $('ghMsg');
-      var content = $('impOut').value.trim();
-      if (!content) {
-        g.textContent = '请先在「校验并生成」得到内容，或直接在上方大框中粘贴整份 data.js';
-        g.style.color = 'var(--danger)';
-        return;
-      }
-      var token = ($('ghToken').value || '').trim() || '';
-      try { token = token || localStorage.getItem(TOKEN_KEY) || ''; } catch (e) { }
-      if (!token) {
-        g.textContent = '请先填入 GitHub 令牌（生成方法见下方灰色说明）';
-        g.style.color = 'var(--danger)';
-        return;
-      }
-      g.textContent = '正在提交到 GitHub…';
-      g.style.color = 'var(--text-dim)';
-      try {
-        var sha = await ghSave(content, token);
-        try { localStorage.setItem(TOKEN_KEY, token); } catch (e) { }
-        if (applyDataFromText(content)) update();
-        g.textContent = '已提交 commit ' + sha.slice(0, 7) + '，约 1~2 分钟后线上自动更新（本页已即时刷新数据）';
-        g.style.color = 'var(--good)';
-      } catch (e) {
-        g.textContent = '保存失败：' + e.message;
-        g.style.color = 'var(--danger)';
-      }
-    });
   }
 
   /* ================= 导出矩阵图片（PNG） ================= */
@@ -1342,7 +1241,6 @@
     eModal.addEventListener('click', function (e) { if (e.target === eModal) eModal.classList.add('hidden'); });
     $('eSave').addEventListener('click', function () { saveEntry(); });
 
-    setupImport();
     update();
   }
 

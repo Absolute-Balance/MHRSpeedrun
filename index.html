@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MHRS 竞速成绩库</title>
-<link rel="stylesheet" href="css/style.css?v=1788712487288">
+<link rel="stylesheet" href="css/style.css?v=20260913">
 </head>
 <body>
 
@@ -62,7 +62,6 @@
     <span class="spacer"></span>
     <span class="fg-desc" id="filterSummary"></span>
     <button type="button" class="btn btn-primary" id="exportBtn" disabled title="把当前筛选出的表格（怪物/任务 × 14 武器）导出为 PNG 图片">⤓ 导出表格图片</button>
-    <button type="button" class="btn btn-primary" id="openImportBtn">＋ 录入成绩</button>
     <span class="fg-desc" id="exportMsg"></span>
   </div>
 </section>
@@ -98,35 +97,6 @@
   </div>
 </section>
 
-<!-- ================= 录入弹窗 ================= -->
-<div class="modal-mask hidden" id="importModal">
-  <div class="modal">
-    <div class="modal-head">
-      <b>录入成绩（生成新的 js/data.js）</b>
-      <button type="button" class="btn btn-ghost" id="importClose">✕</button>
-    </div>
-    <p class="fg-desc">每行一条，中英文逗号均可分隔：怪物, 武器, 任务类型, EX星级或烈祸任务, 规则, 用时, 作者, 日期[, 视频网址][, 备注]。用时按 05'02''52（分'秒''百分秒）填写，也接受 5:47.33 等写法；日期 2026-9-6 或 2026-09-06 均可；平台默认 Steam（后续可在数据中修改）。</p>
-    <pre class="hint">激昂金狮子，单手剑，怪异探究Lv300，EX7，三无规则，04'52''00，Rabiden，2026-09-04，https://www.bilibili.com/video/BV1zctv6qE2h
-雪鬼兽, 大剑, 特别探究, EX4, 三无规则, 06'57''52, 鬼畜茶走, 2026-8-29, https://www.bilibili.com/video/BV1Zv4C6HEPx</pre>
-    <textarea id="impInput" rows="8" spellcheck="false" placeholder="在这里粘贴多条成绩…"></textarea>
-    <div class="modal-actions">
-      <button type="button" class="btn btn-primary" id="impParse">校验并生成</button>
-      <span class="fg-desc" id="impMsg"></span>
-    </div>
-    <textarea id="impOut" rows="10" spellcheck="false" placeholder="生成结果会出现在这里（保存前可在此手工增删改条目）…"></textarea>
-    <div class="ghbar">
-      <input type="password" id="ghToken" placeholder="GitHub 令牌（可选，设置一次后记住）" autocomplete="off">
-      <button type="button" class="btn btn-primary" id="ghSave">💾 保存到 GitHub（直接更新网站）</button>
-      <span class="fg-desc" id="ghMsg"></span>
-    </div>
-    <div class="modal-actions">
-      <button type="button" class="btn btn-primary" id="impDownload">仅下载 data.js</button>
-      <button type="button" class="btn btn-ghost" id="impCopy">复制全部</button>
-      <span class="fg-desc">令牌获取：GitHub → Settings → Developer settings → Fine-grained personal access tokens（勾选本仓库 Contents 读写），只存在你的浏览器里。</span>
-    </div>
-  </div>
-</div>
-
 <!-- ================= 收录规则弹窗 ================= -->
 <div class="modal-mask hidden" id="rulesModal">
   <div class="modal modal-narrow">
@@ -160,11 +130,16 @@
       <label>位置</label><span class="efix" id="eTask"></span>
       <label>武器</label><span class="efix" id="eWeapon"></span>
       <label>规则</label><select id="eRule"></select>
+      <label>视频标题</label><input type="text" id="eTitle" placeholder="按钮上显示的视频标题（可选）" autocomplete="off">
       <label>作者</label><input type="text" id="eAuthor" placeholder="玩家名 / UP主" autocomplete="off">
       <label>用时</label><input type="text" id="eTime" placeholder="如 05'02''52 或 5:02.52" autocomplete="off">
       <label>日期</label><input type="text" id="eDate" placeholder="2026-9-6" autocomplete="off">
       <label>视频链接</label><input type="text" id="eVideo" placeholder="B站链接或 BV 号（可选，自动补全）" autocomplete="off">
       <label>平台</label><select id="ePlat"></select>
+    </div>
+    <div class="modal-actions">
+      <input type="password" id="eToken" placeholder="GitHub 令牌（首次填一次，自动记住）" autocomplete="off">
+      <span class="fg-desc">令牌获取：GitHub → Settings → Developer settings → Fine-grained tokens（本仓库 Contents 读写），仅存于你的浏览器。</span>
     </div>
     <div class="modal-actions">
       <button type="button" class="btn btn-primary" id="eSave">✓ 录入并保存</button>
@@ -173,9 +148,9 @@
   </div>
 </div>
 
-<script src="js/config.js?v=1788712487288"></script>
-<script src="js/monsters.js?v=1788712487288"></script>
-<script src="js/data.js?v=1788712487288"></script>
-<script src="js/app.js?v=1788712487288"></script>
+<script src="js/config.js?v=20260913"></script>
+<script src="js/monsters.js?v=20260913"></script>
+<script src="js/data.js?v=20260913"></script>
+<script src="js/app.js?v=20260913"></script>
 </body>
 </html>

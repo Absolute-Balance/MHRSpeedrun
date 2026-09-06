@@ -331,6 +331,15 @@ code { background: rgba(255,255,255,.06); padding: 1px 5px; border-radius: 4px; 
 .site-youtube { background: #ff000044; color: #ff9b9b; }
 .site-other { background: #8884; color: var(--text-dim); }
 
+/* 管理操作（仅令牌持有者可见） */
+.adm-bar {
+  display: flex; gap: 8px; align-items: center; margin-top: 10px; padding-top: 8px;
+  border-top: 1px dashed var(--line);
+}
+.adm-bar .btn { font-size: 12px; }
+.adm-bar .adm-del:hover { border-color: var(--danger); color: var(--danger); }
+.cur-card .adm-bar { border-top: none; margin-top: 0; padding-top: 0; margin-left: auto; align-self: center; }
+
 /* ---------- 弹窗 ---------- */
 .ghbar { display: flex; align-items: center; gap: 10px; margin: 8px 0 2px; flex-wrap: wrap; }
 .ghbar input {
@@ -347,6 +356,11 @@ code { background: rgba(255,255,255,.06); padding: 1px 5px; border-radius: 4px; 
   border-radius: 8px; padding: 6px 10px; font-size: 13px; outline: none; font-family: inherit;
 }
 .eform input:focus, .eform select:focus { border-color: var(--sel-border); }
+.modal-actions input[type="password"] {
+  flex: 1; min-width: 200px; background: #101117; color: var(--text); border: 1px solid var(--line);
+  border-radius: 8px; padding: 6px 10px; font-size: 12.5px; outline: none; font-family: Consolas, Menlo, monospace;
+}
+.modal-actions input[type="password"]:focus { border-color: var(--sel-border); }
 /* 空格子可点击录入 */
 .mx-cell.add {
   cursor: pointer; align-items: center; justify-content: center;
