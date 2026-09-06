@@ -23,5 +23,26 @@ window.MHRS_RECORDS = [
     ],
     "platform": "steam",
     "note": ""
+  },
+  {
+    "id": "rmtq16wvs",
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m57",
+    "weaponId": "db",
+    "timeMs": 229890,
+    "author": "BFeather7",
+    "date": "2025-10-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1zXspzkEGu",
+        "title": ""
+      }
+    ],
+    "platform": "steam",
+    "note": ""
   }
 ];
