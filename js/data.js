@@ -408,15 +408,15 @@ window.MHRS_RECORDS = [
     "note": "霸主档 mod 任务演示（怪异探究Lv300）"
   },
   {
-    "id": "rmtpzughd",
+    "id": "rmtpzzos2",
     "questType": "special",
     "quest": null,
     "exStar": "EX2",
     "rule": "sanyou",
     "monsterId": "m10",
     "weaponId": "gs",
-    "timeMs": 302520,
-    "author": "RealizedSoul",
+    "timeMs": 71110,
+    "author": "1",
     "date": "2026-09-06",
     "videos": [
       {
