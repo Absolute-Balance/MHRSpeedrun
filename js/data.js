@@ -23,5 +23,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtq283ax"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m57",
+    "weaponId": "ls",
+    "timeMs": 260990,
+    "author": "15soyoの睦头",
+    "date": "2026-05-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1mmRCBrEoz",
+        "title": "特探彗彗 420 太刀三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtq2blgp"
   }
 ];
