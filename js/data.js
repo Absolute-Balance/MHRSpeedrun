@@ -107,5 +107,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtq2nkek"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m57",
+    "weaponId": "lance",
+    "timeMs": 356560,
+    "author": "-下机下机-",
+    "date": "2025-01-12",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1WVcVevENy",
+        "title": "【MHRS/圆梦5台】长枪 特别探究：怪异克服天彗龙 5'56''56 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtq2p44n"
   }
 ];
