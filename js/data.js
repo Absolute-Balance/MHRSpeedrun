@@ -44,5 +44,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtq2blgp"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m57",
+    "weaponId": "sns",
+    "timeMs": 5878000,
+    "author": "-橘-孜-",
+    "date": "2026-06-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1fv7k6cEQS",
+        "title": "【MHRS/pc】牢片 特别探究 怪异克服神秘红光天彗龙 5分55秒78 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtq2exmc"
   }
 ];
