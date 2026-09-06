@@ -42,23 +42,43 @@
     var c = cs % 100;
     return m + ':' + String(s).padStart(2, '0') + '.' + String(c).padStart(2, '0');
   }
+  /* 宽松时间解析：5:47.33 / 5'47''33 / 5"47"33 / 5分47秒33 / 347.5 等 */
   function parseTime(str) {
-    var t = String(str).trim();
-    var m = t.match(/^(?:(\d+):)?(\d{1,2})(?:[.:](\d{1,3}))?$/);
+    var t = String(str).trim().replace(/分/g, ':').replace(/秒/g, '');
+    if (!t) return null;
+    var nums = t.split(/[^0-9]+/).filter(Boolean).map(Number);
+    if (!nums.length) return null;
+    var sepChars = t.replace(/[0-9]+/g, '').replace(/\s+/g, '');
+    var firstSep = sepChars.charAt(0);
+    var fracMs = function (n) {
+      var s = String(n);
+      if (s.length >= 3) return n;          // 毫秒
+      if (s.length === 2) return n * 10;    // 百分秒
+      return n * 100;                       // 十分之一秒
+    };
+    if (nums.length >= 3) {
+      return (nums[0] * 60 + nums[1]) * 1000 + fracMs(nums[2]);
+    }
+    if (nums.length === 2) {
+      if (firstSep === ':' || firstSep === "'" || firstSep === '′' || firstSep === '‘') {
+        return (nums[0] * 60 + nums[1]) * 1000;   // 分:秒
+      }
+      return nums[0] * 1000 + fracMs(nums[1]);    // 秒.百分
+    }
+    return nums[0] * 1000;                        // 纯秒
+  }
+  /* 宽松日期：2026-9-6 / 2026.09.06 / 2026年9月6日 */
+  function normDate(v) {
+    var m = String(v).trim().match(/^(\d{4})[-\/.年](\d{1,2})[-\/.月](\d{1,2})日?$/);
     if (!m) return null;
-    var mins = m[1] ? parseInt(m[1], 10) : 0;
-    var secs = parseInt(m[2], 10);
-    var frac = m[3] ? m[3] : '';
-    var ms = (mins * 60 + secs) * 1000;
-    if (frac.length === 1) ms += parseInt(frac, 10) * 100;
-    else if (frac.length === 2) ms += parseInt(frac, 10) * 10;
-    else if (frac.length === 3) ms += parseInt(frac, 10);
-    return ms;
+    var y = +m[1], mo = +m[2], d = +m[3];
+    if (mo < 1 || mo > 12 || d < 1 || d > 31) return null;
+    return y + '-' + String(mo).padStart(2, '0') + '-' + String(d).padStart(2, '0');
   }
   function qtObj(id) { return CFG.questTypes.find(function (q) { return q.id === id; }) || null; }
   function qtLabel(id) { var q = qtObj(id); return q ? q.label : '未选择'; }
   function ruleObj(id) {
-    if (id === 'all') return { label: '规则不限', id: 'all' };
+    if (id === 'all') return { label: '全部', id: 'all' };
     return CFG.rules.find(function (r) { return r.id === id; }) || { label: id, id: id };
   }
   function ruleLabel(id) { return ruleObj(id).label; }
@@ -72,7 +92,12 @@
     if (t === 'raging') return '烈祸袭来';
     return t;
   }
-  function tmCls(rule) { return rule === 'ta' ? 'tm ta' : 'tm'; }
+  function tmCls(rule) { return rule === 'ta' ? 'tm ta' : rule === 'free' ? 'tm free' : 'tm'; }
+  function platformLabel(id) {
+    if (!id) return '—';
+    var x = CFG.platforms.find(function (p) { return p.id === id; });
+    return x ? x.label : id;
+  }
   function siteInfo(site) {
     site = String(site || '').toLowerCase();
     if (site === 'bilibili') return { label: 'B站', cls: 'site-bilibili' };
@@ -141,11 +166,6 @@
       });
       box.appendChild(b);
     });
-    $('questReset').addEventListener('click', function () {
-      state.questType = 'raging';
-      state.view = 'matrix';
-      update();
-    });
   }
   function syncQuestTypeUI() {
     document.querySelectorAll('#questTypeRadios .radio-pill').forEach(function (b) {
@@ -191,7 +211,7 @@
   function renderRuleUI() {
     var box = $('ruleRadios');
     box.innerHTML = '';
-    var opts = [{ id: 'all', label: '规则不限' }].concat(CFG.rules);
+    var opts = [{ id: 'all', label: '全部' }].concat(CFG.rules);
     opts.forEach(function (o) {
       var b = document.createElement('button');
       b.type = 'button';
@@ -226,11 +246,7 @@
       pager.classList.add('hidden');
       $('matrixTitle').innerHTML = '';
       $('matrixSub').textContent = '';
-      if (state.questType === 'raging') {
-        prompt.textContent = '烈祸袭来任务共 10 个，将直接作为横轴展示。';
-        return;
-      }
-      prompt.textContent = '请选择 EX 星级（EX1~EX9 / Apex，可多选），对应怪物将作为矩阵横轴。';
+      prompt.textContent = '请选择 EX 星级（EX1~EX9 / Apex，可多选），对应怪物将作为横轴展示。';
       return;
     }
 
@@ -244,8 +260,7 @@
 
     $('matrixTitle').innerHTML = '<b>' + esc(qtLabel(state.questType)) + '</b>' +
       (state.rule !== 'all' ? ' · ' + esc(ruleLabel(state.rule)) : '');
-    var headDesc = state.questType === 'raging' ? '10 个烈祸袭来任务' : '横轴 ' + axis.length + ' 只（含 Apex 档）';
-    $('matrixSub').textContent = headDesc + ' × 14 武器 · 每格只显示最新最快 · 黄色=TA规则 白色=其他规则 · 点怪物头像看全武器，点成绩格看该武器';
+    $('matrixSub').textContent = '每格只显示最快成绩，白色=三无，黄色=TA，红色=无限制，点怪物头像看全武器，点成绩格看该武器';
 
     pager.classList.toggle('hidden', pages <= 1);
     if (pages > 1) {
@@ -285,11 +300,7 @@
           return;
         }
         var best = bestOf(recs);
-        var inner = '<div class="line1"><span class="' + tmCls(best.rule) + '">' + fmtTime(best.timeMs) + '</span>';
-        if (state.rule === 'all') {
-          inner += '<span class="rg">' + esc(ruleLabel(best.rule)) + '</span>';
-        }
-        inner += '</div>';
+        var inner = '<div class="line1"><span class="' + tmCls(best.rule) + '">' + fmtTime(best.timeMs) + '</span></div>';
         inner += '<div class="line2"><span class="mxauthor pa" data-p="' + esc(best.author) + '" title="查看该玩家全部成绩">' + esc(best.author) + '</span>' +
           (recs.length > 1 ? '<span class="mxmore">历史 ' + (recs.length - 1) + '</span>' : '') + '</div>';
         html += '<div class="mx-cell" data-mid="' + it.monster.id + '" data-quest="' +
@@ -297,7 +308,7 @@
       });
     });
     grid.innerHTML = html;
-    grid.style.gridTemplateColumns = '62px repeat(' + n + ', minmax(112px, 1fr))';
+    grid.style.gridTemplateColumns = '58px repeat(' + n + ', minmax(0, 1fr))';
 
     grid.querySelectorAll('.mx-head').forEach(function (el) {
       el.addEventListener('click', function () {
@@ -353,13 +364,7 @@
     update();
   }
   function backLabel() {
-    if (state.view === 'player') {
-      if (state.prev === 'weapon' && state.scope.mid && state.scope.wid) return '← 返回武器页';
-      if (state.prev === 'monster' && state.scope.mid) return '← 返回怪物页';
-      return '← 返回矩阵';
-    }
-    if (state.view === 'weapon' && state.prev === 'monster') return '← 返回怪物页';
-    return '← 返回矩阵';
+    return '← 返回';
   }
   function commonHead(m) {
     var tags = '<span class="tag qt-' + esc(state.questType) + '">' + esc(qtLabel(state.questType)) + '</span>';
@@ -409,12 +414,10 @@
     var wset = new Set();
     all.forEach(function (r) { wset.add(r.weaponId); });
 
-    var initial = Array.from(pname)[0] || '?';
     var tags = '<span class="tag">成绩 ' + all.length + ' 条</span>' +
       '<span class="tag">武器 ' + wset.size + ' 种</span>';
     $('detailSummary').innerHTML = '共 <b>' + all.length + '</b> 条成绩（按日期新→旧）';
     $('detailHead').innerHTML =
-      '<div class="p-avatar">' + esc(initial) + '</div>' +
       '<div class="dtitle"><h2>' + esc(pname) + '</h2>' +
       '<div class="dmeta">玩家成绩时间线 · 点击行展开视频与详情</div></div>' +
       '<div class="ctx-tags">' + tags + '</div>';
@@ -530,8 +533,7 @@
       ['用时', fmtTime(r.timeMs)],
       ['作者', r.author],
       ['日期', r.date],
-      ['平台', r.platform || '—'],
-      ['记录编号', r.id]
+      ['平台', platformLabel(r.platform)]
     ];
     info.forEach(function (it) {
       h += '<div class="ditem"><div class="dk">' + esc(it[0]) + '</div><div class="dv">' + esc(it[1]) + '</div></div>';
@@ -565,12 +567,12 @@
     var html = '<div class="wv-sub">' + esc(ctx) + (state.rule !== 'all' ? ' · ' + esc(ruleLabel(state.rule)) : '') + ' —— 该武器在此位置的成绩</div>';
     html += '<div class="cur-card">';
     if (current) {
-      html += '<div class="cur-time' + (current.rule === 'ta' ? ' ta' : '') + '">' + fmtTime(current.timeMs) + '</div>';
+      html += '<div class="cur-time ' + (current.rule === 'ta' ? 'ta' : current.rule === 'free' ? 'free' : '') + '">' + fmtTime(current.timeMs) + '</div>';
       html += '<div class="cur-meta">';
       html += '<span class="k">规则</span><span>' + esc(ruleLabel(current.rule)) + '</span>';
       html += '<span class="k">作者</span><span class="pa" data-p="' + esc(current.author) + '" title="查看该玩家全部成绩">' + esc(current.author) + '</span>';
       html += '<span class="k">日期</span><span>' + esc(current.date) + '</span>';
-      html += '<span class="k">平台</span><span>' + esc(current.platform || '—') + '</span>';
+      html += '<span class="k">平台</span><span>' + esc(platformLabel(current.platform)) + '</span>';
       html += '</div>';
       html += '<div class="cur-vids">';
       if (current.videos && current.videos.length) {
@@ -699,6 +701,53 @@
     } catch (e) { /* ignore */ }
   }
 
+  /* ================= GitHub 直存（不依赖本地文件） ================= */
+  var GH = CFG.github;
+  var TOKEN_KEY = 'mhrs_gh_token';
+  function ghB64(text) {
+    var bytes = new TextEncoder().encode(text);
+    var bin = '';
+    var CH = 0x8000;
+    for (var i = 0; i < bytes.length; i += CH) {
+      bin += String.fromCharCode.apply(null, bytes.subarray(i, i + CH));
+    }
+    return btoa(bin);
+  }
+  function ghContentsUrl() {
+    return 'https://api.github.com/repos/' + GH.owner + '/' + GH.repo + '/contents/' + GH.dataPath;
+  }
+  async function ghSave(content, token) {
+    var headers = { Accept: 'application/vnd.github+json', Authorization: 'Bearer ' + token };
+    var res = await fetch(ghContentsUrl() + '?ref=' + GH.branch, { headers: headers });
+    var sha = null;
+    if (res.status === 200) sha = (await res.json()).sha;
+    else if (res.status !== 404) throw new Error('读取仓库文件失败（HTTP ' + res.status + '），请检查令牌权限');
+    var msg = '成绩更新（网页录入） ' + new Date().toISOString().slice(0, 10);
+    var body = JSON.stringify({ message: msg, content: ghB64(content), branch: GH.branch, sha: sha });
+    res = await fetch(ghContentsUrl(), {
+      method: 'PUT',
+      headers: Object.assign(headers, { 'Content-Type': 'application/json' }),
+      body: body
+    });
+    if (!res.ok) {
+      var err = await res.json().catch(function () { return {}; });
+      throw new Error(err.message || ('保存失败（HTTP ' + res.status + '）'));
+    }
+    var j = await res.json();
+    return j.commit ? j.commit.sha : '';
+  }
+  function applyDataFromText(txt) {
+    try {
+      var start = txt.indexOf('['), end = txt.lastIndexOf(']');
+      if (start < 0 || end < 0) return false;
+      var arr = JSON.parse(txt.slice(start, end + 1));
+      if (!Array.isArray(arr)) return false;
+      RECORDS.length = 0;
+      Array.prototype.push.apply(RECORDS, arr);
+      return true;
+    } catch (e) { return false; }
+  }
+
   /* ================= 录入 ================= */
   function normWeapon(v) {
     v = String(v).trim();
@@ -779,8 +828,9 @@
       var rule = normRule(f[4]);
       if (!rule) { errors.push('第 ' + ln + ' 行：规则无法识别 “' + f[4] + '”'); return; }
       var ms = parseTime(f[5]);
-      if (ms == null) { errors.push('第 ' + ln + ' 行：用时格式不对 “' + f[5] + '”（如 5:47.33）'); return; }
-      if (!/^\d{4}-\d{2}-\d{2}$/.test(f[7])) { errors.push('第 ' + ln + ' 行：日期格式应为 YYYY-MM-DD “' + f[7] + '”'); return; }
+      if (ms == null) { errors.push('第 ' + ln + ' 行：用时识别失败 “' + f[5] + '”（支持 5:47.33、5\'47\'\'33 等）'); return; }
+      var date = normDate(f[7]);
+      if (!date) { errors.push('第 ' + ln + ' 行：日期识别失败 “' + f[7] + '”（支持 2026-9-6 / 2026.09.06）'); return; }
       var rec = {
         id: 'r' + Date.now().toString(36) + '-' + (out.length + 1),
         questType: qt,
@@ -791,9 +841,9 @@
         weaponId: wid,
         timeMs: ms,
         author: f[6],
-        date: f[7],
+        date: date,
         videos: f[8] ? [{ site: /youtu/.test(f[8]) ? 'youtube' : /bilibili/.test(f[8]) ? 'bilibili' : 'other', url: f[8], title: '' }] : [],
-        platform: 'pc',
+        platform: 'steam',
         note: f[9] || ''
       };
       out.push(rec);
@@ -813,6 +863,8 @@
       modal.classList.remove('hidden');
       $('impMsg').textContent = '';
       $('impOut').value = '';
+      $('ghMsg').textContent = '';
+      try { $('ghToken').value = localStorage.getItem(TOKEN_KEY) || ''; } catch (e) { }
     });
     $('importClose').addEventListener('click', function () { modal.classList.add('hidden'); });
     modal.addEventListener('click', function (e) { if (e.target === modal) modal.classList.add('hidden'); });
@@ -857,6 +909,34 @@
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(txt).catch(fallback);
       } else fallback();
+    });
+    $('ghSave').addEventListener('click', async function () {
+      var g = $('ghMsg');
+      var content = $('impOut').value.trim();
+      if (!content) {
+        g.textContent = '请先在「校验并生成」得到内容，或直接在上方大框中粘贴整份 data.js';
+        g.style.color = 'var(--danger)';
+        return;
+      }
+      var token = ($('ghToken').value || '').trim() || '';
+      try { token = token || localStorage.getItem(TOKEN_KEY) || ''; } catch (e) { }
+      if (!token) {
+        g.textContent = '请先填入 GitHub 令牌（生成方法见下方灰色说明）';
+        g.style.color = 'var(--danger)';
+        return;
+      }
+      g.textContent = '正在提交到 GitHub…';
+      g.style.color = 'var(--text-dim)';
+      try {
+        var sha = await ghSave(content, token);
+        try { localStorage.setItem(TOKEN_KEY, token); } catch (e) { }
+        if (applyDataFromText(content)) update();
+        g.textContent = '已提交 commit ' + sha.slice(0, 7) + '，约 1~2 分钟后线上自动更新（本页已即时刷新数据）';
+        g.style.color = 'var(--good)';
+      } catch (e) {
+        g.textContent = '保存失败：' + e.message;
+        g.style.color = 'var(--danger)';
+      }
     });
   }
 
@@ -914,7 +994,7 @@
 
     var C = { bg: '#141519', panel: '#1c1d24', panel2: '#23252e', cell: '#16171e',
       line: '#2c2e38', text: '#e6e4de', dim: '#97959e', ta: '#f2c14e', def: '#efece4',
-      gold: '#f2c14e', purple: '#b98cff', crimson: '#ef7a68' };
+      free: '#ff6b5e', gold: '#f2c14e', apex: '#3fa9f5', crimson: '#ef7a68' };
 
     ctx.fillStyle = C.bg;
     ctx.fillRect(0, 0, W, H);
@@ -927,11 +1007,11 @@
     ctx.textBaseline = 'alphabetic';
     ctx.font = '700 17px "Microsoft YaHei", sans-serif';
     ctx.fillStyle = C.text;
-    ctx.fillText(qtName + starText + ' 成绩矩阵', pad, pad + 22);
+    ctx.fillText(qtName + starText + ' 成绩表', pad, pad + 22);
     ctx.font = '11px "Microsoft YaHei", sans-serif';
     ctx.fillStyle = C.dim;
     var sub = axis.length + (state.questType === 'raging' ? ' 个烈祸袭来任务' : ' 只怪物') + ' × ' +
-      weapons.length + ' 种武器 · ' + (state.rule === 'all' ? '规则不限（每格=最新最快）' : '规则：' + ruleLabel(state.rule));
+      weapons.length + ' 种武器 · ' + (state.rule === 'all' ? '规则：全部（每格为最快成绩）' : '规则：' + ruleLabel(state.rule));
     ctx.fillText(sub, pad, pad + 40);
     ctx.textAlign = 'right';
     var today = new Date();
@@ -957,9 +1037,9 @@
       var cy = gy + 4;
       if (it.kind === 'ex') {
         var bw = it.ex === 'Apex' ? 44 : 38;
-        ctx.fillStyle = it.ex === 'Apex' ? C.purple : C.gold;
+        ctx.fillStyle = it.ex === 'Apex' ? C.apex : C.gold;
         rrect(ctx, x + (colW - bw) / 2, cy, bw, 15, 4);
-        ctx.fillStyle = '#180f2e';
+        ctx.fillStyle = '#052238';
         ctx.font = '700 9px "Microsoft YaHei", sans-serif';
         ctx.fillText(it.ex, x + colW / 2, cy + 11.5);
         cy += 19;
@@ -999,18 +1079,9 @@
         /* 时间 */
         ctx.textAlign = 'left';
         ctx.font = '700 15px Consolas, Menlo, monospace';
-        ctx.fillStyle = best.rule === 'ta' ? C.ta : C.def;
-        var timeW = ctx.measureText(fmtTime(best.timeMs)).width;
+        ctx.fillStyle = best.rule === 'ta' ? C.ta : best.rule === 'free' ? C.free : C.def;
         var tx = x + 8;
         ctx.fillText(fmtTime(best.timeMs), tx, y + 23);
-        /* 规则小标 */
-        if (state.rule === 'all') {
-          var rl = ruleLabel(best.rule);
-          ctx.font = '9px "Microsoft YaHei", sans-serif';
-          var rw = ctx.measureText(rl).width + 8;
-          ctx.fillStyle = C.dim;
-          ctx.fillText(rl, tx + timeW + 6, y + 23);
-        }
         /* 作者 */
         ctx.font = '10px "Microsoft YaHei", sans-serif';
         ctx.fillStyle = C.dim;
@@ -1030,7 +1101,7 @@
     ctx.fillStyle = C.dim;
     ctx.font = '10px "Microsoft YaHei", sans-serif';
     ctx.textAlign = 'left';
-    ctx.fillText('黄色=TA规则 · 白色=其他规则 · 同格存在更早成绩时右下角显示历史数', pad, gy + gridH + 18);
+    ctx.fillText('白色=三无 · 黄色=TA · 红色=无限制 · 同格有更早成绩时右下角显示历史数', pad, gy + gridH + 18);
     ctx.textAlign = 'right';
     ctx.fillText('MHRS 竞速成绩库 · @星空柠檬凛', W - pad, gy + gridH + 18);
 
@@ -1038,7 +1109,7 @@
       var a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
       var fn = qtLabel(state.questType).replace(/[\s/\\:：]/g, '');
-      a.download = fn + '-矩阵.png';
+      a.download = fn + '-成绩表.png';
       document.body.appendChild(a);
       a.click();
       setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 300);

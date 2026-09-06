@@ -16,11 +16,12 @@
   --btn-grad2: #b23c32;
   --sel-border: #e0705f;
   --time-ta: #f2c14e;            /* TA 时间：暖金黄 */
-  --time-def: #efece4;           /* 其他规则时间：暖白 */
+  --time-def: #efece4;           /* 三无时间：暖白 */
+  --time-free: #ff6b5e;          /* 无限制时间：红 */
+  --apex: #3fa9f5;               /* Apex 档：蓝 */
   --gold: #ffd75e;
   --silver: #c9ced6;
   --bronze: #d89b6b;
-  --purple: #b98cff;
 }
 
 * { box-sizing: border-box; }
@@ -106,7 +107,7 @@ code { background: rgba(255,255,255,.06); padding: 1px 5px; border-radius: 4px; 
 }
 .chip:hover { border-color: var(--sel-border); color: var(--text); }
 .chip.on { background: rgba(214,90,78,.14); border-color: var(--sel-border); color: #ff9d88; font-weight: 700; }
-.chip[data-star="Apex"].on { border-color: var(--purple); color: #cfa9ff; background: rgba(185,140,255,.13); }
+.chip[data-star="Apex"].on { border-color: var(--apex); color: #8ecfff; background: rgba(63,169,245,.13); }
 
 .filter-actions { display: flex; align-items: center; gap: 14px; padding: 8px 0 4px; flex-wrap: wrap; }
 
@@ -121,14 +122,15 @@ code { background: rgba(255,255,255,.06); padding: 1px 5px; border-radius: 4px; 
   text-align: center; color: var(--text-dim);
 }
 
-/* 时间字体配色 */
+/* 时间字体配色（白=三无 黄=TA 红=无限制） */
 .tm { font-family: Consolas, Menlo, monospace; font-weight: 700; color: var(--time-def); }
 .tm.ta { color: var(--time-ta); }
+.tm.free { color: var(--time-free); }
 
 /* ---------- 矩阵 ---------- */
 .matrix-box { overflow-x: auto; padding-bottom: 6px; }
 .matrix {
-  display: grid; gap: 6px; min-width: 640px;
+  display: grid; gap: 6px; min-width: 0;
   background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 10px;
 }
 .corner { border-radius: 8px; background: var(--panel-2); border: 1px solid var(--line);
@@ -147,7 +149,7 @@ code { background: rgba(255,255,255,.06); padding: 1px 5px; border-radius: 4px; 
   font-size: 10px; color: #241407; background: var(--time-ta); border-radius: 4px;
   padding: 0 6px; font-weight: 700; line-height: 15px;
 }
-.mx-head .ex-badge.apex { background: var(--purple); color: #180f2e; }
+.mx-head .ex-badge.apex { background: var(--apex); color: #052238; }
 .mx-head .mxlabel {
   font-size: 10.5px; color: var(--text-dim); max-width: 100%;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
@@ -162,7 +164,7 @@ code { background: rgba(255,255,255,.06); padding: 1px 5px; border-radius: 4px; 
 .mx-weapon img { width: 28px; height: 28px; object-fit: contain; }
 .mx-weapon .wname { font-size: 10.5px; color: var(--text-dim); }
 
-/* 成绩格（单条 = 最新最快） */
+/* 成绩格（单条 = 最快成绩） */
 .mx-cell {
   border-radius: 8px; border: 1px dashed var(--line); background: rgba(10,11,15,.42);
   padding: 5px 8px; display: flex; flex-direction: column; justify-content: center;
@@ -171,12 +173,7 @@ code { background: rgba(255,255,255,.06); padding: 1px 5px; border-radius: 4px; 
 .mx-cell:hover { border-color: var(--sel-border); background: rgba(214,90,78,.05); }
 .mx-cell.empty { cursor: default; }
 .mx-cell.empty:hover { border-color: var(--line); background: rgba(10,11,15,.42); }
-.mx-cell .line1 { display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
 .mx-cell .line1 .tm { font-size: 16px; }
-.mx-cell .rg {
-  font-size: 9.5px; color: var(--text-dim); border: 1px solid var(--line);
-  border-radius: 3px; padding: 0 3px; line-height: 14px;
-}
 .mx-cell .line2 { display: flex; justify-content: space-between; gap: 6px; align-items: baseline;
   font-size: 10px; color: var(--text-dim); min-width: 0; }
 .mx-cell .mxauthor { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -204,8 +201,8 @@ code { background: rgba(255,255,255,.06); padding: 1px 5px; border-radius: 4px; 
 .tag.qt-anomaly300 { color: #d3a6ff; border-color: #d3a6ff55; }
 .tag.qt-special { color: #ffb3e6; border-color: #ffb3e655; }
 .tag.rule-ta { color: var(--time-ta); border-color: #f2c14e66; }
-.tag.rule-sanyou { color: #ff9e9e; border-color: #ff9e9e55; }
-.tag.rule-free { color: #9fe0a8; border-color: #9fe0a855; }
+.tag.rule-sanyou { color: #e3e8f0; border-color: #e3e8f055; }
+.tag.rule-free { color: var(--time-free); border-color: #ff6b5e66; }
 
 /* ---------- 怪物页：全武器最快 ---------- */
 .mv-head { font-size: 13px; color: var(--text-dim); margin-bottom: 8px; }
@@ -243,7 +240,8 @@ code { background: rgba(255,255,255,.06); padding: 1px 5px; border-radius: 4px; 
   font-size: 34px; line-height: 1.1; font-family: Consolas, Menlo, monospace; font-weight: 800;
 }
 .cur-card .cur-time.ta { color: var(--time-ta); }
-.cur-card .cur-time:not(.ta) { color: var(--time-def); }
+.cur-card .cur-time.free { color: var(--time-free); }
+.cur-card .cur-time:not(.ta):not(.free) { color: var(--time-def); }
 .cur-meta { display: grid; grid-template-columns: auto auto; gap: 3px 14px; font-size: 13px; }
 .cur-meta .k { color: var(--text-dim); font-size: 12px; }
 .cur-vids { display: flex; flex-direction: column; gap: 4px; }
@@ -334,6 +332,12 @@ code { background: rgba(255,255,255,.06); padding: 1px 5px; border-radius: 4px; 
 .site-other { background: #8884; color: var(--text-dim); }
 
 /* ---------- 弹窗 ---------- */
+.ghbar { display: flex; align-items: center; gap: 10px; margin: 8px 0 2px; flex-wrap: wrap; }
+.ghbar input {
+  flex: 1; min-width: 220px; background: #101117; color: var(--text); border: 1px solid var(--line);
+  border-radius: 8px; padding: 6px 10px; font-size: 12.5px; outline: none; font-family: Consolas, Menlo, monospace;
+}
+.ghbar input:focus { border-color: var(--sel-border); }
 .modal-mask { position: fixed; inset: 0; background: rgba(6,6,9,.8); display: flex; align-items: flex-start; justify-content: center; padding: 40px 16px; z-index: 50; }
 .modal { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; width: 860px; max-width: 100%; padding: 16px 18px; }
 .modal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
@@ -352,6 +356,7 @@ code { background: rgba(255,255,255,.06); padding: 1px 5px; border-radius: 4px; 
 
 /* ---------- 响应式 ---------- */
 @media (max-width: 900px) {
+  .matrix { min-width: 780px; }
   .mv-headrow, .mv-row { grid-template-columns: 40px 110px 130px 1fr 18px; }
   .mv-row .mv-date, .mv-headrow .h-date { display: none; }
   .hrow { grid-template-columns: 120px 1fr 90px 20px; }

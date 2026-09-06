@@ -25,16 +25,15 @@
   <div class="fgroup">
     <div class="fg-head">
       <span class="fg-label">任务类型</span>
-      <span class="fg-desc">单选 · 决定矩阵横轴</span>
+      <span class="fg-desc">单选</span>
     </div>
     <div class="row">
       <div class="radios" id="questTypeRadios"></div>
-      <button type="button" class="btn btn-ghost" id="questReset">不限</button>
     </div>
 
     <!-- 联动区：烈祸袭来 → 固定 10 任务（无需额外控件，只有提示） -->
     <div class="cond-row hidden" id="ragingHint">
-      <span class="cond-label">烈祸袭来任务共 10 个，已作为矩阵横轴展示（任务 → 目标怪）</span>
+      <span class="cond-label">烈祸袭来共 10 个任务（任务 → 目标怪），已作为横轴展示</span>
     </div>
 
     <!-- 联动区：怪异探究Lv300 / 特别探究 → EX 星级多选 -->
@@ -52,16 +51,16 @@
   <div class="fgroup">
     <div class="fg-head">
       <span class="fg-label">狩猎规则</span>
-      <span class="fg-desc">单选 · 矩阵与详情页按此过滤</span>
+      <span class="fg-desc">单选</span>
     </div>
     <div class="radios" id="ruleRadios"></div>
   </div>
 
   <div class="filter-actions">
-    <button type="button" class="btn btn-ghost" id="resetBtn">清除全部筛选</button>
+    <button type="button" class="btn btn-ghost" id="resetBtn">恢复默认</button>
     <span class="spacer"></span>
     <span class="fg-desc" id="filterSummary"></span>
-    <button type="button" class="btn btn-primary" id="exportBtn" disabled title="把当前筛选的矩阵（怪物/任务 × 14 武器）导出为 PNG 图片">⤓ 导出矩阵图片</button>
+    <button type="button" class="btn btn-primary" id="exportBtn" disabled title="把当前筛选出的表格（怪物/任务 × 14 武器）导出为 PNG 图片">⤓ 导出表格图片</button>
     <button type="button" class="btn btn-primary" id="openImportBtn">＋ 录入成绩</button>
     <span class="fg-desc" id="exportMsg"></span>
   </div>
@@ -109,20 +108,24 @@
       <b>录入成绩（生成新的 js/data.js）</b>
       <button type="button" class="btn btn-ghost" id="importClose">✕</button>
     </div>
-    <p class="fg-desc">每行一条成绩，按如下顺序以半角逗号分隔（可只写前 8 项；怪物/武器/任务可用中文）：</p>
-    <pre class="hint">怪物id或名称, 武器id或中文名, 任务类型, EX星级或烈祸任务, 规则, 用时, 作者, 日期, 视频网址[, 备注]
-例1（烈祸袭来，任务名可只写片段）：月迅龙, 太刀, 烈祸袭来, 朦胧之影, TA规则, 5:47.33, 玩家A, 2025-01-10, https://www.bilibili.com/video/BVxxxx, 备注文字
-例2（特别探究）：怪异克服天彗龙, 弓, 特别探究, EX9, 无限制, 7:58.02, 玩家B, 2025-01-11, https://www.youtube.com/watch?v=xxxx</pre>
+    <p class="fg-desc">每行一条，用半角逗号分隔：怪物, 武器, 任务类型, EX星级或烈祸任务, 规则, 用时, 作者, 日期[, 视频网址][, 备注]。用时支持 5:47.33 / 5'47''33 等写法，日期 2026-9-6 或 2026-09-06 均可；平台默认 Steam（可在数据里改）。</p>
+    <pre class="hint">雪鬼兽, 大剑, 特别探究, EX4, 三无, 6'57''52, 鬼畜茶走, 2026-8-29, https://www.bilibili.com/video/BV1Zv4C6HEPx
+怪异克服天彗龙, 弓, 特别探究, EX9, 无限制, 7:58.02, 玩家B, 2025-01-11, https://www.youtube.com/watch?v=xxxx, 备注文字</pre>
     <textarea id="impInput" rows="8" spellcheck="false" placeholder="在这里粘贴多条成绩…"></textarea>
     <div class="modal-actions">
       <button type="button" class="btn btn-primary" id="impParse">校验并生成</button>
       <span class="fg-desc" id="impMsg"></span>
     </div>
-    <textarea id="impOut" rows="10" spellcheck="false" readonly placeholder="生成结果会出现在这里…"></textarea>
+    <textarea id="impOut" rows="10" spellcheck="false" placeholder="生成结果会出现在这里（保存前可在此手工增删改条目）…"></textarea>
+    <div class="ghbar">
+      <input type="password" id="ghToken" placeholder="GitHub 令牌（可选，设置一次后记住）" autocomplete="off">
+      <button type="button" class="btn btn-primary" id="ghSave">💾 保存到 GitHub（直接更新网站）</button>
+      <span class="fg-desc" id="ghMsg"></span>
+    </div>
     <div class="modal-actions">
-      <button type="button" class="btn btn-primary" id="impDownload">下载 data.js</button>
+      <button type="button" class="btn btn-primary" id="impDownload">仅下载 data.js</button>
       <button type="button" class="btn btn-ghost" id="impCopy">复制全部</button>
-      <span class="fg-desc">下载后替换 <code>js/data.js</code> 并刷新页面即可生效。</span>
+      <span class="fg-desc">令牌获取：GitHub → Settings → Developer settings → Fine-grained personal access tokens（勾选本仓库 Contents 读写），只存在你的浏览器里。</span>
     </div>
   </div>
 </div>

@@ -67,10 +67,25 @@ window.MHRS_CONFIG = {
     { id: 'bow',    label: '弓',     file: '弓.png' }
   ],
 
+  /* ---- 平台（成绩可选字段，可后续扩展） ---- */
+  platforms: [
+    { id: 'steam',  label: 'Steam' },
+    { id: 'switch', label: 'Nintendo Switch' },
+    { id: 'ps5',    label: 'PS5' }
+  ],
+
   /* ---- 图标目录（相对 index.html） ---- */
   weaponIconDir: 'weapons',
   monsterIconDir: 'monsters',
 
   /* ---- 矩阵横轴每页最多显示的数量 ---- */
-  axisPageSize: 10
+  axisPageSize: 10,
+
+  /* ---- GitHub 仓库信息（网页内直接保存成绩回仓库用） ---- */
+  github: {
+    owner: 'Absolute-Balance',
+    repo: 'MHRSpeedrun',
+    branch: 'main',
+    dataPath: 'js/data.js'
+  }
 };
