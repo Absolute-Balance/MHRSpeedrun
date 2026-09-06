@@ -105,6 +105,18 @@
     if (site === 'youtube') return { label: 'YouTube', cls: 'site-youtube' };
     return { label: site || '视频', cls: 'site-other' };
   }
+  /* 仅收录 B 站：支持完整链接或只填 BV 号，统一补全 */
+  function biliVideo(v) {
+    v = String(v || '').trim();
+    if (!v) return '';
+    var m = v.match(/(BV[0-9A-Za-z]{8,})/);
+    if (m) return 'https://www.bilibili.com/video/' + m[1];
+    var s = v.replace(/^https?:\/\//, '');
+    if (s.indexOf('bilibili.com/') === 0 || s.indexOf('www.bilibili.com/') === 0 || s.indexOf('b23.tv/') === 0) {
+      return 'https://' + s;
+    }
+    return null; // 非 B 站内容
+  }
   /* 最新最快：先比时间快，同时间取日期新 */
   function bestOf(list) {
     if (!list || !list.length) return null;
@@ -303,8 +315,7 @@
         }
         var best = bestOf(recs);
         var inner = '<div class="line1"><span class="' + tmCls(best.rule) + '">' + fmtTime(best.timeMs) + '</span></div>';
-        inner += '<div class="line2"><span class="mxauthor pa" data-p="' + esc(best.author) + '" title="查看该玩家全部成绩">' + esc(best.author) + '</span>' +
-          (recs.length > 1 ? '<span class="mxmore">历史 ' + (recs.length - 1) + '</span>' : '') + '</div>';
+        inner += '<div class="line2"><span class="mxauthor pa" data-p="' + esc(best.author) + '" title="查看该玩家全部成绩">' + esc(best.author) + '</span></div>';
         html += '<div class="mx-cell" data-mid="' + it.monster.id + '" data-quest="' +
           (it.kind === 'raging' ? it.quest.id : '') + '" data-wid="' + w.id + '">' + inner + '</div>';
       });
@@ -461,6 +472,11 @@
       msg.textContent = '烈祸袭来需要先确定具体任务（请从对应任务列进入）'; msg.style.color = 'var(--danger)'; return;
     }
     var m = mById[entryCtx.mid];
+    var videoUrl = '';
+    if (video) {
+      videoUrl = biliVideo(video);
+      if (!videoUrl) { msg.textContent = '视频仅支持 B 站（完整链接或 BV 号，自动补全）'; msg.style.color = 'var(--danger)'; return; }
+    }
     var rec = {
       id: 'r' + Date.now().toString(36),
       questType: state.questType,
@@ -472,7 +488,7 @@
       timeMs: ms,
       author: author,
       date: date,
-      videos: video ? [{ site: /youtu/.test(video) ? 'youtube' : /bilibili/.test(video) ? 'bilibili' : 'other', url: video, title: '' }] : [],
+      videos: videoUrl ? [{ site: 'bilibili', url: videoUrl, title: '' }] : [],
       platform: $('ePlat').value || 'steam',
       note: ''
     };
@@ -951,6 +967,11 @@
       if (ms == null) { errors.push('第 ' + ln + ' 行：用时识别失败 “' + f[5] + '”（支持 05\'02\'\'52 或 5:47.33 等写法）'); return; }
       var date = normDate(f[7]);
       if (!date) { errors.push('第 ' + ln + ' 行：日期识别失败 “' + f[7] + '”（支持 2026-9-6 / 2026.09.06）'); return; }
+      var videoUrl = '';
+      if (f[8]) {
+        videoUrl = biliVideo(f[8]);
+        if (!videoUrl) { errors.push('第 ' + ln + ' 行：视频仅支持 B 站（完整链接或 BV 号）'); return; }
+      }
       var rec = {
         id: 'r' + Date.now().toString(36) + '-' + (out.length + 1),
         questType: qt,
@@ -962,7 +983,7 @@
         timeMs: ms,
         author: f[6],
         date: date,
-        videos: f[8] ? [{ site: /youtu/.test(f[8]) ? 'youtube' : /bilibili/.test(f[8]) ? 'bilibili' : 'other', url: f[8], title: '' }] : [],
+        videos: videoUrl ? [{ site: 'bilibili', url: videoUrl, title: '' }] : [],
         platform: 'steam',
         note: f[9] || ''
       };
@@ -1207,13 +1228,6 @@
         ctx.fillStyle = C.dim;
         var auth = fitText(ctx, best.author, colW - 16);
         ctx.fillText(auth, tx, y + 41);
-        /* 历史标记 */
-        if (recs.length > 1) {
-          ctx.textAlign = 'right';
-          var his = '历史 ' + (recs.length - 1);
-          ctx.fillText(his, x + colW - 8, y + 41);
-          ctx.textAlign = 'left';
-        }
       });
     });
 
@@ -1221,7 +1235,7 @@
     ctx.fillStyle = C.dim;
     ctx.font = '10px "Microsoft YaHei", sans-serif';
     ctx.textAlign = 'left';
-    ctx.fillText('白色=三无规则 · 黄色=TA规则 · 红色=无限制规则 · 同格有更早成绩时右下角显示历史数', pad, gy + gridH + 18);
+    ctx.fillText('白色=三无规则 · 黄色=TA规则 · 红色=无限制规则', pad, gy + gridH + 18);
     ctx.textAlign = 'right';
     ctx.fillText('MHRS 竞速成绩库 · @星空柠檬凛', W - pad, gy + gridH + 18);
 
