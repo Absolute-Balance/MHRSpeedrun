@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MHRS 竞速成绩库</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <h1 id="siteTitle">MHRS 竞速成绩库</h1>
+    <p id="siteSubtitle">怪物猎人 崛起：曙光 · Speedrun 成绩数据库</p>
+  </div>
+</header>
+
+<!-- ================= 筛选面板 ================= -->
+<section class="filter-panel wrap">
+
+  <!-- 任务类型（单选） -->
+  <div class="fgroup">
+    <div class="fg-head">
+      <span class="fg-label">任务类型</span>
+      <span class="fg-desc">单选 · 决定矩阵横轴</span>
+    </div>
+    <div class="row">
+      <div class="radios" id="questTypeRadios"></div>
+      <button type="button" class="btn btn-ghost" id="questReset">不限</button>
+    </div>
+
+    <!-- 联动区：烈祸袭来 → 固定 10 任务（无需额外控件，只有提示） -->
+    <div class="cond-row hidden" id="ragingHint">
+      <span class="cond-label">烈祸袭来任务共 10 个，已作为矩阵横轴展示（任务 → 目标怪）</span>
+    </div>
+
+    <!-- 联动区：怪异探究Lv300 / 特别探究 → EX 星级多选 -->
+    <div class="cond-row hidden" id="exWrap">
+      <span class="cond-label">EX 星级：</span>
+      <div class="chips" id="exChips"></div>
+      <div class="inline-btns">
+        <button type="button" class="btn btn-mini" id="exAll">全选</button>
+        <button type="button" class="btn btn-mini" id="exNone">全不选</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 狩猎规则（单选） -->
+  <div class="fgroup">
+    <div class="fg-head">
+      <span class="fg-label">狩猎规则</span>
+      <span class="fg-desc">单选 · 矩阵与详情页按此过滤</span>
+    </div>
+    <div class="radios" id="ruleRadios"></div>
+  </div>
+
+  <div class="filter-actions">
+    <button type="button" class="btn btn-ghost" id="resetBtn">清除全部筛选</button>
+    <span class="spacer"></span>
+    <span class="fg-desc" id="filterSummary"></span>
+    <button type="button" class="btn btn-primary" id="openImportBtn">＋ 录入成绩</button>
+  </div>
+</section>
+
+<!-- ================= 视图区 ================= -->
+<section class="result wrap" id="viewWrap">
+
+  <!-- 矩阵视图 -->
+  <div id="matrixArea">
+    <div class="result-bar">
+      <span class="result-count" id="matrixTitle"></span>
+      <span class="fg-desc" id="matrixSub"></span>
+      <span class="spacer"></span>
+      <span class="fg-desc hidden" id="pagerWrap"></span>
+    </div>
+
+    <div class="prompt hidden" id="matrixPrompt"></div>
+
+    <div class="matrix-box hidden" id="matrixBox">
+      <div class="matrix" id="matrixGrid"></div>
+    </div>
+  </div>
+
+  <!-- 怪物详情视图 -->
+  <div id="detailArea" class="hidden">
+    <div class="result-bar">
+      <button type="button" class="btn btn-ghost" id="backBtn">← 返回矩阵</button>
+      <span class="spacer"></span>
+      <span class="result-count" id="detailSummary"></span>
+    </div>
+    <div class="dhead" id="detailHead"></div>
+    <div id="detailBody"></div>
+  </div>
+</section>
+
+<footer class="site-foot wrap">
+  <p>数据文件：<code>js/data.js</code> · 怪物映射：<code>js/monsters.js</code>（由 <code>data/monster-order.json</code> + <code>tools/scan-monsters.js</code> 生成）· 说明见 <code>README.md</code></p>
+</footer>
+
+<!-- ================= 录入弹窗 ================= -->
+<div class="modal-mask hidden" id="importModal">
+  <div class="modal">
+    <div class="modal-head">
+      <b>录入成绩（生成新的 js/data.js）</b>
+      <button type="button" class="btn btn-ghost" id="importClose">✕</button>
+    </div>
+    <p class="fg-desc">每行一条成绩，按如下顺序以半角逗号分隔（可只写前 8 项；怪物/武器/任务可用中文）：</p>
+    <pre class="hint">怪物id或名称, 武器id或中文名, 任务类型, EX星级或烈祸任务, 规则, 用时, 作者, 日期, 视频网址[, 备注]
+例1（烈祸袭来，任务名可只写片段）：月迅龙, 太刀, 烈祸袭来, 朦胧之影, TA规则, 5:47.33, 玩家A, 2025-01-10, https://www.bilibili.com/video/BVxxxx, 备注文字
+例2（特别探究）：怪异克服天彗龙, 弓, 特别探究, EX9, 无限制, 7:58.02, 玩家B, 2025-01-11, https://www.youtube.com/watch?v=xxxx</pre>
+    <textarea id="impInput" rows="8" spellcheck="false" placeholder="在这里粘贴多条成绩…"></textarea>
+    <div class="modal-actions">
+      <button type="button" class="btn btn-primary" id="impParse">校验并生成</button>
+      <span class="fg-desc" id="impMsg"></span>
+    </div>
+    <textarea id="impOut" rows="10" spellcheck="false" readonly placeholder="生成结果会出现在这里…"></textarea>
+    <div class="modal-actions">
+      <button type="button" class="btn btn-primary" id="impDownload">下载 data.js</button>
+      <button type="button" class="btn btn-ghost" id="impCopy">复制全部</button>
+      <span class="fg-desc">下载后替换 <code>js/data.js</code> 并刷新页面即可生效。</span>
+    </div>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/monsters.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
