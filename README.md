@@ -6,6 +6,29 @@
 
 - 直接双击 `index.html`，或 `node tools/serve.js` → http://127.0.0.1:8123
 
+## 上线到 GitHub Pages（让别人能访问）
+
+1. 注册/登录 [github.com](https://github.com)，右上角 **+ → New repository**：仓库名建议 `mhrspeedrun`，**选 Public**（免费 Pages 要求公开仓库），不要勾选任何初始化文件（README 等都不勾，本地已有）
+2. 创建后按页面提示在本地执行（git 已初始化并提交过）：
+   ```
+   git remote add origin https://github.com/你的用户名/mhrspeedrun.git
+   git push -u origin master
+   ```
+   （首次推送会弹浏览器登录 GitHub 授权一次）
+3. 回到仓库页面 **Settings → Pages**：Source 选 **Deploy from a branch**，Branch 选 **master / (root)**，Save
+4. 等 1~2 分钟，访问 `https://你的用户名.github.io/mhrspeedrun/` 即上线
+
+以后更新成绩：改完 `js/data.js` 等文件后
+```
+git add -A
+git commit -m "更新成绩"
+git push
+```
+等一两分钟自动生效（或先看自己机器上的预览效果再推）。
+
+> GitHub 学生认证（Student Developer Pack）后可额外获得：免费 `.me` 域名 + GitHub Pro（私有仓库也能开 Pages + 更多 Actions 额度）。普通免费账号用公开仓库即可，无需学生认证。
+> 换自定义域名：仓库 Settings → Pages → Custom domain 填入你的域名，并按提示到域名服务商加一条 CNAME 记录指向 `你的用户名.github.io`（见上文“数据迁移”说明，换域名不丢数据）。
+
 ## 目录结构
 
 ```
