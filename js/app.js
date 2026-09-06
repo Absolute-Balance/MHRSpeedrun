@@ -297,7 +297,8 @@
       slice.forEach(function (it) {
         var recs = bracketRecords(it, w.id);
         if (!recs.length) {
-          html += '<div class="mx-cell empty"></div>';
+          html += '<div class="mx-cell add" data-mid="' + it.monster.id + '" data-quest="' +
+            (it.kind === 'raging' ? it.quest.id : '') + '" data-wid="' + w.id + '" title="该位置暂无成绩，点击录入">＋</div>';
           return;
         }
         var best = bestOf(recs);
@@ -325,6 +326,11 @@
       el.addEventListener('click', function (e) {
         e.stopPropagation();
         openPlayer(el.dataset.p);
+      });
+    });
+    grid.querySelectorAll('.mx-cell.add').forEach(function (el) {
+      el.addEventListener('click', function () {
+        openEntry({ mid: el.dataset.mid, wid: el.dataset.wid, quest: el.dataset.quest || null });
       });
     });
   }
@@ -402,6 +408,103 @@
     });
   }
 
+  /* ================= 快速录入（空格子 / 单武器页入口） ================= */
+  var entryCtx = null;
+  function todayStr() {
+    var d = new Date();
+    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  }
+  function openEntry(ctx) {
+    var m = mById[ctx.mid], w = wById[ctx.wid];
+    if (!m || !w) return;
+    entryCtx = { mid: ctx.mid, wid: ctx.wid, quest: ctx.quest || null };
+    var task;
+    if (state.questType === 'raging') {
+      var q = (ctx.quest && qById[ctx.quest]) ? qById[ctx.quest] :
+        CFG.ragingQuests.find(function (x) { return x.monsterFile === m.file; }) || null;
+      entryCtx.quest = q ? q.id : null;
+      task = q ? q.label : '烈祸袭来';
+    } else {
+      task = qtLabel(state.questType) + (m.tier ? ' · ' + m.tier : '');
+    }
+    $('eTask').textContent = task + '　' + m.name + ' × ' + w.label;
+    $('eWeapon').textContent = w.label;
+    $('eAuthor').value = '';
+    $('eTime').value = '';
+    $('eDate').value = todayStr();
+    $('eVideo').value = '';
+    var ruleSel = $('eRule');
+    if (state.rule !== 'all' && ruleSel.querySelector('option[value="' + state.rule + '"]')) {
+      ruleSel.value = state.rule;
+    } else {
+      ruleSel.value = '';
+    }
+    $('eMsg').textContent = '';
+    $('entryModal').classList.remove('hidden');
+    $('eAuthor').focus();
+  }
+  async function saveEntry() {
+    var msg = $('eMsg');
+    if (!entryCtx) return;
+    var rule = $('eRule').value;
+    var author = $('eAuthor').value.trim();
+    var timeText = $('eTime').value.trim();
+    var dateText = $('eDate').value.trim();
+    var video = $('eVideo').value.trim();
+    if (!rule) { msg.textContent = '请选择规则'; msg.style.color = 'var(--danger)'; return; }
+    if (!author) { msg.textContent = '请填写作者'; msg.style.color = 'var(--danger)'; return; }
+    var ms = parseTime(timeText);
+    if (ms == null) { msg.textContent = '用时格式不对（如 05\'02\'\'52 或 5:02.52）'; msg.style.color = 'var(--danger)'; return; }
+    var date = normDate(dateText);
+    if (!date) { msg.textContent = '日期格式不对（如 2026-9-6）'; msg.style.color = 'var(--danger)'; return; }
+    if (state.questType === 'raging' && !entryCtx.quest) {
+      msg.textContent = '烈祸袭来需要先确定具体任务（请从对应任务列进入）'; msg.style.color = 'var(--danger)'; return;
+    }
+    var m = mById[entryCtx.mid];
+    var rec = {
+      id: 'r' + Date.now().toString(36),
+      questType: state.questType,
+      quest: state.questType === 'raging' ? entryCtx.quest : null,
+      exStar: state.questType === 'raging' ? null : (m && m.tier && /^(EX\d|Apex)$/.test(m.tier) ? m.tier : null),
+      rule: rule,
+      monsterId: entryCtx.mid,
+      weaponId: entryCtx.wid,
+      timeMs: ms,
+      author: author,
+      date: date,
+      videos: video ? [{ site: /youtu/.test(video) ? 'youtube' : /bilibili/.test(video) ? 'bilibili' : 'other', url: video, title: '' }] : [],
+      platform: $('ePlat').value || 'steam',
+      note: ''
+    };
+    var content = serializeData(RECORDS.concat(rec));
+    var token = '';
+    try { token = localStorage.getItem(TOKEN_KEY) || ''; } catch (e) { }
+    if (token) {
+      msg.textContent = '正在提交到 GitHub…';
+      msg.style.color = 'var(--text-dim)';
+      try {
+        var sha = await ghSave(content, token);
+        if (applyDataFromText(content)) update();
+        msg.textContent = '已保存 commit ' + sha.slice(0, 7) + '，约 1~2 分钟后线上更新（本页已即时显示）';
+        msg.style.color = 'var(--good)';
+        entryCtx = null;
+      } catch (e) {
+        msg.textContent = '保存失败：' + e.message;
+        msg.style.color = 'var(--danger)';
+      }
+      return;
+    }
+    /* 无令牌：转入批量录入弹窗，填令牌后保存 */
+    $('entryModal').classList.add('hidden');
+    $('impOut').value = content;
+    var impMsg = $('impMsg');
+    impMsg.textContent = '已生成 1 条（共 ' + (RECORDS.length + 1) + ' 条）。填好 GitHub 令牌后点「💾 保存到 GitHub」即直接上线；也可先下载。';
+    impMsg.style.color = 'var(--good)';
+    $('ghMsg').textContent = '';
+    $('importModal').classList.remove('hidden');
+    entryCtx = null;
+  }
+
   /* ================= 玩家页（按日期时间线） ================= */
   function renderPlayerView() {
     var pname = state.scope.player;
@@ -476,8 +579,7 @@
     $('detailSummary').innerHTML = '共 <b>' + recs.length + '</b> 条 · 覆盖 <b>' +
       Object.keys(usedWeapons).length + '</b>/14 种武器';
 
-    var ctx = qtLabel(state.questType);
-    if (state.scope.quest && qById[state.scope.quest]) ctx += ' · ' + qById[state.scope.quest].label;
+    var ctx = ctxTask();
     if (state.rule !== 'all') ctx += ' · ' + ruleLabel(state.rule);
     var html = '<div class="mv-head">' + esc(ctx) + ' —— 各武器最快成绩（点击某武器查看该位置详情与历史）</div>';
     html += '<div class="mv-headrow"><span class="h-fill"></span><span class="h-name">武器</span>' +
@@ -542,13 +644,23 @@
     return '<div class="dgrid">' + h + '</div>';
   }
   function questLabelOf(r) {
-    var t = qtLabel(r.questType);
     if (r.questType === 'raging') {
       var q = questObj(r);
-      t += ' · ' + (q ? q.label : (r.quest || ''));
-    } else if (r.exStar) {
-      t += ' · ' + r.exStar;
+      return q ? q.label : '烈祸袭来';
     }
+    var t = qtLabel(r.questType);
+    if (r.exStar) t += ' · ' + r.exStar;
+    return t;
+  }
+  /* 当前视图的任务语境（避免 “烈祸袭来 · 烈祸袭来：XX” 重复） */
+  function ctxTask() {
+    if (state.questType === 'raging') {
+      var q = state.scope.quest ? qById[state.scope.quest] : null;
+      return q ? q.label : '烈祸袭来';
+    }
+    var t = qtLabel(state.questType);
+    var m = state.scope.mid ? mById[state.scope.mid] : null;
+    if (m && m.tier) t += ' · ' + tierLabel(m.tier);
     return t;
   }
   function renderWeaponView() {
@@ -564,8 +676,9 @@
       .sort(function (a, b) { return a.date < b.date ? -1 : a.date > b.date ? 1 : a.timeMs - b.timeMs; });
     $('detailSummary').innerHTML = '当前 <b>1</b> 条 · 历史 <b>' + history.length + '</b> 条';
 
-    var ctx = qtLabel(state.questType) + ' · ' + (s.quest && qById[s.quest] ? qById[s.quest].label : (m.tier ? m.tier : ''));
-    var html = '<div class="wv-sub">' + esc(ctx) + (state.rule !== 'all' ? ' · ' + esc(ruleLabel(state.rule)) : '') + ' —— 该武器在此位置的成绩</div>';
+    var ctx = ctxTask();
+    var html = '<div class="wv-sub">' + esc(ctx) + (state.rule !== 'all' ? ' · ' + esc(ruleLabel(state.rule)) : '') + ' —— 该武器在此位置的成绩' +
+      '　<button type="button" class="btn btn-mini btn-primary" id="wvAddBtn">＋ 为该位置录入成绩</button></div>';
     html += '<div class="cur-card">';
     if (current) {
       html += '<div class="cur-time ' + (current.rule === 'ta' ? 'ta' : current.rule === 'free' ? 'free' : '') + '">' + fmtTime(current.timeMs) + '</div>';
@@ -621,6 +734,12 @@
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); row.click(); }
       });
     });
+    var wvAdd = body.querySelector('#wvAddBtn');
+    if (wvAdd) {
+      wvAdd.addEventListener('click', function () {
+        openEntry({ mid: state.scope.mid, wid: state.scope.wid, quest: state.scope.quest || null });
+      });
+    }
     bindAuthorClicks(body);
   }
 
@@ -1143,6 +1262,27 @@
     $('rulesBtn').addEventListener('click', function () { rModal.classList.remove('hidden'); });
     $('rulesClose').addEventListener('click', function () { rModal.classList.add('hidden'); });
     rModal.addEventListener('click', function (e) { if (e.target === rModal) rModal.classList.add('hidden'); });
+
+    /* 快速录入弹窗 */
+    var ruleSel = $('eRule');
+    ruleSel.innerHTML = '<option value="">— 请选择规则 —</option>';
+    CFG.rules.forEach(function (r) {
+      var op = document.createElement('option');
+      op.value = r.id; op.textContent = r.label;
+      ruleSel.appendChild(op);
+    });
+    var platSel = $('ePlat');
+    platSel.innerHTML = '';
+    CFG.platforms.forEach(function (p) {
+      var op = document.createElement('option');
+      op.value = p.id; op.textContent = p.label;
+      platSel.appendChild(op);
+    });
+    var eModal = $('entryModal');
+    $('entryClose').addEventListener('click', function () { eModal.classList.add('hidden'); });
+    eModal.addEventListener('click', function (e) { if (e.target === eModal) eModal.classList.add('hidden'); });
+    $('eSave').addEventListener('click', function () { saveEntry(); });
+
     setupImport();
     update();
   }

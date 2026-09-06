@@ -338,6 +338,21 @@ code { background: rgba(255,255,255,.06); padding: 1px 5px; border-radius: 4px; 
   border-radius: 8px; padding: 6px 10px; font-size: 12.5px; outline: none; font-family: Consolas, Menlo, monospace;
 }
 .ghbar input:focus { border-color: var(--sel-border); }
+/* 快速录入表单 */
+.eform { display: grid; grid-template-columns: 72px 1fr; gap: 8px 12px; align-items: center; margin: 8px 0 6px; }
+.eform label { color: var(--text-dim); font-size: 12.5px; }
+.eform .efix { color: var(--text); font-size: 13px; word-break: break-all; }
+.eform input, .eform select {
+  width: 100%; background: #101117; color: var(--text); border: 1px solid var(--line);
+  border-radius: 8px; padding: 6px 10px; font-size: 13px; outline: none; font-family: inherit;
+}
+.eform input:focus, .eform select:focus { border-color: var(--sel-border); }
+/* 空格子可点击录入 */
+.mx-cell.add {
+  cursor: pointer; align-items: center; justify-content: center;
+  color: #5a5f6d; font-size: 17px; user-select: none;
+}
+.mx-cell.add:hover { border-color: var(--sel-border); color: var(--accent-hi); background: rgba(214,90,78,.05); }
 .modal-mask { position: fixed; inset: 0; background: rgba(6,6,9,.8); display: flex; align-items: flex-start; justify-content: center; padding: 40px 16px; z-index: 50; }
 .modal { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; width: 860px; max-width: 100%; padding: 16px 18px; }
 .modal-narrow { width: 560px; }

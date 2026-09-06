@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MHRS 竞速成绩库</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=20260908">
 </head>
 <body>
 
@@ -149,9 +149,33 @@
   </div>
 </div>
 
-<script src="js/config.js"></script>
-<script src="js/monsters.js"></script>
-<script src="js/data.js"></script>
-<script src="js/app.js"></script>
+<!-- ================= 单格快速录入弹窗 ================= -->
+<div class="modal-mask hidden" id="entryModal">
+  <div class="modal modal-narrow">
+    <div class="modal-head">
+      <b id="entryTitle">录入成绩</b>
+      <button type="button" class="btn btn-ghost" id="entryClose">✕</button>
+    </div>
+    <div class="eform">
+      <label>位置</label><span class="efix" id="eTask"></span>
+      <label>武器</label><span class="efix" id="eWeapon"></span>
+      <label>规则</label><select id="eRule"></select>
+      <label>作者</label><input type="text" id="eAuthor" placeholder="玩家名 / UP主" autocomplete="off">
+      <label>用时</label><input type="text" id="eTime" placeholder="如 05'02''52 或 5:02.52" autocomplete="off">
+      <label>日期</label><input type="text" id="eDate" placeholder="2026-9-6" autocomplete="off">
+      <label>视频链接</label><input type="text" id="eVideo" placeholder="B站/YouTube 链接（可选）" autocomplete="off">
+      <label>平台</label><select id="ePlat"></select>
+    </div>
+    <div class="modal-actions">
+      <button type="button" class="btn btn-primary" id="eSave">✓ 录入并保存</button>
+      <span class="fg-desc" id="eMsg"></span>
+    </div>
+  </div>
+</div>
+
+<script src="js/config.js?v=20260908"></script>
+<script src="js/monsters.js?v=20260908"></script>
+<script src="js/data.js?v=20260908"></script>
+<script src="js/app.js?v=20260908"></script>
 </body>
 </html>
