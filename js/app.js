@@ -499,9 +499,9 @@
       msg.textContent = '正在提交到 GitHub…';
       msg.style.color = 'var(--text-dim)';
       try {
-        var sha = await ghSave(content, token);
-        if (applyDataFromText(content)) update();
-        msg.textContent = '已保存 commit ' + sha.slice(0, 7) + '，约 1~2 分钟后线上更新（本页已即时显示）';
+        var res = await ghSaveRecords([rec], token);
+        if (applyDataFromText(res.text)) update();
+        msg.textContent = '已保存 commit ' + res.sha.slice(0, 7) + '，本页已即时更新；线上约 1~2 分钟后刷新可见（已自动刷新资源版本号）';
         msg.style.color = 'var(--good)';
         entryCtx = null;
       } catch (e) {
@@ -849,20 +849,29 @@
     }
     return btoa(bin);
   }
-  function ghContentsUrl() {
-    return 'https://api.github.com/repos/' + GH.owner + '/' + GH.repo + '/contents/' + GH.dataPath;
+  function ghApiOf(path) {
+    return 'https://api.github.com/repos/' + GH.owner + '/' + GH.repo + '/contents/' + path;
   }
-  async function ghSave(content, token) {
-    var headers = { Accept: 'application/vnd.github+json', Authorization: 'Bearer ' + token };
-    var res = await fetch(ghContentsUrl() + '?ref=' + GH.branch, { headers: headers });
-    var sha = null;
-    if (res.status === 200) sha = (await res.json()).sha;
-    else if (res.status !== 404) throw new Error('读取仓库文件失败（HTTP ' + res.status + '），请检查令牌权限');
-    var msg = '成绩更新（网页录入） ' + new Date().toISOString().slice(0, 10);
-    var body = JSON.stringify({ message: msg, content: ghB64(content), branch: GH.branch, sha: sha });
-    res = await fetch(ghContentsUrl(), {
+  async function ghRead(path, token) {
+    var res = await fetch(ghApiOf(path) + '?ref=' + GH.branch, {
+      headers: { Accept: 'application/vnd.github+json', Authorization: 'Bearer ' + token }
+    });
+    if (!res.ok) return null;               // 404=文件不存在；401/403 会在写入时报错
+    var j = await res.json();
+    var bin = atob(j.content);
+    var bytes = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    return { sha: j.sha, text: new TextDecoder().decode(bytes) };
+  }
+  async function ghPut(path, sha, content, message, token) {
+    var body = JSON.stringify({ message: message, content: ghB64(content), branch: GH.branch, sha: sha });
+    var res = await fetch(ghApiOf(path), {
       method: 'PUT',
-      headers: Object.assign(headers, { 'Content-Type': 'application/json' }),
+      headers: {
+        Accept: 'application/vnd.github+json',
+        Authorization: 'Bearer ' + token,
+        'Content-Type': 'application/json'
+      },
       body: body
     });
     if (!res.ok) {
@@ -872,16 +881,52 @@
     var j = await res.json();
     return j.commit ? j.commit.sha : '';
   }
-  function applyDataFromText(txt) {
+  /* 保存后自动给 index.html 换一个资源版本号，强制浏览器/缓存拉新数据 */
+  async function bumpVersion(token) {
+    try {
+      var meta = await ghRead('index.html', token);
+      if (!meta || !meta.text) return;
+      var stamp = 'v=' + Date.now();
+      var next = meta.text.replace(/\?v=\d+/g, '?' + stamp);
+      if (next === meta.text) return;
+      await ghPut('index.html', meta.sha, next, '自动刷新资源版本号', token);
+    } catch (e) { /* 版本号刷新失败不影响成绩本身 */ }
+  }
+  async function ghSave(content, token) {
+    var meta = await ghRead(GH.dataPath, token);
+    var sha = meta ? meta.sha : null;
+    var msg = '成绩更新（网页录入） ' + new Date().toISOString().slice(0, 10);
+    var newSha = await ghPut(GH.dataPath, sha, content, msg, token);
+    bumpVersion(token);   // 不等待，让版本号提交随后跟上
+    return newSha;
+  }
+  function parseArray(txt) {
     try {
       var start = txt.indexOf('['), end = txt.lastIndexOf(']');
-      if (start < 0 || end < 0) return false;
+      if (start < 0 || end < 0) return null;
       var arr = JSON.parse(txt.slice(start, end + 1));
-      if (!Array.isArray(arr)) return false;
-      RECORDS.length = 0;
-      Array.prototype.push.apply(RECORDS, arr);
-      return true;
-    } catch (e) { return false; }
+      return Array.isArray(arr) ? arr : null;
+    } catch (e) { return null; }
+  }
+  /* 合并式保存：先读远端最新数据，只追加/更新本次记录，避免覆盖此前提交 */
+  async function ghSaveRecords(delta, token) {
+    var remote = await ghRead(GH.dataPath, token);
+    var base = null;
+    if (remote && remote.text) base = parseArray(remote.text);
+    if (!base) base = RECORDS.slice();
+    var ids = {};
+    base.forEach(function (r) { ids[r.id] = 1; });
+    delta.forEach(function (r) { if (!ids[r.id]) { base.push(r); ids[r.id] = 1; } });
+    var text = serializeData(base);
+    var sha = await ghSave(text, token);
+    return { sha: sha, text: text };
+  }
+  function applyDataFromText(txt) {
+    var arr = parseArray(txt);
+    if (!arr) return false;
+    RECORDS.length = 0;
+    Array.prototype.push.apply(RECORDS, arr);
+    return true;
   }
 
   /* ================= 录入 ================= */
