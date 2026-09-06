@@ -34,13 +34,14 @@
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
       .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
+  /* 显示统一为 分'秒''百分秒，如 05'02''52 */
   function fmtTime(ms) {
-    if (!(ms >= 0)) return '--:--.--';
+    if (!(ms >= 0)) return "--'--''--";
     var cs = Math.floor(ms / 10);
     var m = Math.floor(cs / 6000);
     var s = Math.floor((cs % 6000) / 100);
     var c = cs % 100;
-    return m + ':' + String(s).padStart(2, '0') + '.' + String(c).padStart(2, '0');
+    return String(m).padStart(2, '0') + "'" + String(s).padStart(2, '0') + "''" + String(c).padStart(2, '0');
   }
   /* 宽松时间解析：5:47.33 / 5'47''33 / 5"47"33 / 5分47秒33 / 347.5 等 */
   function parseTime(str) {
@@ -260,7 +261,7 @@
 
     $('matrixTitle').innerHTML = '<b>' + esc(qtLabel(state.questType)) + '</b>' +
       (state.rule !== 'all' ? ' · ' + esc(ruleLabel(state.rule)) : '');
-    $('matrixSub').textContent = '每格只显示最快成绩，白色=三无，黄色=TA，红色=无限制，点怪物头像看全武器，点成绩格看该武器';
+    $('matrixSub').textContent = '每格只显示最快成绩，白色=三无规则，黄色=TA规则，红色=无限制规则，点怪物头像看全武器，点成绩格看该武器';
 
     pager.classList.toggle('hidden', pages <= 1);
     if (pages > 1) {
@@ -803,9 +804,9 @@
   }
   function normRule(v) {
     var low = String(v).trim().toLowerCase().replace(/\s+/g, '');
-    if (low === '三无' || low === 'sanyou') return 'sanyou';
+    if (low === '三无' || low === '三无规则' || low === 'sanyou') return 'sanyou';
     if (low === 'ta规则' || low === 'ta' || low === 'tarules') return 'ta';
-    if (low === '无限制' || low === 'free' || low === '不限' || low === 'freestyle') return 'free';
+    if (low === '无限制' || low === '无限制规则' || low === 'free' || low === '不限' || low === 'freestyle') return 'free';
     return null;
   }
   function parseImportLines(text) {
@@ -815,8 +816,8 @@
       var ln = idx + 1;
       if (!line.trim()) return;
       if (/^\s*[#/]/.test(line)) return;
-      var f = line.split(',').map(function (s) { return s.trim(); });
-      if (f.length < 8) { errors.push('第 ' + ln + ' 行：字段不足（至少 8 项）'); return; }
+      var f = line.split(/[,，]/).map(function (s) { return s.trim(); });
+      if (f.length < 8) { errors.push('第 ' + ln + ' 行：字段不足（至少 8 项，中英文逗号均可分隔）'); return; }
       var mid = normMonster(f[0]);
       if (!mid) { errors.push('第 ' + ln + ' 行：找不到怪物 “' + f[0] + '”'); return; }
       var wid = normWeapon(f[1]);
@@ -828,7 +829,7 @@
       var rule = normRule(f[4]);
       if (!rule) { errors.push('第 ' + ln + ' 行：规则无法识别 “' + f[4] + '”'); return; }
       var ms = parseTime(f[5]);
-      if (ms == null) { errors.push('第 ' + ln + ' 行：用时识别失败 “' + f[5] + '”（支持 5:47.33、5\'47\'\'33 等）'); return; }
+      if (ms == null) { errors.push('第 ' + ln + ' 行：用时识别失败 “' + f[5] + '”（支持 05\'02\'\'52 或 5:47.33 等写法）'); return; }
       var date = normDate(f[7]);
       if (!date) { errors.push('第 ' + ln + ' 行：日期识别失败 “' + f[7] + '”（支持 2026-9-6 / 2026.09.06）'); return; }
       var rec = {
@@ -1101,7 +1102,7 @@
     ctx.fillStyle = C.dim;
     ctx.font = '10px "Microsoft YaHei", sans-serif';
     ctx.textAlign = 'left';
-    ctx.fillText('白色=三无 · 黄色=TA · 红色=无限制 · 同格有更早成绩时右下角显示历史数', pad, gy + gridH + 18);
+    ctx.fillText('白色=三无规则 · 黄色=TA规则 · 红色=无限制规则 · 同格有更早成绩时右下角显示历史数', pad, gy + gridH + 18);
     ctx.textAlign = 'right';
     ctx.fillText('MHRS 竞速成绩库 · @星空柠檬凛', W - pad, gy + gridH + 18);
 
@@ -1138,6 +1139,10 @@
     $('exportBtn').addEventListener('click', function () {
       exportMatrixImage();
     });
+    var rModal = $('rulesModal');
+    $('rulesBtn').addEventListener('click', function () { rModal.classList.remove('hidden'); });
+    $('rulesClose').addEventListener('click', function () { rModal.classList.add('hidden'); });
+    rModal.addEventListener('click', function (e) { if (e.target === rModal) rModal.classList.add('hidden'); });
     setupImport();
     update();
   }

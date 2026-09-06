@@ -42,11 +42,11 @@ window.MHRS_CONFIG = {
    * ---------------------------------------------- */
   exStars: ['EX1', 'EX2', 'EX3', 'EX4', 'EX5', 'EX6', 'EX7', 'EX8', 'EX9', 'Apex'],
 
-  /* ---- 狩猎规则（单选；默认“不限”） ---- */
+  /* ---- 狩猎规则（单选；默认“全部”） ---- */
   rules: [
-    { id: 'sanyou', label: '三无' },
+    { id: 'sanyou', label: '三无规则' },
     { id: 'ta',     label: 'TA规则' },
-    { id: 'free',   label: '无限制' }
+    { id: 'free',   label: '无限制规则' }
   ],
 
   /* ---- 14 种武器（矩阵纵轴；file 指向 weapons/ 下的图标文件） ---- */

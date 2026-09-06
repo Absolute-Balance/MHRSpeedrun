@@ -58,6 +58,7 @@
 
   <div class="filter-actions">
     <button type="button" class="btn btn-ghost" id="resetBtn">恢复默认</button>
+    <button type="button" class="btn btn-ghost" id="rulesBtn">📜 收录规则</button>
     <span class="spacer"></span>
     <span class="fg-desc" id="filterSummary"></span>
     <button type="button" class="btn btn-primary" id="exportBtn" disabled title="把当前筛选出的表格（怪物/任务 × 14 武器）导出为 PNG 图片">⤓ 导出表格图片</button>
@@ -97,10 +98,6 @@
   </div>
 </section>
 
-<footer class="site-foot wrap">
-  <p>数据文件：<code>js/data.js</code> · 怪物映射：<code>js/monsters.js</code>（由 <code>data/monster-order.json</code> + <code>tools/scan-monsters.js</code> 生成）· 说明见 <code>README.md</code></p>
-</footer>
-
 <!-- ================= 录入弹窗 ================= -->
 <div class="modal-mask hidden" id="importModal">
   <div class="modal">
@@ -108,9 +105,9 @@
       <b>录入成绩（生成新的 js/data.js）</b>
       <button type="button" class="btn btn-ghost" id="importClose">✕</button>
     </div>
-    <p class="fg-desc">每行一条，用半角逗号分隔：怪物, 武器, 任务类型, EX星级或烈祸任务, 规则, 用时, 作者, 日期[, 视频网址][, 备注]。用时支持 5:47.33 / 5'47''33 等写法，日期 2026-9-6 或 2026-09-06 均可；平台默认 Steam（可在数据里改）。</p>
-    <pre class="hint">雪鬼兽, 大剑, 特别探究, EX4, 三无, 6'57''52, 鬼畜茶走, 2026-8-29, https://www.bilibili.com/video/BV1Zv4C6HEPx
-怪异克服天彗龙, 弓, 特别探究, EX9, 无限制, 7:58.02, 玩家B, 2025-01-11, https://www.youtube.com/watch?v=xxxx, 备注文字</pre>
+    <p class="fg-desc">每行一条，中英文逗号均可分隔：怪物, 武器, 任务类型, EX星级或烈祸任务, 规则, 用时, 作者, 日期[, 视频网址][, 备注]。用时按 05'02''52（分'秒''百分秒）填写，也接受 5:47.33 等写法；日期 2026-9-6 或 2026-09-06 均可；平台默认 Steam（后续可在数据中修改）。</p>
+    <pre class="hint">激昂金狮子，单手剑，怪异探究Lv300，EX7，三无规则，04'52''00，Rabiden，2026-09-04，https://www.bilibili.com/video/BV1zctv6qE2h
+雪鬼兽, 大剑, 特别探究, EX4, 三无规则, 06'57''52, 鬼畜茶走, 2026-8-29, https://www.bilibili.com/video/BV1Zv4C6HEPx</pre>
     <textarea id="impInput" rows="8" spellcheck="false" placeholder="在这里粘贴多条成绩…"></textarea>
     <div class="modal-actions">
       <button type="button" class="btn btn-primary" id="impParse">校验并生成</button>
@@ -126,6 +123,28 @@
       <button type="button" class="btn btn-primary" id="impDownload">仅下载 data.js</button>
       <button type="button" class="btn btn-ghost" id="impCopy">复制全部</button>
       <span class="fg-desc">令牌获取：GitHub → Settings → Developer settings → Fine-grained personal access tokens（勾选本仓库 Contents 读写），只存在你的浏览器里。</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 收录规则弹窗 ================= -->
+<div class="modal-mask hidden" id="rulesModal">
+  <div class="modal modal-narrow">
+    <div class="modal-head">
+      <b>成绩收录规则</b>
+      <button type="button" class="btn btn-ghost" id="rulesClose">✕</button>
+    </div>
+    <ul class="rules-list">
+      <li>只收录录制相对完整的片。</li>
+      <li>只录入了国内玩家的成绩。</li>
+      <li>未展示装备和技能的片不录入。</li>
+      <li>装备有“不合法”炼化的不录入。</li>
+      <li>使用了一些影响局内 MOD 的片不录入（例如显血、彩鬼火鸟MOD等）。</li>
+      <li>有过“恶性老金”事迹玩家的片不录入。</li>
+      <li>未开伤害显示的片不录入。</li>
+    </ul>
+    <div class="modal-actions">
+      <span class="fg-desc">发现不符合规则的收录请告知维护者。</span>
     </div>
   </div>
 </div>

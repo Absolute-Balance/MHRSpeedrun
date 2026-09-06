@@ -13,7 +13,7 @@
  *   rule        狩猎规则: 'sanyou'三无 | 'ta'TA规则 | 'free'无限制
  *   monsterId   怪物 id（见 js/monsters.js，m01~m68）
  *   weaponId    武器 id（见 js/config.js，如 'ls' 太刀、'db' 双剑）
- *   timeMs      用时（毫秒）；显示自动格式化为 分:秒.百分秒
+ *   timeMs      用时（毫秒）；页面统一显示为 分'秒''百分秒，如 05'02''52
  *   author      作者
  *   date        成绩日期 'YYYY-MM-DD'
  *   videos      视频链接数组：[{site, url, title}]  site: 'bilibili'|'youtube'|'other'

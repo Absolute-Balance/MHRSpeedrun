@@ -340,6 +340,9 @@ code { background: rgba(255,255,255,.06); padding: 1px 5px; border-radius: 4px; 
 .ghbar input:focus { border-color: var(--sel-border); }
 .modal-mask { position: fixed; inset: 0; background: rgba(6,6,9,.8); display: flex; align-items: flex-start; justify-content: center; padding: 40px 16px; z-index: 50; }
 .modal { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; width: 860px; max-width: 100%; padding: 16px 18px; }
+.modal-narrow { width: 560px; }
+.rules-list { margin: 8px 4px 14px 22px; padding: 0; color: var(--text); font-size: 14px; line-height: 1.8; }
+.rules-list li::marker { color: var(--accent-hi); }
 .modal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
 .modal textarea {
   width: 100%; background: #101117; color: var(--text); border: 1px solid var(--line);
