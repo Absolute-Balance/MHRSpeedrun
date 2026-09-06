@@ -265,6 +265,54 @@ code { background: rgba(255,255,255,.06); padding: 1px 5px; border-radius: 4px; 
 .hrow .h-arr { font-size: 11px; color: var(--text-dim); transition: transform .2s; text-align: center; }
 .hrow.open .h-arr { transform: rotate(90deg); }
 
+/* 玩家链接（可点击作者名） */
+.pa {
+  cursor: pointer;
+  text-decoration: underline dotted rgba(151, 149, 158, .65);
+  text-underline-offset: 2px;
+  transition: color .12s;
+}
+.pa:hover { color: var(--accent-hi); text-decoration-color: var(--accent-hi); }
+
+/* ---------- 玩家页 ---------- */
+.p-avatar {
+  width: 56px; height: 56px; border-radius: 50%; flex: none;
+  background: linear-gradient(135deg, var(--btn-grad1), var(--btn-grad2));
+  color: #fff; font-size: 24px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 0 3px rgba(214, 90, 78, .25);
+}
+.pv-headrow {
+  display: grid; grid-template-columns: 92px 84px 150px 1fr 118px 62px 20px;
+  gap: 8px; align-items: center; padding: 2px 12px 4px; margin-bottom: 4px;
+  color: var(--text-dim); font-size: 11.5px; letter-spacing: 1px;
+  border-bottom: 1px solid var(--line);
+}
+.pv-headrow .h-w, .pv-headrow .h-m { font-weight: 700; color: var(--text); }
+.prow {
+  display: grid; grid-template-columns: 92px 84px 150px 1fr 118px 62px 20px;
+  gap: 8px; align-items: center; padding: 5px 12px; margin-bottom: 5px;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+  cursor: pointer; transition: border-color .15s, background .15s;
+}
+.prow:hover { border-color: var(--sel-border); background: rgba(214, 90, 78, .03); }
+.prow.open { border-color: var(--sel-border); }
+.prow .p-date { font-size: 12px; color: var(--text-dim); }
+.prow .p-w, .prow .p-m { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.prow .p-w img, .prow .p-m img { width: 22px; height: 22px; object-fit: contain; flex: none; }
+.prow .p-w span, .prow .p-m span {
+  font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.prow .p-q {
+  font-size: 12px; color: var(--text-dim); overflow: hidden;
+  text-overflow: ellipsis; white-space: nowrap;
+}
+.prow .tm { font-size: 15px; }
+.prow .tag { font-size: 10.5px; padding: 1px 6px; text-align: center; }
+.prow .p-arr { font-size: 11px; color: var(--text-dim); text-align: center; transition: transform .2s; }
+.prow.open .p-arr { transform: rotate(90deg); }
+.prow.open + .detail-box { display: block; }
+
 /* 展开详情 */
 .detail-box {
   display: none; background: var(--panel-2); border: 1px solid var(--line); border-top: none;
@@ -307,4 +355,6 @@ code { background: rgba(255,255,255,.06); padding: 1px 5px; border-radius: 4px; 
   .mv-headrow, .mv-row { grid-template-columns: 40px 110px 130px 1fr 18px; }
   .mv-row .mv-date, .mv-headrow .h-date { display: none; }
   .hrow { grid-template-columns: 120px 1fr 90px 20px; }
+  .pv-headrow, .prow { grid-template-columns: 86px 80px 1fr 110px 52px 18px; }
+  .pv-headrow .h-m, .prow .p-m, .pv-headrow .h-q, .prow .p-q { display: none; }
 }

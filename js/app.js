@@ -22,8 +22,8 @@
     exSel: new Set(),
     rule: 'all',
     page: 1,
-    view: 'matrix',              // matrix | monster | weapon
-    scope: { mid: null, wid: null, quest: null }
+    view: 'matrix',              // matrix | monster | weapon | player
+    scope: { mid: null, wid: null, quest: null, player: null }
   };
   var expandedIds = new Set();
 
@@ -290,7 +290,7 @@
           inner += '<span class="rg">' + esc(ruleLabel(best.rule)) + '</span>';
         }
         inner += '</div>';
-        inner += '<div class="line2"><span class="mxauthor">' + esc(best.author) + '</span>' +
+        inner += '<div class="line2"><span class="mxauthor pa" data-p="' + esc(best.author) + '" title="查看该玩家全部成绩">' + esc(best.author) + '</span>' +
           (recs.length > 1 ? '<span class="mxmore">历史 ' + (recs.length - 1) + '</span>' : '') + '</div>';
         html += '<div class="mx-cell" data-mid="' + it.monster.id + '" data-quest="' +
           (it.kind === 'raging' ? it.quest.id : '') + '" data-wid="' + w.id + '">' + inner + '</div>';
@@ -309,6 +309,12 @@
         openView('weapon', { mid: el.dataset.mid, wid: el.dataset.wid, quest: el.dataset.quest || null });
       });
     });
+    grid.querySelectorAll('.pa[data-p]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.stopPropagation();
+        openPlayer(el.dataset.p);
+      });
+    });
   }
 
   /* ================= 视图切换 ================= */
@@ -318,21 +324,42 @@
     state.scope = {
       mid: scope.mid || null,
       wid: scope.wid || null,
-      quest: scope.quest || null
+      quest: scope.quest || null,
+      player: state.scope.player || null
     };
     update();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
-  function goBack() {
-    if (state.view === 'weapon' && state.prev === 'monster') {
-      state.view = 'monster';
-      state.scope.wid = null;
-    } else {
-      state.view = 'matrix';
-      state.scope = { mid: null, wid: null, quest: null };
-    }
-    state.prev = 'matrix';
+  function openPlayer(name) {
+    if (!name) return;
+    state.prev = state.view;
+    state.view = 'player';
+    state.scope.player = name;
     update();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  function goBack() {
+    var target = 'matrix';
+    if (state.view === 'weapon' && state.prev === 'monster' && state.scope.mid) {
+      target = 'monster';
+    } else if (state.view === 'player') {
+      if (state.prev === 'weapon' && state.scope.mid && state.scope.wid) target = 'weapon';
+      else if (state.prev === 'monster' && state.scope.mid) target = 'monster';
+    }
+    state.view = target;
+    state.prev = 'matrix';
+    if (target === 'matrix') state.scope = { mid: null, wid: null, quest: null, player: null };
+    else if (target === 'monster') state.scope.wid = null;
+    update();
+  }
+  function backLabel() {
+    if (state.view === 'player') {
+      if (state.prev === 'weapon' && state.scope.mid && state.scope.wid) return '← 返回武器页';
+      if (state.prev === 'monster' && state.scope.mid) return '← 返回怪物页';
+      return '← 返回矩阵';
+    }
+    if (state.view === 'weapon' && state.prev === 'monster') return '← 返回怪物页';
+    return '← 返回矩阵';
   }
   function commonHead(m) {
     var tags = '<span class="tag qt-' + esc(state.questType) + '">' + esc(qtLabel(state.questType)) + '</span>';
@@ -356,8 +383,81 @@
       $('backBtn').classList.add('hidden');
     } else {
       $('backBtn').classList.remove('hidden');
-      $('backBtn').textContent = (kind === 'weapon' && state.prev === 'monster') ? '← 返回怪物页' : '← 返回矩阵';
+      $('backBtn').textContent = backLabel();
     }
+  }
+  function bindAuthorClicks(container) {
+    if (!container) return;
+    container.querySelectorAll('.pa[data-p]').forEach(function (el) {
+      el.addEventListener('click', function (e) {
+        e.stopPropagation();
+        openPlayer(el.dataset.p);
+      });
+    });
+  }
+
+  /* ================= 玩家页（按日期时间线） ================= */
+  function renderPlayerView() {
+    var pname = state.scope.player;
+    if (!pname) { state.view = 'matrix'; update(); return; }
+    showArea('player');
+
+    var all = RECORDS.filter(function (r) { return r.author === pname; })
+      .sort(function (a, b) {
+        return a.date < b.date ? 1 : a.date > b.date ? -1 : a.timeMs - b.timeMs;
+      });
+    var wset = new Set();
+    all.forEach(function (r) { wset.add(r.weaponId); });
+
+    var initial = Array.from(pname)[0] || '?';
+    var tags = '<span class="tag">成绩 ' + all.length + ' 条</span>' +
+      '<span class="tag">武器 ' + wset.size + ' 种</span>';
+    $('detailSummary').innerHTML = '共 <b>' + all.length + '</b> 条成绩（按日期新→旧）';
+    $('detailHead').innerHTML =
+      '<div class="p-avatar">' + esc(initial) + '</div>' +
+      '<div class="dtitle"><h2>' + esc(pname) + '</h2>' +
+      '<div class="dmeta">玩家成绩时间线 · 点击行展开视频与详情</div></div>' +
+      '<div class="ctx-tags">' + tags + '</div>';
+
+    var html = '<div class="pv-headrow"><span class="h-date">日期</span>' +
+      '<span class="h-w">武器</span><span class="h-m">怪物</span>' +
+      '<span class="h-q">任务</span><span class="h-t">成绩</span>' +
+      '<span class="h-r">规则</span><span class="h-a"></span></div>';
+
+    if (!all.length) {
+      html += '<div class="wv-sub">该玩家暂无成绩。</div>';
+    } else {
+      all.forEach(function (r) {
+        var m = mById[r.monsterId], w = wById[r.weaponId];
+        var open = expandedIds.has(r.id);
+        html += '<div class="prow' + (open ? ' open' : '') + '" data-id="' + esc(r.id) + '" role="button" tabindex="0">' +
+          '<span class="p-date">' + esc(r.date) + '</span>' +
+          '<span class="p-w" title="' + esc(w ? w.label : r.weaponId) + '">' +
+          '<img src="' + WEAPON_ICON + encodeURIComponent(w ? w.file : '') + '" alt="">' +
+          '<span>' + esc(w ? w.label : r.weaponId) + '</span></span>' +
+          '<span class="p-m" title="' + esc(m ? m.name : r.monsterId) + '">' +
+          '<img src="' + MONSTER_ICON + encodeURIComponent(m ? m.file : '') + '" alt="">' +
+          '<span>' + esc(m ? m.name : r.monsterId) + '</span></span>' +
+          '<span class="p-q">' + esc(questLabelOf(r)) + '</span>' +
+          '<span class="' + tmCls(r.rule) + '">' + fmtTime(r.timeMs) + '</span>' +
+          '<span class="tag rule-' + esc(r.rule) + '">' + esc(ruleLabel(r.rule)) + '</span>' +
+          '<span class="p-arr">▶</span>' +
+          '</div>';
+        html += '<div class="detail-box">' + recordDetailHTML(r) + '</div>';
+      });
+    }
+    var body = $('detailBody');
+    body.innerHTML = html;
+    body.querySelectorAll('.prow').forEach(function (row) {
+      row.addEventListener('click', function () {
+        var id = row.dataset.id;
+        var open = row.classList.toggle('open');
+        if (open) expandedIds.add(id); else expandedIds.delete(id);
+      });
+      row.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); row.click(); }
+      });
+    });
   }
 
   /* ================= 怪物页（全武器最快） ================= */
@@ -388,7 +488,7 @@
         '<span class="mv-name">' + esc(w.label) + '</span>';
       if (best) {
         html += '<span class="mv-time"><span class="' + tmCls(best.rule) + '">' + fmtTime(best.timeMs) + '</span></span>' +
-          '<span class="mv-author">' + esc(best.author) + (best.videos && best.videos.length ? ' 📹' : '') + '</span>' +
+          '<span class="mv-author pa" data-p="' + esc(best.author) + '" title="查看该玩家全部成绩">' + esc(best.author) + (best.videos && best.videos.length ? ' 📹' : '') + '</span>' +
           '<span class="mv-date">' + esc(best.date) + '</span>' +
           '<span class="mv-arr">›</span>';
       } else {
@@ -404,6 +504,7 @@
         openView('weapon', { mid: row.dataset.mid, wid: row.dataset.wid, quest: state.scope.quest || null });
       });
     });
+    bindAuthorClicks(body);
   }
 
   /* ================= 武器页（当前记录 + 历史） ================= */
@@ -467,7 +568,7 @@
       html += '<div class="cur-time' + (current.rule === 'ta' ? ' ta' : '') + '">' + fmtTime(current.timeMs) + '</div>';
       html += '<div class="cur-meta">';
       html += '<span class="k">规则</span><span>' + esc(ruleLabel(current.rule)) + '</span>';
-      html += '<span class="k">作者</span><span>' + esc(current.author) + '</span>';
+      html += '<span class="k">作者</span><span class="pa" data-p="' + esc(current.author) + '" title="查看该玩家全部成绩">' + esc(current.author) + '</span>';
       html += '<span class="k">日期</span><span>' + esc(current.date) + '</span>';
       html += '<span class="k">平台</span><span>' + esc(current.platform || '—') + '</span>';
       html += '</div>';
@@ -498,7 +599,7 @@
         var open = expandedIds.has(r.id);
         html += '<div class="hrow' + (open ? ' open' : '') + '" data-id="' + esc(r.id) + '" role="button" tabindex="0">' +
           '<span class="' + tmCls(r.rule) + '">' + fmtTime(r.timeMs) + '</span>' +
-          '<span class="h-author">' + esc(r.author) + '</span>' +
+          '<span class="h-author pa" data-p="' + esc(r.author) + '" title="查看该玩家全部成绩">' + esc(r.author) + '</span>' +
           '<span class="h-date">' + esc(r.date) + '</span>' +
           '<span class="h-arr">▶</span>' +
           '</div>';
@@ -517,6 +618,7 @@
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); row.click(); }
       });
     });
+    bindAuthorClicks(body);
   }
 
   /* ================= 总刷新 ================= */
@@ -526,7 +628,8 @@
     syncExUI();
     renderCond();
     $('filterSummary').textContent = summaryText();
-    if (state.view === 'monster') renderMonsterView();
+    if (state.view === 'player') renderPlayerView();
+    else if (state.view === 'monster') renderMonsterView();
     else if (state.view === 'weapon') renderWeaponView();
     else renderMatrix();
     updateExportState();
@@ -547,7 +650,7 @@
     state.rule = 'all';
     state.page = 1;
     state.view = 'matrix';
-    state.scope = { mid: null, wid: null, quest: null };
+    state.scope = { mid: null, wid: null, quest: null, player: null };
     expandedIds.clear();
     update();
   }
@@ -565,6 +668,8 @@
       } else if (state.view === 'weapon' && mById[state.scope.mid] && wById[state.scope.wid]) {
         p.set('v', 'weapon'); p.set('mid', state.scope.mid); p.set('wid', state.scope.wid);
         if (state.scope.quest) p.set('q', state.scope.quest);
+      } else if (state.view === 'player' && state.scope.player) {
+        p.set('v', 'player'); p.set('p', state.scope.player);
       }
       var qs = p.toString();
       history.replaceState(null, '', qs ? '?' + qs : location.pathname);
@@ -581,7 +686,10 @@
       if (CFG.rules.some(function (r) { return r.id === rl; })) state.rule = rl;
       var v = p.get('v');
       var mid = p.get('mid');
-      if (mById[mid] && (v === 'monster' || v === 'weapon')) {
+      if (v === 'player') {
+        var pn = p.get('p');
+        if (pn) { state.view = 'player'; state.scope.player = pn; }
+      } else if (mById[mid] && (v === 'monster' || v === 'weapon')) {
         state.view = v;
         state.scope.mid = mid;
         state.scope.quest = p.get('q') || null;

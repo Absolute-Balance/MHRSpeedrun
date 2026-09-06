@@ -55,6 +55,15 @@ window.MHRS_RECORDS = [
     platform: 'pc', note: '历史记录：3\'55"15'
   },
 
+  /* ---- 真实成绩示例 3（鬼畜茶走 · 雪鬼兽 三无 大剑）---- */
+  {
+    id: 'real-005', questType: 'special', quest: null, exStar: 'EX4',
+    rule: 'sanyou', monsterId: 'm30', weaponId: 'gs', timeMs: 417520,
+    author: '鬼畜茶走', date: '2026-08-29',
+    videos: [{ site: 'bilibili', url: 'https://www.bilibili.com/video/BV1Zv4C6HEPx', title: '6分台达成 流斩大剑 特别探究：雪鬼兽 6\'57\'\'52 三无规则' }],
+    platform: 'pc', note: ''
+  },
+
   /* ---- 以下为演示/示例数据，正式使用前请删除或替换 ---- */
   {
     id: 'demo-001', questType: 'raging', quest: 'q01', exStar: null,
