@@ -42,6 +42,16 @@ code { background: rgba(255,255,255,.06); padding: 1px 5px; border-radius: 4px; 
 
 /* ---------- 头部 ---------- */
 .site-head { padding: 26px 0 18px; border-bottom: 1px solid var(--line); }
+.head-bar { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
+.head-main { min-width: 0; }
+.user-home {
+  color: #40e0d0; font-size: 15px; font-weight: 700; text-decoration: none;
+  padding: 4px 12px; border: 1px solid #40e0d055; border-radius: 999px;
+  background: rgba(64, 224, 208, .07); transition: background .15s, border-color .15s;
+  white-space: nowrap;
+}
+.user-home:hover { background: rgba(64, 224, 208, .16); border-color: #40e0d0; }
+.user-home::before { content: 'B站·'; font-size: 11px; color: #7fbfba; }
 .site-head h1 {
   margin: 0; font-size: 26px; letter-spacing: 2px;
   background: linear-gradient(90deg, var(--accent-hi), var(--btn-grad2));

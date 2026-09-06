@@ -529,6 +529,7 @@
     if (state.view === 'monster') renderMonsterView();
     else if (state.view === 'weapon') renderWeaponView();
     else renderMatrix();
+    updateExportState();
     persistState();
   }
   function summaryText() {
@@ -751,6 +752,199 @@
     });
   }
 
+  /* ================= 导出矩阵图片（PNG） ================= */
+  function loadImg(src) {
+    return new Promise(function (resolve) {
+      var img = new Image();
+      img.onload = function () { resolve(img); };
+      img.onerror = function () { resolve(null); };
+      img.src = src;
+    });
+  }
+  function rrect(ctx, x, y, w, h, r) {
+    if (ctx.roundRect) { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); ctx.fill(); return; }
+    ctx.fillRect(x, y, w, h);
+  }
+  function fitText(ctx, text, maxW) {
+    if (ctx.measureText(text).width <= maxW) return text;
+    var s = text;
+    while (s.length > 1 && ctx.measureText(s + '…').width > maxW) s = s.slice(0, -1);
+    return s + '…';
+  }
+  async function exportMatrixImage() {
+    var msg = $('exportMsg');
+    var axis = buildAxis();
+    if (!axis || !state.questType) {
+      msg.textContent = '请先选择任务类型（探究类还需勾选 EX 星级）';
+      return;
+    }
+    msg.textContent = '正在生成图片…';
+    var weapons = CFG.weapons;
+
+    /* 布局 */
+    var pad = 16, leadW = 66, colW = 126, headH = 88, rowH = 56, topH = 64, footH = 26;
+    var gridH = headH + weapons.length * rowH;
+    var W = pad * 2 + leadW + axis.length * colW;
+    var H = pad + topH + gridH + footH + pad;
+
+    var canvas = document.createElement('canvas');
+    var SC = 2;
+    canvas.width = W * SC;
+    canvas.height = H * SC;
+    var ctx = canvas.getContext('2d');
+    ctx.scale(SC, SC);
+
+    /* 图标加载 */
+    var jobs = [];
+    axis.forEach(function (it) {
+      jobs.push(loadImg(MONSTER_ICON + encodeURIComponent(it.monster.file)).then(function (im) { it._img = im; }));
+    });
+    weapons.forEach(function (w) {
+      jobs.push(loadImg(WEAPON_ICON + encodeURIComponent(w.file)).then(function (im) { w._img = im; }));
+    });
+    await Promise.all(jobs);
+
+    var C = { bg: '#141519', panel: '#1c1d24', panel2: '#23252e', cell: '#16171e',
+      line: '#2c2e38', text: '#e6e4de', dim: '#97959e', ta: '#f2c14e', def: '#efece4',
+      gold: '#f2c14e', purple: '#b98cff', crimson: '#ef7a68' };
+
+    ctx.fillStyle = C.bg;
+    ctx.fillRect(0, 0, W, H);
+
+    /* 顶部标题区 */
+    var qtName = qtLabel(state.questType);
+    var starText = state.questType === 'raging' ? '' :
+      (state.exSel.size ? ' · ' + Array.from(state.exSel).sort().join(' + ') : '');
+    ctx.textAlign = 'left';
+    ctx.textBaseline = 'alphabetic';
+    ctx.font = '700 17px "Microsoft YaHei", sans-serif';
+    ctx.fillStyle = C.text;
+    ctx.fillText(qtName + starText + ' 成绩矩阵', pad, pad + 22);
+    ctx.font = '11px "Microsoft YaHei", sans-serif';
+    ctx.fillStyle = C.dim;
+    var sub = axis.length + (state.questType === 'raging' ? ' 个烈祸袭来任务' : ' 只怪物') + ' × ' +
+      weapons.length + ' 种武器 · ' + (state.rule === 'all' ? '规则不限（每格=最新最快）' : '规则：' + ruleLabel(state.rule));
+    ctx.fillText(sub, pad, pad + 40);
+    ctx.textAlign = 'right';
+    var today = new Date();
+    ctx.fillText(today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0'), W - pad, pad + 22);
+
+    /* 矩阵主体 */
+    var gx = pad, gy = pad + topH;
+    ctx.fillStyle = C.panel;
+    rrect(ctx, gx, gy, leadW + axis.length * colW, gridH, 10);
+
+    /* 表头行 */
+    var cornerX = gx, weaponColX = gx + leadW;
+    ctx.fillStyle = C.panel2;
+    rrect(ctx, cornerX, gy, leadW, headH, 8);
+    ctx.fillStyle = C.dim;
+    ctx.font = '10.5px "Microsoft YaHei", sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('武 器', cornerX + leadW / 2, gy + headH / 2 + 4);
+    axis.forEach(function (it, i) {
+      var x = weaponColX + i * colW;
+      ctx.fillStyle = C.panel2;
+      rrect(ctx, x, gy, colW, headH, 8);
+      var cy = gy + 4;
+      if (it.kind === 'ex') {
+        var bw = it.ex === 'Apex' ? 44 : 38;
+        ctx.fillStyle = it.ex === 'Apex' ? C.purple : C.gold;
+        rrect(ctx, x + (colW - bw) / 2, cy, bw, 15, 4);
+        ctx.fillStyle = '#180f2e';
+        ctx.font = '700 9px "Microsoft YaHei", sans-serif';
+        ctx.fillText(it.ex, x + colW / 2, cy + 11.5);
+        cy += 19;
+      }
+      if (it._img) {
+        var s = 38;
+        ctx.drawImage(it._img, x + (colW - s) / 2, cy, s, s);
+        cy += s;
+      }
+      ctx.fillStyle = C.dim;
+      ctx.font = '10px "Microsoft YaHei", sans-serif';
+      var label = it.kind === 'raging' ? it.quest.shortLabel : it.monster.name;
+      ctx.fillText(fitText(ctx, label, colW - 10), x + colW / 2, gy + headH - 8);
+    });
+
+    /* 行：武器 + 成绩格 */
+    weapons.forEach(function (w, ri) {
+      var y = gy + headH + ri * rowH;
+      ctx.fillStyle = C.panel2;
+      rrect(ctx, cornerX, y, leadW, rowH, 6);
+      if (w._img) {
+        var s = 24;
+        ctx.drawImage(w._img, cornerX + (leadW - s) / 2, y + 6, s, s);
+      }
+      ctx.fillStyle = C.dim;
+      ctx.font = '10px "Microsoft YaHei", sans-serif';
+      ctx.textAlign = 'center';
+      ctx.fillText(w.label, cornerX + leadW / 2, y + rowH - 8);
+
+      axis.forEach(function (it, ci) {
+        var x = weaponColX + ci * colW;
+        var recs = bracketRecords(it, w.id);
+        ctx.fillStyle = C.cell;
+        ctx.fillRect(x, y, colW, rowH);
+        if (!recs.length) return;
+        var best = bestOf(recs);
+        /* 时间 */
+        ctx.textAlign = 'left';
+        ctx.font = '700 15px Consolas, Menlo, monospace';
+        ctx.fillStyle = best.rule === 'ta' ? C.ta : C.def;
+        var timeW = ctx.measureText(fmtTime(best.timeMs)).width;
+        var tx = x + 8;
+        ctx.fillText(fmtTime(best.timeMs), tx, y + 23);
+        /* 规则小标 */
+        if (state.rule === 'all') {
+          var rl = ruleLabel(best.rule);
+          ctx.font = '9px "Microsoft YaHei", sans-serif';
+          var rw = ctx.measureText(rl).width + 8;
+          ctx.fillStyle = C.dim;
+          ctx.fillText(rl, tx + timeW + 6, y + 23);
+        }
+        /* 作者 */
+        ctx.font = '10px "Microsoft YaHei", sans-serif';
+        ctx.fillStyle = C.dim;
+        var auth = fitText(ctx, best.author, colW - 16);
+        ctx.fillText(auth, tx, y + 41);
+        /* 历史标记 */
+        if (recs.length > 1) {
+          ctx.textAlign = 'right';
+          var his = '历史 ' + (recs.length - 1);
+          ctx.fillText(his, x + colW - 8, y + 41);
+          ctx.textAlign = 'left';
+        }
+      });
+    });
+
+    /* 图例 + 页脚 */
+    ctx.fillStyle = C.dim;
+    ctx.font = '10px "Microsoft YaHei", sans-serif';
+    ctx.textAlign = 'left';
+    ctx.fillText('黄色=TA规则 · 白色=其他规则 · 同格存在更早成绩时右下角显示历史数', pad, gy + gridH + 18);
+    ctx.textAlign = 'right';
+    ctx.fillText('MHRS 竞速成绩库 · @星空柠檬凛', W - pad, gy + gridH + 18);
+
+    canvas.toBlob(function (blob) {
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      var fn = qtLabel(state.questType).replace(/[\s/\\:：]/g, '');
+      a.download = fn + '-矩阵.png';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 300);
+      msg.textContent = '已导出 ' + axis.length + ' 列 × ' + weapons.length + ' 行 PNG（列数过多时图片较宽，请横向查看）';
+    }, 'image/png');
+  }
+  function updateExportState() {
+    var btn = $('exportBtn');
+    var ok = state.view === 'matrix' && !!state.questType &&
+      (state.questType === 'raging' || state.exSel.size > 0);
+    btn.disabled = !ok;
+    if (!ok) $('exportMsg').textContent = '';
+  }
+
   /* ================= 初始化 ================= */
   function init() {
     document.title = CFG.siteTitle;
@@ -762,6 +956,9 @@
     renderExUI();
     $('resetBtn').addEventListener('click', resetAll);
     $('backBtn').addEventListener('click', goBack);
+    $('exportBtn').addEventListener('click', function () {
+      exportMatrixImage();
+    });
     setupImport();
     update();
   }
