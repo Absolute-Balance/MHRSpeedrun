@@ -52,7 +52,7 @@ window.MHRS_RECORDS = [
     "rule": "sanyou",
     "monsterId": "m57",
     "weaponId": "sns",
-    "timeMs": 5878000,
+    "timeMs": 355780,
     "author": "-橘-孜-",
     "date": "2026-06-05",
     "videos": [
