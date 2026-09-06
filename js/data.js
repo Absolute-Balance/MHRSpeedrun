@@ -427,5 +427,26 @@ window.MHRS_RECORDS = [
     ],
     "platform": "steam",
     "note": ""
+  },
+  {
+    "id": "rmtq07ffj",
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m11",
+    "weaponId": "gl",
+    "timeMs": 308000,
+    "author": "杞柳木昔_",
+    "date": "2026-09-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1gCtB6vEfM",
+        "title": ""
+      }
+    ],
+    "platform": "steam",
+    "note": ""
   }
 ];
