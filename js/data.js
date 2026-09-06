@@ -170,5 +170,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtq30r6d"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m57",
+    "weaponId": "ig",
+    "timeMs": 371470,
+    "author": "玛修推",
+    "date": "2025-01-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1VfweeEEu5",
+        "title": "【MHRS/生庆】 操虫棍 特别探究: 怪异克服天彗龙 6'11''47 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtq32o0p"
   }
 ];
