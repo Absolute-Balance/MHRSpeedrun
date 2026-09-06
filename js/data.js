@@ -191,5 +191,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtq32o0p"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m57",
+    "weaponId": "lbg",
+    "timeMs": 270400,
+    "author": "灼眼の冷面魔男",
+    "date": "2023-11-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1gc41167Nb",
+        "title": "【MHRS】全新流派属性轻弩 特别探究：天彗龙 4'30''40 三无/TA＋怪异炼成"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtq345rn"
   }
 ];
