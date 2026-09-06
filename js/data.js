@@ -149,5 +149,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtq2wxkz"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m57",
+    "weaponId": "cb",
+    "timeMs": 270590,
+    "author": "K----J",
+    "date": "2024-10-13",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1BK2qY4EWs",
+        "title": "【极致打\"点\"】盾斧 三无规则 4'30\"59 特别探究:怪异克服天彗龙 MHRS"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtq30r6d"
   }
 ];
