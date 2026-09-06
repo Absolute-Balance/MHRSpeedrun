@@ -128,5 +128,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtq2p44n"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m57",
+    "weaponId": "sa",
+    "timeMs": 288000,
+    "author": "20guns_",
+    "date": "2026-06-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1pF7j6FEtx",
+        "title": "【MHRS】斩斧 特别探究：怪异克服天彗龙 4分48秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtq2wxkz"
   }
 ];
