@@ -43,31 +43,30 @@
     var c = cs % 100;
     return String(m).padStart(2, '0') + "'" + String(s).padStart(2, '0') + "''" + String(c).padStart(2, '0');
   }
-  /* 宽松时间解析：5:47.33 / 5'47''33 / 4'58"08 / 5分47秒33 等。
-   * 关键：保留原始数字串判断位数（08=百分秒80ms，不能转成8按十分位算）。
-   * 未写百分秒/毫秒的（如 3'40、47）按收录规则以 99 替代。 */
+  /* 宽松时间解析：5:47.33 / 5'47''33 / 5"47"33 / 5分47秒33 / 347.5 等 */
   function parseTime(str) {
     var t = String(str).trim().replace(/分/g, ':').replace(/秒/g, '');
     if (!t) return null;
-    var parts = t.split(/[^0-9]+/).filter(Boolean);   // 原始数字串，保留前导零
-    if (!parts.length) return null;
-    var nums = parts.map(Number);
+    var nums = t.split(/[^0-9]+/).filter(Boolean).map(Number);
+    if (!nums.length) return null;
     var sepChars = t.replace(/[0-9]+/g, '').replace(/\s+/g, '');
     var firstSep = sepChars.charAt(0);
-    var isMinSep = firstSep === ':' || firstSep === "'" || firstSep === '′' || firstSep === '‘' || firstSep === '"' || firstSep === '”';
-    var fracMs = function (raw) {
-      if (raw.length >= 3) return +raw;        // 三位=毫秒
-      if (raw.length === 2) return (+raw) * 10; // 两位=百分秒（08 → 80ms）
-      return (+raw) * 100;                     // 一位=十分之一秒
+    var fracMs = function (n) {
+      var s = String(n);
+      if (s.length >= 3) return n;          // 毫秒
+      if (s.length === 2) return n * 10;    // 百分秒
+      return n * 100;                       // 十分之一秒
     };
-    if (parts.length >= 3) {
-      return (nums[0] * 60 + nums[1]) * 1000 + fracMs(parts[2]);
+    if (nums.length >= 3) {
+      return (nums[0] * 60 + nums[1]) * 1000 + fracMs(nums[2]);
     }
-    if (parts.length === 2) {
-      if (isMinSep) return (nums[0] * 60 + nums[1]) * 1000 + 990;  // 分:秒（无百分秒 → 默认99）
-      return nums[0] * 1000 + fracMs(parts[1]);                     // 秒.百分
+    if (nums.length === 2) {
+      if (firstSep === ':' || firstSep === "'" || firstSep === '′' || firstSep === '‘') {
+        return (nums[0] * 60 + nums[1]) * 1000;   // 分:秒
+      }
+      return nums[0] * 1000 + fracMs(nums[1]);    // 秒.百分
     }
-    return nums[0] * 1000 + 990;               // 纯秒（无百分秒 → 默认99）
+    return nums[0] * 1000;                        // 纯秒
   }
   /* 宽松日期：2026-9-6 / 2026.09.06 / 2026年9月6日 */
   function normDate(v) {
