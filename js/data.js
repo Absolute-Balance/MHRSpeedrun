@@ -408,7 +408,7 @@ window.MHRS_RECORDS = [
     "note": "霸主档 mod 任务演示（怪异探究Lv300）"
   },
   {
-    "id": "rmtpz8ch5",
+    "id": "rmtpzughd",
     "questType": "special",
     "quest": null,
     "exStar": "EX2",
