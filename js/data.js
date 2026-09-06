@@ -86,5 +86,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtq2llur"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m57",
+    "weaponId": "hammer",
+    "timeMs": 465210,
+    "author": "郁_葱",
+    "date": "2025-12-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV19VBUBHEk4",
+        "title": "【MHRS/PC】 大锤 特别探究：怪异克服天彗龙 7'45''21 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtq2nkek"
   }
 ];
