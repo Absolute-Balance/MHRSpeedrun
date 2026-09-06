@@ -65,5 +65,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtq2exmc"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m57",
+    "weaponId": "db",
+    "timeMs": 214400,
+    "author": "BFeather7",
+    "date": "2026-01-03",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1tMiqBuET8",
+        "title": "【无回刃鳞】双刀 特别探究：怪异克服天彗龙 三无规则 3'34''40"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtq2llur"
   }
 ];
