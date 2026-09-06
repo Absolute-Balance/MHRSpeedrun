@@ -78,6 +78,24 @@
   }
   function qtObj(id) { return CFG.questTypes.find(function (q) { return q.id === id; }) || null; }
   function qtLabel(id) { var q = qtObj(id); return q ? q.label : '未选择'; }
+  /* ================= 主题（白天/夜晚） ================= */
+  var THEME_KEY = 'mhrs_theme';
+  function isLight() {
+    return (document.documentElement.getAttribute('data-theme') || 'dark') === 'light';
+  }
+  function syncThemeUI() {
+    var b = $('themeBtn');
+    if (!b) return;
+    var light = isLight();
+    b.textContent = light ? '🌙' : '☀️';
+    b.title = light ? '切换为夜晚模式' : '切换为白天模式';
+  }
+  function ruleLegendText() {
+    return isLight()
+      ? '每格只显示最快成绩，深色=三无规则，金色=TA规则，红色=无限制规则，点怪物头像看全武器，点成绩格看该武器'
+      : '每格只显示最快成绩，白色=三无规则，黄色=TA规则，红色=无限制规则，点怪物头像看全武器，点成绩格看该武器';
+  }
+
   function ruleObj(id) {
     if (id === 'all') return { label: '全部', id: 'all' };
     return CFG.rules.find(function (r) { return r.id === id; }) || { label: id, id: id };
@@ -273,7 +291,7 @@
 
     $('matrixTitle').innerHTML = '<b>' + esc(qtLabel(state.questType)) + '</b>' +
       (state.rule !== 'all' ? ' · ' + esc(ruleLabel(state.rule)) : '');
-    $('matrixSub').textContent = '每格只显示最快成绩，白色=三无规则，黄色=TA规则，红色=无限制规则，点怪物头像看全武器，点成绩格看该武器';
+    $('matrixSub').textContent = ruleLegendText();
 
     pager.classList.toggle('hidden', pages <= 1);
     if (pages > 1) {
@@ -1207,6 +1225,17 @@
     document.title = CFG.siteTitle;
     $('siteTitle').textContent = CFG.siteTitle;
     $('siteSubtitle').textContent = CFG.siteSubtitle;
+    syncThemeUI();
+    var tBtn = $('themeBtn');
+    if (tBtn) {
+      tBtn.addEventListener('click', function () {
+        var next = isLight() ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        try { localStorage.setItem(THEME_KEY, next); } catch (e) { }
+        syncThemeUI();
+        update();
+      });
+    }
     loadState();
     renderQuestTypeUI();
     renderRuleUI();
