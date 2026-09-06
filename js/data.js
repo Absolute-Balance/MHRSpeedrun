@@ -3,5 +3,25 @@
  * 字段说明见 js/data.js 顶部注释。
  * ============================================================ */
 window.MHRS_RECORDS = [
- 
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m57",
+    "weaponId": "gs",
+    "timeMs": 230820,
+    "author": "__Ciel___",
+    "date": "2026-01-29",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1QGzXBaED1",
+        "title": "【MHRS/三台达成】三无 大剑 特别探究:神秘红光天彗龙 3'50''82"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtq283ax"
+  }
 ];
