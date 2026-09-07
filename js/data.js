@@ -989,5 +989,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqu81dx"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "ls",
+    "timeMs": 328910,
+    "author": "冬季鱼__",
+    "date": "2026-08-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV18q826bEJn",
+        "title": "祝不愿透露姓名的葱游兵生日快乐"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqual6j"
   }
 ];
