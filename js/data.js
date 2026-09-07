@@ -4307,5 +4307,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtri9iga"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "ta",
+    "monsterId": "m53",
+    "weaponId": "db",
+    "timeMs": 419350,
+    "author": "BFeather7",
+    "date": "2026-05-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1WhRKBZEWE",
+        "title": "【MHRS】双刀 特别探究：怪异克服钢龙 TA规则 6'59''35"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtriassd"
   }
 ];
