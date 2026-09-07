@@ -1031,5 +1031,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtquc392"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "db",
+    "timeMs": 330300,
+    "author": "BFeather7",
+    "date": "2024-07-15",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV11jbSejEXD",
+        "title": "【MHRS】双刀 特别探究：怪异克服钢龙 三无规则 5'30''30"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtquddql"
   }
 ];
