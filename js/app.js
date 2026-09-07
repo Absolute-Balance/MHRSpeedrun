@@ -1227,6 +1227,282 @@
     if (!ok) $('exportMsg').textContent = '';
   }
 
+  /* ================= 投稿 + 审核（Cloudflare Worker） ================= */
+  var SUB = CFG.submit || { apiBase: '', adminKeyStorage: 'mhrs_admin_key' };
+  function apiBaseOk() { return SUB.apiBase && SUB.apiBase.indexOf('你的用户名') < 0; }
+  function getAdminKey() {
+    try { return localStorage.getItem(SUB.adminKeyStorage) || ''; } catch (e) { return ''; }
+  }
+  function setAdminKey(k) {
+    try { localStorage.setItem(SUB.adminKeyStorage, k); } catch (e) { }
+  }
+  function sMsg(t, ok) {
+    var m = $('sMsg');
+    m.textContent = t;
+    m.style.color = ok ? 'var(--good)' : 'var(--danger)';
+  }
+  function rvMsg(t, ok) {
+    var m = $('rvMsg');
+    m.textContent = t;
+    m.style.color = ok ? 'var(--good)' : 'var(--danger)';
+  }
+  function fillSelect(id, list, emptyLabel) {
+    var sel = $(id);
+    if (!sel) return;
+    sel.innerHTML = '';
+    if (emptyLabel) {
+      var op0 = document.createElement('option');
+      op0.value = '';
+      op0.textContent = emptyLabel;
+      sel.appendChild(op0);
+    }
+    list.forEach(function (it) {
+      var op = document.createElement('option');
+      op.value = it.id;
+      op.textContent = it.label;
+      sel.appendChild(op);
+    });
+  }
+  function refreshTaskOptions() {
+    var qt = $('sQuestType').value;
+    var dl = $('dlTasks');
+    dl.innerHTML = '';
+    var ph = $('sTask');
+    if (qt === 'raging') {
+      ph.placeholder = '烈祸任务名，如 朦胧之影';
+      CFG.ragingQuests.forEach(function (q) {
+        var op = document.createElement('option');
+        op.value = q.label;
+        dl.appendChild(op);
+      });
+    } else {
+      ph.placeholder = 'EX 星级，如 EX9 / Apex';
+      CFG.exStars.forEach(function (s) {
+        var op = document.createElement('option');
+        op.value = s;
+        dl.appendChild(op);
+      });
+    }
+  }
+  function resolveMonster(v) {
+    v = String(v || '').trim();
+    if (mById[v]) return v;
+    var hit = MONSTERS.find(function (m) {
+      return m.name === v || m.file === v || m.file === v + '.png' ||
+        m.name.replace(/[·・\s]/g, '').toLowerCase() === v.replace(/[·・\s]/g, '').toLowerCase();
+    });
+    return hit ? hit.id : null;
+  }
+  function resolveRagingQuest(v) {
+    v = String(v || '').trim();
+    var low = v.toLowerCase().replace(/\s+/g, '');
+    var norm = function (s) { return s.toLowerCase().replace(/\s+/g, ''); };
+    var hits = CFG.ragingQuests.filter(function (q) {
+      return norm(q.label).indexOf(low) >= 0 || norm(q.shortLabel).indexOf(low) >= 0;
+    });
+    if (hits.length === 1) return hits[0].id;
+    if (hits.length > 1) { hits.sort(function (a, b) { return b.label.length - a.label.length; }); return hits[0].id; }
+    return null;
+  }
+  function setupSubmitReview() {
+    fillSelect('sQuestType', CFG.questTypes, '');
+    fillSelect('sWeapon', CFG.weapons, '');
+    fillSelect('sRule', CFG.rules, '');
+    fillSelect('sPlat', CFG.platforms, '');
+    var dlM = $('dlMonsters');
+    dlM.innerHTML = '';
+    MONSTERS.forEach(function (m) {
+      var op = document.createElement('option');
+      op.value = m.name;
+      dlM.appendChild(op);
+    });
+    $('reviewBtn').classList.toggle('hidden', !getAdminKey());
+    if (!apiBaseOk()) {
+      $('submitBtn').title = '投稿服务尚未启用（等后端部署后可用）';
+      $('reviewBtn').title = '投稿服务尚未启用';
+    }
+    $('submitBtn').addEventListener('click', function () {
+      if (!apiBaseOk()) { window.alert('投稿服务尚未启用：后端部署完成后（见 workers/DEPLOY.md）即可投稿。'); return; }
+      $('sMsg').textContent = '';
+      $('sAuthor').value = '';
+      $('sTime').value = '';
+      $('sDate').value = todayStr();
+      $('sTitle').value = '';
+      $('sBv').value = '';
+      $('sMonster').value = '';
+      $('sQuestType').value = 'special';
+      refreshTaskOptions();
+      $('sTask').value = '';
+      $('sRule').value = '';
+      $('sPlat').value = 'steam';
+      $('submitModal').classList.remove('hidden');
+    });
+    $('sClose').addEventListener('click', function () { $('submitModal').classList.add('hidden'); });
+    $('submitModal').addEventListener('click', function (e) { if (e.target === $('submitModal')) $('submitModal').classList.add('hidden'); });
+    $('sQuestType').addEventListener('change', refreshTaskOptions);
+    $('sSend').addEventListener('click', submitSend);
+    $('reviewBtn').addEventListener('click', function () {
+      if (!apiBaseOk()) { window.alert('投稿服务尚未启用。'); return; }
+      if (!getAdminKey()) {
+        var k = window.prompt('请输入审核口令（管理员用）：');
+        if (!k) return;
+        setAdminKey(k);
+        $('reviewBtn').classList.remove('hidden');
+      }
+      $('reviewModal').classList.remove('hidden');
+      reviewLoad();
+    });
+    $('rvClose').addEventListener('click', function () { $('reviewModal').classList.add('hidden'); });
+    $('reviewModal').addEventListener('click', function (e) { if (e.target === $('reviewModal')) $('reviewModal').classList.add('hidden'); });
+  }
+  async function submitSend() {
+    if (!apiBaseOk()) { sMsg('投稿服务未启用', false); return; }
+    var qt = $('sQuestType').value;
+    var mid = resolveMonster($('sMonster').value);
+    if (!qt) { sMsg('请选择任务类型', false); return; }
+    if (qt === 'raging') {
+      if (!resolveRagingQuest($('sTask').value)) { sMsg('请选择具体的烈祸任务（如：朦胧之影）', false); return; }
+    } else if (!$('sTask').value.trim()) {
+      sMsg('请填写 EX 星级（EX1~EX9 / Apex）', false); return;
+    }
+    if (!mid) { sMsg('找不到该怪物，请从下拉列表选择（如：怪异克服天彗龙）', false); return; }
+    var wid = $('sWeapon').value;
+    var rule = $('sRule').value;
+    var author = $('sAuthor').value.trim();
+    var date = normDate($('sDate').value);
+    var ms = parseTime($('sTime').value);
+    if (!wid) { sMsg('请选择武器', false); return; }
+    if (!rule) { sMsg('请选择规则', false); return; }
+    if (!author) { sMsg('请填写玩家名', false); return; }
+    if (ms == null) { sMsg('用时格式不对（如 05\'02\'\'52）', false); return; }
+    if (!date) { sMsg('日期格式不对（如 2026-9-6）', false); return; }
+    var ex = null;
+    var quest = null;
+    if (qt === 'raging') {
+      quest = resolveRagingQuest($('sTask').value);
+    } else {
+      ex = $('sTask').value.trim().toUpperCase();
+      if (CFG.exStars.indexOf(ex) < 0) { sMsg('EX 星级不正确', false); return; }
+    }
+    var payload = {
+      questType: qt,
+      quest: quest,
+      exStar: ex,
+      rule: rule,
+      monsterId: mid,
+      weaponId: wid,
+      timeMs: ms,
+      author: author,
+      date: date,
+      title: $('sTitle').value.trim(),
+      bv: $('sBv').value.trim(),
+      platform: $('sPlat').value || 'steam',
+      website: $('sWebsite').value
+    };
+    sMsg('正在发送…', true);
+    try {
+      var res = await fetch(SUB.apiBase + '/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      var j = await res.json();
+      if (j.ok) {
+        sMsg('投稿成功！请等待管理员审核通过后发布。', true);
+        $('sAuthor').value = ''; $('sTime').value = ''; $('sBv').value = ''; $('sMonster').value = ''; $('sTask').value = '';
+        setTimeout(function () { $('submitModal').classList.add('hidden'); }, 1600);
+      } else {
+        sMsg('投稿失败：' + (j.error || '未知错误'), false);
+      }
+    } catch (e) {
+      sMsg('网络错误，请稍后再试', false);
+    }
+  }
+  async function reviewLoad() {
+    rvMsg('正在读取待审…', true);
+    var listBox = $('rvList');
+    listBox.innerHTML = '';
+    try {
+      var res = await fetch(SUB.apiBase + '/pending', { headers: { 'x-admin-key': getAdminKey() } });
+      var j = await res.json();
+      if (!j.ok) { rvMsg('读取失败：' + (j.error || '无权限'), false); return; }
+      var list = j.list || [];
+      $('rvSub').textContent = '共 ' + list.length + ' 条待审投稿';
+      if (!list.length) {
+        listBox.innerHTML = '<div class="wv-sub">暂无待审投稿。</div>';
+        rvMsg('', true);
+        return;
+      }
+      list.forEach(function (s) {
+        var m = mById[s.monsterId], w = wById[s.weaponId];
+        var task = qtLabel(s.questType);
+        if (s.questType === 'raging') {
+          var q = questObj(s);
+          task += q ? ' · ' + q.label : '';
+        } else if (s.exStar) {
+          task += ' · ' + s.exStar;
+        }
+        var v = s.videos && s.videos[0];
+        listBox.insertAdjacentHTML('beforeend',
+          '<div class="rv-item" data-id="' + esc(s.id) + '">' +
+          '<div class="rv-top"><span class="rv-time">' + fmtTime(s.timeMs) + '</span>' +
+          '<span class="tag rule-' + esc(s.rule) + '">' + esc(ruleLabel(s.rule)) + '</span>' +
+          '<span><b>' + esc(s.author) + '</b></span>' +
+          '<span class="rv-meta">' + esc(task) + ' · ' + esc(m ? m.name : s.monsterId) + ' × ' + esc(w ? w.label : s.weaponId) + ' · ' + esc(s.date) + ' · ' + esc(platformLabel(s.platform)) + '</span></div>' +
+          '<div class="rv-title">' + (v ? '<a class="vbtn" href="' + esc(v.url) + '" target="_blank" rel="noopener"><span class="site site-bilibili">B站</span>' + esc(v.title || '打开视频') + ' ↗</a>' : '（未附视频）') + '</div>' +
+          '<div class="rv-actions">' +
+          '<button type="button" class="btn btn-mini ok rv-ok">✓ 通过并发布</button>' +
+          '<button type="button" class="btn btn-mini no rv-no">✕ 驳回</button>' +
+          '</div></div>');
+      });
+      bindReviewActions();
+      rvMsg('', true);
+    } catch (e) {
+      rvMsg('网络错误：' + e.message, false);
+    }
+  }
+  function bindReviewActions() {
+    var listBox = $('rvList');
+    listBox.querySelectorAll('.rv-ok').forEach(function (b) {
+      b.addEventListener('click', async function () {
+        var id = b.closest('.rv-item').dataset.id;
+        b.disabled = true;
+        rvMsg('正在发布…', true);
+        try {
+          var res = await fetch(SUB.apiBase + '/approve', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'x-admin-key': getAdminKey() },
+            body: JSON.stringify({ id: id })
+          });
+          var j = await res.json();
+          if (j.ok) {
+            window.alert('已发布（commit ' + j.sha.slice(0, 7) + '），页面即将刷新。');
+            window.location.reload();
+          } else {
+            rvMsg('发布失败：' + (j.error || ''), false);
+            b.disabled = false;
+          }
+        } catch (e) { rvMsg('网络错误：' + e.message, false); b.disabled = false; }
+      });
+    });
+    listBox.querySelectorAll('.rv-no').forEach(function (b) {
+      b.addEventListener('click', async function () {
+        var id = b.closest('.rv-item').dataset.id;
+        if (!window.confirm('确定驳回并删除这条投稿吗？')) return;
+        try {
+          var res = await fetch(SUB.apiBase + '/reject', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'x-admin-key': getAdminKey() },
+            body: JSON.stringify({ id: id })
+          });
+          var j = await res.json();
+          rvMsg(j.ok ? '已驳回' : ('驳回失败：' + (j.error || '')), !!j.ok);
+          reviewLoad();
+        } catch (e) { rvMsg('网络错误：' + e.message, false); }
+      });
+    });
+  }
+
   /* ================= 初始化 ================= */
   function init() {
     document.title = CFG.siteTitle;
@@ -1276,6 +1552,8 @@
     $('entryClose').addEventListener('click', function () { eModal.classList.add('hidden'); });
     eModal.addEventListener('click', function (e) { if (e.target === eModal) eModal.classList.add('hidden'); });
     $('eSave').addEventListener('click', function () { saveEntry(); });
+
+    setupSubmitReview();
 
     update();
   }

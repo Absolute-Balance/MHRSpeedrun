@@ -403,6 +403,19 @@ code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-si
 .modal-mask { position: fixed; inset: 0; background: var(--mask); display: flex; align-items: flex-start; justify-content: center; padding: 40px 16px; z-index: 50; }
 .modal { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; width: 860px; max-width: 100%; padding: 16px 18px; }
 .modal-narrow { width: 560px; }
+.modal-wide { width: 980px; }
+/* 审核区条目 */
+.rv-item {
+  border: 1px solid var(--line); border-radius: 10px; background: var(--panel-2);
+  padding: 10px 14px; margin-bottom: 8px;
+}
+.rv-item .rv-top { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.rv-item .rv-time { font-family: Consolas, Menlo, monospace; font-size: 16px; font-weight: 700; color: var(--time-ta); }
+.rv-item .rv-meta { font-size: 12.5px; color: var(--text-dim); }
+.rv-item .rv-title { font-size: 13px; margin-top: 3px; word-break: break-all; }
+.rv-item .rv-actions { display: flex; gap: 8px; margin-top: 8px; }
+.rv-item .rv-actions .ok:hover { border-color: var(--good); color: var(--good); }
+.rv-item .rv-actions .no:hover { border-color: var(--danger); color: var(--danger); }
 .rules-list { margin: 8px 4px 14px 22px; padding: 0; color: var(--text); font-size: 14px; line-height: 1.8; }
 .rules-list li::marker { color: var(--accent-hi); }
 .modal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
