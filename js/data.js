@@ -3089,5 +3089,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrdryth"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m30",
+    "weaponId": "sa",
+    "timeMs": 249190,
+    "author": "時渡",
+    "date": "2026-08-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1xc4d6PEKn",
+        "title": "【MHRS】斩斧 怪异LV300：雪鬼兽 4分09秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrdz3ww"
   }
 ];
