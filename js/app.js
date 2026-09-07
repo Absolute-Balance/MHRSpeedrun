@@ -1446,9 +1446,13 @@
   function refreshSubmitOptions() {
     var qt = $('sQuestType').value;
     var sel = $('sTaskSel');
-    sel.innerHTML = '<option value="">— 请选择 —</option>';
+    sel.innerHTML = '';
     if (qt === 'raging') {
-      $('sTaskLabel').textContent = '选择烈祸任务';
+      $('sTaskLabel').textContent = '烈祸任务';
+      var ph0 = document.createElement('option');
+      ph0.value = '';
+      ph0.textContent = '选择烈祸任务';
+      sel.appendChild(ph0);
       CFG.ragingQuests.forEach(function (q) {
         var op = document.createElement('option');
         op.value = q.id;
@@ -1456,7 +1460,11 @@
         sel.appendChild(op);
       });
     } else {
-      $('sTaskLabel').textContent = '选择 EX 星级';
+      $('sTaskLabel').textContent = 'EX星级';
+      var ph0b = document.createElement('option');
+      ph0b.value = '';
+      ph0b.textContent = '选择 EX 星级';
+      sel.appendChild(ph0b);
       CFG.exStars.forEach(function (s) {
         var op = document.createElement('option');
         op.value = s;
@@ -1509,7 +1517,7 @@
     fillSelect('sWeapon', CFG.weapons, '');
     fillSelect('sRule', CFG.rules, '');
     fillSelect('sPlat', CFG.platforms, '');
-    $('reviewBtn').classList.toggle('hidden', !getAdminKey());
+    if (apiBaseOk()) $('reviewBtn').classList.remove('hidden');
     if (!apiBaseOk()) {
       $('submitBtn').title = '投稿服务尚未启用（等后端部署后可用）';
       $('reviewBtn').title = '投稿服务尚未启用';
