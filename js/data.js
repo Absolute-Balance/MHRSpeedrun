@@ -338,5 +338,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqo6pzl"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m56",
+    "weaponId": "db",
+    "timeMs": 242520,
+    "author": "LoToPyaKo",
+    "date": "2026-05-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Xv546PEgE",
+        "title": "怪物猎人崛起，双剑vs天廻龙"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqo9sbc"
   }
 ];
