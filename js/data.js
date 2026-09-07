@@ -4160,5 +4160,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtri00cj"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m32",
+    "weaponId": "sa",
+    "timeMs": 249300,
+    "author": "BFeather7",
+    "date": "2025-05-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1u6GzzkEoZ",
+        "title": "【MHRS】斩斧 LV300熔翁龙 TA规则 4'09\"30"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtri1qec"
   }
 ];
