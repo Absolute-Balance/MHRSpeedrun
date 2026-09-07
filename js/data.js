@@ -1892,5 +1892,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr0m1s2"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m50",
+    "weaponId": "sns",
+    "timeMs": 437190,
+    "author": "往日残梦-NLNS",
+    "date": "2026-07-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1h4KU66E5L",
+        "title": "【MHRS】片手剑 特别探究：激昂金狮子 7分17秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr0ncbg"
   }
 ];
