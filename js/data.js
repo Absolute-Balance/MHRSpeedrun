@@ -2753,5 +2753,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrb8a7k"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m46",
+    "weaponId": "bow",
+    "timeMs": 275540,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-08-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1rqgW6hE9N",
+        "title": "⚡雷⚡霆⚡大⚡贯⚡通⚡"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrb9lhf"
   }
 ];
