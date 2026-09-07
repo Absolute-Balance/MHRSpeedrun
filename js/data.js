@@ -1283,5 +1283,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqv5e9v"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "sns",
+    "timeMs": 502140,
+    "author": "澪田维吹",
+    "date": "2025-09-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1aKnJzkEd9",
+        "title": "【Echo杯/竞速区】单手剑 特别探究 怪异克服霞龙 三无 822"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqv9ea2"
   }
 ];
