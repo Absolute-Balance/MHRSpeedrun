@@ -2522,5 +2522,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtray7a8"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m46",
+    "weaponId": "sns",
+    "timeMs": 478540,
+    "author": "往日残梦-NLNS",
+    "date": "2026-05-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV14rGZ6CEhn",
+        "title": "【MHRS】片手剑 特别探究：金火龙 7分58秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrazhub"
   }
 ];
