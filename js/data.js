@@ -1787,5 +1787,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr0fbc5"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m49",
+    "weaponId": "sa",
+    "timeMs": 349900,
+    "author": "K----J",
+    "date": "2024-01-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Mk4y1X78s",
+        "title": "【最解压的一集】斩斧 三无规则 5'49\"90 特别探究:红莲爆鳞龙 MHRS"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr0gs21"
   }
 ];
