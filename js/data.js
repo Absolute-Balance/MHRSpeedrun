@@ -1745,5 +1745,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr0cpo6"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m49",
+    "weaponId": "sns",
+    "timeMs": 411990,
+    "author": "咩咩羊袭",
+    "date": "2026-08-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV18t8962Emt",
+        "title": "【MHRS】片手剑 特别探究：红莲爆鳞龙 6分51秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr0e0g3"
   }
 ];
