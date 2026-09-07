@@ -3341,5 +3341,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtre5v45"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m30",
+    "weaponId": "sa",
+    "timeMs": 348990,
+    "author": "時渡",
+    "date": "2025-11-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1FXUuBUEQ1",
+        "title": "【MHRS】斩斧 特别探究：雪鬼兽 5分48秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtre65ta"
   }
 ];
