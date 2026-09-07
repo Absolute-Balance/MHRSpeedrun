@@ -3614,5 +3614,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrfcgui"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "ta",
+    "monsterId": "m54",
+    "weaponId": "lance",
+    "timeMs": 384540,
+    "author": "这里是庸人",
+    "date": "2026-06-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV12rVD6WEHt",
+        "title": "【MHRS/生庆】LV.300怪异克服炎王龙 长枪 6′24″54 TA"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrff43d"
   }
 ];
