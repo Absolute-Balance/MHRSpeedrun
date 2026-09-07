@@ -19,6 +19,7 @@ const imgDir = path.join(root, 'monsters');
 const outFile = path.join(root, 'js', 'monsters.js');
 const orderFile = path.join(root, 'data', 'monster-order.json');
 const namesFile = path.join(root, 'data', 'monster-names.json');
+const idsFile = path.join(root, 'data', 'monster-ids.json');
 
 const IMG_RE = /\.(png|jpe?g|webp|gif|svg)$/i;
 
@@ -26,6 +27,15 @@ let overrides = {};
 if (fs.existsSync(namesFile)) {
   try { overrides = JSON.parse(fs.readFileSync(namesFile, 'utf8')); }
   catch (e) { console.warn('! data/monster-names.json 解析失败，忽略映射：' + e.message); }
+}
+
+/* 文件名 → 固定 id（data/monster-ids.json）；调整显示顺序不影响成绩引用 */
+let idsMap = {};
+if (fs.existsSync(idsFile)) {
+  try {
+    const raw = JSON.parse(fs.readFileSync(idsFile, 'utf8'));
+    if (raw.ids) idsMap = raw.ids;
+  } catch (e) { console.warn('! data/monster-ids.json 解析失败，将按顺序编号：' + e.message); }
 }
 
 let manifest = null;
@@ -63,7 +73,8 @@ const entries = order.map((it, i) => {
   const stem = it.file.replace(/\.[^.]+$/, '');
   let name = overrides[it.file] || stem;
   const tier = it.tier ? `tier: '${it.tier}', ` : '';
-  return `  { id: 'm${String(i + 1).padStart(2, '0')}', file: '${it.file.replace(/'/g, "\\'")}', ${tier}name: '${name.replace(/'/g, "\\'")}' }`;
+  const fixed = (idsMap[it.file]) ? idsMap[it.file] : `m${String(i + 1).padStart(2, '0')}`;
+  return `  { id: '${fixed}', file: '${it.file.replace(/'/g, "\\'")}', ${tier}name: '${name.replace(/'/g, "\\'")}' }`;
 });
 
 const header = `/* ============================================================

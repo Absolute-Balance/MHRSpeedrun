@@ -88,8 +88,8 @@
     var b = $('themeBtn');
     if (!b) return;
     var light = isLight();
-    b.textContent = light ? '🌙' : '☀️';
-    b.title = light ? '切换为夜晚模式' : '切换为白天模式';
+    b.textContent = light ? '☀️' : '🌙';
+    b.title = light ? '当前：白天模式，点击切换到夜晚' : '当前：夜晚模式，点击切换到白天';
   }
   function ruleLegendText() {
     return isLight()

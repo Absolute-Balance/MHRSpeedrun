@@ -25,16 +25,16 @@ window.MHRS_CONFIG = {
    * monsterFile 目标怪物图标（必须是 monsters/ 目录里的文件名）
    * ---------------------------------------------- */
   ragingQuests: [
+    { id: 'q08', label: '烈祸袭来：原初异音！',   shortLabel: '原初异音！',   monsterFile: '原初形态爵银龙.png' },
+    { id: 'q10', label: '烈祸袭来：冰狼长嚎！',   shortLabel: '冰狼长嚎！',   monsterFile: '冰狼龙.png' },
+    { id: 'q09', label: '烈祸袭来：刚缠巨响！',   shortLabel: '刚缠巨响！',   monsterFile: '刚缠兽.png' },
     { id: 'q01', label: '烈祸袭来：朦胧之影',     shortLabel: '朦胧之影',     monsterFile: '月迅龙.png' },
     { id: 'q02', label: '烈祸袭来：舞于火海的浩劫', shortLabel: '舞于火海的浩劫', monsterFile: '焰狐龙.png' },
     { id: 'q03', label: '烈祸袭来：传奇一击',     shortLabel: '传奇一击',     monsterFile: '棘茶龙.png' },
     { id: 'q04', label: '烈祸袭来：狮子迷人的肉体', shortLabel: '狮子迷人的肉体', monsterFile: '金狮子.png' },
-    { id: 'q05', label: '烈祸袭来：奏响毁灭的旋律', shortLabel: '奏响毁灭的旋律', monsterFile: '岚龙.png' },
     { id: 'q06', label: '烈祸袭来：超速电导',     shortLabel: '超速电导',     monsterFile: '雷狼龙.png' },
     { id: 'q07', label: '烈祸袭来：雪花纷飞',     shortLabel: '雪花纷飞',     monsterFile: '冰龙.png' },
-    { id: 'q08', label: '烈祸袭来：原初异音！',   shortLabel: '原初异音！',   monsterFile: '原初形态爵银龙.png' },
-    { id: 'q09', label: '烈祸袭来：刚缠巨响！',   shortLabel: '刚缠巨响！',   monsterFile: '刚缠兽.png' },
-    { id: 'q10', label: '烈祸袭来：冰狼长嚎！',   shortLabel: '冰狼长嚎！',   monsterFile: '冰狼龙.png' }
+    { id: 'q05', label: '烈祸袭来：奏响毁灭的旋律', shortLabel: '奏响毁灭的旋律', monsterFile: '岚龙.png' }
   ],
 
   /* ---- EX 星级（多选按钮，怪异探究Lv300/特别探究时显示）----
