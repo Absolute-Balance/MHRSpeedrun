@@ -590,5 +590,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqon6kv"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m02",
+    "weaponId": "db",
+    "timeMs": 129960,
+    "author": "BFeather7",
+    "date": "2026-09-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1PJtS6DE4o",
+        "title": "【MHRS】双刀 特别探究：眠狗龙王 三无规则 2'09\"96"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqony82"
   }
 ];
