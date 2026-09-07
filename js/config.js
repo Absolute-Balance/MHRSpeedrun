@@ -89,12 +89,9 @@ window.MHRS_CONFIG = {
     dataPath: 'js/data.js'
   },
 
-  /* ---- 投稿/审核后端（Cloudflare Worker）----
-   * apiBase 留空 = 功能关闭；部署 Worker 后改成你的地址：
-   * 形如 https://mhrs-submit.你的用户名.workers.dev
-   * ---------------------------------------------- */
+  /* ---- 投稿/审核后端（Cloudflare Worker，已部署）---- */
   submit: {
-    apiBase: '',
+    apiBase: 'https://mhrs-api.absolutebalance7.workers.dev',
     adminKeyStorage: 'mhrs_admin_key'
   }
 };
