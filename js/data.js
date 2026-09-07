@@ -1913,5 +1913,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr0ncbg"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m50",
+    "weaponId": "db",
+    "timeMs": 224480,
+    "author": "BFeather7",
+    "date": "2025-04-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1mwouYQEde",
+        "title": "【MHRS】双刀 特别探究：激昂金狮子 三无规则 3'44\"48"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr0omww"
   }
 ];
