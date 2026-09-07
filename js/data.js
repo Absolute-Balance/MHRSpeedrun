@@ -2333,5 +2333,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr8vxls"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m62",
+    "weaponId": "bow",
+    "timeMs": 108720,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-07-03",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV131TJ6fEc2",
+        "title": "【MHRS/新纪录/14x达成/无鬼火跳炸/Extra2 True End】弓箭 刻银穿弓 烈祸原初爵银龙 148 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr8yuso"
   }
 ];
