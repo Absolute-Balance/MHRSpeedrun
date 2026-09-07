@@ -4286,5 +4286,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtri881o"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "ta",
+    "monsterId": "m53",
+    "weaponId": "db",
+    "timeMs": 325840,
+    "author": "BFeather7",
+    "date": "2026-04-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1XU98BzEGh",
+        "title": "【MHRS】双刀 LV300怪异克服钢龙 TA规则 5'25''84"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtri9iga"
   }
 ];
