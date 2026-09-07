@@ -3635,5 +3635,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrff43d"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "ta",
+    "monsterId": "m18",
+    "weaponId": "lance",
+    "timeMs": 238310,
+    "author": "这里是庸人",
+    "date": "2026-02-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1z1FXzaEoX",
+        "title": "【MHRS】长枪 怪异LV.300将军镰蟹 3′58″31 TA"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrffbb4"
   }
 ];
