@@ -695,5 +695,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqouzal"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m54",
+    "weaponId": "ls",
+    "timeMs": 294320,
+    "author": "-MinaZuKI_",
+    "date": "2023-12-03",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1hb4y1K7Rf",
+        "title": "【MHRS】太刀 特别探究：怪异克服炎王龙 4分54秒32 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqp7s9s"
   }
 ];
