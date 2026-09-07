@@ -1157,5 +1157,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtquoige"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "lbg",
+    "timeMs": 321390,
+    "author": "灼眼の冷面魔男",
+    "date": "2024-01-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV19e411m7aM",
+        "title": "【MHRS】为啥你的速射贯二这么刮痧之特别探究：钢龙 5分21 三无 生庆"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtquq2w6"
   }
 ];
