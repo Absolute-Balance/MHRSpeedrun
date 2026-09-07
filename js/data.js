@@ -1808,5 +1808,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr0gs21"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m49",
+    "weaponId": "cb",
+    "timeMs": 312360,
+    "author": "郁_葱",
+    "date": "2026-02-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1WxZ3B7Ex8",
+        "title": "【MHRS/PC】盾斧 特别探究：红莲爆鳞龙 5'12''36 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr0i3h4"
   }
 ];
