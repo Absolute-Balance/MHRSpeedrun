@@ -1674,7 +1674,15 @@
     try {
       var res = await fetch(SUB.apiBase + '/pending', { headers: { 'x-admin-key': getAdminKey() } });
       var j = await res.json();
-      if (!j.ok) { rvMsg('读取失败：' + (j.error || '无权限'), false); return; }
+      if (!j.ok) {
+        rvMsg('读取失败：' + (j.error || '无权限'), false);
+        if (String(j.error || '').indexOf('无权限') >= 0) {
+          try { localStorage.removeItem(SUB.adminKeyStorage); } catch (e) { }
+          var k = window.prompt('口令错误或未设置，请重新输入审核口令：');
+          if (k) { setAdminKey(k); reviewLoad(); }
+        }
+        return;
+      }
       var list = j.list || [];
       $('rvSub').textContent = '共 ' + list.length + ' 条待审投稿';
       if (!list.length) {
