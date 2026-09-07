@@ -884,5 +884,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqtwxs4"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m54",
+    "weaponId": "ig",
+    "timeMs": 481120,
+    "author": "Jalnf",
+    "date": "2023-12-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1pw411t7au",
+        "title": "【MHRS】操虫棍 特别探究：炎王龙 8分01秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqtz55l"
   }
 ];
