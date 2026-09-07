@@ -1220,5 +1220,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqusrjw"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "gs",
+    "timeMs": 292910,
+    "author": "__Ciel___",
+    "date": "2026-04-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ca9EBXEgJ",
+        "title": "霞龙452"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtquvurr"
   }
 ];
