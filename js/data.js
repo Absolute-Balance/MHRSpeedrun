@@ -3761,5 +3761,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrhau3g"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m11",
+    "weaponId": "db",
+    "timeMs": 221860,
+    "author": "BFeather7",
+    "date": "2026-06-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1hNEv6aEJU",
+        "title": "【MHRS】双刀 特别探究：河童蛙 三无规则 3'41\"86"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrhc4p5"
   }
 ];
