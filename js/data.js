@@ -1262,5 +1262,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtquxep3"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "sns",
+    "timeMs": 560990,
+    "author": "-橘-孜-",
+    "date": "2024-11-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1UizEYBEpq",
+        "title": "【MHRS】特别探究 霞龙 片手剑 9分20秒 捉迷藏规则(三无）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqv5e9v"
   }
 ];
