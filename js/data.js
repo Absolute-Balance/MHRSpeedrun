@@ -3677,5 +3677,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrfkgv3"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "ta",
+    "monsterId": "m20",
+    "weaponId": "lance",
+    "timeMs": 373150,
+    "author": "这里是庸人",
+    "date": "2026-06-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1oP7v6ME4f",
+        "title": "【MHRS/Fire Fox杯】长枪 特探雌火龙 6′13″15 TA"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrfkpco"
   }
 ];
