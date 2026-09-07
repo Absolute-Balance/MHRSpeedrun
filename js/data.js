@@ -1934,5 +1934,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr0omww"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "ta",
+    "monsterId": "m50",
+    "weaponId": "db",
+    "timeMs": 307880,
+    "author": "BFeather7",
+    "date": "2025-04-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1xg5kz2E6V",
+        "title": "【MHRS】双刀 特别探究：激昂金狮子 TA规则 5'07\"88"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr0pxeg"
   }
 ];
