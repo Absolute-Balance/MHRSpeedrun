@@ -2480,5 +2480,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrav9go"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m46",
+    "weaponId": "gs",
+    "timeMs": 446990,
+    "author": "Zen10_2333",
+    "date": "2023-11-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Db4y1T7Pm",
+        "title": "头最硬的一集or最气盛的一集？【MHRS】大剑 特别探究: 金火龙 7分26秒 TA打法＋怪异炼化/三无/四无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrawwpf"
   }
 ];
