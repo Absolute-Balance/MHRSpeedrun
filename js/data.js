@@ -3404,5 +3404,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtre7wnp"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m04",
+    "weaponId": "sns",
+    "timeMs": 330990,
+    "author": "咩咩羊袭",
+    "date": "2026-09-02",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1mstG6QEp3",
+        "title": "【MHRS/守势4】片手剑 特别探究：镰鼬龙王 5分30秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtre8521"
   }
 ];
