@@ -3464,7 +3464,7 @@ window.MHRS_RECORDS = [
         "title": "【MHRS】大锤 怪异Lv300·迅龙 5分26秒56 TA规则 无炼化"
       }
     ],
-    "platform": "steam",
+    "platform": "switch",
     "note": "",
     "id": "rmtremhl9"
   }
