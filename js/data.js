@@ -3446,5 +3446,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtre8hd2"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "ta",
+    "monsterId": "m27",
+    "weaponId": "hammer",
+    "timeMs": 326560,
+    "author": "ie78",
+    "date": "2026-09-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV11WbN6AEct",
+        "title": "【MHRS】大锤 怪异Lv300·迅龙 5分26秒56 TA规则 无炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtremhl9"
   }
 ];
