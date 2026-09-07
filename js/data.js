@@ -2207,5 +2207,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr8jnka"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m47",
+    "weaponId": "hbg",
+    "timeMs": 297180,
+    "author": "灼眼の冷面魔男",
+    "date": "2023-09-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1o84y1U7Ur",
+        "title": "【MHRS】♿重弩✌之贯通弹 特别探究：银火龙 4'57''18 三无/TA＋怪异炼成"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr8nfe4"
   }
 ];
