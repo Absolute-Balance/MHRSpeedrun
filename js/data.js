@@ -3425,5 +3425,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtre8521"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m28",
+    "weaponId": "sa",
+    "timeMs": 295000,
+    "author": "時渡",
+    "date": "2026-05-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1CERCBhEve",
+        "title": "【MHRS/刚刃研磨】斩斧 特别探究：泥翁龙 4分55秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtre8b5q"
   }
 ];
