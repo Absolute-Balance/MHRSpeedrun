@@ -2438,5 +2438,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr9eaj0"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m47",
+    "weaponId": "db",
+    "timeMs": 365750,
+    "author": "真名-玛亚特加那芙",
+    "date": "2026-08-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1pk8b6wEBR",
+        "title": "MHRS双刀特别探究银火龙6'05''75三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtratqxs"
   }
 ];
