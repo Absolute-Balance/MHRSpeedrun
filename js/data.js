@@ -3152,5 +3152,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrdzb8s"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m34",
+    "weaponId": "sa",
+    "timeMs": 329630,
+    "author": "時渡",
+    "date": "2026-07-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1zygx6eErb",
+        "title": "【MHRS/电之叛逆/5前记录】斩斧 特别探究：电龙 5分29秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrdzhqb"
   }
 ];
