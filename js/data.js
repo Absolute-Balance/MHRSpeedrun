@@ -2690,5 +2690,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrb76ao"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "ta",
+    "monsterId": "m46",
+    "weaponId": "ig",
+    "timeMs": 599610,
+    "author": "堕落魂淡",
+    "date": "2023-12-29",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV19p4y197Sw",
+        "title": "MHRS 操虫棍 特别探究 金火龙 TA（防具无炼化+属强5护石）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrb6zh1"
   }
 ];
