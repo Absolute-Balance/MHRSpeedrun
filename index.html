@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MHRS 竞速成绩库</title>
 <script>(function(){try{if(localStorage.getItem('mhrs_theme')==='light'){document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();</script>
-<link rel="stylesheet" href="css/style.css?v=1788760965362">
+<link rel="stylesheet" href="css/style.css?v=20260921">
 </head>
 <body>
 
@@ -63,6 +63,8 @@
   <div class="filter-actions">
     <button type="button" class="btn btn-ghost" id="resetBtn">恢复默认</button>
     <button type="button" class="btn btn-ghost" id="rulesBtn">📜 收录规则</button>
+    <button type="button" class="btn btn-ghost" id="submitBtn">✉ 投稿成绩</button>
+    <button type="button" class="btn btn-ghost hidden" id="reviewBtn">⚖ 审核</button>
     <span class="spacer"></span>
     <span class="fg-desc" id="filterSummary"></span>
     <button type="button" class="btn btn-primary" id="exportBtn" disabled title="把当前筛选出的表格（怪物/任务 × 14 武器）导出为 PNG 图片">⤓ 导出表格图片</button>
@@ -153,9 +155,57 @@
   </div>
 </div>
 
-<script src="js/config.js?v=1788760965362"></script>
-<script src="js/monsters.js?v=1788760965362"></script>
-<script src="js/data.js?v=1788760965362"></script>
-<script src="js/app.js?v=1788760965362"></script>
+<!-- ================= 投稿弹窗（所有人） ================= -->
+<div class="modal-mask hidden" id="submitModal">
+  <div class="modal modal-narrow">
+    <div class="modal-head">
+      <b>投稿成绩</b>
+      <button type="button" class="btn btn-ghost" id="sClose">✕</button>
+    </div>
+    <p class="fg-desc">投稿进入审核区，通过后才会正式发布。请确认符合 <b>📜 收录规则</b>。</p>
+    <div class="eform">
+      <label>任务类型</label><select id="sQuestType"></select>
+      <label>EX/烈祸任务</label><span id="sTaskWrap"><input type="text" id="sTask" list="dlTasks" placeholder="烈祸任务名 / EX 星级" autocomplete="off"></span>
+      <datalist id="dlTasks"></datalist>
+      <label>怪物</label><input type="text" id="sMonster" list="dlMonsters" placeholder="输入怪物名，如 怪异克服天彗龙" autocomplete="off">
+      <datalist id="dlMonsters"></datalist>
+      <label>武器</label><select id="sWeapon"></select>
+      <label>规则</label><select id="sRule"></select>
+      <label>用时</label><input type="text" id="sTime" placeholder="如 05'02''52（不写毫秒默认…99）" autocomplete="off">
+      <label>玩家名</label><input type="text" id="sAuthor" placeholder="跑者/UP主 名字" autocomplete="off">
+      <label>日期</label><input type="text" id="sDate" placeholder="2026-9-6" autocomplete="off">
+      <label>视频标题</label><input type="text" id="sTitle" placeholder="视频标题（可选，用于显示）" autocomplete="off">
+      <label>BV号</label><input type="text" id="sBv" placeholder="如 BV1q5bp6AEaJ 或完整链接" autocomplete="off">
+      <label>平台</label><select id="sPlat"></select>
+    </div>
+    <div class="hidden" style="position:absolute;left:-9999px" aria-hidden="true">
+      <input type="text" id="sWebsite" tabindex="-1" autocomplete="off">
+    </div>
+    <div class="modal-actions">
+      <button type="button" class="btn btn-primary" id="sSend">发送投稿</button>
+      <span class="fg-desc" id="sMsg"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= 审核区弹窗（持口令者） ================= -->
+<div class="modal-mask hidden" id="reviewModal">
+  <div class="modal modal-wide">
+    <div class="modal-head">
+      <b>审核区</b>
+      <button type="button" class="btn btn-ghost" id="rvClose">✕</button>
+    </div>
+    <p class="fg-desc" id="rvSub"></p>
+    <div id="rvList"></div>
+    <div class="modal-actions">
+      <span class="fg-desc" id="rvMsg"></span>
+    </div>
+  </div>
+</div>
+
+<script src="js/config.js?v=20260921"></script>
+<script src="js/monsters.js?v=20260921"></script>
+<script src="js/data.js?v=20260921"></script>
+<script src="js/app.js?v=20260921"></script>
 </body>
 </html>
