@@ -71,7 +71,8 @@ window.MHRS_CONFIG = {
   platforms: [
     { id: 'steam',  label: 'Steam' },
     { id: 'switch', label: 'Nintendo Switch' },
-    { id: 'ps5',    label: 'PS5' }
+    { id: 'ps',    label: 'PS5|4' },
+    { id: 'xbox',    label: 'XSX|S/XBO' },
   ],
 
   /* ---- 图标目录（相对 index.html） ---- */

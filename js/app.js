@@ -136,6 +136,175 @@
     }
     return null; // 非 B 站内容
   }
+  //提取BV号
+  function biliBvid(v) {
+    var m = String(v || '').match(/(BV[0-9A-Za-z]{8,})/i);
+    return m ? m[1].slice(0, 2).toUpperCase() + m[1].slice(2) : '';
+  }
+  //将时间戳转换为日期
+  function biliDate(ts) {
+    var d = new Date(Number(ts) * 1000);
+    if (!ts || isNaN(d.getTime())) return '';
+    return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  }
+  //标题中提取时间
+  function biliTitleTime(title) {
+    var m = String(title || '').match(/(?:^|[^0-9])([0-9]{1,3})\s*['′]\s*([0-9]{1,2})\s*(?:''|["″”])\s*([0-9]{1,3})(?![0-9])/);
+    if (!m) return '';
+    var sec = Number(m[2]);
+    var fraction = m[3];
+    if (sec >= 60 || fraction.length > 3) return '';
+    return m[1] + "'" + m[2] + '"' + m[3];
+  }
+  //标题中提取规则
+  function biliTitleRule(title) {
+    var text = String(title || '');
+    var sanyou = text.search(/三无(?:规则)?/);
+    var ta = text.search(/(?:^|[^A-Za-z])TA(?:规则)?(?=$|[^A-Za-z])/i);
+    if (sanyou < 0 && ta < 0) return '';
+    if (sanyou < 0) return 'ta';
+    if (ta < 0) return 'sanyou';
+    return sanyou <= ta ? 'sanyou' : 'ta';
+  }
+  function titleKey(v) {
+    return String(v || '').replace(/[·・\s]/g, '').toLowerCase();
+  }
+  //匹配怪物名称
+  function biliTitleMonster(title) {
+    var text = titleKey(title);
+    var hits = [];
+    MONSTERS.forEach(function (m) {
+      var fullKey = titleKey(m.name);
+      var aliases = [m.name];
+      var base = m.name.replace(/^(?:怪异克服|霸主[·・]?|原初形态)/, '');
+      if (base && base !== m.name) aliases.push(base);
+      aliases.forEach(function (alias) {
+        var key = titleKey(alias);
+        if (key.length < 2) return;
+        var index = text.indexOf(key);
+        if (index < 0) return;
+        hits.push({ id: m.id, key: key, index: index, exact: key === fullKey });
+      });
+    });
+    hits.sort(function (a, b) {
+      return (Number(b.exact) - Number(a.exact)) || (b.key.length - a.key.length) || (a.index - b.index);
+    });
+    return hits.length ? hits[0].id : '';
+  }
+  //匹配武器
+  function biliTitleWeapon(title) {
+    var text = titleKey(title);
+    var aliases = [
+      { id: 'gs', words: ['大剑'] },
+      { id: 'ls', words: ['太刀'] },
+      { id: 'sns', words: ['单手剑', '片手剑'] },
+      { id: 'db', words: ['双剑', '双刀'] },
+      { id: 'hammer', words: ['大锤'] },
+      { id: 'hh', words: ['狩猎笛', '笛'] },
+      { id: 'lance', words: ['长枪'] },
+      { id: 'gl', words: ['铳枪'] },
+      { id: 'sa', words: ['剑斧', '斩斧'] },
+      { id: 'cb', words: ['盾斧'] },
+      { id: 'ig', words: ['操虫棍', '虫棍'] },
+      { id: 'lbg', words: ['轻弩炮', '轻弩'] },
+      { id: 'hbg', words: ['重弩炮', '重弩'] },
+      { id: 'bow', words: ['弓箭', '弓'] }
+    ];
+    var hits = [];
+    aliases.forEach(function (item) {
+      if (!wById[item.id]) return;
+      item.words.forEach(function (word) {
+        var key = titleKey(word);
+        var index = text.indexOf(key);
+        if (index >= 0) hits.push({ id: item.id, length: key.length, index: index });
+      });
+    });
+    hits.sort(function (a, b) { return (b.length - a.length) || (a.index - b.index); });
+    return hits.length ? hits[0].id : '';
+  }
+  function biliInfoFields(data, raw) {
+    var title = data && data.title ? data.title : '';
+    return {
+      title: title,
+      author: data && data.owner && data.owner.name ? data.owner.name : '',
+      date: biliDate(data && data.pubdate),
+      time: biliTitleTime(title),
+      rule: biliTitleRule(title),
+      monsterId: biliTitleMonster(title),
+      weaponId: biliTitleWeapon(title),
+      bvid: biliBvid(raw)
+    };
+  }
+  //调用b站接口
+  function fetchBiliInfo(raw) {
+    var bvid = biliBvid(raw);
+    if (!bvid) return Promise.reject(new Error('链接中没有找到 BV 号，请粘贴完整视频链接或 BV 号'));
+    return new Promise(function (resolve, reject) {
+      var cb = '__mhrsBili_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+      var script = document.createElement('script');
+      var timer = null;
+      var finished = false;
+      function finish(fn, value) {
+        if (finished) return;
+        finished = true;
+        if (timer) clearTimeout(timer);
+        try { delete window[cb]; } catch (e) { window[cb] = undefined; }
+        if (script.parentNode) script.parentNode.removeChild(script);
+        fn(value);
+      }
+      window[cb] = function (payload) {
+        if (!payload || payload.code !== 0 || !payload.data) {
+          finish(reject, new Error((payload && payload.message) || 'B站没有返回视频信息'));
+          return;
+        }
+        finish(resolve, payload.data);
+      };
+      script.onerror = function () { finish(reject, new Error('无法访问 B 站接口')); };
+      script.src = 'https://api.bilibili.com/x/web-interface/view?bvid=' + encodeURIComponent(bvid) + '&jsonp=jsonp&callback=' + cb;
+      timer = setTimeout(function () { finish(reject, new Error('识别超时，请稍后重试')); }, 12000);
+      document.head.appendChild(script);
+    });
+  }
+  async function identifyBiliVideo() {
+    var input = $('eVideo');
+    var btn = $('eVideoIdentify');
+    var msg = $('eMsg');
+    var raw = input.value.trim();
+    if (!raw) {
+      msg.textContent = '请先粘贴 B 站视频链接或 BV 号';
+      msg.style.color = 'var(--danger)';
+      input.focus();
+      return;
+    }
+    btn.disabled = true;
+    btn.textContent = '识别中…';
+    msg.textContent = '正在读取 B 站视频信息…';
+    msg.style.color = 'var(--text-dim)';
+    try {
+      var data = await fetchBiliInfo(raw);
+      if (data.title) $('eTitle').value = data.title;
+      if (data.owner && data.owner.name) $('eAuthor').value = data.owner.name;
+      var date = biliDate(data.pubdate);
+      if (date) $('eDate').value = date;
+      var titleTime = biliTitleTime(data.title);
+      if (titleTime) $('eTime').value = titleTime;
+      var titleRule = biliTitleRule(data.title);
+      if (titleRule) {
+        var ruleSel = $('eRule');
+        if (ruleSel.querySelector('option[value="' + titleRule + '"]')) ruleSel.value = titleRule;
+      }
+      var bvid = biliBvid(raw);
+      if (bvid) $('eVideo').value = 'https://www.bilibili.com/video/' + bvid;
+      msg.textContent = '已识别并回填视频标题、UP 主、日期' + (titleTime ? '、用时' : '') + (titleRule ? '、规则' : '');
+      msg.style.color = 'var(--good)';
+    } catch (e) {
+      msg.textContent = '识别失败：' + e.message;
+      msg.style.color = 'var(--danger)';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = '识别';
+    }
+  }
   /* 最新最快：先比时间快，同时间取日期新 */
   function bestOf(list) {
     if (!list || !list.length) return null;
@@ -468,6 +637,11 @@
     var task = qt === 'raging' ? (q ? q.label : '烈祸袭来') : (qtLabel(qt) + (m.tier ? ' · ' + m.tier : ''));
     $('eTask').textContent = task + '　' + m.name + ' × ' + w.label;
     $('eWeapon').textContent = w.label;
+    var identifyBtn = $('eVideoIdentify');
+    if (identifyBtn) {
+      identifyBtn.disabled = false;
+      identifyBtn.textContent = '识别';
+    }
     $('eAuthor').value = '';
     $('eTime').value = '';
     $('eDate').value = todayStr();
@@ -1309,6 +1483,8 @@
     return null;
   }
   function setupSubmitReview() {
+    if (!$('submitBtn') || !$('reviewBtn') || !$('submitModal') || !$('reviewModal')) return;
+    var submitIdentifyBtn = $('sVideoIdentify');
     fillSelect('sQuestType', CFG.questTypes, '');
     fillSelect('sWeapon', CFG.weapons, '');
     fillSelect('sRule', CFG.rules, '');
@@ -1334,6 +1510,10 @@
       $('sTitle').value = '';
       $('sBv').value = '';
       $('sMonster').value = '';
+      if (submitIdentifyBtn) {
+        submitIdentifyBtn.disabled = false;
+        submitIdentifyBtn.textContent = '识别';
+      }
       $('sQuestType').value = 'special';
       refreshTaskOptions();
       $('sTask').value = '';
@@ -1345,6 +1525,7 @@
     $('submitModal').addEventListener('click', function (e) { if (e.target === $('submitModal')) $('submitModal').classList.add('hidden'); });
     $('sQuestType').addEventListener('change', refreshTaskOptions);
     $('sSend').addEventListener('click', submitSend);
+    if (submitIdentifyBtn) submitIdentifyBtn.addEventListener('click', identifySubmitBiliVideo);
     $('reviewBtn').addEventListener('click', function () {
       if (!apiBaseOk()) { window.alert('投稿服务尚未启用。'); return; }
       if (!getAdminKey()) {
@@ -1358,6 +1539,44 @@
     });
     $('rvClose').addEventListener('click', function () { $('reviewModal').classList.add('hidden'); });
     $('reviewModal').addEventListener('click', function (e) { if (e.target === $('reviewModal')) $('reviewModal').classList.add('hidden'); });
+  }
+  async function identifySubmitBiliVideo() {
+    var input = $('sBv');
+    var btn = $('sVideoIdentify');
+    var raw = input.value.trim();
+    if (!raw) { sMsg('请先粘贴 B 站视频链接或 BV 号', false); input.focus(); return; }
+    btn.disabled = true;
+    btn.textContent = '识别中…';
+    sMsg('正在读取 B 站视频信息…', true);
+    try {
+      var data = await fetchBiliInfo(raw);
+      var info = biliInfoFields(data, raw);
+      if (info.title) $('sTitle').value = info.title;
+      if (info.author) $('sAuthor').value = info.author;
+      if (info.date) $('sDate').value = info.date;
+      if (info.time) $('sTime').value = info.time;
+      if (info.rule) {
+        var ruleSel = $('sRule');
+        if (ruleSel.querySelector('option[value="' + info.rule + '"]')) ruleSel.value = info.rule;
+      }
+      if (info.monsterId && mById[info.monsterId]) $('sMonster').value = mById[info.monsterId].name;
+      if (info.weaponId) {
+        var weaponSel = $('sWeapon');
+        if (weaponSel.querySelector('option[value="' + info.weaponId + '"]')) weaponSel.value = info.weaponId;
+      }
+      if (info.bvid) $('sBv').value = 'https://www.bilibili.com/video/' + info.bvid;
+      var fields = ['视频标题', 'UP 主', '日期'];
+      if (info.time) fields.push('用时');
+      if (info.rule) fields.push('规则');
+      if (info.monsterId) fields.push('怪物');
+      if (info.weaponId) fields.push('武器');
+      sMsg('已识别并回填' + fields.join('、'), true);
+    } catch (e) {
+      sMsg('识别失败：' + e.message, false);
+    } finally {
+      btn.disabled = false;
+      btn.textContent = '识别';
+    }
   }
   async function submitSend() {
     if (!apiBaseOk()) { sMsg('投稿服务未启用', false); return; }
@@ -1556,6 +1775,8 @@
     $('entryClose').addEventListener('click', function () { eModal.classList.add('hidden'); });
     eModal.addEventListener('click', function (e) { if (e.target === eModal) eModal.classList.add('hidden'); });
     $('eSave').addEventListener('click', function () { saveEntry(); });
+    var identifyBtn = $('eVideoIdentify');
+    if (identifyBtn) identifyBtn.addEventListener('click', identifyBiliVideo);
 
     setupSubmitReview();
 

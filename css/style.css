@@ -389,6 +389,9 @@ code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-si
   border-radius: 8px; padding: 6px 10px; font-size: 13px; outline: none; font-family: inherit;
 }
 .eform input:focus, .eform select:focus { border-color: var(--sel-border); }
+.e-video-row, .s-video-row { display: flex; align-items: center; gap: 6px; min-width: 0; }
+.e-video-row input, .s-video-row input { flex: 1; min-width: 0; }
+.e-video-row .btn, .s-video-row .btn { flex: 0 0 auto; white-space: nowrap; }
 .modal-actions input[type="password"] {
   flex: 1; min-width: 200px; background: var(--field); color: var(--text); border: 1px solid var(--line);
   border-radius: 8px; padding: 6px 10px; font-size: 12.5px; outline: none; font-family: Consolas, Menlo, monospace;

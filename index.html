@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MHRS 竞速成绩库</title>
 <script>(function(){try{if(localStorage.getItem('mhrs_theme')==='light'){document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();</script>
-<link rel="stylesheet" href="css/style.css?v=1788761303216">
+<link rel="stylesheet" href="css/style.css?v=1788762604277">
 </head>
 <body>
 
@@ -141,7 +141,7 @@
       <label>作者</label><input type="text" id="eAuthor" placeholder="玩家名 / UP主" autocomplete="off">
       <label>用时</label><input type="text" id="eTime" placeholder="如 05'02''52（不写毫秒则默认…99）" autocomplete="off">
       <label>日期</label><input type="text" id="eDate" placeholder="2026-9-6" autocomplete="off">
-      <label>视频链接</label><input type="text" id="eVideo" placeholder="B站链接或 BV 号（可选，自动补全）" autocomplete="off">
+      <label>视频链接</label><div class="e-video-row"><input type="text" id="eVideo" placeholder="B站链接或 BV 号（可选，自动补全）" autocomplete="off"><button type="button" class="btn btn-mini" id="eVideoIdentify">识别</button></div>
       <label>平台</label><select id="ePlat"></select>
     </div>
     <div class="modal-actions">
@@ -167,6 +167,7 @@
       <label>任务类型</label><select id="sQuestType"></select>
       <label>EX/烈祸任务</label><span id="sTaskWrap"><input type="text" id="sTask" list="dlTasks" placeholder="烈祸任务名 / EX 星级" autocomplete="off"></span>
       <datalist id="dlTasks"></datalist>
+      <label>BV号</label><div class="s-video-row"><input type="text" id="sBv" placeholder="如 BV1q5bp6AEaJ 或完整链接" autocomplete="off"><button type="button" class="btn btn-mini" id="sVideoIdentify">识别</button></div>
       <label>怪物</label><input type="text" id="sMonster" list="dlMonsters" placeholder="输入怪物名，如 怪异克服天彗龙" autocomplete="off">
       <datalist id="dlMonsters"></datalist>
       <label>武器</label><select id="sWeapon"></select>
@@ -175,7 +176,6 @@
       <label>玩家名</label><input type="text" id="sAuthor" placeholder="跑者/UP主 名字" autocomplete="off">
       <label>日期</label><input type="text" id="sDate" placeholder="2026-9-6" autocomplete="off">
       <label>视频标题</label><input type="text" id="sTitle" placeholder="视频标题（可选，用于显示）" autocomplete="off">
-      <label>BV号</label><input type="text" id="sBv" placeholder="如 BV1q5bp6AEaJ 或完整链接" autocomplete="off">
       <label>平台</label><select id="sPlat"></select>
     </div>
     <div class="hidden" style="position:absolute;left:-9999px" aria-hidden="true">
@@ -203,9 +203,9 @@
   </div>
 </div>
 
-<script src="js/config.js?v=1788761303216"></script>
-<script src="js/monsters.js?v=1788761303216"></script>
-<script src="js/data.js?v=1788761303216"></script>
-<script src="js/app.js?v=1788761303216"></script>
+<script src="js/config.js?v=1788762604277"></script>
+<script src="js/monsters.js?v=1788762604277"></script>
+<script src="js/data.js?v=1788762604277"></script>
+<script src="js/app.js?v=1788762604277"></script>
 </body>
 </html>
