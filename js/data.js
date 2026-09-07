@@ -2144,5 +2144,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr7tpbi"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m47",
+    "weaponId": "bow",
+    "timeMs": 278710,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-06-03",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1EpVC6WEdU",
+        "title": "【MHRS/生庆】弓箭 泥=奉献 特别探究：银火龙 438 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr8ek77"
   }
 ];
