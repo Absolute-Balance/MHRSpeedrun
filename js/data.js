@@ -3446,5 +3446,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtre8b5q"
+  },
+  {
+    "questType": "raging",
+    "quest": "q10",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m37",
+    "weaponId": "sa",
+    "timeMs": 262780,
+    "author": "時渡",
+    "date": "2026-06-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV15UM3zZEiM",
+        "title": "【MHRS】斩斧 活动任务：烈祸来袭 冰狼长嚎！4分22秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtre8hd2"
   }
 ];
