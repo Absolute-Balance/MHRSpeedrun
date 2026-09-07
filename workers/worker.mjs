@@ -22,14 +22,14 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const method = request.method;
+    const reqOrigin = request.headers.get('Origin') || '';
+    const corsHeaders = corsFor(env, reqOrigin);
 
-    const corsHeaders = buildCors(env);
+    if (reqOrigin && !isAllowed(reqOrigin, env)) {
+      return json({ ok: false, error: '来源不被允许' }, 403, corsHeaders);
+    }
     if (method === 'OPTIONS') {
       return new Response(null, { status: 204, headers: corsHeaders });
-    }
-    const origin = request.headers.get('Origin') || '';
-    if (origin && !isAllowed(origin, env)) {
-      return json({ ok: false, error: '来源不被允许' }, 403, corsHeaders);
     }
 
     try {
@@ -46,6 +46,9 @@ export default {
       if (method === 'POST' && p === '/reject') {
         return await handleReject(request, env, corsHeaders);
       }
+      if (method === 'GET' && p === '/testgh') {
+        return await handleTestGh(request, env, corsHeaders);
+      }
       return json({ ok: false, error: '接口不存在' }, 404, corsHeaders);
     } catch (e) {
       return json({ ok: false, error: '服务器错误：' + e.message }, 500, corsHeaders);
@@ -60,10 +63,16 @@ function json(obj, status = 200, headers = {}) {
     headers: Object.assign({ 'Content-Type': 'application/json; charset=utf-8' }, headers)
   });
 }
-function buildCors(env) {
+/* 回显“被允许的请求来源”，支持多个来源（本地调试 + 线上并存） */
+function corsFor(env, reqOrigin) {
   const allow = (env.ALLOWED_ORIGIN || '').split(',').map(s => s.trim()).filter(Boolean);
+  let acao = '*';
+  if (allow.length) {
+    acao = (reqOrigin && allow.indexOf(reqOrigin) >= 0) ? reqOrigin : allow[0];
+  }
   return {
-    'Access-Control-Allow-Origin': allow[0] || '*',
+    'Access-Control-Allow-Origin': acao,
+    'Vary': 'Origin',
     'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
     'Access-Control-Allow-Headers': 'Content-Type, x-admin-key',
     'Access-Control-Max-Age': '86400'
@@ -181,7 +190,7 @@ async function handleSubmit(request, env, cors) {
     createdAt: new Date().toISOString(),
     submitterIp: ip
   }));
-  return json({ ok: true, id });
+  return json({ ok: true, id }, 200, cors);
 }
 async function handlePending(request, env, cors) {
   if (!adminOk(request, env)) return json({ ok: false, error: '无权限' }, 401, cors);
@@ -203,7 +212,11 @@ async function handlePending(request, env, cors) {
 const GH_API = (owner, repo) => 'https://api.github.com/repos/' + owner + '/' + repo + '/contents/';
 async function ghGet(path, env) {
   const r = await fetch(GH_API(env.GITHUB_OWNER, env.GITHUB_REPO) + path + '?ref=' + env.GITHUB_BRANCH, {
-    headers: { Accept: 'application/vnd.github+json', Authorization: 'Bearer ' + env.GITHUB_TOKEN }
+    headers: {
+      'User-Agent': 'mhrs-worker',
+      Accept: 'application/vnd.github+json',
+      Authorization: 'Bearer ' + env.GITHUB_TOKEN
+    }
   });
   if (r.status === 404) return null;
   if (!r.ok) throw new Error('读取 GitHub 失败 HTTP ' + r.status);
@@ -214,6 +227,7 @@ async function ghPut(path, sha, content, message, env) {
   const r = await fetch(GH_API(env.GITHUB_OWNER, env.GITHUB_REPO) + path, {
     method: 'PUT',
     headers: {
+      'User-Agent': 'mhrs-worker',
       Accept: 'application/vnd.github+json',
       Authorization: 'Bearer ' + env.GITHUB_TOKEN,
       'Content-Type': 'application/json'
@@ -278,4 +292,29 @@ async function handleReject(request, env, cors) {
   const id = cleanStr(b.id, 200);
   await env.SUBMISSIONS.delete(id).catch(() => {});
   return json({ ok: true }, 200, cors);
+}
+/* 诊断：用 Worker 里的 GITHUB_TOKEN 试读仓库文件，返回 GitHub 原始报错 */
+async function handleTestGh(request, env, cors) {
+  const q = new URL(request.url).searchParams;
+  const key = request.headers.get('x-admin-key') || q.get('key') || '';
+  if (!(env.ADMIN_KEY && key === env.ADMIN_KEY)) return json({ ok: false, error: '无权限' }, 401, cors);
+  const out = {
+    owner: env.GITHUB_OWNER || '(空)',
+    repo: env.GITHUB_REPO || '(空)',
+    branch: env.GITHUB_BRANCH || '(空)',
+    tokenSet: !!(env.GITHUB_TOKEN && env.GITHUB_TOKEN.length > 10),
+    tokenTail: env.GITHUB_TOKEN ? env.GITHUB_TOKEN.slice(-4) : '',
+    kvSet: !!(env.SUBMISSIONS)
+  };
+  try {
+    const r = await fetch(GH_API(env.GITHUB_OWNER || '', env.GITHUB_REPO || '') + 'js/data.js?ref=' + (env.GITHUB_BRANCH || 'main'), {
+      headers: { 'User-Agent': 'mhrs-worker', Accept: 'application/vnd.github+json', Authorization: 'Bearer ' + (env.GITHUB_TOKEN || '') }
+    });
+    out.httpStatus = r.status;
+    const t = await r.text();
+    try { out.github = JSON.parse(t); } catch (e2) { out.github = t.slice(0, 300); }
+  } catch (e) {
+    out.networkError = e.message;
+  }
+  return json({ ok: true, diag: out }, 200, cors);
 }
