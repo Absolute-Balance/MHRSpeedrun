@@ -4139,5 +4139,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrhyomc"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m39",
+    "weaponId": "db",
+    "timeMs": 252830,
+    "author": "BFeather7",
+    "date": "2025-02-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1rPPUeuEBF",
+        "title": "【合气劫血】双刀 特别探究：轰龙 三无规则 4'12\"83"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtri00cj"
   }
 ];
