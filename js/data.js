@@ -2039,5 +2039,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr0vrv5"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m50",
+    "weaponId": "cb",
+    "timeMs": 290540,
+    "author": "德德赛艇",
+    "date": "2023-07-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1r94y1i7iy",
+        "title": "【MHRS/〇针达成】盾斧 特别探究激昂金狮子 4′50″54 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr0x2bh"
   }
 ];
