@@ -3950,5 +3950,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrhmip7"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m28",
+    "weaponId": "db",
+    "timeMs": 248090,
+    "author": "BFeather7",
+    "date": "2025-01-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ARfYYHEVm",
+        "title": "【MHRS】双刀 特别探究：泥翁龙 三无规则 4'08\"09"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrhnt22"
   }
 ];
