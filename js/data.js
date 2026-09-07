@@ -2795,5 +2795,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrbgajo"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m62",
+    "weaponId": "lbg",
+    "timeMs": 210990,
+    "author": "墓墓OVO",
+    "date": "2025-02-19",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1seA6eXEgR",
+        "title": "【MHRS/新记录】最强轻弩流派！3分30秒 烈祸原初爵银龙 TA规则+极限炼化（三无）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrbn2td"
   }
 ];
