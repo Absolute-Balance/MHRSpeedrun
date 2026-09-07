@@ -611,5 +611,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqony82"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m56",
+    "weaponId": "lbg",
+    "timeMs": 402420,
+    "author": "灼眼の冷面魔男",
+    "date": "2024-01-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1E5411y756",
+        "title": "【MHRS】散弹轻弩 特别探究：天廻龙 6'42''42 三无/TA＋怪异炼成"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqoow9p"
   }
 ];
