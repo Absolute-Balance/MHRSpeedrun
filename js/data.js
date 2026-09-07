@@ -1241,5 +1241,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtquvurr"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "ls",
+    "timeMs": 312130,
+    "author": "冬季鱼__",
+    "date": "2026-08-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1J7826GEPr",
+        "title": "I'll make the arrangements just wait on that corner for me"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtquxep3"
   }
 ];
