@@ -275,5 +275,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtql029h"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m56",
+    "weaponId": "gs",
+    "timeMs": 233930,
+    "author": "__Ciel___",
+    "date": "2025-10-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1YjyYBdEX5",
+        "title": "【MHRS/三无/近战首个3台】圆梦3台！3'53 大剑 特别探究·怪异克服天廻龙"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqo3rfe"
   }
 ];
