@@ -664,6 +664,12 @@
         CFG.ragingQuests.find(function (x) { return x.monsterFile === m.file; }) || null;
       ctx.quest = q ? q.id : null;
     }
+    /* 访客（无 GitHub 令牌）点「＋」：自动转投稿弹窗并预填 任务/怪物/武器；
+       管理员直录（有令牌）与「✏️ 修改」仍走下方原入口 */
+    if (!editRec && !hasToken() && apiBaseOk() && $('submitModal')) {
+      openSubmitPrefill(qt, q, m, w);
+      return;
+    }
     entryCtx = {
       mode: editRec ? 'edit' : 'add',
       id: editRec ? editRec.id : null,
@@ -708,8 +714,8 @@
       }
     }
     $('eMsg').textContent = '';
-    if (entryCtx && entryCtx.mode === 'add' && !hasToken() && apiBaseOk()) {
-      $('eMsg').textContent = '提示：这是管理员直录入口（需要 GitHub 令牌）。访客投稿请使用顶部「✉ 投稿成绩」按钮。';
+    if (entryCtx.mode === 'add' && !hasToken() && !apiBaseOk()) {
+      $('eMsg').textContent = '提示：投稿后端未启用（部署见 workers/DEPLOY.md），此直录入口需要 GitHub 令牌。';
       $('eMsg').style.color = 'var(--text-dim)';
     }
     $('entryModal').classList.remove('hidden');
@@ -1606,6 +1612,48 @@
     });
     $('rvClose').addEventListener('click', function () { $('reviewModal').classList.add('hidden'); });
     $('reviewModal').addEventListener('click', function (e) { if (e.target === $('reviewModal')) $('reviewModal').classList.add('hidden'); });
+  }
+  /* ＋ 格子无令牌 → 自动转投稿弹窗（按所点格子预填 任务/怪物/武器） */
+  function openSubmitPrefill(qt, q, m, w) {
+    $('sMsg').textContent = '';
+    var ident = $('sVideoIdentify');
+    if (ident) {
+      ident.disabled = false;
+      ident.textContent = '识别';
+    }
+    $('sAuthor').value = '';
+    $('sTime').value = '';
+    $('sDate').value = todayStr();
+    $('sTitle').value = '';
+    $('sBv').value = '';
+    $('sQuestType').value = qt;
+    refreshSubmitOptions();
+    var filledTask = false;
+    if (qt === 'raging') {
+      if (q && $('sTaskSel').querySelector('option[value="' + q.id + '"]')) {
+        $('sTaskSel').value = q.id;
+        filledTask = true;
+      }
+    } else if (m.tier && CFG.exStars.indexOf(m.tier) >= 0) {
+      $('sTaskSel').value = m.tier;
+      filledTask = true;
+    }
+    rebuildMonsterDl();
+    $('sMonster').value = m.name;
+    $('sWeapon').value = w.id;
+    if (state.rule !== 'all' && $('sRule').querySelector('option[value="' + state.rule + '"]')) {
+      $('sRule').value = state.rule;
+    } else {
+      $('sRule').value = '';
+    }
+    $('sPlat').value = 'steam';
+    if (!filledTask) {
+      var pm = $('sMsg');
+      pm.textContent = '已按所选格子预填怪物与武器，请再补充任务/EX 星级';
+      pm.style.color = 'var(--text-dim)';
+    }
+    $('submitModal').classList.remove('hidden');
+    $('sAuthor').focus();
   }
   async function identifySubmitBiliVideo() {
     var input = $('sBv');
