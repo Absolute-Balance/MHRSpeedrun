@@ -3719,5 +3719,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrh881p"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m09",
+    "weaponId": "db",
+    "timeMs": 251850,
+    "author": "BFeather7",
+    "date": "2026-06-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Eejo6NECa",
+        "title": "【合气劫血】双刀 特别探究：天狗兽 三无规则 4'11\"85"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrh9j5i"
   }
 ];
