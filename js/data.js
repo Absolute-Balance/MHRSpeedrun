@@ -1010,5 +1010,509 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqual6j"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "sns",
+    "timeMs": 424490,
+    "author": "-橘-孜-",
+    "date": "2025-02-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1XJwoeVEvS",
+        "title": "【MHRS/生庆】特别探究 钢龙 片手剑 三无规则 7分04秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtquc392"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "db",
+    "timeMs": 330300,
+    "author": "BFeather7",
+    "date": "2024-07-15",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV11jbSejEXD",
+        "title": "【MHRS】双刀 特别探究：怪异克服钢龙 三无规则 5'30''30"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtquddql"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "lance",
+    "timeMs": 435280,
+    "author": "三明治OAO",
+    "date": "2026-08-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1cmMB6PEaP",
+        "title": "【MHRS】长枪 特别探究：怪异克服钢龙 7分15秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqufh11"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "gl",
+    "timeMs": 601040,
+    "author": "_Aartox_",
+    "date": "2026-07-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1rLKn65Etf",
+        "title": "特别探究 无人区探险记"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtquhips"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "sa",
+    "timeMs": 331680,
+    "author": "心安安安w",
+    "date": "2025-12-21",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV14KqCBZEWr",
+        "title": "【MHRS】特别探究 钢龙 斩斧 5分31秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtquj8eb"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "cb",
+    "timeMs": 375780,
+    "author": "K----J",
+    "date": "2024-01-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1re411Y76E",
+        "title": "【钢·史中史·龙】盾斧 三无规则(撞虫禁止) 6'15\"78 特别探究:怪异克服钢龙 MHRS"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqukqha"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "ta",
+    "monsterId": "m53",
+    "weaponId": "ig",
+    "timeMs": 491900,
+    "author": "一跃下戳升虫",
+    "date": "2024-10-19",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV11cCoYDEME",
+        "title": "【MHRS】 操虫棍 特殊探究：怪异克服钢龙 8分11秒 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtquoige"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "lbg",
+    "timeMs": 321390,
+    "author": "灼眼の冷面魔男",
+    "date": "2024-01-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV19e411m7aM",
+        "title": "【MHRS】为啥你的速射贯二这么刮痧之特别探究：钢龙 5分21 三无 生庆"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtquq2w6"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "hbg",
+    "timeMs": 296990,
+    "author": "灼眼の冷面魔男",
+    "date": "2023-12-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV17e41167od",
+        "title": "【MHRS】最勇气重弩的一集 特别探究：钢龙 4'56''99 三无/TA＋怪异炼成"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqurdl5"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "bow",
+    "timeMs": 234060,
+    "author": "Slayall11",
+    "date": "2024-01-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Jg4y1m7C1",
+        "title": "【MHR/MHRS】出狱！弓箭 特别探究：怪异克服钢龙 三无/TA+怪异炼化3分54"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqusrjw"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "gs",
+    "timeMs": 292910,
+    "author": "__Ciel___",
+    "date": "2026-04-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ca9EBXEgJ",
+        "title": "霞龙452"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtquvurr"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "ls",
+    "timeMs": 312130,
+    "author": "冬季鱼__",
+    "date": "2026-08-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1J7826GEPr",
+        "title": "I'll make the arrangements just wait on that corner for me"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtquxep3"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "sns",
+    "timeMs": 560990,
+    "author": "-橘-孜-",
+    "date": "2024-11-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1UizEYBEpq",
+        "title": "【MHRS】特别探究 霞龙 片手剑 9分20秒 捉迷藏规则(三无）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqv5e9v"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "sns",
+    "timeMs": 502140,
+    "author": "澪田维吹",
+    "date": "2025-09-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1aKnJzkEd9",
+        "title": "【Echo杯/竞速区】单手剑 特别探究 怪异克服霞龙 三无 822"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqv9ea2"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "db",
+    "timeMs": 192900,
+    "author": "Tagakisa",
+    "date": "2026-04-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV18zoJB2EeC",
+        "title": "【MHRS】双刀 特别探究:怪异克服霞龙 3'12\"90 三无规则 极限炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvapx2"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "lance",
+    "timeMs": 430160,
+    "author": "三明治OAO",
+    "date": "2026-08-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1fK8S6jEv8",
+        "title": "【MHRS/生庆】长枪 特别探究：怪异克服霞龙 7分10秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvc83d"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "gl",
+    "timeMs": 524780,
+    "author": "恰鱼鱼的溯汐雨",
+    "date": "2025-10-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1BCxVzDEVF",
+        "title": "【ECHO杯/竞速区】铳枪 特别探究怪异克服霞龙 8'44''78"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqve6jd"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "sa",
+    "timeMs": 280150,
+    "author": "无端路过小小坏",
+    "date": "2026-04-13",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1BfDcBbEmi",
+        "title": "MHRS/生庆】特别探究 怪异克服霞龙 斩斧 4'40\"15 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvfnzu"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "cb",
+    "timeMs": 236670,
+    "author": "K----J",
+    "date": "2024-03-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1WW421c7Rj",
+        "title": "【超解发射器】盾斧 三无规则(撞虫禁止) 3'56\"67 特别探究:怪异克服霞龙 MHRS"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvhf5c"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "ta",
+    "monsterId": "m52",
+    "weaponId": "ig",
+    "timeMs": 490750,
+    "author": "クオハク",
+    "date": "2024-10-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Ar1yYXEZe",
+        "title": "【MHRS】特别讨究 怪异克服霞龙 操虫棍 8分10 TA"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvixrr"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "lbg",
+    "timeMs": 212520,
+    "author": "灼眼の冷面魔男",
+    "date": "2023-09-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1vu411c76u",
+        "title": "【MHRS】属贯爷就是爷！特别探究霞龙 轻弩 3'32''52 三无/TA＋怪异炼成"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvk979"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "hbg",
+    "timeMs": 181480,
+    "author": "灼眼の冷面魔男",
+    "date": "2024-01-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1uC4y1Y7fu",
+        "title": "【MHRS】曙光抽象JR重弩 特别探究：霞龙 3'01''48 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvlk65"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "bow",
+    "timeMs": 201470,
+    "author": "Slayall11",
+    "date": "2023-11-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1WM411o7nc",
+        "title": "弓箭 特别探究：怪异克服霞龙三无/TA+怪异炼化3分21"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvmve7"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m55",
+    "weaponId": "gs",
+    "timeMs": 352740,
+    "author": "Zen10_2333",
+    "date": "2023-09-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Cp4y1L7Ty",
+        "title": "【MHRS】大剑 特别探究: 混沌黑蚀龙 5分52秒 TA打法＋怪异炼化/三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvpyhb"
   }
 ];
