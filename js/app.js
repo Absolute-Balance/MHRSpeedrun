@@ -93,8 +93,8 @@
   }
   function ruleLegendText() {
     return isLight()
-      ? '每格只显示最快成绩，深色=三无规则，金色=TA规则，红色=无限制规则，点怪物头像看全武器，点成绩格看该武器'
-      : '每格只显示最快成绩，白色=三无规则，黄色=TA规则，红色=无限制规则，点怪物头像看全武器，点成绩格看该武器';
+      ? '每格只显示最快成绩，深色=三无规则，金色=TA规则，点怪物头像看全武器，点成绩格看该武器'
+      : '每格只显示最快成绩，白色=三无规则，黄色=TA规则，点怪物头像看全武器，点成绩格看该武器';
   }
 
   function ruleObj(id) {
@@ -706,7 +706,7 @@
         '<span class="mv-name">' + esc(w.label) + '</span>';
       if (best) {
         html += '<span class="mv-time"><span class="' + tmCls(best.rule) + '">' + fmtTime(best.timeMs) + '</span></span>' +
-          '<span class="mv-author pa" data-p="' + esc(best.author) + '" title="查看该玩家全部成绩">' + esc(best.author) + (best.videos && best.videos.length ? ' 📹' : '') + '</span>' +
+          '<span class="mv-author pa" data-p="' + esc(best.author) + '" title="查看该玩家全部成绩">' + esc(best.author) + '</span>' +
           '<span class="mv-date">' + esc(best.date) + '</span>' +
           '<span class="mv-arr">›</span>';
       } else {
@@ -1077,7 +1077,13 @@
     var pad = 16, leadW = 66, colW = 126, headH = 88, rowH = 56, topH = 64, footH = 26;
     var gridH = headH + weapons.length * rowH;
     var W = pad * 2 + leadW + axis.length * colW;
-    var H = pad + topH + gridH + footH + pad;
+    /* 底部图例/落款宽度预测量（窄图时自动加一行，避免文字重叠） */
+    var mctx = document.createElement('canvas').getContext('2d');
+    mctx.font = '10px "Microsoft YaHei", sans-serif';
+    var legText = '白色=三无规则 · 黄色=TA规则';
+    var footText = 'MHRS 竞速成绩库 · @星空柠檬凛';
+    var extraFoot = (mctx.measureText(legText).width + mctx.measureText(footText).width + pad * 2 + 26 > W) ? 15 : 0;
+    var H = pad + topH + gridH + footH + pad + extraFoot;
 
     var canvas = document.createElement('canvas');
     var SC = 2;
@@ -1194,13 +1200,13 @@
       });
     });
 
-    /* 图例 + 页脚 */
+    /* 图例 + 页脚（窄图自动分两行，避免重叠） */
     ctx.fillStyle = C.dim;
     ctx.font = '10px "Microsoft YaHei", sans-serif';
     ctx.textAlign = 'left';
-    ctx.fillText('白色=三无规则 · 黄色=TA规则 · 红色=无限制规则', pad, gy + gridH + 18);
+    ctx.fillText(legText, pad, gy + gridH + 18);
     ctx.textAlign = 'right';
-    ctx.fillText('MHRS 竞速成绩库 · @星空柠檬凛', W - pad, gy + gridH + 18);
+    ctx.fillText(footText, W - pad, gy + gridH + 18 + extraFoot);
 
     canvas.toBlob(function (blob) {
       var a = document.createElement('a');
