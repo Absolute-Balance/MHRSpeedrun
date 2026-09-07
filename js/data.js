@@ -443,5 +443,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqoha3s"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m56",
+    "weaponId": "gl",
+    "timeMs": 661090,
+    "author": "_Aartox_",
+    "date": "2026-07-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1rLKn65Etf",
+        "title": "特别探究 无人区探险记"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqoha65"
   }
 ];
