@@ -2081,5 +2081,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr0ycr1"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m50",
+    "weaponId": "hbg",
+    "timeMs": 299410,
+    "author": "灼眼の冷面魔男",
+    "date": "2023-08-15",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ax4y1f7ri",
+        "title": "【MHRS】物理外挂重弩VS超特猿神 物理武器打出太刀时间！！4分59秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr14ebb"
   }
 ];
