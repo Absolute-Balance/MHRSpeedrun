@@ -3866,5 +3866,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrhhbcc"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m19",
+    "weaponId": "db",
+    "timeMs": 223540,
+    "author": "BFeather7",
+    "date": "2026-06-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Pr7T6gEbJ",
+        "title": "【MHRS】双刀 特别探究：绯天狗兽 三无规则 3'43\"54"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrhimf9"
   }
 ];
