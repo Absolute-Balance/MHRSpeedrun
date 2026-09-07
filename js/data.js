@@ -380,5 +380,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqobjah"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m56",
+    "weaponId": "hh",
+    "timeMs": 419990,
+    "author": "病房里的五香蛋丶",
+    "date": "2024-08-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1wSYpeyEHk",
+        "title": "【MHRS/疾风乐团】六台达成！狩猎笛 特别探究：天廻龙 6\"59 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqodde5"
   }
 ];
