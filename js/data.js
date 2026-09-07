@@ -905,5 +905,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqtz55l"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m54",
+    "weaponId": "lbg",
+    "timeMs": 294000,
+    "author": "灼眼の冷面魔男",
+    "date": "2024-01-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1uC4y1v7BS",
+        "title": "【MHRS】特别探究：炎王龙 轻弩 4分54 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqu1v01"
   }
 ];
