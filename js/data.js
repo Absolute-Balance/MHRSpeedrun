@@ -4013,5 +4013,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrhqel0"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m32",
+    "weaponId": "sa",
+    "timeMs": 299420,
+    "author": "BFeather7",
+    "date": "2026-07-21",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1F8Ks6HEcA",
+        "title": "【MHRS】斩斧 特别探究：熔翁龙 三无规则 4'59\"42"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrhrrvc"
   }
 ];
