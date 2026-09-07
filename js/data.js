@@ -1514,5 +1514,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqvpyhb"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m55",
+    "weaponId": "ls",
+    "timeMs": 389620,
+    "author": "罗丽塔丶",
+    "date": "2024-02-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Et421h7gW",
+        "title": "特别探究：混沌黑蚀龙 太刀 6'29''62 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvsqq9"
   }
 ];
