@@ -1115,5 +1115,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtquj8eb"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "cb",
+    "timeMs": 375780,
+    "author": "K----J",
+    "date": "2024-01-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1re411Y76E",
+        "title": "【钢·史中史·龙】盾斧 三无规则(撞虫禁止) 6'15\"78 特别探究:怪异克服钢龙 MHRS"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqukqha"
   }
 ];
