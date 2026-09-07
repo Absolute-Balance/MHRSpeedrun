@@ -1871,5 +1871,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr0kr3a"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m50",
+    "weaponId": "ls",
+    "timeMs": 268160,
+    "author": "BFeather7",
+    "date": "2025-07-12",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1MDu3znEAF",
+        "title": "【MHRS】太刀 特别探究：激昂金狮子 三无规则 4'28\"16"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr0m1s2"
   }
 ];
