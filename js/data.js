@@ -3908,5 +3908,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrhjx8a"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m22",
+    "weaponId": "db",
+    "timeMs": 263450,
+    "author": "BFeather7",
+    "date": "2026-06-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1L2Js62EKU",
+        "title": "【MHRS】双刀 特别探究：飞雷龙 三无规则 4'23\"45"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrhl8c7"
   }
 ];
