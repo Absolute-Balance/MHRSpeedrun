@@ -506,5 +506,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqoj56i"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m04",
+    "weaponId": "db",
+    "timeMs": 254780,
+    "author": "BFeather7",
+    "date": "2026-09-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1GFtf6xEZn",
+        "title": "【MHRS】双刀 特别探究：镰鼬龙王 三无规则 4'14\"78"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqoknqm"
   }
 ];
