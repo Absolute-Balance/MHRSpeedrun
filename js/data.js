@@ -1388,5 +1388,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqvfnzu"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "cb",
+    "timeMs": 236670,
+    "author": "K----J",
+    "date": "2024-03-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1WW421c7Rj",
+        "title": "【超解发射器】盾斧 三无规则(撞虫禁止) 3'56\"67 特别探究:怪异克服霞龙 MHRS"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvhf5c"
   }
 ];
