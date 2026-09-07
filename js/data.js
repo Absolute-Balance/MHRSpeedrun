@@ -1178,5 +1178,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtquq2w6"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "hbg",
+    "timeMs": 296990,
+    "author": "灼眼の冷面魔男",
+    "date": "2023-12-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV17e41167od",
+        "title": "【MHRS】最勇气重弩的一集 特别探究：钢龙 4'56''99 三无/TA＋怪异炼成"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqurdl5"
   }
 ];
