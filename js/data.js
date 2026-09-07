@@ -1703,5 +1703,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtqzq4f1"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m05",
+    "weaponId": "db",
+    "timeMs": 222560,
+    "author": "BFeather7",
+    "date": "2026-04-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1fhd6BUEsy",
+        "title": "【MHRS】双刀 特别探究：赤甲兽 三无规则 3'42\"56"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqzr52d"
   }
 ];
