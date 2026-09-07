@@ -1267,26 +1267,57 @@
       sel.appendChild(op);
     });
   }
-  function refreshTaskOptions() {
+  var submitMonsterIds = [];
+  /* 按任务类型/EX 刷新“第二级选择”与怪物候选 */
+  function refreshSubmitOptions() {
     var qt = $('sQuestType').value;
-    var dl = $('dlTasks');
-    dl.innerHTML = '';
-    var ph = $('sTask');
+    var sel = $('sTaskSel');
+    sel.innerHTML = '<option value="">— 请选择 —</option>';
     if (qt === 'raging') {
-      ph.placeholder = '烈祸任务名，如 朦胧之影';
+      $('sTaskLabel').textContent = '选择烈祸任务';
       CFG.ragingQuests.forEach(function (q) {
         var op = document.createElement('option');
-        op.value = q.label;
-        dl.appendChild(op);
+        op.value = q.id;
+        op.textContent = q.label;
+        sel.appendChild(op);
       });
     } else {
-      ph.placeholder = 'EX 星级，如 EX9 / Apex';
+      $('sTaskLabel').textContent = '选择 EX 星级';
       CFG.exStars.forEach(function (s) {
         var op = document.createElement('option');
         op.value = s;
-        dl.appendChild(op);
+        op.textContent = s + (s === 'Apex' ? '（霸主）' : '');
+        sel.appendChild(op);
       });
     }
+    rebuildMonsterDl();
+  }
+  function rebuildMonsterDl() {
+    var qt = $('sQuestType').value;
+    var dl = $('dlMonsters');
+    dl.innerHTML = '';
+    submitMonsterIds = [];
+    var seen = {};
+    var ids = [];
+    if (qt === 'raging') {
+      CFG.ragingQuests.forEach(function (q) {
+        var m = mByFile(q.monsterFile);
+        if (m && !seen[m.id]) { seen[m.id] = 1; ids.push(m); }
+      });
+    } else {
+      var tier = $('sTaskSel').value;
+      if (tier) {
+        ids = MONSTERS.filter(function (m) { return m.tier === tier; });
+      }
+    }
+    ids.forEach(function (m) {
+      submitMonsterIds.push(m.id);
+      var op = document.createElement('option');
+      op.value = m.name;
+      dl.appendChild(op);
+    });
+    var mv = $('sMonster').value;
+    if (mv && submitMonsterIds.indexOf(resolveMonster(mv)) < 0) $('sMonster').value = '';
   }
   function resolveMonster(v) {
     v = String(v || '').trim();
@@ -1297,29 +1328,11 @@
     });
     return hit ? hit.id : null;
   }
-  function resolveRagingQuest(v) {
-    v = String(v || '').trim();
-    var low = v.toLowerCase().replace(/\s+/g, '');
-    var norm = function (s) { return s.toLowerCase().replace(/\s+/g, ''); };
-    var hits = CFG.ragingQuests.filter(function (q) {
-      return norm(q.label).indexOf(low) >= 0 || norm(q.shortLabel).indexOf(low) >= 0;
-    });
-    if (hits.length === 1) return hits[0].id;
-    if (hits.length > 1) { hits.sort(function (a, b) { return b.label.length - a.label.length; }); return hits[0].id; }
-    return null;
-  }
   function setupSubmitReview() {
     fillSelect('sQuestType', CFG.questTypes, '');
     fillSelect('sWeapon', CFG.weapons, '');
     fillSelect('sRule', CFG.rules, '');
     fillSelect('sPlat', CFG.platforms, '');
-    var dlM = $('dlMonsters');
-    dlM.innerHTML = '';
-    MONSTERS.forEach(function (m) {
-      var op = document.createElement('option');
-      op.value = m.name;
-      dlM.appendChild(op);
-    });
     $('reviewBtn').classList.toggle('hidden', !getAdminKey());
     if (!apiBaseOk()) {
       $('submitBtn').title = '投稿服务尚未启用（等后端部署后可用）';
@@ -1335,15 +1348,23 @@
       $('sBv').value = '';
       $('sMonster').value = '';
       $('sQuestType').value = 'special';
-      refreshTaskOptions();
-      $('sTask').value = '';
+      refreshSubmitOptions();
+      $('sTaskSel').value = '';
+      rebuildMonsterDl();
       $('sRule').value = '';
       $('sPlat').value = 'steam';
       $('submitModal').classList.remove('hidden');
     });
     $('sClose').addEventListener('click', function () { $('submitModal').classList.add('hidden'); });
     $('submitModal').addEventListener('click', function (e) { if (e.target === $('submitModal')) $('submitModal').classList.add('hidden'); });
-    $('sQuestType').addEventListener('change', refreshTaskOptions);
+    $('sQuestType').addEventListener('change', function () {
+      refreshSubmitOptions();
+      $('sTaskSel').value = '';
+      rebuildMonsterDl();
+    });
+    $('sTaskSel').addEventListener('change', function () {
+      rebuildMonsterDl();
+    });
     $('sSend').addEventListener('click', submitSend);
     $('reviewBtn').addEventListener('click', function () {
       if (!apiBaseOk()) { window.alert('投稿服务尚未启用。'); return; }
@@ -1362,14 +1383,19 @@
   async function submitSend() {
     if (!apiBaseOk()) { sMsg('投稿服务未启用', false); return; }
     var qt = $('sQuestType').value;
-    var mid = resolveMonster($('sMonster').value);
-    if (!qt) { sMsg('请选择任务类型', false); return; }
+    if (!qt) { sMsg('请先选择任务类型', false); return; }
+    var quest = null;
+    var ex = null;
     if (qt === 'raging') {
-      if (!resolveRagingQuest($('sTask').value)) { sMsg('请选择具体的烈祸任务（如：朦胧之影）', false); return; }
-    } else if (!$('sTask').value.trim()) {
-      sMsg('请填写 EX 星级（EX1~EX9 / Apex）', false); return;
+      quest = $('sTaskSel').value;
+      if (!quest) { sMsg('请选择烈祸任务', false); return; }
+    } else {
+      ex = $('sTaskSel').value;
+      if (!ex) { sMsg('请选择 EX 星级', false); return; }
     }
-    if (!mid) { sMsg('找不到该怪物，请从下拉列表选择（如：怪异克服天彗龙）', false); return; }
+    var mid = resolveMonster($('sMonster').value);
+    if (!mid) { sMsg('请选择怪物（仅显示当前任务下的怪物）', false); return; }
+    if (submitMonsterIds.indexOf(mid) < 0) { sMsg('该怪物不属于当前任务/EX 分级，请重新选择', false); return; }
     var wid = $('sWeapon').value;
     var rule = $('sRule').value;
     var author = $('sAuthor').value.trim();
@@ -1377,17 +1403,9 @@
     var ms = parseTime($('sTime').value);
     if (!wid) { sMsg('请选择武器', false); return; }
     if (!rule) { sMsg('请选择规则', false); return; }
-    if (!author) { sMsg('请填写玩家名', false); return; }
+    if (!author) { sMsg('请填写作者', false); return; }
     if (ms == null) { sMsg('用时格式不对（如 05\'02\'\'52）', false); return; }
     if (!date) { sMsg('日期格式不对（如 2026-9-6）', false); return; }
-    var ex = null;
-    var quest = null;
-    if (qt === 'raging') {
-      quest = resolveRagingQuest($('sTask').value);
-    } else {
-      ex = $('sTask').value.trim().toUpperCase();
-      if (CFG.exStars.indexOf(ex) < 0) { sMsg('EX 星级不正确', false); return; }
-    }
     var payload = {
       questType: qt,
       quest: quest,
@@ -1413,13 +1431,13 @@
       var j = await res.json();
       if (j.ok) {
         sMsg('投稿成功！请等待管理员审核通过后发布。', true);
-        $('sAuthor').value = ''; $('sTime').value = ''; $('sBv').value = ''; $('sMonster').value = ''; $('sTask').value = '';
+        $('sAuthor').value = ''; $('sTime').value = ''; $('sBv').value = ''; $('sMonster').value = ''; $('sTaskSel').value = '';
         setTimeout(function () { $('submitModal').classList.add('hidden'); }, 1600);
       } else {
         sMsg('投稿失败：' + (j.error || '未知错误'), false);
       }
     } catch (e) {
-      sMsg('网络错误，请稍后再试', false);
+      sMsg('网络错误：' + e.message + '。若提示跨域/CORS，请检查 Worker 的 ALLOWED_ORIGIN 是否包含当前网址并重新 Deploy', false);
     }
   }
   async function reviewLoad() {
