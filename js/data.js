@@ -758,5 +758,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqpbs67"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m54",
+    "weaponId": "hammer",
+    "timeMs": 501300,
+    "author": "流川神木",
+    "date": "2023-08-29",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1nN4y1R7j9",
+        "title": "【天羽杯/竞速区】MHRS 大锤 超炎王 无猫狗821"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqpel6k"
   }
 ];
