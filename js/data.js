@@ -2732,5 +2732,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrb8gta"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m46",
+    "weaponId": "hbg",
+    "timeMs": 286550,
+    "author": "墓墓OVO",
+    "date": "2024-06-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1VT421Y7UN",
+        "title": "【MHRS】重弩散弹 4分46秒 特殊探究金火龙 TA规则+极限炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrb8a7k"
   }
 ];
