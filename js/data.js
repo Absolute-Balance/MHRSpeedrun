@@ -254,26 +254,5 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtq3bpr0"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX9",
-    "rule": "sanyou",
-    "monsterId": "m57",
-    "weaponId": "sa",
-    "timeMs": 298080,
-    "author": "墓墓OVO",
-    "date": "2024-05-31",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1Tn4y197rE",
-        "title": "MHRS/新记录】0针达成！散贯混打重弩 4分58秒 特殊探究怪异克服天彗龙 三无规则"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtqjpqau"
   }
 ];
