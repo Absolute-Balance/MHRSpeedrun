@@ -1493,5 +1493,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqvmve7"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m55",
+    "weaponId": "gs",
+    "timeMs": 352740,
+    "author": "Zen10_2333",
+    "date": "2023-09-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Cp4y1L7Ty",
+        "title": "【MHRS】大剑 特别探究: 混沌黑蚀龙 5分52秒 TA打法＋怪异炼化/三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvpyhb"
   }
 ];
