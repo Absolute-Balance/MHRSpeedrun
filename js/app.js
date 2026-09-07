@@ -496,6 +496,10 @@
       }
     }
     $('eMsg').textContent = '';
+    if (entryCtx && entryCtx.mode === 'add' && !hasToken() && apiBaseOk()) {
+      $('eMsg').textContent = '提示：这是管理员直录入口（需要 GitHub 令牌）。访客投稿请使用顶部「✉ 投稿成绩」按钮。';
+      $('eMsg').style.color = 'var(--text-dim)';
+    }
     $('entryModal').classList.remove('hidden');
     $('eAuthor').focus();
   }
