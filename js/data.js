@@ -1451,5 +1451,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqvk979"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "hbg",
+    "timeMs": 181480,
+    "author": "灼眼の冷面魔男",
+    "date": "2024-01-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1uC4y1Y7fu",
+        "title": "【MHRS】曙光抽象JR重弩 特别探究：霞龙 3'01''48 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvlk65"
   }
 ];
