@@ -2543,5 +2543,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrazhub"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m46",
+    "weaponId": "db",
+    "timeMs": 323000,
+    "author": "Tagakisa",
+    "date": "2026-05-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1LwGp6WE91",
+        "title": "【MHRS】双刀 特别探究: 金火龙  5'23\"00 三无规则 极限炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrb1gri"
   }
 ];
