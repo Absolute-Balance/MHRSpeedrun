@@ -1136,5 +1136,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqukqha"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "ta",
+    "monsterId": "m53",
+    "weaponId": "ig",
+    "timeMs": 491900,
+    "author": "一跃下戳升虫",
+    "date": "2024-10-19",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV11cCoYDEME",
+        "title": "【MHRS】 操虫棍 特殊探究：怪异克服钢龙 8分11秒 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtquoige"
   }
 ];
