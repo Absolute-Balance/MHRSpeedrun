@@ -3005,5 +3005,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrc8m6h"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m23",
+    "weaponId": "db",
+    "timeMs": 551900,
+    "author": "龙武文",
+    "date": "2026-09-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Zpb76HEBQ",
+        "title": "【MHRS】双刀 特别探究：蛮颚龙 9'11\"9 三无规则 平民炼化 NS2"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrdmbwj"
   }
 ];
