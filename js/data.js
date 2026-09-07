@@ -296,5 +296,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqo3rfe"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m56",
+    "weaponId": "ls",
+    "timeMs": 271770,
+    "author": "-MinaZuKI_",
+    "date": "2026-08-15",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Ndby6yEe6",
+        "title": "太刀三无特廻4分31秒 43x合集"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqo55i0"
   }
 ];
