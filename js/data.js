@@ -2186,5 +2186,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr8hpin"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m47",
+    "weaponId": "gs",
+    "timeMs": 401360,
+    "author": "Zen10_2333",
+    "date": "2024-01-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1FK411x7XG",
+        "title": "还得是坠机【MHRS】大剑 特别探究: 银火龙 6分41秒 TA打法＋怪异炼化/三无/四无/禁用随从盟友牵制捕获御龙爆桶火事场力"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr8jnka"
   }
 ];
