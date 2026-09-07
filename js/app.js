@@ -166,6 +166,30 @@
     if (ta < 0) return 'sanyou';
     return sanyou <= ta ? 'sanyou' : 'ta';
   }
+  //标题中识别任务类型与二级任务
+  function biliTitleExStar(title) {
+    var text = String(title || '');
+    if (/\bApex\b/i.test(text)) return 'Apex';
+    var m = text.match(/(?:^|[^A-Za-z0-9])EX\s*([1-9])(?:\b|$)/i);
+    return m ? 'EX' + m[1] : '';
+  }
+  function biliTitleQuest(title) {
+    var text = String(title || '');
+    var key = titleKey(text);
+    var raging = CFG.ragingQuests.filter(function (q) {
+      return key.indexOf(titleKey(q.label)) >= 0 || key.indexOf(titleKey(q.shortLabel)) >= 0;
+    }).sort(function (a, b) { return titleKey(b.label).length - titleKey(a.label).length; });
+    if (/烈祸/.test(text) || raging.length) {
+      return { type: 'raging', task: raging.length ? raging[0].id : '' };
+    }
+    if (/\bLv\.?\s*300\b/i.test(text) || /怪异探究\s*(?:Lv\.?\s*)?300/i.test(text) || /300\s*(?:级\s*)?怪异探究/i.test(text)) {
+      return { type: 'anomaly300', task: biliTitleExStar(text) };
+    }
+    if (/特别探究/.test(text) || /超特/.test(text)) {
+      return { type: 'special', task: biliTitleExStar(text) };
+    }
+    return { type: '', task: '' };
+  }
   function titleKey(v) {
     return String(v || '').replace(/[·・\s]/g, '').toLowerCase();
   }
@@ -224,14 +248,23 @@
   }
   function biliInfoFields(data, raw) {
     var title = data && data.title ? data.title : '';
+    var quest = biliTitleQuest(title);
+    var monsterId = biliTitleMonster(title);
+    var monster = monsterId ? mById[monsterId] : null;
+    var task = quest.task;
+    if ((quest.type === 'anomaly300' || quest.type === 'special') && monster && /^(EX\d|Apex)$/.test(monster.tier)) {
+      task = monster.tier;
+    }
     return {
       title: title,
       author: data && data.owner && data.owner.name ? data.owner.name : '',
       date: biliDate(data && data.pubdate),
       time: biliTitleTime(title),
       rule: biliTitleRule(title),
-      monsterId: biliTitleMonster(title),
+      monsterId: monsterId,
       weaponId: biliTitleWeapon(title),
+      questType: quest.type,
+      task: task,
       bvid: biliBvid(raw)
     };
   }
@@ -1584,6 +1617,18 @@
       if (info.author) $('sAuthor').value = info.author;
       if (info.date) $('sDate').value = info.date;
       if (info.time) $('sTime').value = info.time;
+      if (info.questType) {
+        var questTypeSel = $('sQuestType');
+        if (questTypeSel.querySelector('option[value="' + info.questType + '"]')) {
+          questTypeSel.value = info.questType;
+          refreshSubmitOptions();
+          $('sTaskSel').value = '';
+          if (info.task && $('sTaskSel').querySelector('option[value="' + info.task + '"]')) {
+            $('sTaskSel').value = info.task;
+          }
+          rebuildMonsterDl();
+        }
+      }
       if (info.rule) {
         var ruleSel = $('sRule');
         if (ruleSel.querySelector('option[value="' + info.rule + '"]')) ruleSel.value = info.rule;
@@ -1595,6 +1640,8 @@
       }
       if (info.bvid) $('sBv').value = 'https://www.bilibili.com/video/' + info.bvid;
       var fields = ['视频标题', 'UP 主', '日期'];
+      if (info.questType) fields.push('任务类型');
+      if (info.task) fields.push(info.questType === 'raging' ? '烈祸任务' : 'EX星级');
       if (info.time) fields.push('用时');
       if (info.rule) fields.push('规则');
       if (info.monsterId) fields.push('怪物');
