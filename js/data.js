@@ -2711,5 +2711,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrb6zh1"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m62",
+    "weaponId": "hh",
+    "timeMs": 228990,
+    "author": "病房里的五香蛋丶",
+    "date": "2023-09-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1v84y1U7zL",
+        "title": "【MHRS/疾风乐团】突破三台！狩猎笛 烈祸原初爵银龙 3'48 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrb8gta"
   }
 ];
