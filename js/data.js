@@ -3509,5 +3509,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrfav82"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m05",
+    "weaponId": "lance",
+    "timeMs": 268880,
+    "author": "这里是庸人",
+    "date": "2026-01-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV19vr1BnETZ",
+        "title": "【MHRS】长枪 LV.300 红色台球 4′28″88 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrfba7d"
   }
 ];
