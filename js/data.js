@@ -2585,5 +2585,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrb34vs"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m46",
+    "weaponId": "sa",
+    "timeMs": 417770,
+    "author": "時渡",
+    "date": "2026-05-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1HcVv6iEsY",
+        "title": "【MHRS/刚刃研磨】斩斧 特别探究：金火龙 6分57秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrb3rzm"
   }
 ];
