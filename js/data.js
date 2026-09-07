@@ -1199,5 +1199,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqurdl5"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "bow",
+    "timeMs": 234060,
+    "author": "Slayall11",
+    "date": "2024-01-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Jg4y1m7C1",
+        "title": "【MHR/MHRS】出狱！弓箭 特别探究：怪异克服钢龙 三无/TA+怪异炼化3分54"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqusrjw"
   }
 ];
