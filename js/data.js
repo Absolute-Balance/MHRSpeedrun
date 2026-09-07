@@ -1346,5 +1346,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqvc83d"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "gl",
+    "timeMs": 524780,
+    "author": "恰鱼鱼的溯汐雨",
+    "date": "2025-10-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1BCxVzDEVF",
+        "title": "【ECHO杯/竞速区】铳枪 特别探究怪异克服霞龙 8'44''78"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqve6jd"
   }
 ];
