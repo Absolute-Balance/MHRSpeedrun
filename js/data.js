@@ -1976,5 +1976,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr0rvif"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m50",
+    "weaponId": "hh",
+    "timeMs": 479990,
+    "author": "Marshmollow",
+    "date": "2026-07-15",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV11nNa62E4Y",
+        "title": "【MHRS】笛 特别探究激昂金狮子 7分59秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr0t6ix"
   }
 ];
