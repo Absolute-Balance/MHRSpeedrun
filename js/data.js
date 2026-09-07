@@ -3278,5 +3278,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtre4twn"
+  },
+  {
+    "questType": "raging",
+    "quest": "q09",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m25",
+    "weaponId": "sa",
+    "timeMs": 238990,
+    "author": "時渡",
+    "date": "2026-02-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV14TZNBKEfm",
+        "title": "【MHRS】斩斧 活动任务：烈祸来袭：刚缠巨响！3分58秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtre568x"
   }
 ];
