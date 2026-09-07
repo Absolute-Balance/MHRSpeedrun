@@ -2,7 +2,7 @@
 
 > 《怪物猎人 崛起：曙光》中文竞速成绩数据库。任务 × 武器矩阵浏览、玩家时间线、成绩投稿与人工审核发布。
 
-[线上访问](https://absolute-balance.github.io/MHRSpeedrun/) · [站长 B站 @星空柠檬凛](https://space.bilibili.com/35665642)
+[线上访问](https://absolute-balance.github.io/MHRSpeedrun/) · [B站 @星空柠檬凛](https://space.bilibili.com/35665642)
 
 ## 这是什么
 
