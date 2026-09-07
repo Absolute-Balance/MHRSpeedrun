@@ -1703,5 +1703,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqzr52d"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m49",
+    "weaponId": "gs",
+    "timeMs": 416990,
+    "author": "开关_",
+    "date": "2025-12-31",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV16evxBZEbS",
+        "title": "【MHRS/生庆】流斩大剑 特别探究 红莲爆鳞龙 三无规则 6分56秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr0b7ub"
   }
 ];
