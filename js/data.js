@@ -317,5 +317,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqo55i0"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m56",
+    "weaponId": "sns",
+    "timeMs": 479000,
+    "author": "阿呆耄",
+    "date": "2025-10-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1DyWmzcEKT",
+        "title": "【MHRS/新纪录】片手剑 特别探究天廻龙 三无规则 7'59''00"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqo6pzl"
   }
 ];
