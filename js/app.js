@@ -149,8 +149,13 @@
   }
   //标题中提取时间
   function biliTitleTime(title) {
-    var m = String(title || '').match(/(?:^|[^0-9])([0-9]{1,3})\s*['′]\s*([0-9]{1,2})\s*(?:''|["″”])\s*([0-9]{1,3})(?![0-9])/);
-    if (!m) return '';
+    var text = String(title || '');
+    var m = text.match(/(?:^|[^0-9])([0-9]{1,3})\s*['′]\s*([0-9]{1,2})\s*(?:''|["″”])\s*([0-9]{1,3})(?![0-9])/);
+    if (!m) {
+      var cm = text.match(/(?:^|[^0-9])([0-9]{1,3})\s*分\s*([0-9]{1,2})\s*秒\s*([0-9]{1,3})?(?![0-9])/);
+      if (!cm) return '';
+      m = [cm[0], cm[1], cm[2], cm[3] || '99'];
+    }
     var sec = Number(m[2]);
     var fraction = m[3];
     if (sec >= 60 || fraction.length > 3) return '';
@@ -159,12 +164,12 @@
   //标题中提取规则
   function biliTitleRule(title) {
     var text = String(title || '');
-    var sanyou = text.search(/三无(?:规则)?/);
-    var ta = text.search(/(?:^|[^A-Za-z])TA(?:规则)?(?=$|[^A-Za-z])/i);
-    if (sanyou < 0 && ta < 0) return '';
-    if (sanyou < 0) return 'ta';
-    if (ta < 0) return 'sanyou';
-    return sanyou <= ta ? 'sanyou' : 'ta';
+    if (/三无|极限炼化|怪异炼成/.test(text)) {
+      return 'sanyou';
+    } else if (/(?:^|[^A-Za-z])TA(?:规则)?(?=$|[^A-Za-z])/i.test(text)) {
+      return 'ta';
+    }
+    return '';
   }
   //标题中识别任务类型与二级任务
   function biliTitleExStar(title) {
