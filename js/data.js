@@ -926,5 +926,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqu1v01"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m54",
+    "weaponId": "hbg",
+    "timeMs": 293700,
+    "author": "灼眼の冷面魔男",
+    "date": "2023-08-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Sm4y1p7u4",
+        "title": "【天羽杯/竞速区】MHRS 重弩 特别探究：炎王龙 三无 4'53''70"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqu3clh"
   }
 ];
