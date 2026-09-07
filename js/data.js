@@ -548,5 +548,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqolhab"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m03",
+    "weaponId": "db",
+    "timeMs": 146630,
+    "author": "BFeather7",
+    "date": "2026-09-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1XFtf6sEtx",
+        "title": "【MHRS】双刀 特别探究：毒狗龙王 三无规则 2'26\"63"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqomc1u"
   }
 ];
