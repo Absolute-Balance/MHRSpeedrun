@@ -1556,5 +1556,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqvu24v"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m55",
+    "weaponId": "cb",
+    "timeMs": 346950,
+    "author": "Aikyan21",
+    "date": "2023-11-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Uu4y1h7Y7",
+        "title": "【MHRS】特别探究：混沌黑蚀龙 盾斧 546"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvwz2f"
   }
 ];
