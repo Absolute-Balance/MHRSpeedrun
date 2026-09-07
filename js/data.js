@@ -401,5 +401,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqodde5"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m56",
+    "weaponId": "lance",
+    "timeMs": 429990,
+    "author": "Marshmollow",
+    "date": "2026-06-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Vq776XEop",
+        "title": "【MHRSB】长枪 特别探究·天廻龙 7分09秒39 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqof0rh"
   }
 ];
