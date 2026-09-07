@@ -2501,5 +2501,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrawwpf"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m46",
+    "weaponId": "ls",
+    "timeMs": 570090,
+    "author": "冬季鱼__",
+    "date": "2026-05-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1igLi6KETz",
+        "title": "MHRS 特别探究金火龙 三无太刀"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtray7a8"
   }
 ];
