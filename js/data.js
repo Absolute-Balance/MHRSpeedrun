@@ -3068,5 +3068,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrdrrtr"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m26",
+    "weaponId": "sa",
+    "timeMs": 358500,
+    "author": "時渡",
+    "date": "2026-08-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ZQgN6uECh",
+        "title": "【MHRS】斩斧 特别探究：冰牙龙 5分58秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrdryth"
   }
 ];
