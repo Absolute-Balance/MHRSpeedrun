@@ -3026,5 +3026,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrc43b7"
+  },
+  {
+    "questType": "raging",
+    "quest": "q02",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m59",
+    "weaponId": "sns",
+    "timeMs": 230990,
+    "author": "咩咩羊袭",
+    "date": "2026-05-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1LqVP6rE5U",
+        "title": "【MHRS/明日方舟】片手剑 烈祸焰狐龙 3分50秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrc8m6h"
   }
 ];
