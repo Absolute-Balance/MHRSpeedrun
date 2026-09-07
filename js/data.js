@@ -1472,5 +1472,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqvlk65"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "bow",
+    "timeMs": 201470,
+    "author": "Slayall11",
+    "date": "2023-11-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1WM411o7nc",
+        "title": "弓箭 特别探究：怪异克服霞龙三无/TA+怪异炼化3分21"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvmve7"
   }
 ];
