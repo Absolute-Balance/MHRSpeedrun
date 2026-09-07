@@ -2669,5 +2669,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrb5vfd"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m62",
+    "weaponId": "hammer",
+    "timeMs": 228590,
+    "author": "枝挽风",
+    "date": "2024-06-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1iKG8eeEeS",
+        "title": "还有高手？【MHRS/PC】大锤 烈祸袭来：原初异音 三无3：48"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrb76ao"
   }
 ];
