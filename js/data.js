@@ -1010,5 +1010,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqual6j"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "sns",
+    "timeMs": 424490,
+    "author": "-橘-孜-",
+    "date": "2025-02-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1XJwoeVEvS",
+        "title": "【MHRS/生庆】特别探究 钢龙 片手剑 三无规则 7分04秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtquc392"
   }
 ];
