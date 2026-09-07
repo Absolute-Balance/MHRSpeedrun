@@ -863,5 +863,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqtuh0v"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m54",
+    "weaponId": "ig",
+    "timeMs": 475820,
+    "author": "一跃下戳升虫",
+    "date": "2024-01-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Zp4y1R7kY",
+        "title": "【MHRS】 操虫棍 特殊探究：怪异克服炎王龙 7分55秒 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqtwxs4"
   }
 ];
