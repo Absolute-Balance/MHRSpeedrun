@@ -2228,5 +2228,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr8nfe4"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m47",
+    "weaponId": "ls",
+    "timeMs": 461680,
+    "author": "RealizedSoul",
+    "date": "2023-07-09",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1dP411C75Q",
+        "title": "【MHRS】特别探究：银火龙 太刀 7分41秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr8pyew"
   }
 ];
