@@ -1724,5 +1724,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr0b7ub"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m49",
+    "weaponId": "ls",
+    "timeMs": 358540,
+    "author": "-晴晓音-",
+    "date": "2023-09-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1R84y1S78e",
+        "title": "【MHRS】太刀 特别探究：红莲爆鳞龙 5分58秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr0cpo6"
   }
 ];
