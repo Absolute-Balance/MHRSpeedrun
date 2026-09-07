@@ -1430,5 +1430,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqvixrr"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "lbg",
+    "timeMs": 212520,
+    "author": "灼眼の冷面魔男",
+    "date": "2023-09-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1vu411c76u",
+        "title": "【MHRS】属贯爷就是爷！特别探究霞龙 轻弩 3'32''52 三无/TA＋怪异炼成"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvk979"
   }
 ];
