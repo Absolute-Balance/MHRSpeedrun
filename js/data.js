@@ -1409,5 +1409,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqvhf5c"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "ta",
+    "monsterId": "m52",
+    "weaponId": "ig",
+    "timeMs": 490750,
+    "author": "クオハク",
+    "date": "2024-10-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Ar1yYXEZe",
+        "title": "【MHRS】特别讨究 怪异克服霞龙 操虫棍 8分10 TA"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvixrr"
   }
 ];
