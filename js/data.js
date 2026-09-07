@@ -4034,5 +4034,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrhrrvc"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m32",
+    "weaponId": "db",
+    "timeMs": 253100,
+    "author": "BFeather7",
+    "date": "2025-02-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV13UAae3EF4",
+        "title": "【MHRS】双刀 特别探究：熔翁龙 三无规则 4'13\"10"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrht2t1"
   }
 ];
