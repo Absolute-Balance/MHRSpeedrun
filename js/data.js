@@ -2648,5 +2648,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrb534a"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "ta",
+    "monsterId": "m62",
+    "weaponId": "gl",
+    "timeMs": 292150,
+    "author": "恰鱼鱼的溯汐雨",
+    "date": "2023-11-12",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Bu4y1N7TM",
+        "title": "新纪录！因为没高手玩所以只能我来打零针了  铳枪 TA 烈祸原初爵银龙 4'52''15"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrb5vfd"
   }
 ];
