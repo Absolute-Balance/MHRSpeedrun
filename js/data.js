@@ -485,5 +485,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqoiqw5"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m56",
+    "weaponId": "sa",
+    "timeMs": 303410,
+    "author": "心安安安w",
+    "date": "2026-05-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1EcRbBmEAU",
+        "title": "特别探究 怪异克服天廻龙 5分03秒 生庆三无斩斧"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqoj56i"
   }
 ];
