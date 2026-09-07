@@ -2606,5 +2606,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrb3rzm"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m62",
+    "weaponId": "lance",
+    "timeMs": 213390,
+    "author": "0r7ens1a",
+    "date": "2026-01-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1obrmBPE9r",
+        "title": "[MHRS/利群猎团/新纪录]长枪 烈祸袭来:原初异音 3'33\"39 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrb4if0"
   }
 ];
