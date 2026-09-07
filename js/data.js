@@ -3656,5 +3656,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrffbb4"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m25",
+    "weaponId": "lance",
+    "timeMs": 406490,
+    "author": "这里是庸人",
+    "date": "2026-08-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1PEuF6YEy3",
+        "title": "【MHRS】长枪 特别探究刚缠兽 6′46″49 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrfkgv3"
   }
 ];
