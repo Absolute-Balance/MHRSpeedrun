@@ -1661,5 +1661,26 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "smtqzgl91"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "ta",
+    "monsterId": "m57",
+    "weaponId": "db",
+    "timeMs": 250180,
+    "author": "BFeather7",
+    "date": "2026-01-12",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1e3i1BuEAH",
+        "title": "【MHRS/生庆】双刀 特别探究：怪异克服天彗龙 TA规则 4'10''18"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqzlx31"
   }
 ];
