@@ -674,5 +674,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqorkzz"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m54",
+    "weaponId": "gs",
+    "timeMs": 236750,
+    "author": "__Ciel___",
+    "date": "2026-02-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1TqfzBqErb",
+        "title": "【MHRS/三台达成】大剑 特别探究:炎王龙 3'56 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqouzal"
   }
 ];
