@@ -1766,5 +1766,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr0e0g3"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m49",
+    "weaponId": "db",
+    "timeMs": 269880,
+    "author": "BFeather7",
+    "date": "2025-08-03",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1EJhuzJEcB",
+        "title": "【MHRS】双刀 特别探究：红莲爆鳞龙 三无规则 4'29\"88"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr0fbc5"
   }
 ];
