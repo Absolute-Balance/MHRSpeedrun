@@ -2270,5 +2270,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr8rx1l"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m47",
+    "weaponId": "sa",
+    "timeMs": 394140,
+    "author": "時渡",
+    "date": "2026-08-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Ve8Z6cEXZ",
+        "title": "【MHRS】斩斧 特别探究：银火龙 6分34秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr8t8re"
   }
 ];
