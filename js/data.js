@@ -4055,5 +4055,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrht2t1"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m33",
+    "weaponId": "db",
+    "timeMs": 260670,
+    "author": "BFeather7",
+    "date": "2026-08-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV14U8U6fEZ7",
+        "title": "我非常祝您生日快乐"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrhus9n"
   }
 ];
