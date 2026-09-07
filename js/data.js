@@ -4181,5 +4181,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtri1qec"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m39",
+    "weaponId": "db",
+    "timeMs": 227030,
+    "author": "BFeather7",
+    "date": "2025-04-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Zm5XzwE8Y",
+        "title": "【MHRS】双刀 LV300轰龙 TA规则 3'47\"03"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtri30yk"
   }
 ];
