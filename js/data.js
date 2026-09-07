@@ -737,5 +737,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqpa7l6"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m54",
+    "weaponId": "db",
+    "timeMs": 256260,
+    "author": "Tagakisa",
+    "date": "2025-11-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV19CSABWECs",
+        "title": "【MHRS】双刀 特别探究：怪异克服炎王龙 4'16\"26 三无规则 极限炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqpbs67"
   }
 ];
