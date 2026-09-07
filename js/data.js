@@ -2123,5 +2123,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr15ou5"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m62",
+    "weaponId": "cb",
+    "timeMs": 150210,
+    "author": "郁_葱",
+    "date": "2025-04-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1rLd5YsEZH",
+        "title": "【MHRS/PC】跳炸盾斧 烈祸袭来：原初异音 原初爵银龙 2'30''21 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr7tpbi"
   }
 ];
