@@ -1535,5 +1535,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqvsqq9"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m55",
+    "weaponId": "db",
+    "timeMs": 347330,
+    "author": "PotatotatoP",
+    "date": "2024-02-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1it421p7Vd",
+        "title": "双刀三无特别探究混沌黑蚀龙5'47\"33"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvu24v"
   }
 ];
