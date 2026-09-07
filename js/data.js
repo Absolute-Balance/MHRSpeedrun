@@ -254,5 +254,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtq3bpr0"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "ta",
+    "monsterId": "m57",
+    "weaponId": "gl",
+    "timeMs": 505780,
+    "author": "lao_bei",
+    "date": "2024-09-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1C5sXe6E5A",
+        "title": "铳枪TA三无特别探究天彗龙8:25"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtql029h"
   }
 ];
