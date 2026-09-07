@@ -1682,5 +1682,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqzlx31"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m20",
+    "weaponId": "db",
+    "timeMs": 226180,
+    "author": "BFeather7",
+    "date": "2026-08-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ot8Z6PExk",
+        "title": "【MHRS】双刀 特别探究：雌火龙 三无规则 3'46\"18"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtqzpt81"
   }
 ];
