@@ -2627,5 +2627,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrb4if0"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m46",
+    "weaponId": "cb",
+    "timeMs": 380290,
+    "author": "clipp3rs",
+    "date": "2024-10-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV16v2HYHEhM",
+        "title": "【MHRS】盾斧 特别探究:金火龙 6'20''29 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrb534a"
   }
 ];
