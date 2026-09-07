@@ -4244,5 +4244,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtri5mdq"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "ta",
+    "monsterId": "m50",
+    "weaponId": "ls",
+    "timeMs": 214490,
+    "author": "BFeather7",
+    "date": "2025-05-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1sMGzzeEZa",
+        "title": "【MHRS】太刀 LV300激昂金狮子 TA规则 3'34\"49"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtri6xd6"
   }
 ];
