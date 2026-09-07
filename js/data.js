@@ -3023,7 +3023,7 @@ window.MHRS_RECORDS = [
         "title": "【MHRS】双刀 特别探究：蛮颚龙 9'11\"9 三无规则 平民炼化 NS2"
       }
     ],
-    "platform": "steam",
+    "platform": "switch",
     "note": "",
     "id": "smtrdmbwj"
   },
