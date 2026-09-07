@@ -779,5 +779,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqpel6k"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m54",
+    "weaponId": "lance",
+    "timeMs": 462460,
+    "author": "并非NTR",
+    "date": "2026-07-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ktTc6tEdE",
+        "title": "【MHRS】长枪 特别探究 怪异克服炎王龙 7'42''46 三无禁撞虫"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqph0bc"
   }
 ];
