@@ -4097,5 +4097,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrhw2rr"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m37",
+    "weaponId": "db",
+    "timeMs": 340950,
+    "author": "BFeather7",
+    "date": "2026-07-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1siKG6ZECf",
+        "title": "【合气劫血】双刀 特别探究：冰狼龙 三无规则 5'40\"95"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrhxe8s"
   }
 ];
