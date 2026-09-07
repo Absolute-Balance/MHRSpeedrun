@@ -1619,5 +1619,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtqyhaxf"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m18",
+    "weaponId": "db",
+    "timeMs": 173300,
+    "author": "BFeather7",
+    "date": "2026-08-29",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV11LtP6dENM",
+        "title": "【MHRS】双刀 特别探究：将军镰蟹 三无规则 2'53\"30"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtqyhiyf"
   }
 ];
