@@ -3236,5 +3236,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtre31l3"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m35",
+    "weaponId": "sa",
+    "timeMs": 404990,
+    "author": "時渡",
+    "date": "2025-08-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1DZtGzuEwT",
+        "title": "【MHRS/妖艳之舞】斩斧 特别探究：泡狐龙 6分44秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtre37d2"
   }
 ];
