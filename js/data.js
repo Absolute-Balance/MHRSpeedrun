@@ -3173,5 +3173,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrdzhqb"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "ta",
+    "monsterId": "m47",
+    "weaponId": "sa",
+    "timeMs": 476330,
+    "author": "時渡",
+    "date": "2026-04-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1zDSoBEEXn",
+        "title": "【MHRS/无回斩斧】斩斧 特别探究：银火龙 7分56秒 TA 防具无炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtre2oau"
   }
 ];
