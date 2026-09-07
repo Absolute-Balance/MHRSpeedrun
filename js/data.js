@@ -2900,5 +2900,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrc2xjd"
+  },
+  {
+    "questType": "raging",
+    "quest": "q06",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m36",
+    "weaponId": "sns",
+    "timeMs": 369990,
+    "author": "咩咩羊袭",
+    "date": "2026-05-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1CYdABXE3L",
+        "title": "【MHRS】片手剑 烈祸袭来：超速电导 雷狼龙 6分09秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrc3bg9"
   }
 ];
