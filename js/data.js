@@ -3194,5 +3194,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtre2oau"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "ta",
+    "monsterId": "m48",
+    "weaponId": "sa",
+    "timeMs": 418990,
+    "author": "時渡",
+    "date": "2025-11-13",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1j5CbBUEuP",
+        "title": "【MHRS】斩斧 特别探究：棘茶龙6分58秒 TA 防具无炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtre2vmn"
   }
 ];
