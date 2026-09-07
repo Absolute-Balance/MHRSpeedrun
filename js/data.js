@@ -632,5 +632,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqoow9p"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m56",
+    "weaponId": "hbg",
+    "timeMs": 381380,
+    "author": "灼眼の冷面魔男",
+    "date": "2023-12-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV17w41147cv",
+        "title": "【MHRS】纯物理不止大剑！特别探究：天廻龙 重弩 6'21''38 三无/TA＋怪异炼成"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqoq8u1"
   }
 ];
