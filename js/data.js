@@ -2060,5 +2060,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr0x2bh"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m50",
+    "weaponId": "lbg",
+    "timeMs": 439950,
+    "author": "灼眼の冷面魔男",
+    "date": "2023-06-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1114y1D7ED",
+        "title": "【MHRS】特别探究：激昂金狮子 轻弩通常弹 7'19''95 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr0ycr1"
   }
 ];
