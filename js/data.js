@@ -2942,5 +2942,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrc3d7a"
+  },
+  {
+    "questType": "raging",
+    "quest": "q10",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m37",
+    "weaponId": "sns",
+    "timeMs": 398990,
+    "author": "咩咩羊袭",
+    "date": "2026-08-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1qUuJ6CEK3",
+        "title": "【MHRS/瞎按轮椅】片手剑 烈祸袭来：冰狼长嚎 冰狼龙 6分38秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrc3mde"
   }
 ];
