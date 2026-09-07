@@ -821,5 +821,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqtr0u8"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m54",
+    "weaponId": "sa",
+    "timeMs": 310480,
+    "author": "无端路过小小坏",
+    "date": "2025-11-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1N9CUBXEah",
+        "title": "【MHRS】斩斧 三无规则(撞虫禁止)5'10\"48 特别探究:怪异克服炎王龙"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqtswi9"
   }
 ];
