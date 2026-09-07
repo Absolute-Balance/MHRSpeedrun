@@ -3257,5 +3257,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtre37d2"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "ta",
+    "monsterId": "m19",
+    "weaponId": "sa",
+    "timeMs": 357990,
+    "author": "時渡",
+    "date": "2025-12-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1d9BzBAECQ",
+        "title": "【MHRS】斩斧 特别探究：绯天狗兽 5分57秒 TA 防具无炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtre4twn"
   }
 ];
