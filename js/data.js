@@ -3929,5 +3929,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrhl8c7"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m21",
+    "weaponId": "db",
+    "timeMs": 239250,
+    "author": "BFeather7",
+    "date": "2026-09-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1YSth67E3g",
+        "title": "【MHRS/生庆】双刀 特别探究：毒妖鸟 三无规则 3'59\"25"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrhmip7"
   }
 ];
