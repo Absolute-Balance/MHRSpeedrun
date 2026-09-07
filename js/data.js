@@ -3299,5 +3299,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtre568x"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m25",
+    "weaponId": "sns",
+    "timeMs": 432990,
+    "author": "咩咩羊袭",
+    "date": "2026-08-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1XsuZ6CEDC",
+        "title": "【MHRS】片手剑 特别探究：刚缠兽 7分12秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtre5of7"
   }
 ];
