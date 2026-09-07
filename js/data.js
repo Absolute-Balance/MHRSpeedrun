@@ -1514,5 +1514,68 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqvpyhb"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m55",
+    "weaponId": "ls",
+    "timeMs": 389620,
+    "author": "罗丽塔丶",
+    "date": "2024-02-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Et421h7gW",
+        "title": "特别探究：混沌黑蚀龙 太刀 6'29''62 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvsqq9"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m55",
+    "weaponId": "db",
+    "timeMs": 347330,
+    "author": "PotatotatoP",
+    "date": "2024-02-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1it421p7Vd",
+        "title": "双刀三无特别探究混沌黑蚀龙5'47\"33"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvu24v"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m55",
+    "weaponId": "cb",
+    "timeMs": 346950,
+    "author": "Aikyan21",
+    "date": "2023-11-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Uu4y1h7Y7",
+        "title": "【MHRS】特别探究：混沌黑蚀龙 盾斧 546"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvwz2f"
   }
 ];
