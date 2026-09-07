@@ -1052,5 +1052,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtquddql"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "lance",
+    "timeMs": 435280,
+    "author": "三明治OAO",
+    "date": "2026-08-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1cmMB6PEaP",
+        "title": "【MHRS】长枪 特别探究：怪异克服钢龙 7分15秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqufh11"
   }
 ];
