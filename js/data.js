@@ -2417,5 +2417,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr9az9r"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m62",
+    "weaponId": "db",
+    "timeMs": 137320,
+    "author": "海文星麻酱",
+    "date": "2026-05-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1m1RTBTEAU",
+        "title": "【MHRS/跳炸流程】双刀 烈祸袭来：原初异音！原初形态爵银龙 2分17秒32 三无规则 极限炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr9cukk"
   }
 ];
