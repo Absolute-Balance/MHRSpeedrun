@@ -2354,5 +2354,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr8yuso"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m62",
+    "weaponId": "hbg",
+    "timeMs": 204150,
+    "author": "墓墓OVO",
+    "date": "2024-12-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV12pz9YNEr5",
+        "title": "【MHRS/新记录】重弩 3分24秒 烈祸原初爵银龙 TA规则+极限炼化（三无）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr90fd1"
   }
 ];
