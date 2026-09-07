@@ -1325,5 +1325,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqvapx2"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "lance",
+    "timeMs": 430160,
+    "author": "三明治OAO",
+    "date": "2026-08-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1fK8S6jEv8",
+        "title": "【MHRS/生庆】长枪 特别探究：怪异克服霞龙 7分10秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvc83d"
   }
 ];
