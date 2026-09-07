@@ -1304,5 +1304,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqv9ea2"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "db",
+    "timeMs": 192900,
+    "author": "Tagakisa",
+    "date": "2026-04-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV18zoJB2EeC",
+        "title": "【MHRS】双刀 特别探究:怪异克服霞龙 3'12\"90 三无规则 极限炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvapx2"
   }
 ];
