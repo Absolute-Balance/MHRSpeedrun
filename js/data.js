@@ -3572,5 +3572,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrfbv0c"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m20",
+    "weaponId": "lance",
+    "timeMs": 231190,
+    "author": "这里是庸人",
+    "date": "2026-02-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1WgfCBrESC",
+        "title": "【MHRS】长枪 LV.300雌火龙 3′51″19 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrfcaab"
   }
 ];
