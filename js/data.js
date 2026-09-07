@@ -1829,5 +1829,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr0i3h4"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m49",
+    "weaponId": "bow",
+    "timeMs": 227670,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-02-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1onZ2BqESq",
+        "title": "【MHRS/雪豹杯】弓箭 钢龙射手弓 特别探究红莲爆鳞龙 347 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr0jfn4"
   }
 ];
