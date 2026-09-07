@@ -842,5 +842,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqtswi9"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m54",
+    "weaponId": "cb",
+    "timeMs": 337710,
+    "author": "K----J",
+    "date": "2026-08-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV178uR6CEaM",
+        "title": "【再度突破】盾斧 三无规则 5'37\"71 特别探究:怪异克服炎王龙 MHRS"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqtuh0v"
   }
 ];
