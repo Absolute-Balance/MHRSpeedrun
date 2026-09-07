@@ -2564,5 +2564,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrb1gri"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m62",
+    "weaponId": "sns",
+    "timeMs": 228340,
+    "author": "-橘-孜-",
+    "date": "2025-09-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1GcprzVEro",
+        "title": "【MHRS/生庆】片手剑 三无 烈祸原初 3分48"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrb34vs"
   }
 ];
