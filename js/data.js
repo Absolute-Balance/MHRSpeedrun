@@ -3215,5 +3215,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtre2vmn"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m48",
+    "weaponId": "sa",
+    "timeMs": 348990,
+    "author": "時渡",
+    "date": "2025-08-31",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ZeaGz8E6Q",
+        "title": "【MHRS/烟中恶鬼】斩斧 特别探究：棘茶龙 5分48秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtre31l3"
   }
 ];
