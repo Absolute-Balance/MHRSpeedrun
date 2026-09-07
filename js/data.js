@@ -1577,5 +1577,68 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqvwz2f"
+  },
+  {
+    "questType": "raging",
+    "quest": "q02",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m59",
+    "weaponId": "gs",
+    "timeMs": 1990,
+    "author": "1",
+    "date": "2026-09-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1aKt66BEJL",
+        "title": "1"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqy642a"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "ta",
+    "monsterId": "m56",
+    "weaponId": "db",
+    "timeMs": 312350,
+    "author": "超好骗的雅各布",
+    "date": "2026-09-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1CV66YoE5K",
+        "title": "【MHRS】免于生庆 双剑 lv300 怪异克服天廻龙 TA规则 5′12″35"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtqyhaxf"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m18",
+    "weaponId": "db",
+    "timeMs": 173300,
+    "author": "BFeather7",
+    "date": "2026-08-29",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV11LtP6dENM",
+        "title": "【MHRS】双刀 特别探究：将军镰蟹 三无规则 2'53\"30"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtqyhiyf"
   }
 ];
