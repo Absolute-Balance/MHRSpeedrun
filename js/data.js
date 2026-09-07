@@ -3782,5 +3782,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrhc4p5"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m12",
+    "weaponId": "db",
+    "timeMs": 328580,
+    "author": "BFeather7",
+    "date": "2025-02-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1jdNReQE2c",
+        "title": "【MHRS】双刀 特别探究：土砂龙 三无规则 5'28\"58"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrhdf58"
   }
 ];
