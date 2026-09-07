@@ -2816,5 +2816,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrbn2td"
+  },
+  {
+    "questType": "raging",
+    "quest": "q04",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m44",
+    "weaponId": "sns",
+    "timeMs": 311990,
+    "author": "咩咩羊袭",
+    "date": "2026-05-09",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1PXRXBFECC",
+        "title": "【MHRS】片手剑 烈祸袭来：狮子迷人的肉体 金狮子 5分11秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrc2mhl"
   }
 ];
