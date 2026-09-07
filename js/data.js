@@ -1598,5 +1598,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqy642a"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "ta",
+    "monsterId": "m56",
+    "weaponId": "db",
+    "timeMs": 312350,
+    "author": "超好骗的雅各布",
+    "date": "2026-09-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1CV66YoE5K",
+        "title": "【MHRS】免于生庆 双剑 lv300 怪异克服天廻龙 TA规则 5′12″35"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtqyhaxf"
   }
 ];
