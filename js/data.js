@@ -968,5 +968,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqu5ad5"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "gs",
+    "timeMs": 215500,
+    "author": "__Ciel___",
+    "date": "2026-03-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1UPXKBbEhn",
+        "title": "【MHRS】三无 大剑 特别探究:钢龙 3'35"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqu81dx"
   }
 ];
