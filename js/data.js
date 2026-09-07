@@ -716,5 +716,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqp7s9s"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m54",
+    "weaponId": "sns",
+    "timeMs": 387090,
+    "author": "-橘-孜-",
+    "date": "2025-09-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Mon9ziESd",
+        "title": "【MHRS/PC】片手剑 特别探究 炎王龙 三无 6分27"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqpa7l6"
   }
 ];
