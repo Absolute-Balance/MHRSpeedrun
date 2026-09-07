@@ -3131,5 +3131,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrdz702"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m25",
+    "weaponId": "sa",
+    "timeMs": 370040,
+    "author": "時渡",
+    "date": "2026-08-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Q8Gg61EEM",
+        "title": "【MHRS/生庆】斩斧 特别探究：刚缠兽 6分10秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrdzb8s"
   }
 ];
