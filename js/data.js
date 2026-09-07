@@ -464,5 +464,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqoha65"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m01",
+    "weaponId": "db",
+    "timeMs": 231220,
+    "author": "BFeather7",
+    "date": "2026-09-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1B9tz62E13",
+        "title": "【合气劫血】双刀 特别探究：搔鸟 三无规则 3'51\"22"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqoiqw5"
   }
 ];
