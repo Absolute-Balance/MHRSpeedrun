@@ -3992,5 +3992,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrhp3qv"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m31",
+    "weaponId": "db",
+    "timeMs": 325850,
+    "author": "BFeather7",
+    "date": "2026-05-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV17tVp68E6T",
+        "title": "【MHRS】双刀 特别探究：冰人鱼龙 三无规则 5'25\"85"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrhqel0"
   }
 ];
