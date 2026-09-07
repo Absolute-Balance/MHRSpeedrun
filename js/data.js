@@ -2963,5 +2963,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrc3mde"
+  },
+  {
+    "questType": "raging",
+    "quest": "q07",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m61",
+    "weaponId": "sns",
+    "timeMs": 396990,
+    "author": "咩咩羊袭",
+    "date": "2026-08-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1fZuN6uE7F",
+        "title": "【MHRS/摆烂】片手剑 烈祸袭来：雪花纷飞 冰呪龙 6分36秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrc3ru3"
   }
 ];
