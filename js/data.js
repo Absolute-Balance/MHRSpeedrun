@@ -3362,5 +3362,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtre65ta"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m13",
+    "weaponId": "sa",
+    "timeMs": 289320,
+    "author": "Marshmollow",
+    "date": "2026-07-21",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1FSKx64E5K",
+        "title": "斩斧 特别探究水兽 4分49秒32 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtre6dlk"
   }
 ];
