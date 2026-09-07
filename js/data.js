@@ -527,5 +527,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqoknqm"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m56",
+    "weaponId": "cb",
+    "timeMs": 277390,
+    "author": "德德赛艇",
+    "date": "2024-07-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1pb421n7ja",
+        "title": "【MHRS】盾斧 特别探究:怪异克服天廻龙 4′37″39 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqolhab"
   }
 ];
