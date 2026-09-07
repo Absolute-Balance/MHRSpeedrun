@@ -1577,5 +1577,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqvwz2f"
+  },
+  {
+    "questType": "raging",
+    "quest": "q02",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m59",
+    "weaponId": "gs",
+    "timeMs": 1990,
+    "author": "1",
+    "date": "2026-09-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1aKt66BEJL",
+        "title": "1"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqy642a"
   }
 ];
