@@ -947,5 +947,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqu3clh"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m54",
+    "weaponId": "bow",
+    "timeMs": 273320,
+    "author": "彩色洋丶",
+    "date": "2023-07-15",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ZV411T7AQ",
+        "title": "【天羽杯/竞速区】MHRS 弓箭 特别探究 怪异克服炎王龙 三无规则 4分33秒32"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqu5ad5"
   }
 ];
