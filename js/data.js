@@ -3551,5 +3551,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrfbi6z"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "ta",
+    "monsterId": "m62",
+    "weaponId": "lance",
+    "timeMs": 266310,
+    "author": "这里是庸人",
+    "date": "2025-12-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1izBkBgEtg",
+        "title": "【A HAPPY NEW YEAR】长枪 烈祸原爵 4′26″31 TA"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrfbv0c"
   }
 ];
