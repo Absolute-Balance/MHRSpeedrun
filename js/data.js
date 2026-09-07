@@ -2375,5 +2375,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr90fd1"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m62",
+    "weaponId": "gs",
+    "timeMs": 143820,
+    "author": "__Ciel___",
+    "date": "2026-03-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1sywxzKECX",
+        "title": "【MHRS】烈祸原初爵银龙 大剑 2分23秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr92lzu"
   }
 ];
