@@ -3593,5 +3593,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrfcaab"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "ta",
+    "monsterId": "m26",
+    "weaponId": "lance",
+    "timeMs": 397830,
+    "author": "这里是庸人",
+    "date": "2026-02-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1DGfMBpE28",
+        "title": "【MHRS/雪豹杯/主赛道】长枪 LV.300冰牙龙 6′37″83 TA"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrfcgui"
   }
 ];
