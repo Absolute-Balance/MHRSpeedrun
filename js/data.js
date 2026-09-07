@@ -1850,5 +1850,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr0jfn4"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m50",
+    "weaponId": "gs",
+    "timeMs": 326380,
+    "author": "开关_",
+    "date": "2026-07-13",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1vsNy6aEzo",
+        "title": "【MHRS】流斩大剑 特别探究 激昂金狮子 三无规则 5分26秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr0kr3a"
   }
 ];
