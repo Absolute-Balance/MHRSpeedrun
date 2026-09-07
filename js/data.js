@@ -1094,5 +1094,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtquhips"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "sa",
+    "timeMs": 331680,
+    "author": "心安安安w",
+    "date": "2025-12-21",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV14KqCBZEWr",
+        "title": "【MHRS】特别探究 钢龙 斩斧 5分31秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtquj8eb"
   }
 ];
