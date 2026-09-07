@@ -4202,5 +4202,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtri30yk"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m50",
+    "weaponId": "ls",
+    "timeMs": 170940,
+    "author": "BFeather7",
+    "date": "2025-12-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1aLmSBGEgX",
+        "title": "【MHRS/生庆】太刀 LV300激昂金狮子 三无规则 2'50''94"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtri4bgp"
   }
 ];
