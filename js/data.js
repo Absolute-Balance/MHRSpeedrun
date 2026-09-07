@@ -3530,5 +3530,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrfba7d"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "ta",
+    "monsterId": "m56",
+    "weaponId": "db",
+    "timeMs": 341960,
+    "author": "丶Nijika丶",
+    "date": "2026-01-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1nvi3BRE11",
+        "title": "【新纪录迎新年/MHRS】双刀 特别探究：怪异克服天廻龙 5'41\"96 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrfbi6z"
   }
 ];
