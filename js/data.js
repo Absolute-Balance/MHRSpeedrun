@@ -220,7 +220,7 @@ window.MHRS_RECORDS = [
     "rule": "sanyou",
     "monsterId": "m57",
     "weaponId": "hbg",
-    "timeMs": 298800,
+    "timeMs": 298080,
     "author": "墓墓OVO",
     "date": "2024-05-31",
     "videos": [
