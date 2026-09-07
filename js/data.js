@@ -3803,5 +3803,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrhdf58"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m13",
+    "weaponId": "db",
+    "timeMs": 200220,
+    "author": "BFeather7",
+    "date": "2026-05-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1VCGn6mEZF",
+        "title": "【MHRS】双刀 特别探究：水兽 三无规则 3'20\"22"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrhepi5"
   }
 ];
