@@ -2984,5 +2984,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrc3ru3"
+  },
+  {
+    "questType": "raging",
+    "quest": "q09",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m25",
+    "weaponId": "sns",
+    "timeMs": 295990,
+    "author": "咩咩羊袭",
+    "date": "2026-06-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1pz7D6hEQy",
+        "title": "【MHRS】片手剑 烈祸袭来：刚缠巨响 刚缠兽 4分55秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrc3xoh"
   }
 ];
