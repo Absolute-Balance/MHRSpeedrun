@@ -2312,5 +2312,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr8uiio"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m47",
+    "weaponId": "ig",
+    "timeMs": 409460,
+    "author": "Sch_warze",
+    "date": "2023-12-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ye411C7Tn",
+        "title": "【MHRS】操虫棍 特别探究银火龙 6'49''"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr8vxls"
   }
 ];
