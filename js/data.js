@@ -1367,5 +1367,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqve6jd"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "sa",
+    "timeMs": 280150,
+    "author": "无端路过小小坏",
+    "date": "2026-04-13",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1BfDcBbEmi",
+        "title": "MHRS/生庆】特别探究 怪异克服霞龙 斩斧 4'40\"15 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqvfnzu"
   }
 ];
