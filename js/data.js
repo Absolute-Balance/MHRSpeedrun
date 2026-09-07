@@ -3467,5 +3467,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrf9irp"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m03",
+    "weaponId": "lance",
+    "timeMs": 174420,
+    "author": "这里是庸人",
+    "date": "2026-02-13",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1YYcGzGEzi",
+        "title": "【MHRS/生庆】怪异LV.300鸟龙三连星合集 长枪 TA"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtrfapk6"
   }
 ];
