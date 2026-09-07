@@ -3845,5 +3845,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrhg0ir"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m14",
+    "weaponId": "db",
+    "timeMs": 280940,
+    "author": "BFeather7",
+    "date": "2025-02-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV11b9cYnEJt",
+        "title": "【MHRS】双刀 特别探究：伞鸟 三无规则 4'40\"94"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtrhhbcc"
   }
 ];
