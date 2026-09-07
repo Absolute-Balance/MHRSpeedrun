@@ -2396,5 +2396,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr92lzu"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m62",
+    "weaponId": "ls",
+    "timeMs": 154810,
+    "author": "旧事九妹a",
+    "date": "2026-07-19",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1tnK66kEYy",
+        "title": "【MHRS】 太刀 烈祸原初爵银龙 2'34''81 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr9az9r"
   }
 ];
