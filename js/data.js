@@ -2291,5 +2291,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr8t8re"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m47",
+    "weaponId": "cb",
+    "timeMs": 374800,
+    "author": "Moissa莫桑",
+    "date": "2023-10-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV13y4y1P777",
+        "title": "【MHRS/PC】超解盾斧 特别探究 · 银火龙 6'14''80"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr8uiio"
   }
 ];
