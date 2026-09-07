@@ -653,5 +653,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqoq8u1"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m56",
+    "weaponId": "bow",
+    "timeMs": 198740,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-05-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ZrRBBgEnA",
+        "title": "【MHRS/31x达成】超越轮回！ 弓箭 赤绝飞翼老人星 特别探究：怪异克服天廻龙 318 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtqorkzz"
   }
 ];
