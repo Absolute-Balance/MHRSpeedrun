@@ -2165,5 +2165,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr8ek77"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m47",
+    "weaponId": "lbg",
+    "timeMs": 314780,
+    "author": "灼眼の冷面魔男",
+    "date": "2024-01-02",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV13C4y1K7og",
+        "title": "【MHRS】为什么你的速射贯二这么刮痧之特别探究：银火龙 5'14''78 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtr8hpin"
   }
 ];
