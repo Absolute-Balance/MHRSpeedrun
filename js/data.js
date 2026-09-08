@@ -4454,5 +4454,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtscch5t"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m48",
+    "weaponId": "sns",
+    "timeMs": 524990,
+    "author": "咩咩羊袭",
+    "date": "2026-05-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1cxGn6FEdC",
+        "title": "【MHRS/烂片水】片手剑 特别探究：棘茶龙 8分44秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtscfx4z"
   }
 ];
