@@ -4979,5 +4979,26 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "rmtsegzlp"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "ta",
+    "monsterId": "m45",
+    "weaponId": "sa",
+    "timeMs": 597730,
+    "author": "堕落魂淡",
+    "date": "2024-02-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1X6421g7s3",
+        "title": "MHRS 斩斧 特别探究 炽妃蜘蛛 TA（防具无炼化+属强5护石）"
+      }
+    ],
+    "platform": "switch",
+    "note": "",
+    "id": "rmtseib5t"
   }
 ];
