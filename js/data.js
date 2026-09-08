@@ -4622,5 +4622,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtscvd3q"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m51",
+    "weaponId": "sa",
+    "timeMs": 348570,
+    "author": "心安安安w",
+    "date": "2026-06-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1NL7b6qEZ9",
+        "title": "【MHRS】斩斧特别探究 嗟怨震天怨虎龙（三无规则）5'48 by:心安安安w"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtsd0b82"
   }
 ];
