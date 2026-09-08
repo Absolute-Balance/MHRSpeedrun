@@ -5231,5 +5231,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsms3py"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m28",
+    "weaponId": "bow",
+    "timeMs": 225010,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-02-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1CRFbzMEhb",
+        "title": "【MHRS】弓箭 永恒绝望 特别探究：泥翁龙 345 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtsms8zd"
   }
 ];
