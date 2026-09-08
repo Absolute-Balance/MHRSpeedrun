@@ -4664,5 +4664,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtsd2nr6"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "ta",
+    "monsterId": "m43",
+    "weaponId": "gs",
+    "timeMs": 578730,
+    "author": "堕落魂淡",
+    "date": "2024-01-19",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1vQ4y1w7NA",
+        "title": "MHRS 大剑 特别探究 爆鳞龙 TA（防具无炼化+等效3护石）"
+      }
+    ],
+    "platform": "switch",
+    "note": "",
+    "id": "rmtsdhlv8"
   }
 ];
