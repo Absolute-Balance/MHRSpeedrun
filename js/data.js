@@ -5126,5 +5126,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtslgoq1"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m28",
+    "weaponId": "sa",
+    "timeMs": 271990,
+    "author": "_懒得起名Y_",
+    "date": "2026-09-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1YxbL6kEfU",
+        "title": "【属性斩斧】LV300泥翁龙 一等效 4分31秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtsmrbvw"
   }
 ];
