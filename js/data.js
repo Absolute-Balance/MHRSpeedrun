@@ -5042,5 +5042,26 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "rmtsensp7"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "sanyou",
+    "monsterId": "m42",
+    "weaponId": "cb",
+    "timeMs": 415600,
+    "author": "Aikyan21",
+    "date": "2024-10-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1dL1HY3Ebz",
+        "title": "【MHRS】特别探究：黑蚀龙 盾斧 655"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtslcrt9"
   }
 ];
