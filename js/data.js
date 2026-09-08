@@ -5189,5 +5189,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsmrpbc"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m33",
+    "weaponId": "bow",
+    "timeMs": 228870,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-07-21",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ddKW6CEHK",
+        "title": "【MHRS】弓箭 赤绝飞翼老人星 特别探究：火龙 348 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtsmrunn"
   }
 ];
