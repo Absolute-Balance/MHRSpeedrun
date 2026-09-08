@@ -4769,5 +4769,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsdpf6r"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "ta",
+    "monsterId": "m28",
+    "weaponId": "sa",
+    "timeMs": 347710,
+    "author": "時渡",
+    "date": "2026-05-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV18w5b6vE5x",
+        "title": "【MHRS/无回斩斧】斩斧 特别探究：泥翁龙 5分47秒 TA 防具无炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtsdpkh7"
   }
 ];
