@@ -4832,5 +4832,26 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "rmtsdswiz"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "ta",
+    "monsterId": "m41",
+    "weaponId": "sa",
+    "timeMs": 529320,
+    "author": "堕落魂淡",
+    "date": "2024-02-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1np421R7N8",
+        "title": "MHRS 斩斧 特别探究 棘龙 TA（防具无炼化+属强5护石）"
+      }
+    ],
+    "platform": "switch",
+    "note": "",
+    "id": "rmtsdu78b"
   }
 ];
