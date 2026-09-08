@@ -5567,5 +5567,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtstmmtu"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "ta",
+    "monsterId": "m23",
+    "weaponId": "ig",
+    "timeMs": 346990,
+    "author": "治愈拽枪兵",
+    "date": "2026-06-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1QeJA6LEfx",
+        "title": "【MHRS/水芸杯】虫棍 300级蛮颚龙 TA规则 5分46秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtstmsvp"
   }
 ];
