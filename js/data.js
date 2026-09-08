@@ -4643,5 +4643,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtsd0b82"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "ta",
+    "monsterId": "m48",
+    "weaponId": "cb",
+    "timeMs": 706100,
+    "author": "堕落魂淡",
+    "date": "2023-06-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Ts4y1B7m8",
+        "title": "MHRS 盾斧 特别探究 棘茶龙 TA"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtsd2nr6"
   }
 ];
