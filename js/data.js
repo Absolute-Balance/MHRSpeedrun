@@ -4328,5 +4328,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smts1it65"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m36",
+    "weaponId": "lance",
+    "timeMs": 432500,
+    "author": "这里是庸人",
+    "date": "2026-08-02",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1yw3m6iEEC",
+        "title": "【MHRS/生庆】长枪 怪异LV.300雷狼龙 7′12″50 TA"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smts1j02f"
   }
 ];
