@@ -4496,5 +4496,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtschc3g"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m51",
+    "weaponId": "hbg",
+    "timeMs": 398760,
+    "author": "墓墓OVO",
+    "date": "2024-03-09",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV12y421i7uM",
+        "title": "【MHRS】生庆 散弹重弩 6分38 特殊探究嗟怨震天怨虎龙  三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtscnx93"
   }
 ];
