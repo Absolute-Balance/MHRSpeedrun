@@ -4790,5 +4790,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsdpoyr"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "sanyou",
+    "monsterId": "m41",
+    "weaponId": "ls",
+    "timeMs": 381810,
+    "author": "恶魔的儿子",
+    "date": "2026-06-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ByTN6AEqs",
+        "title": "【MHRS】太刀特别棘龙6分21秒"
+      }
+    ],
+    "platform": "switch",
+    "note": "",
+    "id": "rmtsdrlzl"
   }
 ];
