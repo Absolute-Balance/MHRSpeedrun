@@ -4601,5 +4601,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtsctu2x"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "ta",
+    "monsterId": "m51",
+    "weaponId": "hammer",
+    "timeMs": 751930,
+    "author": "枂夕夕",
+    "date": "2024-05-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Jm421N7eX",
+        "title": "MHRS 大锤TA 特别探究 嗟怨震天怨虎龙 12′31"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtscvd3q"
   }
 ];
