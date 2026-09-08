@@ -4580,5 +4580,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtscsjs5"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m51",
+    "weaponId": "db",
+    "timeMs": 323710,
+    "author": "Tagakisa",
+    "date": "2026-07-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Wc3w66E2U",
+        "title": "【MHRS】双刀 特别探究: 嗟怨震天怨虎龙 5'23\"71 三无规则 极限炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtsctu2x"
   }
 ];
