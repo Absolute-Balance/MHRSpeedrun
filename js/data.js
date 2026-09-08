@@ -5336,5 +5336,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsmszy0"
+  },
+  {
+    "questType": "raging",
+    "quest": "q07",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m61",
+    "weaponId": "bow",
+    "timeMs": 138480,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-05-12",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1jR5u6tEzM",
+        "title": "【MHRS/21x达成】弓箭 永恒绝望 烈祸袭来：雪花纷飞 烈祸冰呪龙 218 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtsmt9sa"
   }
 ];
