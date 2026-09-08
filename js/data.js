@@ -5273,5 +5273,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsmsezh"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m40",
+    "weaponId": "bow",
+    "timeMs": 127750,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-08-19",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1X48J6nEnh",
+        "title": "七⚡夕⚡一⚡个⚡人⚡在⚡家⚡打⚡角"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtsmslrn"
   }
 ];
