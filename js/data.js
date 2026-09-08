@@ -5021,5 +5021,26 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "rmtsejlse"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "sanyou",
+    "monsterId": "m45",
+    "weaponId": "hh",
+    "timeMs": 541750,
+    "author": "清风不识-字-",
+    "date": "2026-02-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1NmZABcEuR",
+        "title": "【MHRS/雪豹杯】狩猎笛 特别探究炽妃蜘蛛 9分01秒 三无"
+      }
+    ],
+    "platform": "switch",
+    "note": "",
+    "id": "rmtsensp7"
   }
 ];
