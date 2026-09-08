@@ -4685,5 +4685,26 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "rmtsdhlv8"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "sanyou",
+    "monsterId": "m43",
+    "weaponId": "db",
+    "timeMs": 345390,
+    "author": "罐装西打",
+    "date": "2026-01-21",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1B7z7BGEg4",
+        "title": "【MHRS】双刀 特别探究：爆鳞龙 三无规则 5分45秒"
+      }
+    ],
+    "platform": "switch",
+    "note": "",
+    "id": "rmtsdl8c9"
   }
 ];
