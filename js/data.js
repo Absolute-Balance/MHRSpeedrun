@@ -4412,5 +4412,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smts1py5f"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m48",
+    "weaponId": "ls",
+    "timeMs": 309980,
+    "author": "-晴晓音-",
+    "date": "2025-06-13",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1f5MgzwEnk",
+        "title": "【MHRS】太刀 特别探究：棘茶龙 5分09秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtscb5ot"
   }
 ];
