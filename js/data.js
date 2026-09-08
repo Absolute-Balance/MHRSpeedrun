@@ -5105,5 +5105,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtslfd7j"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "ta",
+    "monsterId": "m44",
+    "weaponId": "cb",
+    "timeMs": 735140,
+    "author": "堕落魂淡",
+    "date": "2023-06-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV12s4y1z774",
+        "title": "MHRS 盾斧 特别探究 金狮子 TA"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtslgoq1"
   }
 ];
