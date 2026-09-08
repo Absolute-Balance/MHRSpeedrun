@@ -5483,5 +5483,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtstlt3u"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "ta",
+    "monsterId": "m28",
+    "weaponId": "ig",
+    "timeMs": 402880,
+    "author": "治愈拽枪兵",
+    "date": "2026-09-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1JfYJ6gEnS",
+        "title": "虫棍泥翁"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtstm2k2"
   }
 ];
