@@ -5525,5 +5525,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtstm8s6"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "ta",
+    "monsterId": "m49",
+    "weaponId": "ig",
+    "timeMs": 352990,
+    "author": "治愈拽枪兵",
+    "date": "2026-06-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1fr7W6VESN",
+        "title": "【MHRS/Fire Fox杯】虫棍 300级红莲爆鳞龙 5分52秒 ta规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtstmhvs"
   }
 ];
