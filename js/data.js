@@ -5294,5 +5294,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsmslrn"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m20",
+    "weaponId": "bow",
+    "timeMs": 198210,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-04-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1YkXkBuEP9",
+        "title": "【MHRS】弓箭 赤绝飞翼老人星 特别探究：雌火龙 318 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtsmssnb"
   }
 ];
