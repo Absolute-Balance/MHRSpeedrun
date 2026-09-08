@@ -5315,5 +5315,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsmssnb"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m15",
+    "weaponId": "bow",
+    "timeMs": 234350,
+    "author": "daisukiな欧尼酱",
+    "date": "2025-10-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1zLH7zQESy",
+        "title": "【MHRS/ECHO杯/属光区】刻银穿弓 特别探究 岩龙 354 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtsmszy0"
   }
 ];
