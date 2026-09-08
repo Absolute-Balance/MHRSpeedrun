@@ -5609,5 +5609,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtsv29if"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m27",
+    "weaponId": "hh",
+    "timeMs": 422990,
+    "author": "Marshmollow",
+    "date": "2026-02-12",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1jYctztEHh",
+        "title": "【这就是传说中的辅助武器吗】狩猎笛特别探究迅龙 7分02秒  三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smttb1p1l"
   }
 ];
