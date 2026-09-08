@@ -4748,5 +4748,26 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "rmtsdnlrj"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m34",
+    "weaponId": "sa",
+    "timeMs": 404210,
+    "author": "時渡",
+    "date": "2025-12-03",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1oY2xBUEim",
+        "title": "【MHRS】斩斧 特别探究：电龙 6分44秒 TA 防具无炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtsdpf6r"
   }
 ];
