@@ -4853,5 +4853,26 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "rmtsdu78b"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "sanyou",
+    "monsterId": "m41",
+    "weaponId": "cb",
+    "timeMs": 300300,
+    "author": "clipp3rs",
+    "date": "2025-07-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1F585zNECN",
+        "title": "【MHRS】盾斧 特别探究：棘龙 5'00''30 三无规则"
+      }
+    ],
+    "platform": "switch",
+    "note": "",
+    "id": "rmtsdvinr"
   }
 ];
