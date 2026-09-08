@@ -4895,5 +4895,26 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "rmtse0ltg"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "sanyou",
+    "monsterId": "m41",
+    "weaponId": "bow",
+    "timeMs": 227750,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-04-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1pbDFBcE4v",
+        "title": "【MHRS】弓箭 钢龙射手弓 特别探究：棘龙 347 三无"
+      }
+    ],
+    "platform": "switch",
+    "note": "",
+    "id": "rmtse1wfx"
   }
 ];
