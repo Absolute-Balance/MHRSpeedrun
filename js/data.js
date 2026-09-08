@@ -4811,5 +4811,26 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "rmtsdrlzl"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "sanyou",
+    "monsterId": "m41",
+    "weaponId": "db",
+    "timeMs": 278300,
+    "author": "罐装西打",
+    "date": "2026-03-02",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1nbP5zeETG",
+        "title": "【MHRS】双刀 特别探究：棘龙 三无规则 4分38秒"
+      }
+    ],
+    "platform": "switch",
+    "note": "",
+    "id": "rmtsdswiz"
   }
 ];
