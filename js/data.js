@@ -5504,5 +5504,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtstm2k2"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "ta",
+    "monsterId": "m30",
+    "weaponId": "ig",
+    "timeMs": 392860,
+    "author": "治愈拽枪兵",
+    "date": "2026-08-31",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Y4t865E4F",
+        "title": "虫棍雪鬼"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtstm8s6"
   }
 ];
