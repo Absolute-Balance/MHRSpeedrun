@@ -5399,5 +5399,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsmtk08"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m03",
+    "weaponId": "bow",
+    "timeMs": 138540,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-07-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV15U3z6AEAM",
+        "title": "【MHRS】弓箭 钢龙射手弓 特别探究：毒狗龙王 218 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtsmtoih"
   }
 ];
