@@ -5378,5 +5378,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsmtekq"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m12",
+    "weaponId": "bow",
+    "timeMs": 210040,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-04-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1BwDiBsEhi",
+        "title": "【MHRS】弓箭 永恒绝望 特别探究：土砂龙 330 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtsmtk08"
   }
 ];
