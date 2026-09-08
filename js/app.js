@@ -164,7 +164,7 @@
   //标题中提取规则
   function biliTitleRule(title) {
     var text = String(title || '');
-    if (/三无|极限炼化|怪异炼成/.test(text)) {
+    if (/三无|极限炼化|怪异炼成|怪异炼化/.test(text)) {
       return 'sanyou';
     } else if (/(?:^|[^A-Za-z])TA(?:规则)?(?=$|[^A-Za-z])/i.test(text)) {
       return 'ta';
