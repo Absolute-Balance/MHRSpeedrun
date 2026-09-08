@@ -4538,5 +4538,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtscpyn7"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m51",
+    "weaponId": "ls",
+    "timeMs": 362770,
+    "author": "RealizedSoul",
+    "date": "2024-12-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1cNkcYmEVN",
+        "title": "【MHRS/生庆】特别探究：嗟怨震天怨虎龙 太刀 6分02秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtscr9h8"
   }
 ];
