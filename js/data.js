@@ -4958,5 +4958,26 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "rmtse95e9"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "sanyou",
+    "monsterId": "m45",
+    "weaponId": "ls",
+    "timeMs": 532990,
+    "author": "垣舒筠淇",
+    "date": "2023-06-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1S8411o75s",
+        "title": "【MHRS】太刀 特殊探究：炽妃蜘蛛 8分52秒 三无 有失误 处理基本全"
+      }
+    ],
+    "platform": "switch",
+    "note": "",
+    "id": "rmtsegzlp"
   }
 ];
