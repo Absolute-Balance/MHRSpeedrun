@@ -5168,5 +5168,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsmrjxy"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m40",
+    "weaponId": "bow",
+    "timeMs": 191390,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-01-21",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1oTkEBUExw",
+        "title": "【MHRS】弓箭 钢龙射手弓 特别探究角龙 311 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtsmrpbc"
   }
 ];
