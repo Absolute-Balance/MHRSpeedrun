@@ -4307,5 +4307,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtriassd"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "ta",
+    "monsterId": "m08",
+    "weaponId": "lance",
+    "timeMs": 204950,
+    "author": "这里是庸人",
+    "date": "2026-05-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1pidABDEpK",
+        "title": "【MHRS/生庆】长枪 怪异化LV.300大名盾蟹 3′24″95 TA"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smts1it65"
   }
 ];
