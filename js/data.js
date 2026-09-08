@@ -5462,5 +5462,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtsqgd9b"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m57",
+    "weaponId": "ig",
+    "timeMs": 369630,
+    "author": "治愈拽枪兵",
+    "date": "2026-08-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1KWuB6CErQ",
+        "title": "虫棍克彗"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtstlt3u"
   }
 ];
