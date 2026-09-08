@@ -4937,5 +4937,26 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "rmtse6ifi"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "sanyou",
+    "monsterId": "m42",
+    "weaponId": "ls",
+    "timeMs": 394810,
+    "author": "罗丽塔丶",
+    "date": "2024-06-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1hm421V7Rg",
+        "title": "特别探究：黑蚀龙 太刀 三无规则 6'34''81"
+      }
+    ],
+    "platform": "switch",
+    "note": "",
+    "id": "rmtse95e9"
   }
 ];
