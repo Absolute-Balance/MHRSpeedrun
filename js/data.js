@@ -5084,5 +5084,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtsle2ts"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "ta",
+    "monsterId": "m44",
+    "weaponId": "ls",
+    "timeMs": 581430,
+    "author": "堕落魂淡",
+    "date": "2024-02-12",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV15t421a7gg",
+        "title": "MHRS 太刀 特别探究 金狮子 TA（防具无炼化+属强5护石）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtslfd7j"
   }
 ];
