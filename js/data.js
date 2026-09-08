@@ -4391,5 +4391,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smts1m490"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m07",
+    "weaponId": "ls",
+    "timeMs": 299990,
+    "author": "简一乐",
+    "date": "2026-09-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Skt16EEUb",
+        "title": "04：59 特探青熊兽 三无太刀 MHRS"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smts1py5f"
   }
 ];
