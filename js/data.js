@@ -5420,5 +5420,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsmtoih"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m04",
+    "weaponId": "bow",
+    "timeMs": 237540,
+    "author": "加钱居士觉得很润",
+    "date": "2023-11-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1494y1n7NK",
+        "title": "超特合集 一星 镰鼬龙王3分57"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtsqf1dz"
   }
 ];
