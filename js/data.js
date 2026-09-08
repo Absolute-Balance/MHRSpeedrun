@@ -4370,5 +4370,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smts1lw50"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m27",
+    "weaponId": "ig",
+    "timeMs": 390610,
+    "author": "Fallen_sky2",
+    "date": "2026-08-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1cytN6dE5u",
+        "title": "【MHRS】操虫棍 特别探究迅龙 6分30秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smts1m490"
   }
 ];
