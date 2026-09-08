@@ -4475,5 +4475,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtscfx4z"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m48",
+    "weaponId": "bow",
+    "timeMs": 229200,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-02-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1FrZ4BpEgh",
+        "title": "【MHRS/雪豹杯】弓箭 水击水兽大齿轮 特别探究棘茶龙 349 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtschc3g"
   }
 ];
