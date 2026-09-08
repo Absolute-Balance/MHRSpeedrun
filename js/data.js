@@ -4517,5 +4517,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtscnx93"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m51",
+    "weaponId": "gs",
+    "timeMs": 452990,
+    "author": "开关_",
+    "date": "2025-12-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1cVqjBuE3S",
+        "title": "【MHRS/生庆】流斩大剑 特别探究 嗟怨震天怨虎龙  三无规则 7分32秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtscpyn7"
   }
 ];
