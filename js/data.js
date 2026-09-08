@@ -5546,5 +5546,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtstmhvs"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "ta",
+    "monsterId": "m24",
+    "weaponId": "ig",
+    "timeMs": 383150,
+    "author": "治愈拽枪兵",
+    "date": "2026-08-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1huuw67EDw",
+        "title": "虫棍鬼火大虫合集"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtstmmtu"
   }
 ];
