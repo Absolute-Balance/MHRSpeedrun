@@ -5575,7 +5575,7 @@ window.MHRS_RECORDS = [
     "rule": "ta",
     "monsterId": "m23",
     "weaponId": "ig",
-    "timeMs": 346990,
+    "timeMs": 346940,
     "author": "治愈拽枪兵",
     "date": "2026-06-14",
     "videos": [
