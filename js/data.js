@@ -4727,5 +4727,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsdnxzw"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "sanyou",
+    "monsterId": "m43",
+    "weaponId": "ls",
+    "timeMs": 458700,
+    "author": "从不玩游戏腻",
+    "date": "2024-10-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1es1cYyEnb",
+        "title": "【MHRS】太刀三无特别探究普通爆鳞龙（一等效）"
+      }
+    ],
+    "platform": "switch",
+    "note": "",
+    "id": "rmtsdnlrj"
   }
 ];
