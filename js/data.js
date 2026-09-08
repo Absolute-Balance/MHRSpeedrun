@@ -5252,5 +5252,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsms8zd"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m23",
+    "weaponId": "bow",
+    "timeMs": 274440,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-04-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1dtDABtEXo",
+        "title": "【MHRS】弓箭 泥=奉献 特别探究：蛮颚龙 434 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtsmsezh"
   }
 ];
