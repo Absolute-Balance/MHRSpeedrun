@@ -163,17 +163,26 @@ function validateSubmission(b) {
   };
 }
 
-/* ---------------- 限频 ---------------- */
+/* ---------------- 限频（可按需调整） ----------------
+ * RATE_MAX      同一 IP 在窗口内最多可投稿次数；0 = 不限制（默认关闭）
+ * RATE_WINDOW_MS 窗口长度（从该 IP 第一次投稿起算）
+ * RATE_TTL_SEC   计数在 KV 的留存秒数（需 ≥ 窗口长度即可）
+ * 说明：计数键是 rl:{IP}。若在 v2rayN 规则模式下 workers.dev 走了“直连”，
+ *       换节点也不会换 IP（见 README/纪要），所以会一直提示频繁。 */
+const RATE_MAX = 0;
+const RATE_WINDOW_MS = 3600000;
+const RATE_TTL_SEC = 7200;
 async function rateLimited(env, ip) {
+  if (!(RATE_MAX > 0)) return false; // 限频已关闭
   const key = 'rl:' + (ip || 'unknown');
   const raw = await env.SUBMISSIONS.get(key).catch(() => null);
   const now = Date.now();
   let rec = { n: 0, t: now };
   if (raw) { try { rec = JSON.parse(raw); } catch (e) { /* 忽略 */ } }
-  if (now - rec.t > 3600000) { rec = { n: 0, t: now }; }
+  if (now - rec.t > RATE_WINDOW_MS) { rec = { n: 0, t: now }; }
   rec.n += 1;
-  await env.SUBMISSIONS.put(key, JSON.stringify(rec), { expirationTtl: 7200 }).catch(() => {});
-  return rec.n > 10;
+  await env.SUBMISSIONS.put(key, JSON.stringify(rec), { expirationTtl: RATE_TTL_SEC }).catch(() => {});
+  return rec.n > RATE_MAX;
 }
 
 /* ---------------- 各接口 ---------------- */

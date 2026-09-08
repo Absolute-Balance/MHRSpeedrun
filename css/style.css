@@ -419,6 +419,15 @@ code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-si
 .rv-item .rv-actions { display: flex; gap: 8px; margin-top: 8px; }
 .rv-item .rv-actions .ok:hover { border-color: var(--good); color: var(--good); }
 .rv-item .rv-actions .no:hover { border-color: var(--danger); color: var(--danger); }
+/* 审核区弹窗：弹窗占满可视高度，列表区内部滚动（宽屏自动两列） */
+#reviewModal .modal { max-height: calc(100vh - 80px); display: flex; flex-direction: column; }
+#reviewModal .modal > * { flex: none; }
+#rvList { flex: 1 1 auto; min-height: 100px; overflow-y: auto; overscroll-behavior: contain; padding: 2px 6px 6px 2px; scrollbar-gutter: stable; }
+#reviewModal .modal-actions { margin-top: 6px; }
+@media (min-width: 1180px) {
+  #reviewModal .modal-wide { width: 1180px; }
+  #rvList { display: grid; grid-template-columns: 1fr 1fr; column-gap: 12px; align-content: start; }
+}
 .rules-list { margin: 8px 4px 14px 22px; padding: 0; color: var(--text); font-size: 14px; line-height: 1.8; }
 .rules-list li::marker { color: var(--accent-hi); }
 .modal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
