@@ -4559,5 +4559,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtscr9h8"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m51",
+    "weaponId": "sns",
+    "timeMs": 419090,
+    "author": "-橘-孜-",
+    "date": "2025-09-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1RvahzrEPt",
+        "title": "【MHRS/6台达成】片手剑 特别探究 嗟怨震天怨虎龙 三无米线炼化 6分59秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtscsjs5"
   }
 ];
