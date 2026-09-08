@@ -5147,5 +5147,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsmrbvw"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m57",
+    "weaponId": "bow",
+    "timeMs": 190240,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-06-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1PXLd6uExh",
+        "title": "直播边黑听女主播边打的一把300彗三分十秒弓箭泥奉献"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtsmrjxy"
   }
 ];
