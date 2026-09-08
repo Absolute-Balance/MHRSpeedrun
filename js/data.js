@@ -4916,5 +4916,26 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "rmtse1wfx"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "sanyou",
+    "monsterId": "m42",
+    "weaponId": "db",
+    "timeMs": 405190,
+    "author": "两万一锤",
+    "date": "2025-05-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1DsGhzSExo",
+        "title": "【MHRS】特别探究：黑蚀龙  双刀  6'45  三无"
+      }
+    ],
+    "platform": "switch",
+    "note": "",
+    "id": "rmtse6ifi"
   }
 ];
