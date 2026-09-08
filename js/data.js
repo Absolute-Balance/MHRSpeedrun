@@ -5210,5 +5210,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsmrunn"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m32",
+    "weaponId": "bow",
+    "timeMs": 237300,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-02-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV16bFyz3Eoi",
+        "title": "【MHRS】弓箭 水击水兽大齿轮 特别探究熔翁龙 357 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtsms3py"
   }
 ];
