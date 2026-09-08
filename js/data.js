@@ -5357,5 +5357,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsmt9sa"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m13",
+    "weaponId": "bow",
+    "timeMs": 179640,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-07-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1qJMb6hEAU",
+        "title": "【MHRS】二战水兽 弓箭 永恒绝望 特别探究：水兽 259 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtsmtekq"
   }
 ];
