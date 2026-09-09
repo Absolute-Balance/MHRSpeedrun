@@ -6491,5 +6491,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttxafg8"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m05",
+    "weaponId": "bow",
+    "timeMs": 265300,
+    "author": "加钱居士觉得很润",
+    "date": "2023-11-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Xc411z7KT",
+        "title": "超特合集 一星完结 赤甲兽 4分25"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttxel6h"
   }
 ];
