@@ -6134,5 +6134,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttl0j0b"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m02",
+    "weaponId": "bow",
+    "timeMs": 181710,
+    "author": "加钱居士觉得很润",
+    "date": "2023-11-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV15N4y127r7",
+        "title": "超特合集 一星 眠狗龙王3分01"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttl1swa"
   }
 ];
