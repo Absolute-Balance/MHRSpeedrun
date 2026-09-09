@@ -6701,5 +6701,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtu27bjs"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m39",
+    "weaponId": "gs",
+    "timeMs": 299990,
+    "author": "Marshmollow",
+    "date": "2026-09-09",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1mdYt65EJJ",
+        "title": "大剑 特别探究·轰龙 4分59秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtu29vh2"
   }
 ];
