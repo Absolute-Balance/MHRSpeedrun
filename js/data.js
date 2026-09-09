@@ -5672,5 +5672,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smttd9l4w"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m32",
+    "weaponId": "hh",
+    "timeMs": 445990,
+    "author": "Marshmollow",
+    "date": "2026-06-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV19QjQ6jEvS",
+        "title": "【MHRS /Fire Fox杯】大笛客  特别探究·熔翁龙 7分25秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smttdaiyi"
   }
 ];
