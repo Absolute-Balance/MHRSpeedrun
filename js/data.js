@@ -6785,5 +6785,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtucgubs"
+  },
+  {
+    "questType": "raging",
+    "quest": "q01",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m58",
+    "weaponId": "bow",
+    "timeMs": 109290,
+    "author": "抹茶摇摇薯条",
+    "date": "2026-03-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1VswtzoEvX",
+        "title": "【MHRS】弓箭 烈祸月迅龙 1'49\"29 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtuchapr"
   }
 ];
