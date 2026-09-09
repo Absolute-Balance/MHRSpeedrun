@@ -6722,5 +6722,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtu29vh2"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m36",
+    "weaponId": "bow",
+    "timeMs": 217990,
+    "author": "鱼丸加芝心",
+    "date": "2026-07-29",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1xG3y6AEsV",
+        "title": "【MHRS】弓箭LV300雷狼龙337"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtucfo82"
   }
 ];
