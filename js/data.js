@@ -6680,5 +6680,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttxqkc0"
+  },
+  {
+    "questType": "raging",
+    "quest": "q07",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m61",
+    "weaponId": "sns",
+    "timeMs": 365990,
+    "author": "白炎妖光",
+    "date": "2026-04-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1t5DCB8EtD",
+        "title": "片手三无烈祸冰呪 605"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtu27bjs"
   }
 ];
