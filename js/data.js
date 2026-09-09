@@ -5840,5 +5840,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smttdw0ua"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m30",
+    "weaponId": "db",
+    "timeMs": 349600,
+    "author": "Tagakisa",
+    "date": "2026-08-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1qXbR64E1b",
+        "title": "【MHRS】双刀 特别探究: 雪鬼兽 5'49\"60 三无规则 极限炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smttdx0v2"
   }
 ];
