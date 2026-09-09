@@ -6260,5 +6260,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttl6trp"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m03",
+    "weaponId": "ig",
+    "timeMs": 339220,
+    "author": "天亿1",
+    "date": "2023-10-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1c34y1u7s5",
+        "title": "【MHRS】操虫棍 特别探究：毒狗龙王 5分39秒 ta"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttl83dk"
   }
 ];
