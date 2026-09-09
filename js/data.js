@@ -6050,5 +6050,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttkuxb1"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m02",
+    "weaponId": "sns",
+    "timeMs": 313180,
+    "author": "yiopk",
+    "date": "2026-05-12",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1SF5K6qE7L",
+        "title": "【MHRS】片手 特别探究：眠狗龙王 5'13'18 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttkw700"
   }
 ];
