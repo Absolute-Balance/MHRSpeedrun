@@ -6,7 +6,7 @@
 <title>MHRS 竞速成绩库</title>
 <link rel="icon" type="image/png" href="MHRS-Logo-Square.png">
 <script>(function(){try{if(localStorage.getItem('mhrs_theme')==='light'){document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();</script>
-<link rel="stylesheet" href="css/style.css?v=1788928130643">
+<link rel="stylesheet" href="css/style.css?v=1788929404671">
 </head>
 <body>
 
@@ -27,7 +27,7 @@
 </header>
 
 <!-- ================= 筛选面板 ================= -->
-<section class="filter-panel wrap">
+<section class="filter-panel wrap" id="filterPanel">
 
   <!-- 任务类型（单选） -->
   <div class="fgroup">
@@ -67,6 +67,7 @@
   <div class="filter-actions">
     <button type="button" class="btn btn-ghost" id="resetBtn">恢复默认</button>
     <button type="button" class="btn btn-ghost" id="rulesBtn">📜 收录规则</button>
+    <button type="button" class="btn btn-ghost" id="anomalyBtn">⚠ 怪异探究任务规则</button>
     <button type="button" class="btn btn-ghost" id="submitBtn">✉ 投稿成绩</button>
     <button type="button" class="btn btn-ghost hidden" id="reviewBtn">⚖ 审核</button>
     <span class="spacer"></span>
@@ -107,6 +108,105 @@
   </div>
 </section>
 
+<!-- ================= 怪异探究任务规则（独立页面视图） ================= -->
+<section class="wrap hidden" id="anomalyArea">
+  <div class="result-bar">
+    <button type="button" class="btn btn-ghost" id="anomalyBack">← 返回</button>
+    <span class="result-count">怪异探究任务规则</span>
+    <span class="spacer"></span>
+    <span class="fg-desc">投稿与审核时，据此判断某场怪异探究任务是否“合法”可收录。</span>
+  </div>
+
+  <div class="ax-card">
+    <h3 class="ax-h">一、限制条件与怪异经验倍率、血量补正、出现等级</h3>
+    <div class="tbl-scroll">
+      <table class="ax-tbl">
+        <thead><tr><th>限制条件</th><th class="c">怪异经验倍率</th><th class="c">血量补正</th><th class="c">出现等级</th></tr></thead>
+        <tbody>
+          <tr><td>参加人数 2 人以下</td><td class="c">1.2 倍</td><td class="c">1.0 倍</td><td class="c">71 以上</td></tr>
+          <tr><td>1 次力尽倒下</td><td class="c">1.4 倍</td><td class="c">1.0 倍</td><td class="c">71 以上</td></tr>
+          <tr><td>2 次力尽倒下</td><td class="c">1.2 倍</td><td class="c">1.0 倍</td><td class="c">41 以上</td></tr>
+          <tr><td>4 次力尽倒下</td><td class="c">0.9 倍</td><td class="c">1.0 倍</td><td class="c">1 以上</td></tr>
+          <tr><td>5 次力尽倒下</td><td class="c">0.8 倍</td><td class="c">1.0 倍</td><td class="c">1-70（EX1-5 限定）</td></tr>
+          <tr><td>9 次力尽倒下</td><td class="c">0.6 倍</td><td class="c">1.0 倍</td><td class="c">1-20（EX1-2 限定）</td></tr>
+          <tr><td>限制时间 25 分</td><td class="c">1.35 倍</td><td class="c">0.9 倍</td><td class="c">41 以上（单怪限定）</td></tr>
+          <tr><td>限制时间 30 分</td><td class="c">1.3 倍</td><td class="c">0.95 倍</td><td class="c">21 以上（单怪/双怪限定）</td></tr>
+          <tr><td>限制时间 35 分</td><td class="c">1.25 倍</td><td class="c">0.97 倍</td><td class="c">21 以上（单怪/双怪限定）</td></tr>
+          <tr><td>双怪任务</td><td class="c dim">—</td><td class="c">0.9 倍</td><td class="c">21 以上</td></tr>
+          <tr><td>三怪任务</td><td class="c dim">—</td><td class="c">0.8 倍</td><td class="c">61 以上</td></tr>
+          <tr><td>决战场任务</td><td class="c dim">—</td><td class="c">1.05 倍</td><td class="c">181 以上</td></tr>
+          <tr><td>四怪任务</td><td class="c dim">—</td><td class="c">0.7 倍</td><td class="c">261 以上</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="ax-card">
+    <h3 class="ax-h">二、怪异探究任务单怪基础经验</h3>
+    <p class="ax-sub">同一只怪作为副怪时，获得的基础经验是主怪的 1/2。</p>
+    <div class="tbl-scroll">
+      <table class="ax-tbl">
+        <thead><tr><th class="c">EX</th><th class="c">主怪经验</th><th class="c">副怪经验</th><th>副怪说明</th></tr></thead>
+        <tbody>
+          <tr><td class="c">EX1</td><td class="c">180</td><td class="c">90</td><td class="dim">—</td></tr>
+          <tr><td class="c">EX2</td><td class="c">220</td><td class="c">110</td><td class="dim">—</td></tr>
+          <tr><td class="c">EX3</td><td class="c">270</td><td class="c">135</td><td class="dim">—</td></tr>
+          <tr><td class="c">EX4</td><td class="c">320</td><td class="c">160</td><td class="dim">—</td></tr>
+          <tr><td class="c">EX5</td><td class="c">380</td><td class="c">190</td><td>霸主·青熊兽</td></tr>
+          <tr><td class="c">EX6</td><td class="c">440</td><td class="c">220</td><td>霸主·雌火龙、霞龙、钢龙、炎王龙、爵银龙、天廻龙、神秘红光天彗龙</td></tr>
+          <tr><td class="c">EX7</td><td class="c">500</td><td class="c">250</td><td>月迅龙</td></tr>
+          <tr><td class="c">EX8</td><td class="c">560</td><td class="c">280</td><td>霸主·火龙、霸主·泡狐龙</td></tr>
+          <tr><td class="c">EX9</td><td class="c">620</td><td class="c">310</td><td>霸主·角龙、霸主·雷狼龙、冰龙、原初形态爵银龙</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="ax-card">
+    <h3 class="ax-h">三、怪异探究任务其他规则</h3>
+    <h4 class="ax-h4">1. 怪物组合对主怪 EX 等级的要求</h4>
+    <div class="tbl-scroll">
+      <table class="ax-tbl">
+        <thead><tr><th class="c">主怪 EX</th><th>副怪最高等级限制</th></tr></thead>
+        <tbody>
+          <tr><td class="c">EX1</td><td>大师 2 级</td></tr>
+          <tr><td class="c">EX2</td><td>大师 3 级</td></tr>
+          <tr><td class="c">EX3</td><td>大师 4 级</td></tr>
+          <tr><td class="c">EX4</td><td>大师 5 级</td></tr>
+          <tr><td class="c">EX5 及以上</td><td>副怪没有限制</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 class="ax-h4">2. 部分怪物在决战场地图上的限制</h4>
+    <div class="tbl-scroll">
+      <table class="ax-tbl">
+        <thead><tr><th class="c">主怪 EX</th><th>怪物</th><th>限制</th></tr></thead>
+        <tbody>
+          <tr><td class="c">EX1</td><td>镰鼬龙王、赤甲兽、白兔兽、青熊兽</td><td>无法在塔之秘境出现</td></tr>
+          <tr><td class="c">EX2</td><td>河童蛙、土砂龙、水兽</td><td>无法在塔之秘境出现</td></tr>
+          <tr><td class="c">EX3</td><td>人鱼龙、泥鱼龙</td><td>只能在狱泉乡出现</td></tr>
+          <tr><td class="c">EX4</td><td>冰人鱼龙、雪鬼兽</td><td>无法在塔之秘境出现</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="ax-list">
+      <li>霞龙作为副怪，无法在塔之秘境出现。</li>
+      <li>霸主·青熊兽作为副怪，无法在塔之秘境出现。</li>
+    </ul>
+
+    <h4 class="ax-h4">3. 一些其他限制</h4>
+    <ul class="ax-list">
+      <li>副怪与主怪不可以相同。</li>
+      <li>古龙无法和自己的特殊个体一起出现。</li>
+      <li>同一个任务只能出现一只霸主怪物。</li>
+      <li>同一个任务只能出现黑蚀龙、混沌黑蚀龙、天廻龙中的一只。</li>
+      <li>怪异克服古龙无法作为副怪出现。</li>
+      <li>月迅龙出现的任务固定为塔之秘境夜晚。</li>
+    </ul>
+  </div>
+</section>
+
 <!-- ================= 收录规则弹窗 ================= -->
 <div class="modal-mask hidden" id="rulesModal">
   <div class="modal modal-narrow">
@@ -116,14 +216,18 @@
     </div>
     <ul class="rules-list">
       <li>只收录录制相对完整的片。</li>
-      <li>只录入了国内玩家的成绩。</li>
-      <li>未展示装备和技能的片不录入。</li>
-      <li>装备有“不合法”炼化的不录入。</li>
-      <li>使用了一些影响局内 MOD 的片不录入（例如显血、彩鬼火鸟MOD等）。</li>
-      <li>有过“恶性老金”事迹玩家的片不录入。</li>
-      <li>未开伤害显示的片不录入。</li>
+      <li>只收录了国内玩家的成绩。</li>
+      <li>未展示装备和技能的片不收录。</li>
+      <li>装备有“不合法”炼化的不收录。</li>
+      <li>怪异探究为不合法任务的不收录（详情看怪异探究任务规则）。</li>
+      <li>使用了一些影响局内 MOD 的片不收录（例如显血、彩鬼火鸟MOD等）。</li>
+      <li>有过“恶性老金”事迹玩家的片不收录。</li>
+      <li>未开伤害显示的片不收录。</li>
       <li>未展示结算最后毫秒成绩的均以 99 替代毫秒数字。</li>
     </ul>
+    <div class="modal-actions">
+      <button type="button" class="btn btn-mini" id="rulesAnomalyBtn">怪异探究任务规则（EX 限制 / 倍率 / 副怪）</button>
+    </div>
     <div class="modal-actions">
       <span class="fg-desc">发现不符合规则的收录请告知维护者。</span>
     </div>
@@ -206,9 +310,9 @@
   </div>
 </div>
 
-<script src="js/config.js?v=1788928130643"></script>
-<script src="js/monsters.js?v=1788928130643"></script>
-<script src="js/data.js?v=1788928130643"></script>
-<script src="js/app.js?v=1788928130643"></script>
+<script src="js/config.js?v=1788929404671"></script>
+<script src="js/monsters.js?v=1788929404671"></script>
+<script src="js/data.js?v=1788929404671"></script>
+<script src="js/app.js?v=1788929404671"></script>
 </body>
 </html>

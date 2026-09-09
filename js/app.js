@@ -645,6 +645,32 @@
     });
   }
 
+  /* ================= 怪异探究任务规则（独立页面视图） ================= */
+  function openAnomalyRules() {
+    var rModal = $('rulesModal');
+    if (rModal) rModal.classList.add('hidden');
+    var fp = $('filterPanel');
+    if (fp) fp.classList.add('hidden');
+    $('matrixArea').classList.add('hidden');
+    $('detailArea').classList.add('hidden');
+    var bb = $('backBtn');
+    if (bb) bb.classList.add('hidden');
+    var aa = $('anomalyArea');
+    if (!aa) return;
+    aa.classList.remove('hidden');
+    window.scrollTo({ top: 0 });
+  }
+  function closeAnomalyRules() {
+    var aa = $('anomalyArea');
+    if (aa) aa.classList.add('hidden');
+    var fp = $('filterPanel');
+    if (fp) fp.classList.remove('hidden');
+    state.view = 'matrix';
+    state.prev = 'matrix';
+    state.scope = { mid: null, wid: null, quest: null, player: null };
+    update();
+  }
+
   /* ================= 快速录入 + 管理（空格子 / 单武器页入口） ================= */
   var entryCtx = null;
   function hasToken() {
@@ -1886,9 +1912,19 @@
       exportMatrixImage();
     });
     var rModal = $('rulesModal');
-    $('rulesBtn').addEventListener('click', function () { rModal.classList.remove('hidden'); });
-    $('rulesClose').addEventListener('click', function () { rModal.classList.add('hidden'); });
-    rModal.addEventListener('click', function (e) { if (e.target === rModal) rModal.classList.add('hidden'); });
+    var RULES_SEEN_KEY = 'mhrs_rules_seen';
+    function markRulesSeen() { try { sessionStorage.setItem(RULES_SEEN_KEY, '1'); } catch (e) { } }
+    function openRulesModal() { rModal.classList.remove('hidden'); }
+    function closeRulesModal() { rModal.classList.add('hidden'); markRulesSeen(); }
+    $('rulesBtn').addEventListener('click', openRulesModal);
+    $('rulesClose').addEventListener('click', closeRulesModal);
+    rModal.addEventListener('click', function (e) { if (e.target === rModal) closeRulesModal(); });
+    var axBtn = $('anomalyBtn');
+    if (axBtn) axBtn.addEventListener('click', openAnomalyRules);
+    var rAxBtn = $('rulesAnomalyBtn');
+    if (rAxBtn) rAxBtn.addEventListener('click', openAnomalyRules);
+    var axBack = $('anomalyBack');
+    if (axBack) axBack.addEventListener('click', closeAnomalyRules);
 
     /* 快速录入弹窗 */
     var ruleSel = $('eRule');
@@ -1915,6 +1951,19 @@
     setupSubmitReview();
 
     update();
+
+    /* 打开网站自动弹出收录规则（本会话内手动关闭后不再自动弹，刷新页面后仍会弹） */
+    var rulesSeen = false;
+    try { rulesSeen = !!sessionStorage.getItem(RULES_SEEN_KEY); } catch (e) { }
+    if (!rulesSeen && rModal) {
+      setTimeout(function () {
+        var busy = ['submitModal', 'reviewModal', 'entryModal'].some(function (id) {
+          var el = document.getElementById(id);
+          return el && !el.classList.contains('hidden');
+        });
+        if (!busy) rModal.classList.remove('hidden');
+      }, 900);
+    }
   }
 
   if (document.readyState === 'loading') {

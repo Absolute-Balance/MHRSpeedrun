@@ -450,6 +450,21 @@ code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-si
 #impMsg { white-space: pre-line; max-height: 120px; overflow: auto; }
 .hint { background: var(--field); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; font-size: 12px; color: var(--text-dim); overflow-x: auto; }
 
+/* ================= 怪异探究任务规则页 ================= */
+#anomalyArea { padding-bottom: 34px; }
+.ax-card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px 14px; margin-bottom: 14px; }
+.ax-h { margin: 2px 0 2px; font-size: 16px; letter-spacing: 1px; }
+.ax-h4 { margin: 14px 0 6px; font-size: 14px; color: var(--text); }
+.ax-sub { margin: 4px 0 10px; color: var(--text-dim); font-size: 12.5px; }
+.tbl-scroll { overflow-x: auto; }
+.ax-tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
+.ax-tbl th, .ax-tbl td { border: 1px solid var(--line); padding: 6px 10px; text-align: left; vertical-align: top; }
+.ax-tbl th { background: var(--panel-2); white-space: nowrap; font-weight: 700; }
+.ax-tbl td.c, .ax-tbl th.c { text-align: center; }
+.ax-tbl .dim { color: var(--text-dim); }
+.ax-tbl tbody tr:hover td { background: var(--hov); }
+.ax-list { margin: 8px 0 2px 20px; padding: 0; font-size: 13px; line-height: 2; color: var(--text); }
+
 /* ============================================================
  * 白天模式（浅色 · 暖纸）— 通过 <html data-theme="light"> 启用
  * ============================================================ */
