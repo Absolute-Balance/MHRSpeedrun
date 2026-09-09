@@ -6050,5 +6050,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtte2rxd"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m23",
+    "weaponId": "hammer",
+    "timeMs": 520990,
+    "author": "Marshmollow",
+    "date": "2026-09-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1HNt86bEYb",
+        "title": "【逆天粉色霸王龙】大锤 特别探究蛮颚龙 8分40秒。三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtte3rq3"
   }
 ];
