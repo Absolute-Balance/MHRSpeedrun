@@ -5966,5 +5966,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtte0db5"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m50",
+    "weaponId": "hammer",
+    "timeMs": 449180,
+    "author": "Marshmollow",
+    "date": "2026-07-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1N7KL6BEi9",
+        "title": "大锤 超特激昂金狮子 7分29秒18  三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtte0wkb"
   }
 ];
