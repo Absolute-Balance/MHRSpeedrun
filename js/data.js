@@ -6659,5 +6659,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttxnuaz"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m07",
+    "weaponId": "bow",
+    "timeMs": 214780,
+    "author": "加钱居士觉得很润",
+    "date": "2023-11-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1bC4y127Xy",
+        "title": "超特合集 一星 青熊兽3分34"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttxqkc0"
   }
 ];
