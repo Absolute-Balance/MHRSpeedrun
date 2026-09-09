@@ -5945,5 +5945,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smttdzndo"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m50",
+    "weaponId": "hammer",
+    "timeMs": 286990,
+    "author": "Marshmollow",
+    "date": "2026-07-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1mDNz6uEw7",
+        "title": "大锤 怪异化LV300激昂金狮子 4分46秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtte0db5"
   }
 ];
