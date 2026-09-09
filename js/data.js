@@ -6197,5 +6197,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttl325c"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m03",
+    "weaponId": "gs",
+    "timeMs": 279110,
+    "author": "鬼畜茶走",
+    "date": "2025-07-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1kPuZzME2K",
+        "title": "[MHRS] 大剑 属性流斩 特别探究：毒狗龙王 TA+怪异炼化 4'39''11"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttl4c8l"
   }
 ];
