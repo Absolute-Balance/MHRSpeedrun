@@ -5987,5 +5987,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtte0wkb"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m12",
+    "weaponId": "hh",
+    "timeMs": 494250,
+    "author": "Marshmollow",
+    "date": "2026-07-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV12X3W65ER3",
+        "title": "【玩过轮椅武器吗你】狩猎笛 特别探究·土砂龙  8分14秒25 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtte1rno"
   }
 ];
