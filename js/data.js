@@ -6596,5 +6596,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttxjvdp"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m06",
+    "weaponId": "bow",
+    "timeMs": 254820,
+    "author": "加钱居士觉得很润",
+    "date": "2023-11-29",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1PM411Z7ry",
+        "title": "超特合集 一星 白兔兽 4分14"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttxl520"
   }
 ];
