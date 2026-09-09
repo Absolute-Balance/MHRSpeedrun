@@ -5693,5 +5693,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smttdmvnk"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m34",
+    "weaponId": "lance",
+    "timeMs": 456890,
+    "author": "Marshmollow",
+    "date": "2026-05-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1niGi6BEi7",
+        "title": "冲天长枪 特别探究电龙 7分36秒89  三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smttdnpal"
   }
 ];
