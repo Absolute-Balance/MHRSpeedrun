@@ -6344,5 +6344,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttlbvkd"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m01",
+    "weaponId": "sns",
+    "timeMs": 589010,
+    "author": "yiopk",
+    "date": "2026-05-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1sVRRBeEfc",
+        "title": "【MHRS】片手 特别探究：搔鸟 9'49''01 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttldue7"
   }
 ];
