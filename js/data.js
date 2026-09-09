@@ -6407,5 +6407,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttx3wzc"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m05",
+    "weaponId": "gs",
+    "timeMs": 338440,
+    "author": "鬼畜茶走",
+    "date": "2025-08-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1jD8Sz4EPM",
+        "title": "[MHRS] 打网球 大剑 特别探究：赤甲兽 TA+怪异炼化 5'38''44"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttx6iwq"
   }
 ];
