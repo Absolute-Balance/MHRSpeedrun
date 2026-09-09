@@ -5672,5 +5672,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smttdaiyi"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m39",
+    "weaponId": "cb",
+    "timeMs": 317990,
+    "author": "Marshmollow",
+    "date": "2026-05-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1E5LJ6bEkU",
+        "title": "【超解大剑这一块】盾斧 特别探究·轰龙 5分17秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smttdmvnk"
   }
 ];
