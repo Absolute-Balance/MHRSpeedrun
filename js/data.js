@@ -6071,5 +6071,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttkw700"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m02",
+    "weaponId": "sa",
+    "timeMs": 329940,
+    "author": "堕落魂淡",
+    "date": "2024-08-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1DbpoefEEf",
+        "title": "MHRS 斩斧 特别探究 眠狗龙王 TA（防具无炼化+属强5护石）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttky0eu"
   }
 ];
