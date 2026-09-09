@@ -366,27 +366,6 @@ window.MHRS_RECORDS = [
     "exStar": "EX9",
     "rule": "sanyou",
     "monsterId": "m56",
-    "weaponId": "hammer",
-    "timeMs": 478990,
-    "author": "Marshmollow",
-    "date": "2026-08-23",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1MA8x6wEFc",
-        "title": "大锤 特别探究·天廻龙 7分58秒94 三无规则"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtqobjah"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX9",
-    "rule": "sanyou",
-    "monsterId": "m56",
     "weaponId": "hh",
     "timeMs": 419990,
     "author": "病房里的五香蛋丶",
