@@ -6617,5 +6617,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttxl520"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m07",
+    "weaponId": "gs",
+    "timeMs": 313360,
+    "author": "鬼畜茶走",
+    "date": "2025-07-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1p8gWzjEgQ",
+        "title": "[MHRS] 大剑 属性流斩 特别探究：青熊兽 TA+怪异炼化 5'13''36"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttxmf0r"
   }
 ];
