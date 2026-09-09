@@ -6470,5 +6470,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttx9315"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m05",
+    "weaponId": "lance",
+    "timeMs": 431090,
+    "author": "天亿1",
+    "date": "2023-10-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV12c411Z7SZ",
+        "title": "【MHRS】长枪 特别探究：赤甲兽 7分11秒 ta"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttxafg8"
   }
 ];
