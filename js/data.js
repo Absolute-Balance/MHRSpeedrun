@@ -6638,5 +6638,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttxmf0r"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m07",
+    "weaponId": "sns",
+    "timeMs": 431830,
+    "author": "yiopk",
+    "date": "2026-05-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1SWRHBmET1",
+        "title": "【MHRS】片手 特别探究：青熊兽 7'11'83 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttxnuaz"
   }
 ];
