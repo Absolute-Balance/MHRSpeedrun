@@ -6806,5 +6806,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtuchapr"
+  },
+  {
+    "questType": "raging",
+    "quest": "q05",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m60",
+    "weaponId": "bow",
+    "timeMs": 199990,
+    "author": "鱼丸加芝心",
+    "date": "2026-08-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV11nbq6sE7Z",
+        "title": "【MHRS】弓箭三无烈祸岚龙3分19"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtuchupe"
   }
 ];
