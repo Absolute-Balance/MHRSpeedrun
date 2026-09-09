@@ -5882,5 +5882,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smttdxgv1"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m36",
+    "weaponId": "db",
+    "timeMs": 377180,
+    "author": "Tagakisa",
+    "date": "2026-06-13",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1z4JE6KERZ",
+        "title": "【MHRS】双刀 特别探究: 雷狼龙 6'17\"18 三无规则 极限炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smttdy8qa"
   }
 ];
