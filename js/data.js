@@ -5819,5 +5819,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smttdudpo"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m17",
+    "weaponId": "db",
+    "timeMs": 489770,
+    "author": "Tagakisa",
+    "date": "2026-08-13",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1imgW69EQ9",
+        "title": "【MHRS】双刀 特别探究: 泥鱼龙 8'09\"77 三无规则 极限炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smttdw0ua"
   }
 ];
