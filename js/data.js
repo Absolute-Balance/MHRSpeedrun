@@ -6365,5 +6365,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttlgxpw"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "ta",
+    "monsterId": "m57",
+    "weaponId": "ls",
+    "timeMs": 348960,
+    "author": "新世纪辣条提督",
+    "date": "2026-05-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1UkR8BqEik",
+        "title": "【MHRS/生庆】太刀 特别探究：怪异克服天彗龙 5分48 TA"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttwucdb"
   }
 ];
