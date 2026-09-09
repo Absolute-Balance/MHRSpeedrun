@@ -5903,5 +5903,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smttdy8qa"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m20",
+    "weaponId": "hammer",
+    "timeMs": 233990,
+    "author": "Marshmollow",
+    "date": "2026-08-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1EG8k6FENJ",
+        "title": "【我们牢锤也能3台】大锤 LV300雌火龙 3分53秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smttdz12x"
   }
 ];
