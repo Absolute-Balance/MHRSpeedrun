@@ -6029,5 +6029,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtte2f8c"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m08",
+    "weaponId": "hh",
+    "timeMs": 283990,
+    "author": "Marshmollow",
+    "date": "2026-08-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1tShV6NEyz",
+        "title": "大笛客 特别探究·大名盾蟹 4分43秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtte2rxd"
   }
 ];
