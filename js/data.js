@@ -5651,5 +5651,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smttd75lr"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m27",
+    "weaponId": "lance",
+    "timeMs": 257270,
+    "author": "Marshmollow",
+    "date": "2026-06-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1FPjy6TEZd",
+        "title": "【MHRSB】长枪 LV300迅龙 4分17秒27 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smttd9l4w"
   }
 ];
