@@ -157,8 +157,13 @@ code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-si
   text-align: center; color: var(--text-dim);
 }
 
-/* 时间字体配色（白=三无 黄=TA 红=无限制） */
-.tm { font-family: Consolas, Menlo, monospace; font-weight: 700; color: var(--time-def); }
+/* 时间字体配色（白=三无 黄=TA 红=无限制）
+ * 数字用黑体 + tabular-nums：格式固定为 xx'xx''xx，无需等宽也能对齐，引号更紧凑 */
+.tm {
+  font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700; color: var(--time-def);
+}
 .tm.ta { color: var(--time-ta); }
 .tm.free { color: var(--time-free); }
 
@@ -208,8 +213,9 @@ code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-si
 .mx-cell:hover { border-color: var(--sel-border); background: var(--hov); }
 .mx-cell.empty { cursor: default; }
 .mx-cell.empty:hover { border-color: var(--line); background: var(--cellbg); }
-.mx-cell .line1 .tm { font-size: 16px; }
-.mx-cell .line2 { display: flex; justify-content: space-between; gap: 6px; align-items: baseline;
+.mx-cell .line1 { text-align: center; }
+.mx-cell .line1 .tm { font-size: 15px; }
+.mx-cell .line2 { display: flex; justify-content: center; gap: 6px; align-items: baseline;
   font-size: 10px; color: var(--text-dim); min-width: 0; }
 .mx-cell .mxauthor { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .mx-cell .mxmore { flex: none; color: #7c7a84; }
@@ -272,7 +278,9 @@ code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-si
   padding: 14px 18px; margin-bottom: 16px;
 }
 .cur-card .cur-time {
-  font-size: 34px; line-height: 1.1; font-family: Consolas, Menlo, monospace; font-weight: 800;
+  font-size: 32px; line-height: 1.15;
+  font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+  font-variant-numeric: tabular-nums; font-weight: 800;
 }
 .cur-card .cur-time.ta { color: var(--time-ta); }
 .cur-card .cur-time.free { color: var(--time-free); }
@@ -415,7 +423,7 @@ code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-si
   padding: 10px 14px; margin-bottom: 8px;
 }
 .rv-item .rv-top { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
-.rv-item .rv-time { font-family: Consolas, Menlo, monospace; font-size: 16px; font-weight: 700; color: var(--time-ta); }
+.rv-item .rv-time { font-family: "Segoe UI", "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif; font-variant-numeric: tabular-nums; font-size: 16px; font-weight: 700; color: var(--time-ta); }
 .rv-item .rv-meta { font-size: 12.5px; color: var(--text-dim); }
 .rv-item .rv-title { font-size: 13px; margin-top: 3px; word-break: break-all; }
 .rv-item .rv-actions { display: flex; gap: 8px; margin-top: 8px; }

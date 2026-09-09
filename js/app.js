@@ -93,8 +93,8 @@
   }
   function ruleLegendText() {
     return isLight()
-      ? '每格只显示最快成绩，深色=三无规则，金色=TA规则，点怪物头像看全武器，点成绩格看该武器'
-      : '每格只显示最快成绩，白色=三无规则，黄色=TA规则，点怪物头像看全武器，点成绩格看该武器';
+      ? '每格只显示最快成绩 · 深色=三无规则 · 金色=TA规则 · 点怪物头像看全武器 · 点成绩格看该武器详情 · 点作者名查看玩家成绩'
+      : '每格只显示最快成绩 · 白色=三无规则 · 黄色=TA规则 · 点怪物头像看全武器 · 点成绩格看该武器详情 · 点作者名查看玩家成绩';
   }
 
   function ruleObj(id) {
@@ -1375,15 +1375,15 @@
     var today = new Date();
     ctx.fillText(today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0'), W - pad, pad + 22);
 
-    /* 矩阵主体 */
+    /* 矩阵主体（导出统一直角，配合分隔线更像成绩表） */
     var gx = pad, gy = pad + topH;
     ctx.fillStyle = C.panel;
-    rrect(ctx, gx, gy, leadW + axis.length * colW, gridH, 10);
+    rrect(ctx, gx, gy, leadW + axis.length * colW, gridH, 0);
 
     /* 表头行 */
     var cornerX = gx, weaponColX = gx + leadW;
     ctx.fillStyle = C.panel2;
-    rrect(ctx, cornerX, gy, leadW, headH, 8);
+    rrect(ctx, cornerX, gy, leadW, headH, 0);
     ctx.fillStyle = C.dim;
     ctx.font = '10.5px "Microsoft YaHei", sans-serif';
     ctx.textAlign = 'center';
@@ -1391,7 +1391,7 @@
     axis.forEach(function (it, i) {
       var x = weaponColX + i * colW;
       ctx.fillStyle = C.panel2;
-      rrect(ctx, x, gy, colW, headH, 8);
+      rrect(ctx, x, gy, colW, headH, 0);
       var cy = gy + 4;
       if (it.kind === 'ex') {
         var bw = it.ex === 'Apex' ? 44 : 38;
@@ -1417,7 +1417,7 @@
     weapons.forEach(function (w, ri) {
       var y = gy + headH + ri * rowH;
       ctx.fillStyle = C.panel2;
-      rrect(ctx, cornerX, y, leadW, rowH, 6);
+      rrect(ctx, cornerX, y, leadW, rowH, 0);
       if (w._img) {
         var s = 24;
         ctx.drawImage(w._img, cornerX + (leadW - s) / 2, y + 6, s, s);
@@ -1434,19 +1434,43 @@
         ctx.fillRect(x, y, colW, rowH);
         if (!recs.length) return;
         var best = bestOf(recs);
-        /* 时间 */
-        ctx.textAlign = 'left';
-        ctx.font = '700 15px Consolas, Menlo, monospace';
+        /* 时间（格内居中） */
+        ctx.textAlign = 'center';
+        ctx.font = '700 15px "Segoe UI", "Microsoft YaHei", sans-serif';
         ctx.fillStyle = best.rule === 'ta' ? C.ta : best.rule === 'free' ? C.free : C.def;
-        var tx = x + 8;
-        ctx.fillText(fmtTime(best.timeMs), tx, y + 23);
-        /* 作者 */
+        ctx.fillText(fmtTime(best.timeMs), x + colW / 2, y + 23);
+        /* 作者（格内居中） */
         ctx.font = '10px "Microsoft YaHei", sans-serif';
         ctx.fillStyle = C.dim;
         var auth = fitText(ctx, best.author, colW - 16);
-        ctx.fillText(auth, tx, y + 41);
+        ctx.fillText(auth, x + colW / 2, y + 41);
       });
     });
+
+    /* 单元格分隔线（细分隔 + 表头强调，避免串行） */
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.strokeStyle = 'rgba(255,255,255,0.10)';
+    for (var gj = 0; gj <= weapons.length; gj++) {
+      var gy2 = gy + headH + gj * rowH;
+      ctx.moveTo(weaponColX + 0.5, gy2 + 0.5);
+      ctx.lineTo(weaponColX + axis.length * colW + 0.5, gy2 + 0.5);
+    }
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.strokeStyle = 'rgba(255,255,255,0.055)';
+    for (var gi = 0; gi <= axis.length; gi++) {
+      var gx2 = weaponColX + gi * colW;
+      ctx.moveTo(gx2 + 0.5, gy + 0.5);
+      ctx.lineTo(gx2 + 0.5, gy + gridH + 0.5);
+    }
+    ctx.stroke();
+    /* 表头与数据区之间一条稍明显的分隔线 */
+    ctx.strokeStyle = 'rgba(255,255,255,0.16)';
+    ctx.beginPath();
+    ctx.moveTo(weaponColX + 0.5, gy + headH + 0.5);
+    ctx.lineTo(weaponColX + axis.length * colW + 0.5, gy + headH + 0.5);
+    ctx.stroke();
 
     /* 图例 + 页脚（窄图自动分两行，避免重叠） */
     ctx.fillStyle = C.dim;
