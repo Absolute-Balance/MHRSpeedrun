@@ -6449,5 +6449,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttx7t36"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m05",
+    "weaponId": "sns",
+    "timeMs": 527990,
+    "author": "yiopk",
+    "date": "2026-05-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1i1Gm6cECp",
+        "title": "【MHRS】片手 特别探究：赤甲兽 8'47''99 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttx9315"
   }
 ];
