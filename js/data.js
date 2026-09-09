@@ -5987,5 +5987,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttfrxgu"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m04",
+    "weaponId": "ls",
+    "timeMs": 370650,
+    "author": "b海风",
+    "date": "2023-12-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Vg4y1Z72m",
+        "title": "太刀 301镰鼬龙王"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttkrpsv"
   }
 ];
