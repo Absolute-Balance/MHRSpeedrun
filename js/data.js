@@ -6308,27 +6308,6 @@ window.MHRS_RECORDS = [
     "quest": null,
     "exStar": "EX1",
     "rule": "ta",
-    "monsterId": "m03",
-    "weaponId": "ls",
-    "timeMs": 460090,
-    "author": "堕落魂淡",
-    "date": "2024-08-15",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV11veseREp9",
-        "title": "MHRS 太刀 特别探究 搔鸟 TA（防具无炼化+等效3护石）"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmttlan0e"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX1",
-    "rule": "ta",
     "monsterId": "m01",
     "weaponId": "ls",
     "timeMs": 460090,
