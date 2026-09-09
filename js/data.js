@@ -6113,5 +6113,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttkz9lj"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m02",
+    "weaponId": "ig",
+    "timeMs": 313300,
+    "author": "天亿1",
+    "date": "2023-10-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1aw411F7Jv",
+        "title": "【MHRS】操虫棍 特别探究：眠狗龙王 5分13秒 ta"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttl0j0b"
   }
 ];
