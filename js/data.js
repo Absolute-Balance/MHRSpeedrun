@@ -6008,5 +6008,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttkrpsv"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m04",
+    "weaponId": "hbg",
+    "timeMs": 353780,
+    "author": "天亿1",
+    "date": "2023-10-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1x34y1g7an",
+        "title": "【MHRS】 重弩 特别探究：镰鼬龙王 5分53秒 ta"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttktcrx"
   }
 ];
