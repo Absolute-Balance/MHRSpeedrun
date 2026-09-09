@@ -5756,5 +5756,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smttdpy06"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m27",
+    "weaponId": "hh",
+    "timeMs": 299220,
+    "author": "Marshmollow",
+    "date": "2026-06-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1i3jy6hEdP",
+        "title": "【MHRSB】狩猎笛 LV300迅龙 4分59秒22  三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smttdr9rr"
   }
 ];
