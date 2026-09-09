@@ -6092,5 +6092,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttky0eu"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m02",
+    "weaponId": "cb",
+    "timeMs": 317990,
+    "author": "Decanee",
+    "date": "2024-01-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1bi4y1z7YK",
+        "title": "盾斧不要贪挑战，特别探究眠狗龙王"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttkz9lj"
   }
 ];
