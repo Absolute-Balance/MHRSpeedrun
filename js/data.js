@@ -5798,5 +5798,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smttdtdl5"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m22",
+    "weaponId": "hh",
+    "timeMs": 456340,
+    "author": "Marshmollow",
+    "date": "2026-07-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1WtNw68EyN",
+        "title": "【MHRS】狩猎笛 特别探究·飞雷龙 7分36秒34  三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smttdudpo"
   }
 ];
