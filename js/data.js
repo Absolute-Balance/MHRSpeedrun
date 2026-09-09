@@ -6575,5 +6575,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttxilr7"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m06",
+    "weaponId": "sa",
+    "timeMs": 413690,
+    "author": "天亿1",
+    "date": "2024-06-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1V5VLedE8M",
+        "title": "【MHRS】斩斧 特别探究：白兔兽 6分53秒 ta"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttxjvdp"
   }
 ];
