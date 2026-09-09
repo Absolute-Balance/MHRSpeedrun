@@ -6428,5 +6428,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttx6iwq"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m05",
+    "weaponId": "sa",
+    "timeMs": 307990,
+    "author": "Marshmollow",
+    "date": "2025-11-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1cBygBVEix",
+        "title": "【打棒球这一块】斩斧爽怪之  特别探究·赤甲兽  三无规则  5分07秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttx7t36"
   }
 ];
