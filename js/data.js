@@ -6365,5 +6365,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttldue7"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m01",
+    "weaponId": "bow",
+    "timeMs": 274020,
+    "author": "加钱居士觉得很润",
+    "date": "2023-11-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1SN4y117E6",
+        "title": "超特合集 一星 搔鸟4分34"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttlgxpw"
   }
 ];
