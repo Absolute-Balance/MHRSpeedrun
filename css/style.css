@@ -421,10 +421,17 @@ code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-si
 .rv-item .rv-actions { display: flex; gap: 8px; margin-top: 8px; }
 .rv-item .rv-actions .ok:hover { border-color: var(--good); color: var(--good); }
 .rv-item .rv-actions .no:hover { border-color: var(--danger); color: var(--danger); }
-/* 审核区弹窗：弹窗占满可视高度，列表区内部滚动（宽屏自动两列） */
+/* 审核区弹窗：弹窗高度受限不外溢；列表区直接限高并内部滚动（宽屏自动两列） */
 #reviewModal .modal { max-height: calc(100vh - 80px); display: flex; flex-direction: column; }
-#reviewModal .modal > * { flex: none; }
-#rvList { flex: 1 1 auto; min-height: 100px; overflow-y: auto; overscroll-behavior: contain; padding: 2px 6px 6px 2px; scrollbar-gutter: stable; }
+#rvList {
+  flex: 1 1 auto;
+  min-height: 120px;
+  max-height: calc(100vh - 230px); /* 直接限高，不依赖 flex 收缩，保证出现内部滚动条 */
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 2px 6px 6px 2px;
+  scrollbar-gutter: stable;
+}
 #reviewModal .modal-actions { margin-top: 6px; }
 @media (min-width: 1180px) {
   #reviewModal .modal-wide { width: 1180px; }
