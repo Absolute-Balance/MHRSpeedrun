@@ -6176,5 +6176,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttl2qcc"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m02",
+    "weaponId": "hammer",
+    "timeMs": 514230,
+    "author": "迎刃无解",
+    "date": "2023-06-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1su411a729",
+        "title": "【怪物猎人：崛起曙光】纯净VS超特 大锤 特别探究眠狗龙王 08'34''23"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttl325c"
   }
 ];
