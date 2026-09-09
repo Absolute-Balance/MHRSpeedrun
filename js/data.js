@@ -6281,5 +6281,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttl83dk"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m01",
+    "weaponId": "gs",
+    "timeMs": 368740,
+    "author": "鬼畜茶走",
+    "date": "2025-07-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1aj8LzQEcX",
+        "title": "[MHRS] 我将以陶罐形态出击！！大剑 特别探究：搔鸟 TA+怪异炼化 6'08''74"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttl9ctq"
   }
 ];
