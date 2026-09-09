@@ -6008,5 +6008,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtte1rno"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m14",
+    "weaponId": "hh",
+    "timeMs": 567810,
+    "author": "Marshmollow",
+    "date": "2026-08-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1RyuP6cE6a",
+        "title": "【真是一场酣畅淋漓的赤石啊】狩猎笛 特别探究伞鸟 9分27秒81"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtte2f8c"
   }
 ];
