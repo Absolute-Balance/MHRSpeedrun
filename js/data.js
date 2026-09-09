@@ -5714,5 +5714,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smttdnpal"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m39",
+    "weaponId": "lbg",
+    "timeMs": 310240,
+    "author": "Marshmollow",
+    "date": "2026-05-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1KjGn6KEmR",
+        "title": "【MHRSB】轻弩 特别探究·轰龙  5分10秒24 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smttdo5qx"
   }
 ];
