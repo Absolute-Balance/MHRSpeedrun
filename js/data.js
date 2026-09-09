@@ -5735,5 +5735,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smttdo5qx"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m39",
+    "weaponId": "gs",
+    "timeMs": 188610,
+    "author": "Marshmollow",
+    "date": "2026-05-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1HkGQ6UE5L",
+        "title": "【有一种数值的美】大剑 LV300轰龙 3分08秒61 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smttdpy06"
   }
 ];
