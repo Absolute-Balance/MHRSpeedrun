@@ -6533,5 +6533,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttxg13r"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m06",
+    "weaponId": "ls",
+    "timeMs": 598870,
+    "author": "堕落魂淡",
+    "date": "2024-08-12",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV17KYqe3ETx",
+        "title": "MHRS 太刀 特别探究 白兔兽 TA（防具无炼化+等效3护石）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttxhb9b"
   }
 ];
