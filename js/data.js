@@ -6029,5 +6029,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttktcrx"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m02",
+    "weaponId": "gs",
+    "timeMs": 272140,
+    "author": "鬼畜茶走",
+    "date": "2025-07-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1rPuZzMEdn",
+        "title": "[MHRS] 大剑 属性流斩 特别探究：眠狗龙王 TA+怪异炼化 4'32''14"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttkuxb1"
   }
 ];
