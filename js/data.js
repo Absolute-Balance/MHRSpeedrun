@@ -6512,5 +6512,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttxel6h"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m06",
+    "weaponId": "gs",
+    "timeMs": 466790,
+    "author": "鬼畜茶走",
+    "date": "2025-07-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Ya8xzHEou",
+        "title": "[MHRS] 大剑 偷袭流斩 特别探究：白兔兽 TA+怪异炼化 7'46''79"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttxg13r"
   }
 ];
