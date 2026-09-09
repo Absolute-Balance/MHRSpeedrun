@@ -5630,5 +5630,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smttb1p1l"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m39",
+    "weaponId": "hammer",
+    "timeMs": 416990,
+    "author": "Marshmollow",
+    "date": "2026-05-19",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV16nLA6nEQx",
+        "title": "【牢字辈武器之】大锤 特别探究轰龙 6分56秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smttd75lr"
   }
 ];
