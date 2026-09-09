@@ -6239,5 +6239,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttl5kzk"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m03",
+    "weaponId": "sns",
+    "timeMs": 405110,
+    "author": "yiopk",
+    "date": "2026-05-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1bBGZ61EP9",
+        "title": "【MHRS】风车片手 特别探究：毒狗龙王 6'45''11 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttl6trp"
   }
 ];
