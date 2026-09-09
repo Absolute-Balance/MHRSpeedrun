@@ -6554,5 +6554,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttxhb9b"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m06",
+    "weaponId": "sns",
+    "timeMs": 654360,
+    "author": "yiopk",
+    "date": "2026-05-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1fgGJ6nE3S",
+        "title": "【MHRS/生贺】片手 特别探究：白兔兽 10'54''36 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmttxilr7"
   }
 ];
