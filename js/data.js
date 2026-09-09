@@ -5924,5 +5924,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smttdz12x"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m20",
+    "weaponId": "hammer",
+    "timeMs": 341990,
+    "author": "Marshmollow",
+    "date": "2026-09-02",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1GFtL6iEFe",
+        "title": "大锤 特别探究·雌火龙 5分41秒三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smttdzndo"
   }
 ];
