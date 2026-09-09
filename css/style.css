@@ -67,7 +67,9 @@ code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-si
 /* ---------- 头部 ---------- */
 .site-head { padding: 26px 0 18px; border-bottom: 1px solid var(--line); }
 .head-bar { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; }
-.head-main { min-width: 0; }
+.head-main { display: flex; align-items: center; gap: 14px; min-width: 0; }
+.head-logo { height: 46px; width: auto; display: block; flex: none; border-radius: 6px; }
+.head-text { min-width: 0; }
 .user-home {
   color: var(--uh); font-size: 15px; font-weight: 700; text-decoration: none;
   padding: 4px 12px; border: 1px solid var(--uh-bd); border-radius: 999px;
