@@ -7247,5 +7247,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtv0c9t0"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m12",
+    "weaponId": "hbg",
+    "timeMs": 259560,
+    "author": "灼眼の冷面魔男",
+    "date": "2023-10-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1f8411C7WR",
+        "title": "【MHRS】巨大的💩从天而降 重弩特别探究小动物之土砂龙 4'19''56 三无/TA＋怪异炼成"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtv0dkbc"
   }
 ];
