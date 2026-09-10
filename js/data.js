@@ -7037,5 +7037,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtuzumw8"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m10",
+    "weaponId": "bow",
+    "timeMs": 236070,
+    "author": "加钱居士觉得很润",
+    "date": "2023-12-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Ee411B7ZX",
+        "title": "超特合集 牛牛 3分56 圣诞快乐！"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtuzwymh"
   }
 ];
