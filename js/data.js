@@ -7415,5 +7415,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtv0whbg"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m14",
+    "weaponId": "bow",
+    "timeMs": 281400,
+    "author": "加钱居士觉得很润",
+    "date": "2024-01-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1EC4y1e789",
+        "title": "又是抽象打法的一集 伞鸟4分41"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtv10kz5"
   }
 ];
