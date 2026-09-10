@@ -7268,5 +7268,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtv0dkbc"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m13",
+    "weaponId": "ls",
+    "timeMs": 378740,
+    "author": "-晴晓音-",
+    "date": "2023-05-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ph4y1t712",
+        "title": "【MHRS】太刀 特别探究水兽 6分18秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtv0h2q9"
   }
 ];
