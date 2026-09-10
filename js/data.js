@@ -7478,5 +7478,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtv14qq3"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "ta",
+    "monsterId": "m15",
+    "weaponId": "sns",
+    "timeMs": 819740,
+    "author": "yiopk",
+    "date": "2026-07-19",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1DiKr6nENK",
+        "title": "【MHRS】重击刃药片手 特别探究：岩龙 13'39''24 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtv16ai7"
   }
 ];
