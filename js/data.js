@@ -7100,5 +7100,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtv007w2"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "ta",
+    "monsterId": "m11",
+    "weaponId": "sns",
+    "timeMs": 588060,
+    "author": "yiopk",
+    "date": "2026-06-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1KUEH6REcr",
+        "title": "【MHRS】片手 特别探究：河童蛙 9'48''06 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtv01hs9"
   }
 ];
