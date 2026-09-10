@@ -6974,5 +6974,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtuz5inm"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m09",
+    "weaponId": "bow",
+    "timeMs": 272420,
+    "author": "加钱居士觉得很润",
+    "date": "2023-12-15",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1P94y1A7B4",
+        "title": "超特合集 二星 天狗兽4分32"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtuz6u3e"
   }
 ];
