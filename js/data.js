@@ -7331,5 +7331,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtv0mydo"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m13",
+    "weaponId": "cb",
+    "timeMs": 289210,
+    "author": "郁_葱",
+    "date": "2024-11-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1uPU5YEE4o",
+        "title": "【MHRS/PC】 盾斧 特别探究：水兽 4'49''21 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtv0pr8h"
   }
 ];
