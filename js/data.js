@@ -7142,5 +7142,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtv02s5a"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m11",
+    "weaponId": "cb",
+    "timeMs": 262680,
+    "author": "东西的是",
+    "date": "2026-09-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Bxtf6qEBc",
+        "title": "【MHRS】盾斧 特别探究:河童蛙 4′22″68 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtv04igs"
   }
 ];
