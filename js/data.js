@@ -6911,5 +6911,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtuyyzu9"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m08",
+    "weaponId": "bow",
+    "timeMs": 171840,
+    "author": "加钱居士觉得很润",
+    "date": "2023-12-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1cC4y1T7Ma",
+        "title": "超特合集 最强上位怪 2分51"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtuz1n6s"
   }
 ];
