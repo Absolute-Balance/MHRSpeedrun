@@ -7226,5 +7226,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtv0aaya"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "ta",
+    "monsterId": "m12",
+    "weaponId": "sa",
+    "timeMs": 479500,
+    "author": "堕落魂淡",
+    "date": "2024-07-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Q142147Nx",
+        "title": "MHRS 斩斧 特别探究 土砂龙 TA（防具无炼化+属强5护石）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtv0c9t0"
   }
 ];
