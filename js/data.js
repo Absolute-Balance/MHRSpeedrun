@@ -6995,5 +6995,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtuz6u3e"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m10",
+    "weaponId": "ls",
+    "timeMs": 302520,
+    "author": "RealizedSoul",
+    "date": "2023-11-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1VN411G7VM",
+        "title": "【0_生庆】特别探究：奇怪龙 5分02秒 太刀 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtuzt810"
   }
 ];
