@@ -7436,5 +7436,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtv10kz5"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m14",
+    "weaponId": "lance",
+    "timeMs": 410090,
+    "author": "谢233",
+    "date": "2023-05-19",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Na4y1g7PK",
+        "title": "【MHRS】天才少年长枪vs特别探究伞鸟 6'50\"94 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtv12zwk"
   }
 ];
