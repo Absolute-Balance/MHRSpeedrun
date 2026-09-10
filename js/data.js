@@ -6827,5 +6827,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtuchupe"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m08",
+    "weaponId": "gs",
+    "timeMs": 261330,
+    "author": "鬼畜茶走",
+    "date": "2025-08-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV16we9znETn",
+        "title": "[MHRS] 属性流斩 大剑 特别探究：大名盾蟹 TA+怪异炼化 4'21''33"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtuyjno0"
   }
 ];
