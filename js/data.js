@@ -6890,5 +6890,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtuymezs"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m08",
+    "weaponId": "cb",
+    "timeMs": 337990,
+    "author": "Decanee",
+    "date": "2023-11-12",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1bw411W7UJ",
+        "title": "特别探究大名盾蟹，盾斧每日解压"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtuyyzu9"
   }
 ];
