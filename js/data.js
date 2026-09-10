@@ -7352,5 +7352,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtv0pr8h"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m14",
+    "weaponId": "gs",
+    "timeMs": 322400,
+    "author": "鬼畜茶走",
+    "date": "2025-08-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1s7bvzfEwS",
+        "title": "[MHRS] 必殺！后空翻！！大剑 特别探究：伞鸟 TA+怪异炼化 5'22''40"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtv0r1ra"
   }
 ];
