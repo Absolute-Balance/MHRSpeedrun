@@ -7058,5 +7058,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtuzwymh"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m11",
+    "weaponId": "gs",
+    "timeMs": 340670,
+    "author": "鬼畜茶走",
+    "date": "2025-09-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1DbJ2zmE2o",
+        "title": "[MHRS] 肥仔道，堂堂连载！！流斩真蓄 大剑 特别探究：河童蛙 TA+怪异炼化 5'40''67"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtuzyx1i"
   }
 ];
