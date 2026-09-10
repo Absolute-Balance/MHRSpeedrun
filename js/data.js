@@ -7457,5 +7457,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtv12zwk"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m15",
+    "weaponId": "hbg",
+    "timeMs": 330500,
+    "author": "灼眼の冷面魔男",
+    "date": "2023-10-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1pN4y1o7MJ",
+        "title": "【MHRS】重弩特别探究小动物之岩龙 5'30''50 三无/TA＋怪异炼成"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtv14qq3"
   }
 ];
