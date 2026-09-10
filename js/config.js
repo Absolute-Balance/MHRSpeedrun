@@ -72,7 +72,7 @@ window.MHRS_CONFIG = {
     { id: 'steam',    label: 'Steam' },
     { id: 'switch',   label: 'Nintendo Switch' },
     { id: 'ps',       label: 'PlayStation 4 / 5' },
-    { id: 'xbox',     label: 'Xbox One / Series X|S' },
+    { id: 'xbox',     label: 'Xbox One / Xbox Series X|S' },
   ],
 
   /* ---- 图标目录（相对 index.html） ---- */
