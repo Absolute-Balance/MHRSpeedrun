@@ -125,7 +125,7 @@ function biliUrl(v) {
 const QT = ['raging', 'anomaly300', 'special'];
 const EXS = ['EX1','EX2','EX3','EX4','EX5','EX6','EX7','EX8','EX9','Apex'];
 const RULES = ['sanyou', 'ta'];
-const PLATS = ['steam', 'switch', 'ps5'];
+const PLATS = ['steam', 'switch', 'ps', 'ps5', 'xbox'];
 function validateSubmission(b) {
   if (!b || typeof b !== 'object') throw new Error('内容为空');
   if (cleanStr(b.website, 50)) throw new Error('机器人检测'); // 蜜罐字段
@@ -147,6 +147,7 @@ function validateSubmission(b) {
   const vUrl = b.bv ? biliUrl(b.bv) : '';
   if (b.bv && !vUrl) throw new Error('视频仅支持 B 站链接或 BV 号');
   if (!PLATS.includes(b.platform)) b.platform = 'steam';
+  if (b.platform === 'ps5') b.platform = 'ps'; // 兼容旧值
   return {
     questType: b.questType,
     quest: b.questType === 'raging' ? cleanStr(b.quest, 10) : null,

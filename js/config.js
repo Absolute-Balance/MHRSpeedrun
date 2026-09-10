@@ -67,12 +67,12 @@ window.MHRS_CONFIG = {
     { id: 'bow',    label: '弓',     file: '弓.png' }
   ],
 
-  /* ---- 平台（成绩可选字段，可后续扩展） ---- */
+  /* ---- 平台（成绩可选字段；顺序即下拉顺序，人数多的在前） ---- */
   platforms: [
-    { id: 'steam',  label: 'Steam' },
-    { id: 'switch', label: 'Nintendo Switch' },
-    { id: 'ps',    label: 'PS5|4' },
-    { id: 'xbox',    label: 'XSX|S/XBO' },
+    { id: 'steam',    label: 'Steam' },
+    { id: 'switch',   label: 'Nintendo Switch' },
+    { id: 'ps',       label: 'PlayStation 4 / 5' },
+    { id: 'xbox',     label: 'Xbox One / Series X|S' },
   ],
 
   /* ---- 图标目录（相对 index.html） ---- */
