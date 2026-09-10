@@ -7289,5 +7289,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtv0h2q9"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "ta",
+    "monsterId": "m13",
+    "weaponId": "sns",
+    "timeMs": 560810,
+    "author": "yiopk",
+    "date": "2026-06-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1eyjf6NEV3",
+        "title": "【MHRS】风车片手 特别探究：水兽 9'20''81 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtv0k4p7"
   }
 ];
