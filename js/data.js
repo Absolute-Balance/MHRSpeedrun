@@ -6869,5 +6869,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtuyl3b5"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "ta",
+    "monsterId": "m08",
+    "weaponId": "sns",
+    "timeMs": 423790,
+    "author": "yiopk",
+    "date": "2026-06-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1VNJw6jEzW",
+        "title": "【MHRS】片手 特别探究：大名盾蟹 7'03''79 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtuymezs"
   }
 ];
