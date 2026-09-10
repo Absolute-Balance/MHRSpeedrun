@@ -7373,5 +7373,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtv0r1ra"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m14",
+    "weaponId": "sa",
+    "timeMs": 329280,
+    "author": "东山三千代",
+    "date": "2026-07-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1rTMb6zEDP",
+        "title": "【MHRS/五前达成】 特别探究：伞鸟 狂化斩斧 5分29秒 三无 魔法炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtv0uf3h"
   }
 ];
