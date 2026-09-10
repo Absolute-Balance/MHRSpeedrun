@@ -6848,5 +6848,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtuyjno0"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m08",
+    "weaponId": "ls",
+    "timeMs": 350830,
+    "author": "冬季鱼__",
+    "date": "2026-04-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1zMdrBWE9c",
+        "title": "MHRS/特别探究 大名盾蟹 三无太刀"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtuyl3b5"
   }
 ];
