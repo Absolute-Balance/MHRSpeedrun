@@ -7499,5 +7499,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtv19jlh"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m39",
+    "weaponId": "gs",
+    "timeMs": 269530,
+    "author": "鬼畜茶走",
+    "date": "2024-09-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1eApveMEdX",
+        "title": "[MHRS/秋晓祭-大剑] 大剑 属性流斩 Lv300 怪异探究：轰龙 三无规则 4'29''53"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtvaoweq"
   }
 ];
