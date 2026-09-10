@@ -7184,5 +7184,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtv05uca"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m12",
+    "weaponId": "gs",
+    "timeMs": 396370,
+    "author": "鬼畜茶走",
+    "date": "2025-11-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV18J1qBPEya",
+        "title": "[MHRS] 偷袭流斩 大剑 特别探究：土砂龙 TA+怪异炼化 6'36''37"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtv0905n"
   }
 ];
