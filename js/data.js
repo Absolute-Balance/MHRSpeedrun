@@ -7079,5 +7079,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtuzyx1i"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m11",
+    "weaponId": "ls",
+    "timeMs": 408290,
+    "author": "b海风",
+    "date": "2024-03-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1zx421r79o",
+        "title": "太刀 301河童蛙"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtv007w2"
   }
 ];
