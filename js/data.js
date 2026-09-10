@@ -7394,5 +7394,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtv0uf3h"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m14",
+    "weaponId": "sns",
+    "timeMs": 411990,
+    "author": "咩咩羊袭",
+    "date": "2026-06-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Mnj766Euh",
+        "title": "【MHRS】片手剑 特别探究：伞鸟 6分51秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtv0whbg"
   }
 ];
