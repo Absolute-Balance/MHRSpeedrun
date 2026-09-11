@@ -7772,5 +7772,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtx3mzvj"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "ta",
+    "monsterId": "m19",
+    "weaponId": "sns",
+    "timeMs": 495580,
+    "author": "yiopk",
+    "date": "2026-08-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1jZhN6oEA6",
+        "title": "【MHRS】片手 特别探究：绯天狗兽 8'15''58 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtx3ntyq"
   }
 ];
