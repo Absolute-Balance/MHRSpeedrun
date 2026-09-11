@@ -7814,5 +7814,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtx3pqpc"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "ta",
+    "monsterId": "m19",
+    "weaponId": "gs",
+    "timeMs": 304660,
+    "author": "鬼畜茶走",
+    "date": "2025-12-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1P8q6B1Ehr",
+        "title": "[MHRS] 流斩大剑 Lv 300 怪异探究：绯天狗兽 TA规则 5'04''66"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtx3ql5o"
   }
 ];
