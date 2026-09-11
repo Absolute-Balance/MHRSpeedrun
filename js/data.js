@@ -7877,5 +7877,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtx3vqzc"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m19",
+    "weaponId": "cb",
+    "timeMs": 331640,
+    "author": "GodFilm",
+    "date": "2026-01-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1zbz2B4Eu1",
+        "title": "MHRS 超解盾斧 特别探究绯天狗兽 5:31:64"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtx3yzmz"
   }
 ];
