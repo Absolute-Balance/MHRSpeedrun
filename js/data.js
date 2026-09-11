@@ -7730,5 +7730,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtx3fex2"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m18",
+    "weaponId": "gs",
+    "timeMs": 334680,
+    "author": "Zen10_2333",
+    "date": "2023-12-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Su4y1g75p",
+        "title": "AI漏洞or控怪老金？【MHRS】大剑 特别探究: 将军镰蟹 5分34秒 TA打法+怪异炼化/三无/四无/禁用随从盟友牵制捕获御龙爆桶火事场力"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtx3hm67"
   }
 ];
