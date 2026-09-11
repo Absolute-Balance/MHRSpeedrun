@@ -7751,5 +7751,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtx3jpcd"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m19",
+    "weaponId": "sa",
+    "timeMs": 287610,
+    "author": "拟人态废柴",
+    "date": "2026-08-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1YmhK6WEBf",
+        "title": "【MHRS】泥=直接  特别探究：绯天狗兽 三无规则 4'47\"61"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtx3mzvj"
   }
 ];
