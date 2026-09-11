@@ -7667,5 +7667,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtx3d3n6"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m18",
+    "weaponId": "db",
+    "timeMs": 138990,
+    "author": "_懒得起名Y_",
+    "date": "2025-05-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1eAVkztEzj",
+        "title": "【狂化双刀】LV300将军镰蟹 一等效 2分18秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtx3d94d"
   }
 ];
