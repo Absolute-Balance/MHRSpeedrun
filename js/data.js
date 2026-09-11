@@ -7709,5 +7709,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtx3ddsc"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "ta",
+    "monsterId": "m18",
+    "weaponId": "sa",
+    "timeMs": 442650,
+    "author": "堕落魂淡",
+    "date": "2024-06-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1hJ4m1u77N",
+        "title": "MHRS 斩斧 特别探究 将军镰蟹 TA（防具无炼化+属强5护石）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtx3fex2"
   }
 ];
