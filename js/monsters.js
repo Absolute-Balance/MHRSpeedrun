@@ -65,11 +65,5 @@ window.MHRS_MONSTERS = [
   { id: 'm58', file: '月迅龙.png', tier: 'raging', name: '月迅龙' },
   { id: 'm59', file: '焰狐龙.png', tier: 'raging', name: '焰狐龙' },
   { id: 'm61', file: '冰龙.png', tier: 'raging', name: '冰龙' },
-  { id: 'm60', file: '岚龙.png', tier: 'raging', name: '岚龙' },
-  { id: 'm63', file: '霸主·青熊兽.png', tier: 'Apex', name: '霸主·青熊兽' },
-  { id: 'm64', file: '霸主·雌火龙.png', tier: 'Apex', name: '霸主·雌火龙' },
-  { id: 'm65', file: '霸主·火龙.png', tier: 'Apex', name: '霸主·火龙' },
-  { id: 'm66', file: '霸主·泡狐龙.png', tier: 'Apex', name: '霸主·泡狐龙' },
-  { id: 'm67', file: '霸主·角龙.png', tier: 'Apex', name: '霸主·角龙' },
-  { id: 'm68', file: '霸主·雷狼龙.png', tier: 'Apex', name: '霸主·雷狼龙' }
+  { id: 'm60', file: '岚龙.png', tier: 'raging', name: '岚龙' }
 ];

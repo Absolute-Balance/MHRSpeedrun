@@ -108,7 +108,6 @@
   }
   function tierLabel(t) {
     if (!t) return '未分组';
-    if (t === 'Apex') return 'Apex（霸主）';
     if (t === 'raging') return '烈祸袭来';
     return t;
   }
@@ -174,7 +173,6 @@
   //标题中识别任务类型与二级任务
   function biliTitleExStar(title) {
     var text = String(title || '');
-    if (/\bApex\b/i.test(text)) return 'Apex';
     var m = text.match(/(?:^|[^A-Za-z0-9])EX\s*([1-9])(?:\b|$)/i);
     return m ? 'EX' + m[1] : '';
   }
@@ -257,7 +255,7 @@
     var monsterId = biliTitleMonster(title);
     var monster = monsterId ? mById[monsterId] : null;
     var task = quest.task;
-    if ((quest.type === 'anomaly300' || quest.type === 'special') && monster && /^(EX\d|Apex)$/.test(monster.tier)) {
+    if ((quest.type === 'anomaly300' || quest.type === 'special') && monster && /^EX\d$/.test(monster.tier)) {
       task = monster.tier;
     }
     return {
@@ -485,7 +483,7 @@
       pager.classList.add('hidden');
       $('matrixTitle').innerHTML = '';
       $('matrixSub').textContent = '';
-      prompt.textContent = '请选择 EX 星级（EX1~EX9 / Apex，可多选），对应怪物将作为横轴展示。';
+      prompt.textContent = '请选择 EX 星级（EX1~EX9，可多选），对应怪物将作为横轴展示。';
       return;
     }
 
@@ -525,7 +523,7 @@
       var tt = it.kind === 'raging' ? (it.quest.label + '\n目标：' + m.name) : (m.name + '（' + it.ex + '）');
       html += '<div class="mx-head" data-mid="' + m.id + '" data-quest="' +
         (it.kind === 'raging' ? it.quest.id : '') + '" title="' + esc(tt + '\n点击查看全部武器最快') + '">' +
-        (it.kind === 'ex' ? '<span class="ex-badge' + (it.ex === 'Apex' ? ' apex' : '') + '">' + it.ex + '</span>' : '') +
+        (it.kind === 'ex' ? '<span class="ex-badge">' + it.ex + '</span>' : '') +
         '<img src="' + MONSTER_ICON + encodeURIComponent(m.file) + '" alt="" loading="lazy">' +
         '<span class="mxlabel">' + esc(it.kind === 'raging' ? it.quest.shortLabel : m.name) + '</span>' +
         '</div>';
@@ -784,7 +782,7 @@
     var baseRec = {
       questType: qt,
       quest: qt === 'raging' ? entryCtx.quest : null,
-      exStar: qt === 'raging' ? null : (m && m.tier && /^(EX\d|Apex)$/.test(m.tier) ? m.tier : null),
+      exStar: qt === 'raging' ? null : (m && m.tier && /^EX\d$/.test(m.tier) ? m.tier : null),
       rule: rule,
       monsterId: entryCtx.mid,
       weaponId: entryCtx.wid,
@@ -1394,8 +1392,8 @@
       rrect(ctx, x, gy, colW, headH, 0);
       var cy = gy + 4;
       if (it.kind === 'ex') {
-        var bw = it.ex === 'Apex' ? 44 : 38;
-        ctx.fillStyle = it.ex === 'Apex' ? C.apex : C.gold;
+        var bw = 38;
+        ctx.fillStyle = C.apex;
         rrect(ctx, x + (colW - bw) / 2, cy, bw, 15, 4);
         ctx.fillStyle = '#052238';
         ctx.font = '700 9px "Microsoft YaHei", sans-serif';
@@ -1562,7 +1560,7 @@
       CFG.exStars.forEach(function (s) {
         var op = document.createElement('option');
         op.value = s;
-        op.textContent = s + (s === 'Apex' ? '（霸主）' : '');
+        op.textContent = s;
         sel.appendChild(op);
       });
     }

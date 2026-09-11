@@ -18,7 +18,6 @@
   --time-ta: #f2c14e;            /* TA 时间：暖金黄 */
   --time-def: #efece4;           /* 三无时间：暖白 */
   --time-free: #ff6b5e;          /* 无限制时间：红 */
-  --apex: #3fa9f5;               /* Apex 档：蓝 */
   --gold: #ffd75e;
   --silver: #c9ced6;
   --bronze: #d89b6b;
@@ -29,8 +28,6 @@
   --hov: rgba(214, 90, 78, .07); /* 通用 hover 背景 */
   --hov-sel: rgba(214, 90, 78, .14); /* 选中 chip 背景 */
   --chipon-txt: #ff9d88;
-  --apex-sel-bg: rgba(63, 169, 245, .13);
-  --apex-on-txt: #8ecfff;
   --line-strong: #545a68;
   --code-bg: rgba(255, 255, 255, .06);
   --avatar-glow: rgba(214, 90, 78, .25);
@@ -133,7 +130,7 @@ code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-si
 .cond-label { color: var(--text-dim); font-size: 13px; }
 .inline-btns { display: flex; gap: 6px; }
 
-/* EX 星级 chips（含 Apex） */
+/* EX 星级 chips */
 .chips { display: flex; gap: 6px; flex-wrap: wrap; }
 .chip {
   min-width: 42px; text-align: center; border: 1px solid var(--line); background: var(--panel-2);
@@ -142,7 +139,7 @@ code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-si
 }
 .chip:hover { border-color: var(--sel-border); color: var(--text); }
 .chip.on { background: var(--hov-sel); border-color: var(--sel-border); color: var(--chipon-txt); font-weight: 700; }
-.chip[data-star="Apex"].on { border-color: var(--apex); color: var(--apex-on-txt); background: var(--apex-sel-bg); }
+
 
 .filter-actions { display: flex; align-items: center; gap: 14px; padding: 8px 0 4px; flex-wrap: wrap; }
 
@@ -186,10 +183,9 @@ code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-si
 .mx-head:hover { border-color: var(--sel-border); background: var(--hov); }
 .mx-head img { width: 40px; height: 40px; object-fit: contain; }
 .mx-head .ex-badge {
-  font-size: 10px; color: #241407; background: var(--time-ta); border-radius: 4px;
+  font-size: 10px; color: #052238; background: #3fa9f5; border-radius: 4px;
   padding: 0 6px; font-weight: 700; line-height: 15px;
 }
-.mx-head .ex-badge.apex { background: var(--apex); color: #052238; }
 .mx-head .mxlabel {
   font-size: 10.5px; color: var(--text-dim); max-width: 100%;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
@@ -492,7 +488,6 @@ html[data-theme="light"] {
   --time-ta: #8f6a00;            /* TA：深金（浅底可读） */
   --time-def: #33302a;           /* 三无：深炭色（浅底以深色代替白） */
   --time-free: #bd2f20;          /* 无限制：深红 */
-  --apex: #6d4fc4;               /* Apex：紫蓝 */
   --gold: #a37a08;
   --silver: #7c7e84;
   --bronze: #a05e30;
@@ -502,8 +497,6 @@ html[data-theme="light"] {
   --hov: rgba(178, 64, 47, .08);
   --hov-sel: rgba(178, 64, 47, .15);
   --chipon-txt: #a53426;
-  --apex-sel-bg: rgba(109, 79, 196, .14);
-  --apex-on-txt: #6d4fc4;
   --line-strong: #b3a98f;
   --code-bg: rgba(50, 45, 38, .06);
   --avatar-glow: rgba(178, 64, 47, .22);
@@ -523,8 +516,6 @@ html[data-theme="light"] body {
     radial-gradient(800px 380px at 0% 0%, rgba(163, 98, 13, .04), transparent 55%),
     var(--bg);
 }
-html[data-theme="light"] .mx-head .ex-badge { color: #fff; }
-html[data-theme="light"] .mx-head .ex-badge.apex { color: #ffffff; }
 html[data-theme="light"] .btn-primary { color: #fff; }
 html[data-theme="light"] .site-bilibili { background: rgba(251, 114, 153, .14); color: #c02a76; }
 html[data-theme="light"] .site-youtube { background: rgba(255, 0, 0, .07); color: #b0151e; }

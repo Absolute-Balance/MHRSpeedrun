@@ -1,5 +1,5 @@
 {
-  "_comment": "怪物显示顺序清单（供 tools/scan-monsters.js 生成 js/monsters.js 使用）。tier: EX1~EX9=特别探究星级 | raging=烈祸袭来独有怪 | Apex=霸主（mod 进怪异探究）。id 由 data/monster-ids.json 固定，调整顺序不会造成成绩错位。",
+  "_comment": "怪物显示顺序清单（供 tools/scan-monsters.js 生成 js/monsters.js 使用）。tier: EX1~EX9=特别探究星级 | raging=烈祸袭来独有怪。id 由 data/monster-ids.json 固定，调整顺序不会造成成绩错位。",
   "order": [
     { "file": "镰鼬龙王.png", "tier": "EX1" },
     { "file": "眠狗龙王.png", "tier": "EX1" },
@@ -71,13 +71,6 @@
     { "file": "月迅龙.png", "tier": "raging" },
     { "file": "焰狐龙.png", "tier": "raging" },
     { "file": "冰龙.png", "tier": "raging" },
-    { "file": "岚龙.png", "tier": "raging" },
-
-    { "file": "霸主·青熊兽.png", "tier": "Apex" },
-    { "file": "霸主·雌火龙.png", "tier": "Apex" },
-    { "file": "霸主·火龙.png", "tier": "Apex" },
-    { "file": "霸主·泡狐龙.png", "tier": "Apex" },
-    { "file": "霸主·角龙.png", "tier": "Apex" },
-    { "file": "霸主·雷狼龙.png", "tier": "Apex" }
+    { "file": "岚龙.png", "tier": "raging" }
   ]
 }

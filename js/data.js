@@ -2986,27 +2986,6 @@ window.MHRS_RECORDS = [
     "id": "smtrdrdfk"
   },
   {
-    "questType": "anomaly300",
-    "quest": null,
-    "exStar": "Apex",
-    "rule": "sanyou",
-    "monsterId": "m68",
-    "weaponId": "sa",
-    "timeMs": 326170,
-    "author": "時渡",
-    "date": "2026-09-04",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1XFtf6sEc9",
-        "title": "【MHRS】斩斧 怪异LV300：霸主雷狼龙 5分26秒 三无"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtrdrrtr"
-  },
-  {
     "questType": "special",
     "quest": null,
     "exStar": "EX4",

@@ -123,7 +123,7 @@ function biliUrl(v) {
 
 /* ---------------- 校验投稿 ---------------- */
 const QT = ['raging', 'anomaly300', 'special'];
-const EXS = ['EX1','EX2','EX3','EX4','EX5','EX6','EX7','EX8','EX9','Apex'];
+const EXS = ['EX1','EX2','EX3','EX4','EX5','EX6','EX7','EX8','EX9'];
 const RULES = ['sanyou', 'ta'];
 const PLATS = ['steam', 'switch', 'ps', 'ps5', 'xbox'];
 function validateSubmission(b) {
