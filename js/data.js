@@ -7646,5 +7646,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtwmsxdc"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m18",
+    "weaponId": "ls",
+    "timeMs": 329860,
+    "author": "RealizedSoul",
+    "date": "2023-10-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1234y137VQ",
+        "title": "【MHRS】特别探究：将军镰蟹 太刀 5分29秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtx3d3n6"
   }
 ];
