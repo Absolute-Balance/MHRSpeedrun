@@ -7793,5 +7793,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtx3ntyq"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m19",
+    "weaponId": "gs",
+    "timeMs": 339070,
+    "author": "鬼畜茶走",
+    "date": "2025-12-21",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1qkqSBtEcH",
+        "title": "[MHRS] 偷袭流斩 大剑 特别探究：绯天狗兽 TA+怪异炼化 5'39''07"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtx3pqpc"
   }
 ];
