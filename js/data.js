@@ -7898,5 +7898,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtx3yzmz"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m19",
+    "weaponId": "sa",
+    "timeMs": 278840,
+    "author": "压梅蝶",
+    "date": "2026-07-21",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1uJKh6pEXZ",
+        "title": "【MHRS】斩斧LV300绯天狗兽，4分38秒84，三无米线"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtx4582y"
   }
 ];
