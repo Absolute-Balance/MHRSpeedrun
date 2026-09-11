@@ -7695,27 +7695,6 @@ window.MHRS_RECORDS = [
     "exStar": "EX3",
     "rule": "ta",
     "monsterId": "m18",
-    "weaponId": "gs",
-    "timeMs": 461720,
-    "author": "yiopk",
-    "date": "2026-08-16",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1TAbQ6PEnr",
-        "title": "【MHRS】片手 特别探究：将军镰蟹 7'41''72 TA规则"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtx3ddsc"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX3",
-    "rule": "ta",
-    "monsterId": "m18",
     "weaponId": "sa",
     "timeMs": 442650,
     "author": "堕落魂淡",
