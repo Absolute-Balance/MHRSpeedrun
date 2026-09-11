@@ -7835,5 +7835,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtx3ql5o"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m19",
+    "weaponId": "ls",
+    "timeMs": 328700,
+    "author": "漏野",
+    "date": "2024-04-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1YZ421i7xs",
+        "title": "【MHRS】太刀 特别探究：绯天狗兽  5分28秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtx3t8e2"
   }
 ];
