@@ -7856,5 +7856,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtx3t8e2"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m19",
+    "weaponId": "ls",
+    "timeMs": 250500,
+    "author": "Asteria_星芒",
+    "date": "2025-10-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV14NHJzTEJh",
+        "title": "【MHRS/ECHO杯/属光区】太刀 LV300绯天狗兽 三无 4'10''50"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtx3vqzc"
   }
 ];
