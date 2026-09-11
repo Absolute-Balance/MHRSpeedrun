@@ -149,7 +149,7 @@
   //标题中提取时间
   function biliTitleTime(title) {
     var text = String(title || '');
-    var m = text.match(/(?:^|[^0-9])([0-9]{1,3})\s*['′]\s*([0-9]{1,2})\s*(?:''|["″”])\s*([0-9]{1,3})(?![0-9])/);
+    var m = text.match(/(?:^|[^0-9])([0-9]{1,3})\s*[:：'′]\s*([0-9]{1,2})\s*(?:[:：]|''|["″”])\s*([0-9]{1,3})(?![0-9])/);
     if (!m) {
       var cm = text.match(/(?:^|[^0-9])([0-9]{1,3})\s*分\s*([0-9]{1,2})\s*秒\s*([0-9]{1,3})?(?![0-9])/);
       if (!cm) return '';
@@ -224,10 +224,10 @@
     var aliases = [
       { id: 'gs', words: ['大剑'] },
       { id: 'ls', words: ['太刀'] },
-      { id: 'sns', words: ['单手剑', '片手剑'] },
+      { id: 'sns', words: ['单手剑', '片手剑','片手'] },
       { id: 'db', words: ['双剑', '双刀'] },
-      { id: 'hammer', words: ['大锤'] },
-      { id: 'hh', words: ['狩猎笛', '笛'] },
+      { id: 'hammer', words: ['大锤','锤子'] },
+      { id: 'hh', words: ['狩猎笛', '笛','笛子'] },
       { id: 'lance', words: ['长枪'] },
       { id: 'gl', words: ['铳枪'] },
       { id: 'sa', words: ['剑斧', '斩斧'] },
