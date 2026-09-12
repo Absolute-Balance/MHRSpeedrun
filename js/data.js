@@ -9347,5 +9347,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty3s3ak"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m37",
+    "weaponId": "cb",
+    "timeMs": 366990,
+    "author": "InSo-可以叫我硬师傅",
+    "date": "2023-12-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1tC4y1A79g",
+        "title": "【MHRS/NS】超解盾斧·LV300 冰狼龙 6分06 三无"
+      }
+    ],
+    "platform": "switch",
+    "note": "",
+    "id": "smty3y73s"
   }
 ];
