@@ -9662,5 +9662,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty4mlbs"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m32",
+    "weaponId": "ls",
+    "timeMs": 392570,
+    "author": "ゥァ害之",
+    "date": "2024-03-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Kt421573s",
+        "title": "【MHRS】太刀 特别探究熔翁龙 6分32 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmty4mlzr"
   }
 ];
