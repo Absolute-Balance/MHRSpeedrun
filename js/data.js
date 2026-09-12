@@ -8528,5 +8528,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxy21u2"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "ta",
+    "monsterId": "m21",
+    "weaponId": "sa",
+    "timeMs": 538500,
+    "author": "堕落魂淡",
+    "date": "2024-06-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV17M4m1m7CS",
+        "title": "MHRS 斩斧 特别探究 毒妖鸟 TA（防具无炼化+属强5护石）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxy49fb"
   }
 ];
