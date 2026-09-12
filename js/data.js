@@ -9809,5 +9809,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmty51si7"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m34",
+    "weaponId": "hammer",
+    "timeMs": 599650,
+    "author": "一筋の閃光へ",
+    "date": "2023-04-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Qg4y177T5",
+        "title": "【MHRS】纯真大锤 特别讨究电龙 9分59 TA规则初完走"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmty53hcl"
   }
 ];
