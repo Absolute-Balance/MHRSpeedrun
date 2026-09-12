@@ -9746,5 +9746,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmty4ucik"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m34",
+    "weaponId": "cb",
+    "timeMs": 405160,
+    "author": "咸鱼王-老徐",
+    "date": "2025-01-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV157ffYkEMW",
+        "title": "【再见了，所有的盾斧电龙/新纪录】超解盾斧 TA规则 6'45''16 特别探究：电龙 MHRS/PC"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmty4wimh"
   }
 ];
