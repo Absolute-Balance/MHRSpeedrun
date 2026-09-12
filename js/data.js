@@ -8066,5 +8066,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxrxv5f"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m19",
+    "weaponId": "ls",
+    "timeMs": 297630,
+    "author": "冬季鱼__",
+    "date": "2026-08-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV16H8t6oE1U",
+        "title": "贪玩坚果"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtxsmyq0"
   }
 ];
