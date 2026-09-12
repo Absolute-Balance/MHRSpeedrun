@@ -9872,5 +9872,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtybhzio"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m25",
+    "weaponId": "gs",
+    "timeMs": 293580,
+    "author": "Zen10_2333",
+    "date": "2023-10-02",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1JV411F7i5",
+        "title": "【MHRS】G不停！大剑 特别探究: 刚缠兽 4分53秒 TA打法＋怪异炼化/三无/四无/禁用随从盟友牵制捕获御龙爆桶火事场力"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtyf3vrd"
   }
 ];
