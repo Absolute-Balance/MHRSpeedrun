@@ -8570,5 +8570,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxybipg"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m22",
+    "weaponId": "ls",
+    "timeMs": 329910,
+    "author": "0_regrets",
+    "date": "2023-11-15",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Gg4y1Q7rC",
+        "title": "【MHRS/生庆】太刀 特别探究飞雷龙 5'29''91 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxybn1v"
   }
 ];
