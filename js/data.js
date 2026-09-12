@@ -8318,5 +8318,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxwuoqn"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m18",
+    "weaponId": "cb",
+    "timeMs": 173680,
+    "author": "往日残梦-NLNS",
+    "date": "2026-04-21",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1wqdUBmE87",
+        "title": "【MHRS】超解盾斧 Lv300将军镰蟹 2分53秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxxkknc"
   }
 ];
