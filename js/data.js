@@ -9599,5 +9599,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty4hq4w"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m38",
+    "weaponId": "cb",
+    "timeMs": 196140,
+    "author": "往日残梦-NLNS",
+    "date": "2026-02-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1U3FWzAE2K",
+        "title": "【MHRS】超解盾斧 Lv300 千刃龙 3分16秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty4kaov"
   }
 ];
