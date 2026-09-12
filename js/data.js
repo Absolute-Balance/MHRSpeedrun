@@ -9263,5 +9263,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmty2qy95"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m33",
+    "weaponId": "lance",
+    "timeMs": 407720,
+    "author": "无语的解",
+    "date": "2024-07-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1dE421A7bR",
+        "title": "【MHRS】贴脸龙车不得不品，长枪讨伐lv300怪异化火龙"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty2tk0q"
   }
 ];
