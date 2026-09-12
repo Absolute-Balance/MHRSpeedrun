@@ -9725,5 +9725,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmty4p04n"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m34",
+    "weaponId": "db",
+    "timeMs": 400120,
+    "author": "PotatotatoP",
+    "date": "2024-02-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1JH4y1E7nZ",
+        "title": "双刀三无特别探究电龙6'40\"12"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmty4ucik"
   }
 ];
