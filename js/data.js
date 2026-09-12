@@ -8402,5 +8402,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxxkz4e"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m21",
+    "weaponId": "cb",
+    "timeMs": 291350,
+    "author": "寒冰苍龍",
+    "date": "2024-10-13",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV18R2hY8Emv",
+        "title": "【MHRS/NS】超解盾斧 LV300毒妖鸟4分51"
+      }
+    ],
+    "platform": "switch",
+    "note": "",
+    "id": "smtxxoffq"
   }
 ];
