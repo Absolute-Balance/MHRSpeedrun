@@ -9704,5 +9704,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty4o1ue"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m32",
+    "weaponId": "cb",
+    "timeMs": 315050,
+    "author": "郁_葱",
+    "date": "2024-09-12",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1En4keCECF",
+        "title": "【MHRS/PC】 盾斧 特别探究：熔翁龙 5'15''05 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmty4p04n"
   }
 ];
