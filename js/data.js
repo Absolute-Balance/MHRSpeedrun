@@ -8024,5 +8024,26 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "smtxru57r"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m20",
+    "weaponId": "ls",
+    "timeMs": 348850,
+    "author": "恶魔的儿子",
+    "date": "2026-07-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1eZMi6UEJo",
+        "title": "【MHRS】太刀特别探究雌火龙5分48秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxrw2tk"
   }
 ];
