@@ -8696,5 +8696,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxylwmt"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m23",
+    "weaponId": "lance",
+    "timeMs": 346700,
+    "author": "无语的解",
+    "date": "2025-04-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1WiG9zrEeA",
+        "title": "【MHRS】知道曙光兽龙种为什么这么少吗？去打打蛮颚龙这个闸种你就知道了。冲天长枪讨伐怪异化LV300蛮颚龙"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxyutf8"
   }
 ];
