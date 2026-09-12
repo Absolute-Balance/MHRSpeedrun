@@ -8446,27 +8446,6 @@ window.MHRS_RECORDS = [
     "id": "smtxxz4h2"
   },
   {
-    "questType": "anomaly300",
-    "quest": null,
-    "exStar": "EX3",
-    "rule": "ta",
-    "monsterId": "m21",
-    "weaponId": "sa",
-    "timeMs": 277990,
-    "author": "上班辣酱",
-    "date": "2026-08-27",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1ST4R6gEHR",
-        "title": "斩斧300毒妖鸟 TA 437"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtxy21u2"
-  },
-  {
     "questType": "special",
     "quest": null,
     "exStar": "EX3",
