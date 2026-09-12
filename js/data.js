@@ -8297,5 +8297,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxwtzgm"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "ta",
+    "monsterId": "m21",
+    "weaponId": "sns",
+    "timeMs": 467590,
+    "author": "yiopk",
+    "date": "2026-08-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1fmug6pEsw",
+        "title": "【MHRS】片手 特别探究：毒妖鸟 7'47'59 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxwuoqn"
   }
 ];
