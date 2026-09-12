@@ -9137,5 +9137,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty2gb2h"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m33",
+    "weaponId": "hbg",
+    "timeMs": 476080,
+    "author": "灼眼の冷面魔男",
+    "date": "2023-07-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1uh411A71V",
+        "title": "【MHRS】最强の空中王者 特别探究：火龙 重弩通常弹 7'56''08 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty2ggtt"
   }
 ];
