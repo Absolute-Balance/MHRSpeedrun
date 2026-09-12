@@ -9011,5 +9011,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty08zb4"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "ta",
+    "monsterId": "m24",
+    "weaponId": "ls",
+    "timeMs": 305710,
+    "author": "RealizedSoul",
+    "date": "2023-12-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1aN4y147eS",
+        "title": "【MHRS】太刀 LV300怨虎龙 5分05秒 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty0cxvj"
   }
 ];
