@@ -9536,5 +9536,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty4h683"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m38",
+    "weaponId": "sns",
+    "timeMs": 356800,
+    "author": "阿呆耄",
+    "date": "2025-11-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ZYyPBHEzr",
+        "title": "【MHRS】片手剑 特别探究千刃龙 三无规则 5'56''80"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty4hfyc"
   }
 ];
