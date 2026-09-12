@@ -9835,7 +9835,7 @@ window.MHRS_RECORDS = [
     "questType": "special",
     "quest": null,
     "exStar": "EX4",
-    "rule": "sanyou",
+    "rule": "ta",
     "monsterId": "m30",
     "weaponId": "lance",
     "timeMs": 557950,
