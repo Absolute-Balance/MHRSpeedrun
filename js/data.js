@@ -8360,5 +8360,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxxkqwn"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m18",
+    "weaponId": "cb",
+    "timeMs": 387990,
+    "author": "Decanee",
+    "date": "2023-11-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV12c411q7zi",
+        "title": "盾斧特别探究将军镰蟹"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxxkv9a"
   }
 ];
