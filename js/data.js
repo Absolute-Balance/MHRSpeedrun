@@ -8738,5 +8738,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxyuy19"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m23",
+    "weaponId": "cb",
+    "timeMs": 361880,
+    "author": "TaylorS22",
+    "date": "2024-01-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1K94y1M781",
+        "title": "【mhrs】超解盾斧 lv300 蛮颚龙 6'01三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxyxre9"
   }
 ];
