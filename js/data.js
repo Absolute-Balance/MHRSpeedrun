@@ -9830,5 +9830,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmty53hcl"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m30",
+    "weaponId": "lance",
+    "timeMs": 557950,
+    "author": "谢233",
+    "date": "2023-08-29",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1mu4y1D7v4",
+        "title": "【MHRS】喜欢我18w血小动物吗 特别探究:雪鬼兽 长枪 9'17\"95 TA规则/无怪异炼化防具"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmty7b9ot"
   }
 ];
