@@ -8591,5 +8591,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxybn1v"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m22",
+    "weaponId": "sns",
+    "timeMs": 331990,
+    "author": "咩咩羊袭",
+    "date": "2026-06-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1x2KX6VEgA",
+        "title": "【MHRS/毒狗片】片手剑 Lv300飞雷龙 5分31秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxye278"
   }
 ];
