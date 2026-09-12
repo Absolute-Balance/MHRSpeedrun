@@ -5942,7 +5942,7 @@ window.MHRS_RECORDS = [
         "title": "太刀 301镰鼬龙王"
       }
     ],
-    "platform": "steam",
+    "platform": "switch",
     "note": "",
     "id": "rmttkrpsv"
   },
