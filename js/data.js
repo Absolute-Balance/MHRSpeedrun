@@ -4941,27 +4941,6 @@ window.MHRS_RECORDS = [
   {
     "questType": "special",
     "quest": null,
-    "exStar": "EX4",
-    "rule": "sanyou",
-    "monsterId": "m30",
-    "weaponId": "gs",
-    "timeMs": 414590,
-    "author": "鬼畜茶走",
-    "date": "2026-09-08",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1dFb566ERP",
-        "title": "【MHRS】流斩真蓄 大剑 特别探究：雪鬼兽 6'54''59 三无规则"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtsle2ts"
-  },
-  {
-    "questType": "special",
-    "quest": null,
     "exStar": "EX6",
     "rule": "ta",
     "monsterId": "m44",
