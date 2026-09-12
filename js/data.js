@@ -9872,5 +9872,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmty7d3d8"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m30",
+    "weaponId": "hbg",
+    "timeMs": 377400,
+    "author": "灼眼の冷面魔男",
+    "date": "2024-01-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1xe411h7yu",
+        "title": "【MHRS】唉哥们你怎么是小动物了之雪鬼兽 重弩 6'17''40 三无/TA＋怪异炼成"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmty7fpph"
   }
 ];
