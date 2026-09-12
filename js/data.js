@@ -8255,5 +8255,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtxtagst"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m17",
+    "weaponId": "sa",
+    "timeMs": 531990,
+    "author": "DukeSarg",
+    "date": "2024-12-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV18eq7YPEJY",
+        "title": "【斩斧练习】特别探究：泥鱼龙 8'51'' 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtxtdtw8"
   }
 ];
