@@ -9389,5 +9389,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty3yce2"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m29",
+    "weaponId": "db",
+    "timeMs": 453770,
+    "author": "罐装西打",
+    "date": "2026-03-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1rTP4zTEq4",
+        "title": "【MHRS】双刀 特别探究：妃蜘蛛 三无规则 7分33秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmty48zte"
   }
 ];
