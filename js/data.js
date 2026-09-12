@@ -8803,27 +8803,6 @@ window.MHRS_RECORDS = [
     "id": "smty08qzf"
   },
   {
-    "questType": "anomaly300",
-    "quest": null,
-    "exStar": "EX4",
-    "rule": "sanyou",
-    "monsterId": "m24",
-    "weaponId": "db",
-    "timeMs": 272990,
-    "author": "八音盒_Wayyyy",
-    "date": "2026-02-03",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1gWFuzZENS",
-        "title": "【MHRS/利群猎团】古法来袭 双刀 lv300怨虎龙 三无 432"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smty08v71"
-  },
-  {
     "questType": "special",
     "quest": null,
     "exStar": "EX4",
