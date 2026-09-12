@@ -9368,5 +9368,26 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "smty3y73s"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m37",
+    "weaponId": "ls",
+    "timeMs": 332990,
+    "author": "_懒得起名Y_",
+    "date": "2026-06-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Fm786eEd7",
+        "title": "【双月太刀】LV300冰狼龙 一等效 5分32秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty3yce2"
   }
 ];
