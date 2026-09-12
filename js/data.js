@@ -7919,5 +7919,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtx4582y"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m20",
+    "weaponId": "lance",
+    "timeMs": 360760,
+    "author": "无语的解",
+    "date": "2026-07-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1qtNt6xEZj",
+        "title": "【MHRS】长枪 冲天突刺 特别探究雌火龙"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxrfd9o"
   }
 ];
