@@ -8276,5 +8276,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtxtdtw8"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "ta",
+    "monsterId": "m23",
+    "weaponId": "sns",
+    "timeMs": 519770,
+    "author": "yiopk",
+    "date": "2026-08-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1wVuz6gEiF",
+        "title": "【MHRS】重击刃药片手 特别探究：蛮颚龙 8'39'77 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxwtzgm"
   }
 ];
