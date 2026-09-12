@@ -8381,5 +8381,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxxkv9a"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m16",
+    "weaponId": "ls",
+    "timeMs": 321990,
+    "author": "_懒得起名Y_",
+    "date": "2026-01-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1xoqwBkEMj",
+        "title": "【双月太刀】LV300人鱼龙 一等效 5分21秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxxkz4e"
   }
 ];
