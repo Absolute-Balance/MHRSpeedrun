@@ -9242,5 +9242,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmty2p59z"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m33",
+    "weaponId": "bow",
+    "timeMs": 258420,
+    "author": "清风不识-字-",
+    "date": "2026-06-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Fc7N6fEkS",
+        "title": "【MHRS/Fire Fox杯】弓箭 Lv300火龙 4分18秒 TA"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmty2qy95"
   }
 ];
