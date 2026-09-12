@@ -8045,5 +8045,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxrw2tk"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "ta",
+    "monsterId": "m16",
+    "weaponId": "sns",
+    "timeMs": 534450,
+    "author": "yiopk",
+    "date": "2026-08-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1zp4X6HEQP",
+        "title": "【MHRS】片手 特别探究：人鱼龙 8'54''45 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxrxv5f"
   }
 ];
