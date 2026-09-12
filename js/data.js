@@ -9683,5 +9683,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmty4mlzr"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m38",
+    "weaponId": "gl",
+    "timeMs": 295980,
+    "author": "杞柳木昔_",
+    "date": "2026-07-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV19wTy6NECA",
+        "title": "【MHRS】逆推铳枪 Lv300千刃龙 TA4'55"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty4o1ue"
   }
 ];
