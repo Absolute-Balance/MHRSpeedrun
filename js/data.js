@@ -8150,5 +8150,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtxstiyg"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m34",
+    "weaponId": "ls",
+    "timeMs": 381520,
+    "author": "冬季鱼__",
+    "date": "2026-06-29",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1FUKU64E2a",
+        "title": "电之逆反"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtxsvawt"
   }
 ];
