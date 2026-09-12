@@ -7982,5 +7982,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxro6cg"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m20",
+    "weaponId": "cb",
+    "timeMs": 354160,
+    "author": "恶魔的儿子",
+    "date": "2026-08-12",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1bngG6CEmS",
+        "title": "【MHRS】盾斧特别探究雌火龙5分54秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxru0hq"
   }
 ];
