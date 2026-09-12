@@ -9221,5 +9221,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty2mfjn"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m33",
+    "weaponId": "ig",
+    "timeMs": 315990,
+    "author": "坐井观月",
+    "date": "2026-07-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV16ygx6eEHg",
+        "title": "【MHRS】御天之棍——操虫棍TA规则300雄火龙5分15秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmty2p59z"
   }
 ];
