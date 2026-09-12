@@ -9284,5 +9284,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty2tk0q"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m33",
+    "weaponId": "sns",
+    "timeMs": 353060,
+    "author": "-橘-孜-",
+    "date": "2025-07-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1D1gbz6EcU",
+        "title": "【MHRS/坠机爽】片手剑 Lv300 火龙 5分53秒 TA"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty3ri8k"
   }
 ];
