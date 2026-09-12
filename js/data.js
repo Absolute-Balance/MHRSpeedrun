@@ -8108,5 +8108,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtxspqbv"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m30",
+    "weaponId": "ls",
+    "timeMs": 384680,
+    "author": "冬季鱼__",
+    "date": "2026-08-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1fy8B6DEyT",
+        "title": "田所大夫生日快乐"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtxsr6st"
   }
 ];
