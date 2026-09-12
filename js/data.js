@@ -8171,5 +8171,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtxsvawt"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m39",
+    "weaponId": "ls",
+    "timeMs": 345990,
+    "author": "RealizedSoul",
+    "date": "2023-11-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Ja4y1X7nm",
+        "title": "【MHRS】特别探究：轰龙 太刀 5分45 三无/TA300 4分38"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtxsyt98"
   }
 ];
