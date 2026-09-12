@@ -9767,5 +9767,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmty4wimh"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m34",
+    "weaponId": "sns",
+    "timeMs": 470990,
+    "author": "咩咩羊袭",
+    "date": "2026-08-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1YAbZ6tEJY",
+        "title": "【MHRS】片手剑 特别探究：电龙 7分50秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmty4ym9b"
   }
 ];
