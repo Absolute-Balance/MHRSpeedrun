@@ -9116,5 +9116,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty2g6m6"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m33",
+    "weaponId": "sa",
+    "timeMs": 558610,
+    "author": "堕落魂淡",
+    "date": "2024-03-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV19m411Z7zW",
+        "title": "MHRS 斩斧 特别探究 火龙 TA（防具无炼化+属强5护石）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty2gb2h"
   }
 ];
