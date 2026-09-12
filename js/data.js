@@ -9053,5 +9053,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty0joxq"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m28",
+    "weaponId": "cb",
+    "timeMs": 189710,
+    "author": "到高地了吗",
+    "date": "2024-09-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1GH4ieUEaz",
+        "title": "【MHRS/秋晓祭-盾斧】超解盾斧 LV300 泥翁龙 3分09秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty0nqn5"
   }
 ];
