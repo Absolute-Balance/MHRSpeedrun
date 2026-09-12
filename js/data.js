@@ -9473,5 +9473,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty4gg3y"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m38",
+    "weaponId": "gs",
+    "timeMs": 234990,
+    "author": "开关_",
+    "date": "2025-04-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1aDZWYuEhw",
+        "title": "【MHRS/三台达成】流斩大剑 怪异探究：千刃龙 Lv300 3分54秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty4gkp2"
   }
 ];
