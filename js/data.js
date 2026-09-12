@@ -8927,5 +8927,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxzxqvq"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m24",
+    "weaponId": "sns",
+    "timeMs": 463620,
+    "author": "-橘-孜-",
+    "date": "2025-01-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1mefBYgEiu",
+        "title": "【MHRS/单纯爱搓红点】片手剑 特别探究 怨虎龙 三无规则 7分43秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty08lct"
   }
 ];
