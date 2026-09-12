@@ -8549,5 +8549,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxy49fb"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m22",
+    "weaponId": "sa",
+    "timeMs": 379500,
+    "author": "两万一锤",
+    "date": "2025-07-31",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1tw8qzrEh3",
+        "title": "【MHRS/生庆】特别探究：飞雷龙  斩斧  6'19  三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxybipg"
   }
 ];
