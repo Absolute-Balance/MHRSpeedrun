@@ -8885,5 +8885,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxzfl1p"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m24",
+    "weaponId": "ls",
+    "timeMs": 360900,
+    "author": "Trashily",
+    "date": "2023-12-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1GN4y187qs",
+        "title": "【MHRS】特别探究 怨虎龙 太刀 6\"00\"90 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxzxm7o"
   }
 ];
