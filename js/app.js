@@ -45,9 +45,10 @@
   }
   /* 宽松时间解析：5:47.33 / 5'47''33 / 4'58"08 / 5分47秒33 等。
    * 关键：保留原始数字串判断位数（08=百分秒80ms，不能转成8按十分位算）。
-   * 未写百分秒/毫秒的（如 3'40、47）按收录规则以 99 替代。
+   * 未写百分秒/毫秒的（如 3'40）按收录规则以 99 替代。
    * 快捷录入：纯 6 位数字 = 分秒百分秒（035785 → 03'57''85）；
-   *           纯 4 位数字 = 分秒（0357 → 03'57''99）。 */
+   *           纯 4 位数字 = 分秒（0357 → 03'57''99）。
+   * 不识别“只有秒”的写法（本站任务都是分+秒）。 */
   function parseTime(str) {
     var t = String(str).trim();
     var digitsOnly = t.replace(/\s+/g, '');
@@ -62,9 +63,8 @@
     var parts = t.split(/[^0-9]+/).filter(Boolean);   // 原始数字串，保留前导零
     if (!parts.length) return null;
     var nums = parts.map(Number);
-    var sepChars = t.replace(/[0-9]+/g, '').replace(/\s+/g, '');
-    var firstSep = sepChars.charAt(0);
-    var isMinSep = firstSep === ':' || firstSep === "'" || firstSep === '′' || firstSep === '‘' || firstSep === '"' || firstSep === '”';
+    if (parts.length >= 2 && (nums[1] >= 60)) return null;          // 秒数必须 < 60
+    if (parts.length >= 3 && String(parts[2]).length > 3) return null; // 百分秒/毫秒最多 3 位
     var fracMs = function (raw) {
       if (raw.length >= 3) return +raw;        // 三位=毫秒
       if (raw.length === 2) return (+raw) * 10; // 两位=百分秒（08 → 80ms）
@@ -72,17 +72,17 @@
     };
     /* 中文单位（分/秒）单独处理：避免“秒”被删掉导致数字粘连（3分57秒85） */
     var cn = String(str).trim().match(/^(\d{1,3})\s*分\s*(\d{1,2})\s*(?:秒\s*)?(?:[.．]?\s*(\d{1,3})\s*秒?)?$/);
-    if (cn) return (Number(cn[1]) * 60 + Number(cn[2])) * 1000 + (cn[3] ? fracMs(cn[3]) : 990);
-    var cnSec = String(str).trim().match(/^(\d{1,2})\s*秒\s*(?:[.．]?\s*(\d{1,3}))?$/);
-    if (cnSec) return Number(cnSec[1]) * 1000 + (cnSec[2] ? fracMs(cnSec[2]) : 990);
+    if (cn) {
+      if (Number(cn[2]) >= 60) return null;
+      return (Number(cn[1]) * 60 + Number(cn[2])) * 1000 + (cn[3] ? fracMs(cn[3]) : 990);
+    }
     if (parts.length >= 3) {
       return (nums[0] * 60 + nums[1]) * 1000 + fracMs(parts[2]);
     }
     if (parts.length === 2) {
-      if (isMinSep) return (nums[0] * 60 + nums[1]) * 1000 + 990;  // 分:秒（无百分秒 → 默认99）
-      return nums[0] * 1000 + fracMs(parts[1]);                     // 秒.百分
+      return (nums[0] * 60 + nums[1]) * 1000 + 990;  // 分+秒（无百分秒 → 默认99）
     }
-    return nums[0] * 1000 + 990;               // 纯秒（无百分秒 → 默认99）
+    return null;                               // 单个数字（无分秒结构）不接受
   }
   /* 宽松日期：2026-9-6 / 2026.09.06 / 2026年9月6日 */
   function normDate(v) {
@@ -162,11 +162,11 @@
     return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
   }
   /* 标题中提取用时：把各种常见写法统一识别为 分'秒''百分秒
-   * 分钟在前（毫秒/百分秒可省略 → 默认 99）：
-   *   05'02''52   05'02"52   05′02″52   05’02”52   05:02:52   05：02：52   05:02.52
-   *   3分57秒85   3分57.85秒   3分57秒   3分57
-   * 仅秒（无分钟，自动补 0 分）：
-   *   57''85   57"85   57″85   57秒85   57秒
+   * 三段式（分/秒/百分秒，分隔符可混用，末尾毫秒可省 → 99）：
+   *   05'02''52   05'02"52   05′02″52   05’02”52   05:02:52   05：02：52   6"00"90
+   * 两段式（分钟在前，无百分秒 → 99）：
+   *   05:02.52   3分57秒85   3分57.85秒   3分57秒   3分57   5:47
+   * 注：不识别“只有秒”的写法（本站任务都是分+秒）。
    */
   function biliTitleTime(title) {
     var text = String(title || '');
@@ -174,15 +174,14 @@
     /* A. 带“分”字：M分SS[秒][FF] / M分SS.FF[秒] */
     m = text.match(/(?:^|[^0-9])([0-9]{1,3})\s*分\s*([0-9]{1,2})\s*(?:秒\s*)?(?:[.．]?\s*([0-9]{1,3})\s*秒?)?(?![0-9])/);
     if (!m) {
-      /* B. 引号/冒号：M'SS[FF] / M:SS.FF 等（毫秒/百分秒可省略） */
-      m = text.match(/(?:^|[^0-9])([0-9]{1,3})\s*[:：'′’]\s*([0-9]{1,2})\s*(?:[:：]|''|["″”]|[.．])?\s*([0-9]{1,3})?(?![0-9])/);
+      /* B. 三段式：分+秒+百分秒，分隔符任意组合（' " ′ ″ ’ ” : ： ''） */
+      m = text.match(/(?:^|[^0-9])([0-9]{1,3})\s*(?:[:：'′’"″”]|'')\s*([0-9]{1,2})\s*(?:[:：'′’"″”]|'')\s*([0-9]{1,3})(?![0-9])/);
     }
     if (!m) {
-      /* C. 仅秒：SS''FF / SS"FF / SS秒FF 等 */
-      var sm = text.match(/(?:^|[^0-9])([0-9]{1,2})\s*(?:秒|''|["″”])\s*([0-9]{1,3})?(?![0-9])/);
-      if (!sm) return '';
-      return titleTimeText('0', sm[1], sm[2]);
+      /* C. 两段式（分钟在前）：M'SS[FF] / M:SS.FF 等（百分秒可省） */
+      m = text.match(/(?:^|[^0-9])([0-9]{1,3})\s*[:：'′’]\s*([0-9]{1,2})\s*(?:[:：]|[.．])?\s*([0-9]{1,3})?(?![0-9])/);
     }
+    if (!m) return '';
     return titleTimeText(m[1], m[2], m[3]);
   }
   function titleTimeText(mm, ss, ff) {
