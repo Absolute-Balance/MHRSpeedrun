@@ -8129,5 +8129,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtxsr6st"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m06",
+    "weaponId": "ls",
+    "timeMs": 377990,
+    "author": "Asteria_星芒",
+    "date": "2026-06-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV14yJA6BEW9",
+        "title": "【MHRS/水芸杯】太刀 特别探究：白兔兽 三无 6'17\"39"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtxstiyg"
   }
 ];
