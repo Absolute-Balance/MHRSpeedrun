@@ -7961,5 +7961,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxrlso1"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m20",
+    "weaponId": "sns",
+    "timeMs": 344990,
+    "author": "往日残梦-NLNS",
+    "date": "2026-08-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1eQGP6TEW7",
+        "title": "【MHRS/生庆】片手剑 特别探究：雌火龙 5分44秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxro6cg"
   }
 ];
