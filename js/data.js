@@ -9200,5 +9200,26 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "smty2m9s1"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m33",
+    "weaponId": "sa",
+    "timeMs": 325990,
+    "author": "_懒得起名Y_",
+    "date": "2025-06-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1riKczuEvP",
+        "title": "【属性斩斧】LV300火龙 一等效 5分25秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty2mfjn"
   }
 ];
