@@ -8486,5 +8486,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxxvm2b"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "ta",
+    "monsterId": "m21",
+    "weaponId": "cb",
+    "timeMs": 227990,
+    "author": "上班辣酱",
+    "date": "2026-08-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1PA8H61EK5",
+        "title": "盾斧300毒妖鸟 TA 347"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxxz4h2"
   }
 ];
