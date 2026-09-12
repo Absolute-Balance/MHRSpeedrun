@@ -531,27 +531,6 @@ window.MHRS_RECORDS = [
   {
     "questType": "special",
     "quest": null,
-    "exStar": "EX9",
-    "rule": "sanyou",
-    "monsterId": "m56",
-    "weaponId": "ig",
-    "timeMs": 443770,
-    "author": "糖と咖啡因",
-    "date": "2026-06-26",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV19M7G6TENw",
-        "title": "【MHRS】特别探究：怪异克服天廻龙 操虫棍 三无7'23"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtqon6kv"
-  },
-  {
-    "questType": "special",
-    "quest": null,
     "exStar": "EX1",
     "rule": "sanyou",
     "monsterId": "m02",
