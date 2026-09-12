@@ -8444,5 +8444,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxxs2eo"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m21",
+    "weaponId": "ls",
+    "timeMs": 236080,
+    "author": "Asteria_星芒",
+    "date": "2025-11-02",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1gR1GBPEjB",
+        "title": "【MHRS】太刀 LV300毒妖鸟 3'56''08 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxxsr8i"
   }
 ];
