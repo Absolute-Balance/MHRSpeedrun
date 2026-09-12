@@ -9410,5 +9410,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmty48zte"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m29",
+    "weaponId": "ls",
+    "timeMs": 518990,
+    "author": "Asteria_星芒",
+    "date": "2026-06-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1rxTg6DER6",
+        "title": "【MHRS/Fire Fox杯】太刀 特别探究：妃蜘蛛 8'38\"58 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmty4abif"
   }
 ];
