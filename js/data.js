@@ -8213,5 +8213,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtxt7pzw"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "ta",
+    "monsterId": "m17",
+    "weaponId": "sns",
+    "timeMs": 600290,
+    "author": "yiopk",
+    "date": "2026-09-03",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1UatD6hEMv",
+        "title": "【MHRS】片手 特别探究：泥鱼龙 10'00'29 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtxt90y0"
   }
 ];
