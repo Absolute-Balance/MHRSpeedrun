@@ -9431,5 +9431,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmty4abif"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m38",
+    "weaponId": "db",
+    "timeMs": 167920,
+    "author": "BFeather7",
+    "date": "2025-10-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1fcx3zrEAn",
+        "title": "【ECHO杯/属光区】双刀 LV300千刃龙 三无规则 2'47\"92"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty4gbel"
   }
 ];
