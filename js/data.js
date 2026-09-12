@@ -8633,5 +8633,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxye7ed"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m22",
+    "weaponId": "hbg",
+    "timeMs": 297070,
+    "author": "灼眼の冷面魔男",
+    "date": "2024-01-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ue411Y7f2",
+        "title": "【MHRS】高性能武器对小动物碾压 特别探究：飞雷龙 4'57''07 三无/TA＋怪异炼成"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxyhn7z"
   }
 ];
