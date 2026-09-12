@@ -8339,5 +8339,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxxkknc"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m21",
+    "weaponId": "sa",
+    "timeMs": 275990,
+    "author": "_懒得起名Y_",
+    "date": "2025-04-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV16qZtYeEzR",
+        "title": "【属性斩斧】LV300毒妖鸟 一等效 4分35秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxxkqwn"
   }
 ];
