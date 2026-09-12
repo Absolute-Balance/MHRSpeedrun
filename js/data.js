@@ -8766,27 +8766,6 @@ window.MHRS_RECORDS = [
     "exStar": "EX3",
     "rule": "ta",
     "monsterId": "m17",
-    "weaponId": "sa",
-    "timeMs": 345990,
-    "author": "上班辣酱",
-    "date": "2026-08-30",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1RNtH64Ez1",
-        "title": "评鉴斩斧泥鱼龙  TA 545"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtxzaa4o"
-  },
-  {
-    "questType": "anomaly300",
-    "quest": null,
-    "exStar": "EX3",
-    "rule": "ta",
-    "monsterId": "m17",
     "weaponId": "sns",
     "timeMs": 391990,
     "author": "往日残梦-NLNS",
