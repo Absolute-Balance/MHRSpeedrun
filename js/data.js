@@ -9557,5 +9557,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty4hfyc"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m38",
+    "weaponId": "gs",
+    "timeMs": 296840,
+    "author": "鬼畜茶走",
+    "date": "2026-05-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1GeLH6WEK4",
+        "title": "流斩大剑 特别探究：千刃龙 4'56''84 直播原声"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty4hm3r"
   }
 ];
