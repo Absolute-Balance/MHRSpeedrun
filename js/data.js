@@ -8717,5 +8717,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxyutf8"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m23",
+    "weaponId": "gs",
+    "timeMs": 278200,
+    "author": "Zen10_2333",
+    "date": "2023-12-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1WC4y1g7ch",
+        "title": "首0针! 【MHRS】大剑 特别探究: 蛮颚龙 4分38秒 TA打法＋怪异炼化/三无/四无/禁用随从盟友牵制捕获御龙爆桶火事场力"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxyuy19"
   }
 ];
