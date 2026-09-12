@@ -8675,5 +8675,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxyhrrx"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m22",
+    "weaponId": "cb",
+    "timeMs": 377980,
+    "author": "Aikyan21",
+    "date": "2023-10-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ou4y1a7n4",
+        "title": "【MHRS】特别探究：飞雷龙 盾斧/电锯 617"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxylwmt"
   }
 ];
