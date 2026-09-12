@@ -9452,5 +9452,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty4gbel"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m38",
+    "weaponId": "gl",
+    "timeMs": 327990,
+    "author": "stalincenlam",
+    "date": "2024-12-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1wTBgYYEwz",
+        "title": "【MHRS】超级全弹铳枪 Lv300千刃龙 5分27秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty4gg3y"
   }
 ];
