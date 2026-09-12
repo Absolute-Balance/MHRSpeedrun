@@ -9641,5 +9641,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty4lbua"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m38",
+    "weaponId": "cb",
+    "timeMs": 193990,
+    "author": "到高地了吗",
+    "date": "2024-02-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Mm41197FK",
+        "title": "【怪物猎人】盾斧 lv300 千刃龙 3分13"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty4mlbs"
   }
 ];
