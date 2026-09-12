@@ -8087,5 +8087,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtxsmyq0"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m31",
+    "weaponId": "ls",
+    "timeMs": 396680,
+    "author": "冬季鱼__",
+    "date": "2026-08-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1xb846AEUa",
+        "title": "直接踹飞"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtxspqbv"
   }
 ];
