@@ -7940,5 +7940,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxrfd9o"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m26",
+    "weaponId": "lance",
+    "timeMs": 361510,
+    "author": "无语的解",
+    "date": "2026-06-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1an7E6pE1T",
+        "title": "【MHRS】长枪 冲天+流转 怪异化LV300冰牙龙"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxrlso1"
   }
 ];
