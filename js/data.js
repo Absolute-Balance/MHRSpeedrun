@@ -8990,5 +8990,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty08v71"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m24",
+    "weaponId": "db",
+    "timeMs": 327940,
+    "author": "罐装西打",
+    "date": "2026-02-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV125fBBYER9",
+        "title": "【MHRS/雪豹杯】双刀 特别探究：怨虎龙 三无规则 5分27秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty08zb4"
   }
 ];
