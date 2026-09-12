@@ -9494,5 +9494,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty4gkp2"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m38",
+    "weaponId": "sa",
+    "timeMs": 253260,
+    "author": "郁_葱",
+    "date": "2025-02-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1vXPYenEws",
+        "title": "【MHRS/PC】 斩斧 LV300：千刃龙 4'13''26 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty4gs8e"
   }
 ];
