@@ -8234,5 +8234,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtxt90y0"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "ta",
+    "monsterId": "m17",
+    "weaponId": "ls",
+    "timeMs": 591980,
+    "author": "堕落魂淡",
+    "date": "2024-06-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Nm421G7zt",
+        "title": "MHRS 太刀 特别探究 泥鱼龙 TA（防具无炼化+等效3护石）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtxtagst"
   }
 ];
