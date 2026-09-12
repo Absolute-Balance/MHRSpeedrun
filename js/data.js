@@ -9788,5 +9788,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmty4ym9b"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m34",
+    "weaponId": "ig",
+    "timeMs": 414940,
+    "author": "silver-age",
+    "date": "2026-08-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1UiuA6mEKA",
+        "title": "【MHRS】操虫棍 特别探究：电龙 6分54秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmty51si7"
   }
 ];
