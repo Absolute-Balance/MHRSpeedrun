@@ -8654,5 +8654,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxyhn7z"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m22",
+    "weaponId": "cb",
+    "timeMs": 290990,
+    "author": "TaylorS22",
+    "date": "2023-12-09",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1LN4y1Y7a4",
+        "title": "【mhrs】空解盾斧 lv300 飞雷龙 4'50三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxyhrrx"
   }
 ];
