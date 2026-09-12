@@ -9578,5 +9578,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty4hm3r"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m38",
+    "weaponId": "cb",
+    "timeMs": 253530,
+    "author": "clipp3rs",
+    "date": "2026-05-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1umRFBXEc4",
+        "title": "【MHRS】盾斧 特别探究:千刃龙 4'13'53 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty4hq4w"
   }
 ];
