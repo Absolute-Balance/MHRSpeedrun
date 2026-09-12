@@ -9620,5 +9620,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty4kaov"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m38",
+    "weaponId": "cb",
+    "timeMs": 195320,
+    "author": "郁_葱",
+    "date": "2024-11-13",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1WEmYYdEyk",
+        "title": "【MHRS/PC】 盾斧 LV300：千刃龙 3'15''32 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty4lbua"
   }
 ];
