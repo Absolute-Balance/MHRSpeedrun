@@ -9515,5 +9515,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty4gs8e"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m38",
+    "weaponId": "ls",
+    "timeMs": 314990,
+    "author": "郁_葱",
+    "date": "2025-07-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1U9ufzXEAr",
+        "title": "【MHRS/PC】 太刀 特别探究：千刃龙 5'14''99 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty4h683"
   }
 ];
