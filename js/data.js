@@ -8003,5 +8003,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxru0hq"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m20",
+    "weaponId": "cb",
+    "timeMs": 237990,
+    "author": "InSo-可以叫我硬师傅",
+    "date": "2023-11-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1hj411Y7Kb",
+        "title": "【MHRS/NS】超解盾斧·LV300 雌火龙 3分57 三无"
+      }
+    ],
+    "platform": "switch",
+    "note": "",
+    "id": "smtxru57r"
   }
 ];
