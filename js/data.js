@@ -8759,5 +8759,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtxyxre9"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m23",
+    "weaponId": "cb",
+    "timeMs": 593990,
+    "author": "Decanee",
+    "date": "2024-11-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV11GmkYQEDU",
+        "title": "盾斧特别探究蛮颚龙"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smtxyzgoq"
   }
 ];
