@@ -9326,5 +9326,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty3rmwc"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m37",
+    "weaponId": "bow",
+    "timeMs": 343670,
+    "author": "奴隶贩子塞的伤口",
+    "date": "2025-11-03",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1CU1eB2ENM",
+        "title": "【mhrs】超特冰狼龙 三无手柄弓5'43\"67（极限炼化）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty3s3ak"
   }
 ];
