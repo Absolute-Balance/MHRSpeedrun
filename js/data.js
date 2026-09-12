@@ -9032,5 +9032,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty0cxvj"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m28",
+    "weaponId": "ls",
+    "timeMs": 360260,
+    "author": "RealizedSoul",
+    "date": "2024-03-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1zj421R7ck",
+        "title": "【MHRS】特别探究:泥翁龙 太刀 6分00秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty0joxq"
   }
 ];
