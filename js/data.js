@@ -8948,5 +8948,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty08lct"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "ta",
+    "monsterId": "m24",
+    "weaponId": "sns",
+    "timeMs": 323650,
+    "author": "-橘-孜-",
+    "date": "2025-09-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV18yakzNEBz",
+        "title": "【MHRS/战国滤镜】片手剑 TA无炼化 Lv300 怨虎龙 5分23秒65"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smty08qzf"
   }
 ];
