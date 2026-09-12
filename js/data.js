@@ -9158,5 +9158,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smty2ggtt"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m33",
+    "weaponId": "gs",
+    "timeMs": 273140,
+    "author": "__Ciel___",
+    "date": "2026-08-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1bH8i6fEds",
+        "title": "大剑 TA 300火龙 433"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmty2kowi"
   }
 ];
