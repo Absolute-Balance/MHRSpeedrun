@@ -9137,5 +9137,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzwgt79"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m27",
+    "weaponId": "gs",
+    "timeMs": 343630,
+    "author": "Zen10_2333",
+    "date": "2023-09-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV13N411n7KG",
+        "title": "【MHRS】黑子缩话！大剑 特别探究: 迅龙 5分43秒 TA打法＋怪异炼化/三无/四无/禁用随从盟友牵制捕获御龙爆桶火事场力等"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzwi73o"
   }
 ];
