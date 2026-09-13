@@ -8969,5 +8969,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzvjh4c"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m26",
+    "weaponId": "gs",
+    "timeMs": 374500,
+    "author": "Zen10_2333",
+    "date": "2023-08-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV15P411W7zh",
+        "title": "【MHRS】测距的极意！大剑 特别探究: 冰牙龙 6分14秒 TA打法＋怪异炼化/三无/四无/禁用随从盟友牵制捕获御龙爆桶火事场力"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzvp3p3"
   }
 ];
