@@ -8278,27 +8278,6 @@ window.MHRS_RECORDS = [
     "id": "smtxxoffq"
   },
   {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX3",
-    "rule": "sanyou",
-    "monsterId": "m21",
-    "weaponId": "cb",
-    "timeMs": 327220,
-    "author": "恶魔的儿子",
-    "date": "2026-08-12",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1s8gG6qEDd",
-        "title": "【MHRS】盾斧特别探究毒妖鸟5分27秒"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtxxs2eo"
-  },
-  {
     "questType": "anomaly300",
     "quest": null,
     "exStar": "EX3",
