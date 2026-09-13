@@ -9284,5 +9284,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu01d0ky"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m30",
+    "weaponId": "db",
+    "timeMs": 293990,
+    "author": "N酱不带匠",
+    "date": "2026-05-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1YGdABTEhZ",
+        "title": "【生庆】 空舞双刀 300雪鬼兽 三无规则 4分53秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu01fp3a"
   }
 ];
