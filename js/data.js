@@ -9032,5 +9032,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzvsdce"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m31",
+    "weaponId": "gs",
+    "timeMs": 474470,
+    "author": "鬼畜茶走",
+    "date": "2026-03-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1FNwczdECb",
+        "title": "学院派流斩02 流斩大剑 特别探究：冰人鱼龙 七分台"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzvxzm3"
   }
 ];
