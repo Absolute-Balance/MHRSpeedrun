@@ -9305,5 +9305,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu01fp3a"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m30",
+    "weaponId": "cb",
+    "timeMs": 325990,
+    "author": "InSo-可以叫我硬师傅",
+    "date": "2024-02-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1qH4y177Ti",
+        "title": "【MHRS/NS】白色三部曲终章：冰剑与火盾-超解盾斧·LV300 雪鬼兽 5分25 三无"
+      }
+    ],
+    "platform": "switch",
+    "note": "",
+    "id": "smu01huj9"
   }
 ];
