@@ -8780,5 +8780,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtztoqa4"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m15",
+    "weaponId": "bow",
+    "timeMs": 251600,
+    "author": "加钱居士觉得很润",
+    "date": "2024-01-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ck4y1X7Ag",
+        "title": "超特合集 二星完结 岩龙4分11"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtztt6a0"
   }
 ];
