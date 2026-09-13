@@ -9704,5 +9704,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtyf3vrd"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m39",
+    "weaponId": "hbg",
+    "timeMs": 296240,
+    "author": "灼眼の冷面魔男",
+    "date": "2023-10-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1aN411t7cR",
+        "title": "【MHRS】♿散弹✌之特别探究：轰龙 4'56''24 三无/TA＋怪异炼成"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtz6wuxw"
   }
 ];
