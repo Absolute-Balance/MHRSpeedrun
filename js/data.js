@@ -9011,5 +9011,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzvqs0b"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m26",
+    "weaponId": "db",
+    "timeMs": 305430,
+    "author": "PotatotatoP",
+    "date": "2024-02-03",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1XU421Z7EB",
+        "title": "双刀三无特别探究冰牙龙5'05\"43"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzvsdce"
   }
 ];
