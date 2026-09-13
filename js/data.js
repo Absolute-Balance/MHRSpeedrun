@@ -9242,5 +9242,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzx9xci"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m29",
+    "weaponId": "sns",
+    "timeMs": 538990,
+    "author": "咩咩羊袭",
+    "date": "2026-05-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ww5R6hEKc",
+        "title": "【MHRS】片手剑 Lv300妃蜘蛛 8分58秒 三无规则 长痛"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu01afg8"
   }
 ];
