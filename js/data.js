@@ -9221,5 +9221,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzx7flk"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m27",
+    "weaponId": "cb",
+    "timeMs": 288880,
+    "author": "狗带三三",
+    "date": "2024-07-13",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Nf421z7uE",
+        "title": "【MHRS】盾斧 特别探究·迅龙 4分48秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzx9xci"
   }
 ];
