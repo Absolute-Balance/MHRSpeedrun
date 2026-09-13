@@ -8885,5 +8885,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzujv9d"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "ls",
+    "timeMs": 350990,
+    "author": "番茄滑蛋兔堍叽",
+    "date": "2026-08-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Yjhc6uECp",
+        "title": "【MHRS】太刀 特别探究：怪异克服霞龙 5分50秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzumsxn"
   }
 ];
