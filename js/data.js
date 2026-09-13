@@ -177,27 +177,6 @@ window.MHRS_RECORDS = [
     "exStar": "EX9",
     "rule": "sanyou",
     "monsterId": "m57",
-    "weaponId": "ig",
-    "timeMs": 371470,
-    "author": "玛修推",
-    "date": "2025-01-22",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1VfweeEEu5",
-        "title": "【MHRS/生庆】 操虫棍 特别探究: 怪异克服天彗龙 6'11''47 三无"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtq32o0p"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX9",
-    "rule": "sanyou",
-    "monsterId": "m57",
     "weaponId": "lbg",
     "timeMs": 270400,
     "author": "灼眼の冷面魔男",
@@ -590,27 +569,6 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqoq8u1"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX9",
-    "rule": "sanyou",
-    "monsterId": "m56",
-    "weaponId": "bow",
-    "timeMs": 198740,
-    "author": "daisukiな欧尼酱",
-    "date": "2026-05-05",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1ZrRBBgEnA",
-        "title": "【MHRS/31x达成】超越轮回！ 弓箭 赤绝飞翼老人星 特别探究：怪异克服天廻龙 318 三无"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtqorkzz"
   },
   {
     "questType": "special",
@@ -1647,27 +1605,6 @@ window.MHRS_RECORDS = [
     "exStar": "EX7",
     "rule": "sanyou",
     "monsterId": "m49",
-    "weaponId": "gs",
-    "timeMs": 416990,
-    "author": "开关_",
-    "date": "2025-12-31",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV16evxBZEbS",
-        "title": "【MHRS/生庆】流斩大剑 特别探究 红莲爆鳞龙 三无规则 6分56秒"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtr0b7ub"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX7",
-    "rule": "sanyou",
-    "monsterId": "m49",
     "weaponId": "ls",
     "timeMs": 358540,
     "author": "-晴晓音-",
@@ -1787,27 +1724,6 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr0jfn4"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX7",
-    "rule": "sanyou",
-    "monsterId": "m50",
-    "weaponId": "gs",
-    "timeMs": 326380,
-    "author": "开关_",
-    "date": "2026-07-13",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1vsNy6aEzo",
-        "title": "【MHRS】流斩大剑 特别探究 激昂金狮子 三无规则 5分26秒"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtr0kr3a"
   },
   {
     "questType": "special",
@@ -2067,27 +1983,6 @@ window.MHRS_RECORDS = [
     "exStar": "EX7",
     "rule": "sanyou",
     "monsterId": "m47",
-    "weaponId": "bow",
-    "timeMs": 278710,
-    "author": "daisukiな欧尼酱",
-    "date": "2026-06-03",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1EpVC6WEdU",
-        "title": "【MHRS/生庆】弓箭 泥=奉献 特别探究：银火龙 438 三无"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtr8ek77"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX7",
-    "rule": "sanyou",
-    "monsterId": "m47",
     "weaponId": "lbg",
     "timeMs": 314780,
     "author": "灼眼の冷面魔男",
@@ -2228,27 +2123,6 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtr8vxls"
-  },
-  {
-    "questType": "raging",
-    "quest": "q08",
-    "exStar": null,
-    "rule": "sanyou",
-    "monsterId": "m62",
-    "weaponId": "bow",
-    "timeMs": 108720,
-    "author": "daisukiな欧尼酱",
-    "date": "2026-07-03",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV131TJ6fEc2",
-        "title": "【MHRS/新纪录/14x达成/无鬼火跳炸/Extra2 True End】弓箭 刻银穿弓 烈祸原初爵银龙 148 三无"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtr8yuso"
   },
   {
     "questType": "raging",
@@ -2648,27 +2522,6 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtrb8a7k"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX7",
-    "rule": "sanyou",
-    "monsterId": "m46",
-    "weaponId": "bow",
-    "timeMs": 275540,
-    "author": "daisukiな欧尼酱",
-    "date": "2026-08-14",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1rqgW6hE9N",
-        "title": "⚡雷⚡霆⚡大⚡贯⚡通⚡"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtrb9lhf"
   },
   {
     "questType": "raging",
@@ -4335,27 +4188,6 @@ window.MHRS_RECORDS = [
     "exStar": "EX7",
     "rule": "sanyou",
     "monsterId": "m51",
-    "weaponId": "gs",
-    "timeMs": 452990,
-    "author": "开关_",
-    "date": "2025-12-17",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1cVqjBuE3S",
-        "title": "【MHRS/生庆】流斩大剑 特别探究 嗟怨震天怨虎龙  三无规则 7分32秒"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtscpyn7"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX7",
-    "rule": "sanyou",
-    "monsterId": "m51",
     "weaponId": "ls",
     "timeMs": 362770,
     "author": "RealizedSoul",
@@ -4691,27 +4523,6 @@ window.MHRS_RECORDS = [
     "quest": null,
     "exStar": "EX6",
     "rule": "sanyou",
-    "monsterId": "m41",
-    "weaponId": "bow",
-    "timeMs": 227750,
-    "author": "daisukiな欧尼酱",
-    "date": "2026-04-07",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1pbDFBcE4v",
-        "title": "【MHRS】弓箭 钢龙射手弓 特别探究：棘龙 347 三无"
-      }
-    ],
-    "platform": "switch",
-    "note": "",
-    "id": "rmtse1wfx"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX6",
-    "rule": "sanyou",
     "monsterId": "m42",
     "weaponId": "db",
     "timeMs": 405190,
@@ -4897,27 +4708,6 @@ window.MHRS_RECORDS = [
     "id": "smtsmrbvw"
   },
   {
-    "questType": "anomaly300",
-    "quest": null,
-    "exStar": "EX9",
-    "rule": "sanyou",
-    "monsterId": "m57",
-    "weaponId": "bow",
-    "timeMs": 190240,
-    "author": "daisukiな欧尼酱",
-    "date": "2026-06-18",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1PXLd6uExh",
-        "title": "直播边黑听女主播边打的一把300彗三分十秒弓箭泥奉献"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtsmrjxy"
-  },
-  {
     "questType": "special",
     "quest": null,
     "exStar": "EX5",
@@ -4937,27 +4727,6 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsmrpbc"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX5",
-    "rule": "sanyou",
-    "monsterId": "m33",
-    "weaponId": "bow",
-    "timeMs": 228870,
-    "author": "daisukiな欧尼酱",
-    "date": "2026-07-21",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1ddKW6CEHK",
-        "title": "【MHRS】弓箭 赤绝飞翼老人星 特别探究：火龙 348 三无"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtsmrunn"
   },
   {
     "questType": "special",
@@ -5006,48 +4775,6 @@ window.MHRS_RECORDS = [
     "quest": null,
     "exStar": "EX3",
     "rule": "sanyou",
-    "monsterId": "m23",
-    "weaponId": "bow",
-    "timeMs": 274440,
-    "author": "daisukiな欧尼酱",
-    "date": "2026-04-04",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1dtDABtEXo",
-        "title": "【MHRS】弓箭 泥=奉献 特别探究：蛮颚龙 434 三无"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtsmsezh"
-  },
-  {
-    "questType": "anomaly300",
-    "quest": null,
-    "exStar": "EX5",
-    "rule": "sanyou",
-    "monsterId": "m40",
-    "weaponId": "bow",
-    "timeMs": 127750,
-    "author": "daisukiな欧尼酱",
-    "date": "2026-08-19",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1X48J6nEnh",
-        "title": "七⚡夕⚡一⚡个⚡人⚡在⚡家⚡打⚡角"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtsmslrn"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX3",
-    "rule": "sanyou",
     "monsterId": "m20",
     "weaponId": "bow",
     "timeMs": 198210,
@@ -5063,111 +4790,6 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtsmssnb"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX2",
-    "rule": "sanyou",
-    "monsterId": "m15",
-    "weaponId": "bow",
-    "timeMs": 234350,
-    "author": "daisukiな欧尼酱",
-    "date": "2025-10-01",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1zLH7zQESy",
-        "title": "【MHRS/ECHO杯/属光区】刻银穿弓 特别探究 岩龙 354 三无"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtsmszy0"
-  },
-  {
-    "questType": "raging",
-    "quest": "q07",
-    "exStar": null,
-    "rule": "sanyou",
-    "monsterId": "m61",
-    "weaponId": "bow",
-    "timeMs": 138480,
-    "author": "daisukiな欧尼酱",
-    "date": "2026-05-12",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1jR5u6tEzM",
-        "title": "【MHRS/21x达成】弓箭 永恒绝望 烈祸袭来：雪花纷飞 烈祸冰呪龙 218 三无"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtsmt9sa"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX2",
-    "rule": "sanyou",
-    "monsterId": "m13",
-    "weaponId": "bow",
-    "timeMs": 179640,
-    "author": "daisukiな欧尼酱",
-    "date": "2026-07-07",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1qJMb6hEAU",
-        "title": "【MHRS】二战水兽 弓箭 永恒绝望 特别探究：水兽 259 三无"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtsmtekq"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX2",
-    "rule": "sanyou",
-    "monsterId": "m12",
-    "weaponId": "bow",
-    "timeMs": 210040,
-    "author": "daisukiな欧尼酱",
-    "date": "2026-04-08",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1BwDiBsEhi",
-        "title": "【MHRS】弓箭 永恒绝望 特别探究：土砂龙 330 三无"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtsmtk08"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX1",
-    "rule": "sanyou",
-    "monsterId": "m03",
-    "weaponId": "bow",
-    "timeMs": 138540,
-    "author": "daisukiな欧尼酱",
-    "date": "2026-07-28",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV15U3z6AEAM",
-        "title": "【MHRS】弓箭 钢龙射手弓 特别探究：毒狗龙王 218 三无"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtsmtoih"
   },
   {
     "questType": "special",
@@ -5210,27 +4832,6 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtsqgd9b"
-  },
-  {
-    "questType": "anomaly300",
-    "quest": null,
-    "exStar": "EX9",
-    "rule": "sanyou",
-    "monsterId": "m57",
-    "weaponId": "ig",
-    "timeMs": 369630,
-    "author": "治愈拽枪兵",
-    "date": "2026-08-11",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1KWuB6CErQ",
-        "title": "虫棍克彗"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtstlt3u"
   },
   {
     "questType": "anomaly300",
@@ -6197,27 +5798,6 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmttx6iwq"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX1",
-    "rule": "sanyou",
-    "monsterId": "m05",
-    "weaponId": "sa",
-    "timeMs": 307990,
-    "author": "Marshmollow",
-    "date": "2025-11-18",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1cBygBVEix",
-        "title": "【打棒球这一块】斩斧爽怪之  特别探究·赤甲兽  三无规则  5分07秒"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmttx7t36"
   },
   {
     "questType": "special",
@@ -7310,153 +6890,6 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtwcsxfy"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX5",
-    "rule": "sanyou",
-    "monsterId": "m39",
-    "weaponId": "hammer",
-    "timeMs": 393990,
-    "author": "Marshmollow",
-    "date": "2026-09-10",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV19PY86oENS",
-        "title": "【崛起 杂物】"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtwcv0dr"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX5",
-    "rule": "sanyou",
-    "monsterId": "m32",
-    "weaponId": "hammer",
-    "timeMs": 491990,
-    "author": "Marshmollow",
-    "date": "2026-09-10",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV19PY86oENS",
-        "title": "【崛起 杂物】"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtwcweff"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX7",
-    "rule": "sanyou",
-    "monsterId": "m51",
-    "weaponId": "hh",
-    "timeMs": 619990,
-    "author": "Marshmollow",
-    "date": "2026-09-10",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV19PY86oENS",
-        "title": "【崛起 杂物】"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtwcy5zg"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX5",
-    "rule": "sanyou",
-    "monsterId": "m40",
-    "weaponId": "hh",
-    "timeMs": 476990,
-    "author": "Marshmollow",
-    "date": "2026-09-10",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV19PY86oENS",
-        "title": "【崛起 杂物】"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtwczopj"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX5",
-    "rule": "sanyou",
-    "monsterId": "m36",
-    "weaponId": "lbg",
-    "timeMs": 371990,
-    "author": "Marshmollow",
-    "date": "2026-09-10",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV19PY86oENS",
-        "title": "【崛起 杂物】"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtwd0z7l"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX5",
-    "rule": "sanyou",
-    "monsterId": "m39",
-    "weaponId": "lance",
-    "timeMs": 390990,
-    "author": "Marshmollow",
-    "date": "2026-09-10",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV19PY86oENS",
-        "title": "【崛起 杂物】"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtwd30om"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX4",
-    "rule": "sanyou",
-    "monsterId": "m27",
-    "weaponId": "lance",
-    "timeMs": 361990,
-    "author": "Marshmollow",
-    "date": "2026-09-10",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV19PY86oENS",
-        "title": "【崛起 杂物】"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtwd4bb7"
   },
   {
     "questType": "special",
