@@ -9116,5 +9116,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzwa2qc"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m27",
+    "weaponId": "bow",
+    "timeMs": 251970,
+    "author": "清风不识-字-",
+    "date": "2026-01-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Cjz2BvEuZ",
+        "title": "【MHRS/生庆】弓箭 特别探究迅龙 4分11秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzwgt79"
   }
 ];
