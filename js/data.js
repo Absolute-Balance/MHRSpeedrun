@@ -9053,5 +9053,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzvxzm3"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m31",
+    "weaponId": "sns",
+    "timeMs": 546300,
+    "author": "阿呆耄",
+    "date": "2026-02-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1wCZkBTEmq",
+        "title": "【MHRS/雪豹杯】片手剑 特别探究冰人鱼龙 三无规则 9'06''30"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzw1kvp"
   }
 ];
