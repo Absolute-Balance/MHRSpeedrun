@@ -8990,5 +8990,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzvp3p3"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m26",
+    "weaponId": "ls",
+    "timeMs": 395100,
+    "author": "-晴晓音-",
+    "date": "2025-06-02",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1eJ7CzgEF5",
+        "title": "【MHRS】太刀 特别探究：冰牙龙 6分35秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzvqs0b"
   }
 ];
