@@ -6267,27 +6267,6 @@ window.MHRS_RECORDS = [
     "exStar": "EX2",
     "rule": "ta",
     "monsterId": "m09",
-    "weaponId": "gs",
-    "timeMs": 522020,
-    "author": "堕落魂淡",
-    "date": "2024-07-22",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1aM4m1y7MQ",
-        "title": "MHRS 大剑 特别探究 天狗兽 TA（防具无炼化+等效3护石）"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtuz41d0"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX2",
-    "rule": "ta",
-    "monsterId": "m09",
     "weaponId": "sns",
     "timeMs": 539640,
     "author": "yiopk",
