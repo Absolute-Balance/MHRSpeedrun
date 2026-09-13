@@ -9074,5 +9074,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzw1kvp"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m31",
+    "weaponId": "sa",
+    "timeMs": 378100,
+    "author": "东山三千代",
+    "date": "2026-08-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1xQ8U6oEQs",
+        "title": "【MHRS/生庆】 特别探究：冰人鱼龙 狂化斩斧 6分18秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzw3h04"
   }
 ];
