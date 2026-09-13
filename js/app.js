@@ -708,6 +708,50 @@
     var d = new Date();
     return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
   }
+  /* ===== 查重：时间 / 题材 / 怪物 / 武器 / 规则 / 作者 / 日期 全部相同 → 视为重复 ===== */
+  function recDupKey(r) {
+    return [r.questType, r.quest || '', r.exStar || '', r.monsterId, r.weaponId, r.rule,
+      r.timeMs, String(r.author == null ? '' : r.author).trim(), r.date].join('|');
+  }
+  function findDuplicate(rec) {
+    var key = recDupKey(rec);
+    for (var i = 0; i < RECORDS.length; i++) {
+      if (rec.id && RECORDS[i].id === rec.id) continue;
+      if (recDupKey(RECORDS[i]) === key) return RECORDS[i];
+    }
+    return null;
+  }
+  function dupSummary(rec) {
+    var m = mById[rec.monsterId], w = wById[rec.weaponId];
+    var q = rec.questType === 'raging' ? (qById[rec.quest] || {}) : null;
+    var task = rec.questType === 'raging'
+      ? (q && q.label ? q.label : '烈祸袭来')
+      : ((rec.exStar || '') + (m ? ' ' + m.name : ''));
+    return fmtTime(rec.timeMs) + '｜' + (w ? w.label : rec.weaponId) + '｜' + ruleLabel(rec.rule) +
+      '｜' + rec.author + '｜' + rec.date + '｜' + task;
+  }
+  /* ===== 视频查重：同一个 BV 号是否已被收录 ===== */
+  function bvOf(url) {
+    var m = String(url || '').match(/(BV[0-9A-Za-z]{8,})/);
+    return m ? m[1] : '';
+  }
+  function recordsWithBv(bv) {
+    if (!bv) return [];
+    var hit = [];
+    RECORDS.forEach(function (r) {
+      (r.videos || []).forEach(function (v) {
+        if (bvOf(v.url) === bv) hit.push(r);
+      });
+    });
+    return hit;
+  }
+  function sameCell(r, rec) {
+    return r.questType === rec.questType &&
+      (r.quest || '') === (rec.quest || '') &&
+      (r.exStar || '') === (rec.exStar || '') &&
+      r.monsterId === rec.monsterId &&
+      r.weaponId === rec.weaponId;
+  }
   function openEntry(ctx, editRec) {
     var m = mById[ctx.mid], w = wById[ctx.wid];
     if (!m || !w) return;
@@ -825,6 +869,45 @@
     };
     if (entryCtx.mode === 'edit') baseRec.id = entryCtx.id;
     else baseRec.id = 'r' + Date.now().toString(36);
+    /* 查重：与现有记录完全一致时提示（管理员确认后仍可强制录入） */
+    if (entryCtx.mode === 'add') {
+      var dupRec = findDuplicate(baseRec);
+      if (dupRec) {
+        var force = window.confirm('⚠ 已存在完全相同的成绩：\n\n' + dupSummary(dupRec) +
+          '\n\n继续录入会产生完全重复的记录，确定仍要录入吗？\n（如需更正原记录，请先删除或修改原记录）');
+        if (!force) {
+          msg.textContent = '已取消：该成绩与现有记录完全相同（' + dupSummary(dupRec) + '）';
+          msg.style.color = 'var(--danger)';
+          return;
+        }
+      }
+      /* 视频查重：同一 BV 已用于同一位置 → 提示；用于其它成绩 → 需确认 */
+      var entryBv = bvOf(videoUrl || $('eVideo').value);
+      if (entryBv) {
+        var eHits = recordsWithBv(entryBv);
+        var eCell = eHits.filter(function (r) {
+          return sameCell(r, baseRec);
+        });
+        if (eCell.length) {
+          var force2 = window.confirm('⚠ 这个视频（' + entryBv + '）已收录在同一位置：\n\n' + dupSummary(eCell[0]) +
+            '\n\n确认仍要再录一条吗？');
+          if (!force2) {
+            msg.textContent = '已取消：该视频已用于同一位置（' + dupSummary(eCell[0]) + '）';
+            msg.style.color = 'var(--danger)';
+            return;
+          }
+        } else if (eHits.length) {
+          var force3 = window.confirm('⚠ 这个视频（' + entryBv + '）已出现在其它成绩中（共 ' + eHits.length + ' 条）：\n\n' +
+            eHits.slice(0, 5).map(dupSummary).join('\n') + (eHits.length > 5 ? '\n…' : '') +
+            '\n\n确认不是重复录入吗？');
+          if (!force3) {
+            msg.textContent = '已取消：该视频已被其它成绩使用。';
+            msg.style.color = 'var(--danger)';
+            return;
+          }
+        }
+      }
+    }
     msg.textContent = '正在提交到 GitHub…';
     msg.style.color = 'var(--text-dim)';
     try {
@@ -1811,6 +1894,31 @@
     if (!author) { sMsg('请填写作者', false); return; }
     if (ms == null) { sMsg('用时格式不对（如 05\'02\'\'52）', false); return; }
     if (!date) { sMsg('日期格式不对（如 2026-9-6）', false); return; }
+    /* 查重：网站上已有完全相同的成绩 → 不重复投稿 */
+    var dupSub = findDuplicate({ questType: qt, quest: quest, exStar: ex, monsterId: mid, weaponId: wid, rule: rule, timeMs: ms, author: author, date: date });
+    if (dupSub) {
+      sMsg('⚠ 这条成绩网站上已收录：' + dupSummary(dupSub) + '。请勿重复投稿；如果原记录需要更正（视频 / 时间 / 作者等），请联系维护者处理。', false);
+      return;
+    }
+    /* 查重：同一个视频（BV 号）已用于同一位置 → 阻止；出现在其它成绩 → 需确认 */
+    var subBv = bvOf($('sBv').value);
+    if (subBv) {
+      var bvHits = recordsWithBv(subBv);
+      var cellHit = bvHits.filter(function (r) { return sameCell(r, { questType: qt, quest: quest, exStar: ex, monsterId: mid, weaponId: wid }); });
+      if (cellHit.length) {
+        sMsg('⚠ 这个视频（' + subBv + '）已经收录在同一位置：' + dupSummary(cellHit[0]) + '。已阻止重复投稿；如果原记录需要更正，请联系维护者处理。', false);
+        return;
+      }
+      if (bvHits.length) {
+        var okBv = window.confirm('⚠ 这个视频（' + subBv + '）已出现在其它成绩中（共 ' + bvHits.length + ' 条）：\n\n' +
+          bvHits.slice(0, 5).map(dupSummary).join('\n') + (bvHits.length > 5 ? '\n…' : '') +
+          '\n\n确认这不是重复投稿吗？');
+        if (!okBv) {
+          sMsg('已取消投稿：该视频已被其它成绩使用。', false);
+          return;
+        }
+      }
+    }
     var payload = {
       questType: qt,
       quest: quest,

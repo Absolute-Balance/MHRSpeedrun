@@ -251,6 +251,24 @@ async function ghPut(path, sha, content, message, env) {
   const j = await r.json();
   return j.commit ? j.commit.sha : '';
 }
+/* 查重键：时间/题材/怪物/武器/规则/作者/日期 全部相同即视为重复 */
+function recDupKey(r) {
+  return [r.questType, r.quest || '', r.exStar || '', r.monsterId, r.weaponId, r.rule,
+    r.timeMs, String(r.author == null ? '' : r.author).trim(), r.date].join('|');
+}
+/* 视频 BV 号 */
+function bvOf(url) {
+  const m = String(url || '').match(/(BV[0-9A-Za-z]{8,})/);
+  return m ? m[1] : '';
+}
+/* 同一位置（任务类型+任务/EX+怪物+武器） */
+function sameCell(a, b) {
+  return a.questType === b.questType &&
+    (a.quest || '') === (b.quest || '') &&
+    (a.exStar || '') === (b.exStar || '') &&
+    a.monsterId === b.monsterId &&
+    a.weaponId === b.weaponId;
+}
 async function publishToGitHub(sub, env) {
   const path = 'js/data.js';
   const meta = await ghGet(path, env);
@@ -265,6 +283,15 @@ async function publishToGitHub(sub, env) {
     delete rec.submitterIp;
     delete rec.id;
     rec.id = 's' + Date.now().toString(36);
+    /* 重复检测：正式数据中已有完全相同的成绩则拒绝发布 */
+    if (arr.some(x => recDupKey(x) === recDupKey(rec))) {
+      throw new Error('重复投稿：该成绩已存在于正式数据（时间 / 题材 / 怪物 / 武器 / 规则 / 作者 / 日期完全相同），已阻止发布');
+    }
+    /* 重复检测：同一个视频（BV 号）已用于同一位置则拒绝发布 */
+    const newBv = bvOf((rec.videos && rec.videos[0] && rec.videos[0].url) || '');
+    if (newBv && arr.some(x => sameCell(x, rec) && (x.videos || []).some(v => bvOf(v.url) === newBv))) {
+      throw new Error('重复投稿：这个视频（' + newBv + '）已经收录在同一位置，已阻止发布');
+    }
     arr.push(rec);
     text = meta.text.slice(0, start) + JSON.stringify(arr, null, 2) + meta.text.slice(end + 1);
   } else {
