@@ -9200,5 +9200,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzwyszp"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m27",
+    "weaponId": "sa",
+    "timeMs": 307990,
+    "author": "Nakano--Azusa",
+    "date": "2024-08-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1A7W5ewELo",
+        "title": "【MHRS/生庆】秋晓祭-斩斧 特别探究:迅龙 5'07''80 三无规则 极限炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzx7flk"
   }
 ];
