@@ -6577,27 +6577,6 @@ window.MHRS_RECORDS = [
     "id": "smtucgfrt"
   },
   {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX7",
-    "rule": "sanyou",
-    "monsterId": "m50",
-    "weaponId": "bow",
-    "timeMs": 223780,
-    "author": "菠萝泡温泉中",
-    "date": "2026-09-09",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV16tYt6YEqx",
-        "title": "【MHRS/生庆】弓箭 特别探究激昂金狮子 3'43\"78 三无规则"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtucgubs"
-  },
-  {
     "questType": "raging",
     "quest": "q01",
     "exStar": null,
