@@ -9158,5 +9158,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzwi73o"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m27",
+    "weaponId": "ls",
+    "timeMs": 351530,
+    "author": "罗丽塔丶",
+    "date": "2023-12-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1De411b7Ug",
+        "title": "特别探究：迅龙 太刀 5'51''53 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzwk49x"
   }
 ];
