@@ -8906,5 +8906,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzumsxn"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m46",
+    "weaponId": "bow",
+    "timeMs": 295280,
+    "author": "抹茶摇摇薯条",
+    "date": "2026-08-13",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1n5gp6tE3g",
+        "title": "【MHRS】贯穿弓 特别探究金火龙 4'55\"28 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzuur89"
   }
 ];
