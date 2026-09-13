@@ -9179,5 +9179,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzwk49x"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m27",
+    "weaponId": "sns",
+    "timeMs": 410720,
+    "author": "-橘-孜-",
+    "date": "2025-07-29",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1fY8RzVEFN",
+        "title": "【MHRS/单纯爱转圈】片手剑 特别探究 迅龙 三无 6分50秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzwm9db"
   }
 ];
