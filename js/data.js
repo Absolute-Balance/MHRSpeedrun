@@ -9200,5 +9200,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzwm9db"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m27",
+    "weaponId": "lance",
+    "timeMs": 360400,
+    "author": "清风不识-字-",
+    "date": "2026-01-31",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1146BBSELC",
+        "title": "【MHRS/生庆】长枪 特别探究迅龙 6分00秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzwrc6m"
   }
 ];
