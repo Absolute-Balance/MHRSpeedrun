@@ -8843,5 +8843,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzudwpc"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "bow",
+    "timeMs": 211990,
+    "author": "抹茶摇摇薯条",
+    "date": "2026-08-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ZC8m6VEsf",
+        "title": "【MHRS/生庆】弓箭 特别探究：怪异克服霞龙 3'31\"69 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzufnl1"
   }
 ];
