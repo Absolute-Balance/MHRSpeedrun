@@ -9179,5 +9179,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzwm9db"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m27",
+    "weaponId": "bow",
+    "timeMs": 256990,
+    "author": "抹茶摇摇薯条",
+    "date": "2026-01-31",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1kw6yBcES3",
+        "title": "【MHRS】特别探究迅龙 弓箭 4'16\"12 替hpg规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzwyszp"
   }
 ];
