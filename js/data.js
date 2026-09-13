@@ -8801,5 +8801,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtztt6a0"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m56",
+    "weaponId": "bow",
+    "timeMs": 202480,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-03-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1dGP1z1EmN",
+        "title": "【MHRS】弓箭 赤绝飞翼老人星 特别探究：怪异克服天廻龙 322 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzu8cun"
   }
 ];
