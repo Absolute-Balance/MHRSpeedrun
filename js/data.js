@@ -8784,27 +8784,6 @@ window.MHRS_RECORDS = [
   {
     "questType": "special",
     "quest": null,
-    "exStar": "EX4",
-    "rule": "ta",
-    "monsterId": "m28",
-    "weaponId": "gs",
-    "timeMs": 479680,
-    "author": "堕落魂淡",
-    "date": "2024-03-29",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1km421n7tX",
-        "title": "MHRS 大剑 特别探究 泥翁龙 TA（防具无炼化+等效3护石）"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smty0nutm"
-  },
-  {
-    "questType": "special",
-    "quest": null,
     "exStar": "EX5",
     "rule": "sanyou",
     "monsterId": "m33",
