@@ -2041,27 +2041,6 @@ window.MHRS_RECORDS = [
     "id": "rmtr14ebb"
   },
   {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX7",
-    "rule": "sanyou",
-    "monsterId": "m50",
-    "weaponId": "bow",
-    "timeMs": 232610,
-    "author": "小林小林小脑瓜",
-    "date": "2023-06-10",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1xN411k7go",
-        "title": "[MHRS/PC] 弓箭 特别探究：激昂金狮子 3′52″61 TA+怪异炼化"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtr15ou5"
-  },
-  {
     "questType": "raging",
     "quest": "q08",
     "exStar": null,
