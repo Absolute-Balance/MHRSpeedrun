@@ -9095,5 +9095,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzw3h04"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m31",
+    "weaponId": "hbg",
+    "timeMs": 399990,
+    "author": "白炎妖光",
+    "date": "2026-02-19",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1zBZiBLE3P",
+        "title": "【MHRS/雪豹杯】特探冰人鱼 散弹三无 639"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzwa2qc"
   }
 ];
