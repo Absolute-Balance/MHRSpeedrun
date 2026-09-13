@@ -8738,26 +8738,5 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtz6wuxw"
-  },
-  {
-    "questType": "anomaly300",
-    "quest": null,
-    "exStar": "EX4",
-    "rule": "sanyou",
-    "monsterId": "m29",
-    "weaponId": "ig",
-    "timeMs": 403850,
-    "author": "Fallen_sky2",
-    "date": "2026-09-10",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1xkYM6pEYE",
-        "title": "【MHRS】操虫棍 Lv300 妃蜘蛛 6分43 三无"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtzqz4eh"
   }
 ];
