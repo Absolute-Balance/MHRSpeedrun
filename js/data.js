@@ -8927,5 +8927,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzuur89"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m57",
+    "weaponId": "lance",
+    "timeMs": 385790,
+    "author": "谢233",
+    "date": "2023-12-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV19w411t7Wb",
+        "title": "【MHRS】长枪 特别探究：怪异克服天彗龙 6'25\"79 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzv3erv"
   }
 ];
