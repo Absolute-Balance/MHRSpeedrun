@@ -8759,5 +8759,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtztjrip"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m13",
+    "weaponId": "bow",
+    "timeMs": 210220,
+    "author": "加钱居士觉得很润",
+    "date": "2023-12-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1na4y197A4",
+        "title": "超特合集 二星 水兽3分30"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtztoqa4"
   }
 ];
