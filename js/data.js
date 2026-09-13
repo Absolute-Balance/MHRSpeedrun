@@ -114,27 +114,6 @@ window.MHRS_RECORDS = [
     "exStar": "EX9",
     "rule": "sanyou",
     "monsterId": "m57",
-    "weaponId": "lance",
-    "timeMs": 356560,
-    "author": "-下机下机-",
-    "date": "2025-01-12",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1WVcVevENy",
-        "title": "【MHRS/圆梦5台】长枪 特别探究：怪异克服天彗龙 5'56''56 三无规则"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtq2p44n"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX9",
-    "rule": "sanyou",
-    "monsterId": "m57",
     "weaponId": "sa",
     "timeMs": 288990,
     "author": "20guns_",
@@ -763,27 +742,6 @@ window.MHRS_RECORDS = [
     "questType": "special",
     "quest": null,
     "exStar": "EX8",
-    "rule": "ta",
-    "monsterId": "m54",
-    "weaponId": "ig",
-    "timeMs": 475820,
-    "author": "一跃下戳升虫",
-    "date": "2024-01-01",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1Zp4y1R7kY",
-        "title": "【MHRS】 操虫棍 特殊探究：怪异克服炎王龙 7分55秒 TA规则"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtqtwxs4"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX8",
     "rule": "sanyou",
     "monsterId": "m54",
     "weaponId": "ig",
@@ -1100,27 +1058,6 @@ window.MHRS_RECORDS = [
     "quest": null,
     "exStar": "EX8",
     "rule": "sanyou",
-    "monsterId": "m53",
-    "weaponId": "bow",
-    "timeMs": 234060,
-    "author": "Slayall11",
-    "date": "2024-01-16",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1Jg4y1m7C1",
-        "title": "【MHR/MHRS】出狱！弓箭 特别探究：怪异克服钢龙 三无/TA+怪异炼化3分54"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtqusrjw"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX8",
-    "rule": "sanyou",
     "monsterId": "m52",
     "weaponId": "gs",
     "timeMs": 292910,
@@ -1136,27 +1073,6 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtquvurr"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX8",
-    "rule": "sanyou",
-    "monsterId": "m52",
-    "weaponId": "ls",
-    "timeMs": 312130,
-    "author": "冬季鱼__",
-    "date": "2026-08-23",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1J7826GEPr",
-        "title": "I'll make the arrangements just wait on that corner for me"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtquxep3"
   },
   {
     "questType": "special",
@@ -1367,27 +1283,6 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtqvlk65"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX8",
-    "rule": "sanyou",
-    "monsterId": "m52",
-    "weaponId": "bow",
-    "timeMs": 201470,
-    "author": "Slayall11",
-    "date": "2023-11-28",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1WM411o7nc",
-        "title": "弓箭 特别探究：怪异克服霞龙三无/TA+怪异炼化3分21"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtqvmve7"
   },
   {
     "questType": "special",
@@ -3094,69 +2989,6 @@ window.MHRS_RECORDS = [
     "questType": "anomaly300",
     "quest": null,
     "exStar": "EX1",
-    "rule": "ta",
-    "monsterId": "m04",
-    "weaponId": "lance",
-    "timeMs": 238840,
-    "author": "这里是庸人",
-    "date": "2026-02-13",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1YYcGzGEzi",
-        "title": "【MHRS/生庆】怪异LV.300鸟龙三连星合集 长枪 TA"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtrf9irp"
-  },
-  {
-    "questType": "anomaly300",
-    "quest": null,
-    "exStar": "EX1",
-    "rule": "ta",
-    "monsterId": "m03",
-    "weaponId": "lance",
-    "timeMs": 174420,
-    "author": "这里是庸人",
-    "date": "2026-02-13",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1YYcGzGEzi",
-        "title": "【MHRS/生庆】怪异LV.300鸟龙三连星合集 长枪 TA"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtrfapk6"
-  },
-  {
-    "questType": "anomaly300",
-    "quest": null,
-    "exStar": "EX1",
-    "rule": "ta",
-    "monsterId": "m02",
-    "weaponId": "lance",
-    "timeMs": 160460,
-    "author": "这里是庸人",
-    "date": "2026-02-13",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1YYcGzGEzi",
-        "title": "【MHRS/生庆】怪异LV.300鸟龙三连星合集 长枪 TA"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtrfav82"
-  },
-  {
-    "questType": "anomaly300",
-    "quest": null,
-    "exStar": "EX1",
     "rule": "sanyou",
     "monsterId": "m05",
     "weaponId": "lance",
@@ -3278,27 +3110,6 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smtrff43d"
-  },
-  {
-    "questType": "anomaly300",
-    "quest": null,
-    "exStar": "EX3",
-    "rule": "ta",
-    "monsterId": "m18",
-    "weaponId": "lance",
-    "timeMs": 238310,
-    "author": "这里是庸人",
-    "date": "2026-02-11",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1z1FXzaEoX",
-        "title": "【MHRS】长枪 怪异LV.300将军镰蟹 3′58″31 TA"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smtrffbb4"
   },
   {
     "questType": "special",
@@ -4015,69 +3826,6 @@ window.MHRS_RECORDS = [
     "id": "smts1j02f"
   },
   {
-    "questType": "anomaly300",
-    "quest": null,
-    "exStar": "EX4",
-    "rule": "sanyou",
-    "monsterId": "m27",
-    "weaponId": "ig",
-    "timeMs": 275230,
-    "author": "Fallen_sky2",
-    "date": "2026-06-19",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1b7jB6AETX",
-        "title": "【MHRS】操虫棍 Lv300 迅龙 4分35秒 三无"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smts1lw50"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX4",
-    "rule": "sanyou",
-    "monsterId": "m27",
-    "weaponId": "ig",
-    "timeMs": 390610,
-    "author": "Fallen_sky2",
-    "date": "2026-08-28",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1cytN6dE5u",
-        "title": "【MHRS】操虫棍 特别探究迅龙 6分30秒 三无"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smts1m490"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX1",
-    "rule": "sanyou",
-    "monsterId": "m07",
-    "weaponId": "ls",
-    "timeMs": 299990,
-    "author": "简一乐",
-    "date": "2026-09-05",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1Skt16EEUb",
-        "title": "04：59 特探青熊兽 三无太刀 MHRS"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smts1py5f"
-  },
-  {
     "questType": "special",
     "quest": null,
     "exStar": "EX7",
@@ -4622,27 +4370,6 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "rmtsejlse"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX6",
-    "rule": "sanyou",
-    "monsterId": "m45",
-    "weaponId": "hh",
-    "timeMs": 541750,
-    "author": "清风不识-字-",
-    "date": "2026-02-16",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1NmZABcEuR",
-        "title": "【MHRS/雪豹杯】狩猎笛 特别探究炽妃蜘蛛 9分01秒 三无"
-      }
-    ],
-    "platform": "switch",
-    "note": "",
-    "id": "rmtsensp7"
   },
   {
     "questType": "special",
@@ -5595,27 +5322,6 @@ window.MHRS_RECORDS = [
     "exStar": "EX1",
     "rule": "ta",
     "monsterId": "m03",
-    "weaponId": "sa",
-    "timeMs": 320230,
-    "author": "堕落魂淡",
-    "date": "2024-08-16",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1ffeMeNE5a",
-        "title": "MHRS 斩斧 特别探究 毒狗龙王 TA（防具无炼化+属强5护石）"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmttl5kzk"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX1",
-    "rule": "ta",
-    "monsterId": "m03",
     "weaponId": "sns",
     "timeMs": 405110,
     "author": "yiopk",
@@ -6428,27 +6134,6 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtv01hs9"
-  },
-  {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX2",
-    "rule": "ta",
-    "monsterId": "m11",
-    "weaponId": "sa",
-    "timeMs": 479240,
-    "author": "堕落魂淡",
-    "date": "2024-08-04",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1ifvdeeEC1",
-        "title": "MHRS 斩斧 特别探究 河童蛙 TA（防具无炼化+属强5护石）"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtv02s5a"
   },
   {
     "questType": "special",
