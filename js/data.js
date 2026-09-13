@@ -5512,7 +5512,7 @@ window.MHRS_RECORDS = [
     "rule": "sanyou",
     "monsterId": "m34",
     "weaponId": "lance",
-    "timeMs": 456890,
+    "timeMs": 456990,
     "author": "Marshmollow",
     "date": "2026-05-23",
     "videos": [
