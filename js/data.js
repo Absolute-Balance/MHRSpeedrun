@@ -8822,5 +8822,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmtzu8cun"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "bow",
+    "timeMs": 249990,
+    "author": "抹茶摇摇薯条",
+    "date": "2026-08-03",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1BG3f6bEeT",
+        "title": "【MHRS】弓箭 特别探究：怪异克服钢龙 4'09\"00 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmtzudwpc"
   }
 ];
