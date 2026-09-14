@@ -9557,5 +9557,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu0ltpdh"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m12",
+    "weaponId": "bow",
+    "timeMs": 239270,
+    "author": "加钱居士觉得很润",
+    "date": "2023-12-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Gc411i7sR",
+        "title": "超特合集 二星 拉屎怪 3分59"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu0mogfz"
   }
 ];
