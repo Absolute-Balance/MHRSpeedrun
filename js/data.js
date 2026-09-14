@@ -9368,5 +9368,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu0kjxd3"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m36",
+    "weaponId": "gs",
+    "timeMs": 408860,
+    "author": "Zen10_2333",
+    "date": "2023-11-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1k94y1V7Qc",
+        "title": "【MHRS】优雅！大剑 特别探究: 雷狼龙 6分48秒 TA打法+怪异炼化/三无/四无/禁用随从盟友牵制捕获御龙爆桶火事场力"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu0koagl"
   }
 ];
