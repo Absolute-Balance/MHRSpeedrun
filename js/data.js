@@ -9515,5 +9515,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu0lhjna"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m40",
+    "weaponId": "cb",
+    "timeMs": 283980,
+    "author": "clipp3rs",
+    "date": "2025-08-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1A4YCz8EhU",
+        "title": "【MHRS】盾斧 特别探究：角龙 4'43''98 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu0ljbpo"
   }
 ];
