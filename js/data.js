@@ -9431,5 +9431,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu0ks1y9"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m40",
+    "weaponId": "ls",
+    "timeMs": 418380,
+    "author": "-晴晓音-",
+    "date": "2024-10-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV17sycYQEyt",
+        "title": "【MHRS】太刀 特别探究：角龙 6分58秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu0lc60b"
   }
 ];
