@@ -9578,5 +9578,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu0wijx9"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m52",
+    "weaponId": "bow",
+    "timeMs": 172370,
+    "author": "抹茶摇摇薯条",
+    "date": "2026-05-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1TJGe6rE7U",
+        "title": "【MHRS】lv300怪异克服霞龙 弓箭 2'52\"37 替hpg规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu1e76rt"
   }
 ];
