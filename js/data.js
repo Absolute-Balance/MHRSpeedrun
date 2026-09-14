@@ -9536,5 +9536,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu0ljbpo"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m62",
+    "weaponId": "bow",
+    "timeMs": 113590,
+    "author": "daisukiな欧尼酱",
+    "date": "2026-03-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1oWXLBiEay",
+        "title": "【MHRS/15前达成】Finale 弓箭 刻银穿弓 烈祸袭来：原初异音 烈祸原初爵银龙 153 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu0ltpdh"
   }
 ];
