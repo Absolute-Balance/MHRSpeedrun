@@ -9452,5 +9452,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu0lc60b"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m40",
+    "weaponId": "sns",
+    "timeMs": 442730,
+    "author": "阿呆耄",
+    "date": "2025-12-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1fQmcBpEiv",
+        "title": "【MHRS】片手剑 特别探究角龙 三无规则 7'22''73"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu0ldpl7"
   }
 ];
