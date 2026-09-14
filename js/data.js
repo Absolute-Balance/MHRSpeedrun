@@ -8952,27 +8952,6 @@ window.MHRS_RECORDS = [
   {
     "questType": "special",
     "quest": null,
-    "exStar": "EX3",
-    "rule": "sanyou",
-    "monsterId": "m23",
-    "weaponId": "db",
-    "timeMs": 332000,
-    "author": "BFeather7",
-    "date": "2026-09-13",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV17XYi6JEEW",
-        "title": "【MHRS】双刀 特别探究：蛮颚龙 三无规则 5'32\"00"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtzvjh4c"
-  },
-  {
-    "questType": "special",
-    "quest": null,
     "exStar": "EX4",
     "rule": "sanyou",
     "monsterId": "m26",
