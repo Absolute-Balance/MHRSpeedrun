@@ -9410,5 +9410,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu0kqbff"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m36",
+    "weaponId": "sns",
+    "timeMs": 564990,
+    "author": "咩咩羊袭",
+    "date": "2026-06-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Zvjm6rEua",
+        "title": "【MHRS/水芸杯】片手剑 特别探究：雷狼龙 三无 9分24秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu0ks1y9"
   }
 ];
