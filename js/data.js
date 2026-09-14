@@ -9494,5 +9494,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu0lfvq4"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m40",
+    "weaponId": "sa",
+    "timeMs": 595510,
+    "author": "堕落魂淡",
+    "date": "2024-03-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1SA4m1P7PM",
+        "title": "MHRS 斩斧 特别探究 角龙 TA（防具无炼化+属强5护石）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu0lhjna"
   }
 ];
