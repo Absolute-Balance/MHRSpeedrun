@@ -9389,5 +9389,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu0koagl"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m36",
+    "weaponId": "ls",
+    "timeMs": 408580,
+    "author": "0_regrets",
+    "date": "2023-07-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1sM4y147TN",
+        "title": "【MHRS】太刀 特别探究雷狼龙 6'48''58 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu0kqbff"
   }
 ];
