@@ -9326,5 +9326,26 @@ window.MHRS_RECORDS = [
     "platform": "switch",
     "note": "",
     "id": "smu01huj9"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m35",
+    "weaponId": "sns",
+    "timeMs": 477990,
+    "author": "咩咩羊袭",
+    "date": "2026-06-21",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1u5j46iEuz",
+        "title": "【MHRS】片手剑 特别探究：泡狐龙 7分57秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu0kele6"
   }
 ];
