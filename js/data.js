@@ -9347,5 +9347,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu0kele6"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m36",
+    "weaponId": "bow",
+    "timeMs": 328160,
+    "author": "菠萝泡温泉中",
+    "date": "2026-05-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ssdcBnEf2",
+        "title": "【MHRS/生庆】弓箭 特别探究雷狼龙 5'28\"16 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu0kjxd3"
   }
 ];
