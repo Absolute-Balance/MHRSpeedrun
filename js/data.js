@@ -9872,5 +9872,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu2obgsf"
+  },
+  {
+    "questType": "raging",
+    "quest": "q10",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m37",
+    "weaponId": "ls",
+    "timeMs": 241980,
+    "author": "毛啊毛毛毛",
+    "date": "2023-07-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV19m4y1L7EG",
+        "title": "【MHRS】太刀 烈祸冰狼龙 4分01秒 三无 极限炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu2oblak"
   }
 ];
