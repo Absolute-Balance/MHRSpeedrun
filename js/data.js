@@ -9914,5 +9914,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu2ods0r"
+  },
+  {
+    "questType": "raging",
+    "quest": "q09",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m25",
+    "weaponId": "lance",
+    "timeMs": 222010,
+    "author": "并非NTR",
+    "date": "2026-08-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1GEuM6vEmS",
+        "title": "【MHRS】长枪 烈祸刚缠兽 3'42''01 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu2vf8q0"
   }
 ];
