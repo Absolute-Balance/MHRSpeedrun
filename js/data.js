@@ -9851,5 +9851,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu2obc8v"
+  },
+  {
+    "questType": "raging",
+    "quest": "q10",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m37",
+    "weaponId": "gs",
+    "timeMs": 219770,
+    "author": "花露水企鹅",
+    "date": "2023-07-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1b8411m7Jw",
+        "title": "[MHRS] 大剑 烈祸冰狼龙 3：39 三无+怪异炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu2obgsf"
   }
 ];
