@@ -9746,5 +9746,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu264w4y"
+  },
+  {
+    "questType": "raging",
+    "quest": "q05",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m60",
+    "weaponId": "hbg",
+    "timeMs": 353830,
+    "author": "羊角棉苞",
+    "date": "2023-09-29",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Lu411u7qa",
+        "title": "烈祸岚龙 奏响毁灭的旋律 重弩5分53秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu267alc"
   }
 ];
