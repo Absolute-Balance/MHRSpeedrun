@@ -9662,5 +9662,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu1xqz0r"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m33",
+    "weaponId": "bow",
+    "timeMs": 234940,
+    "author": "_starcloud_",
+    "date": "2026-07-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1jvKP64EaX",
+        "title": "【MHR:S】弓箭 特别探究：火龙 三无 3:54"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu25orr7"
   }
 ];
