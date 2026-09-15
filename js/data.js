@@ -9704,5 +9704,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu25ttqf"
+  },
+  {
+    "questType": "raging",
+    "quest": "q05",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m60",
+    "weaponId": "db",
+    "timeMs": 278410,
+    "author": "罐装西打",
+    "date": "2025-12-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV14W2CBUExS",
+        "title": "【MHRS/新纪录】双刀 烈祸岚龙 三无规则 4分38秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu25vnvq"
   }
 ];
