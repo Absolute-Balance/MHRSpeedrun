@@ -9767,5 +9767,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu267alc"
+  },
+  {
+    "questType": "raging",
+    "quest": "q05",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m60",
+    "weaponId": "ls",
+    "timeMs": 391220,
+    "author": "邪恶的柠檬章鱼枪",
+    "date": "2026-06-15",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1LdJM6iEZy",
+        "title": "【MHRS/生庆】太刀 烈岚 6'31''22 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu26djem"
   }
 ];
