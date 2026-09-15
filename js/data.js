@@ -9830,5 +9830,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu2ob59t"
+  },
+  {
+    "questType": "raging",
+    "quest": "q10",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m37",
+    "weaponId": "bow",
+    "timeMs": 189990,
+    "author": "石乐志志志",
+    "date": "2026-09-09",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1aHY46UEWn",
+        "title": "【mhrs/妹妹杯】弓箭 烈祸冰狼龙 三无 3分09秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu2obc8v"
   }
 ];
