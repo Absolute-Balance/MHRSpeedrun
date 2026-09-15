@@ -9641,5 +9641,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu1xqux5"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m24",
+    "weaponId": "sa",
+    "timeMs": 359260,
+    "author": "东山三千代",
+    "date": "2026-09-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1m2Yy6sEp2",
+        "title": "【MHRS】 特别探究：怨虎龙 5分59秒 斩斧 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu1xqz0r"
   }
 ];
