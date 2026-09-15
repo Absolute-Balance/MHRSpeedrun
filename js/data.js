@@ -9788,5 +9788,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu26djem"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m50",
+    "weaponId": "sa",
+    "timeMs": 299990,
+    "author": "20guns_",
+    "date": "2026-09-15",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1D9eV6VEud",
+        "title": "【MHRS】斩斧 特别探究：激昂金狮子4分59秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu2cheoh"
   }
 ];
