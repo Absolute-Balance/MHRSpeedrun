@@ -9809,5 +9809,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu2cheoh"
+  },
+  {
+    "questType": "raging",
+    "quest": "q10",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m37",
+    "weaponId": "lance",
+    "timeMs": 309340,
+    "author": "无语的解",
+    "date": "2026-04-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1beDyBvECh",
+        "title": "【MHRS/Echo杯】长枪 烈祸袭来·冰狼长嚎！ 5分09秒34 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu2ob59t"
   }
 ];
