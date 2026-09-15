@@ -9725,5 +9725,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu25vnvq"
+  },
+  {
+    "questType": "raging",
+    "quest": "q05",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m60",
+    "weaponId": "gs",
+    "timeMs": 256130,
+    "author": "__Ciel___",
+    "date": "2026-02-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1N1fXBzEin",
+        "title": "【MHRS】大剑 烈祸袭来:奏响毁灭的旋律 4'16 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu264w4y"
   }
 ];
