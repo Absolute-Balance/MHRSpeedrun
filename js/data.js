@@ -9956,5 +9956,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu2vm06n"
+  },
+  {
+    "questType": "raging",
+    "quest": "q09",
+    "exStar": null,
+    "rule": "ta",
+    "monsterId": "m25",
+    "weaponId": "ig",
+    "timeMs": 228670,
+    "author": "坐井观月",
+    "date": "2026-06-19",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1NAjq69EnB",
+        "title": "【MHRS】祝你生日快乐——操虫棍TA规则烈祸刚缠兽3分48秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu2vwu3n"
   }
 ];
