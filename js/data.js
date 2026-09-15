@@ -9935,5 +9935,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu2vf8q0"
+  },
+  {
+    "questType": "raging",
+    "quest": "q09",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m25",
+    "weaponId": "ls",
+    "timeMs": 228990,
+    "author": "不玩太刀的太刀使",
+    "date": "2023-08-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1dV411g7Ac",
+        "title": "【MHRS】二战！烈祸刚缠兽 樱威太刀 3分48秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu2vm06n"
   }
 ];
