@@ -9683,5 +9683,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu25orr7"
+  },
+  {
+    "questType": "raging",
+    "quest": "q05",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m60",
+    "weaponId": "sa",
+    "timeMs": 333990,
+    "author": "心安安安w",
+    "date": "2026-05-19",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1d7LM6oEDx",
+        "title": "烈祸袭来 岚龙  5分33 三无斩斧"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu25ttqf"
   }
 ];
