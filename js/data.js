@@ -9599,5 +9599,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu1e76rt"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m53",
+    "weaponId": "sa",
+    "timeMs": 328480,
+    "author": "心安安安w",
+    "date": "2026-09-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Lne56REUT",
+        "title": "特别探究 怪异克服钢龙 5分28 三无斩斧"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu1xqqlh"
   }
 ];
