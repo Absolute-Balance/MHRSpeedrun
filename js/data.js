@@ -9977,5 +9977,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu2vwu3n"
+  },
+  {
+    "questType": "raging",
+    "quest": "q09",
+    "exStar": null,
+    "rule": "ta",
+    "monsterId": "m25",
+    "weaponId": "db",
+    "timeMs": 257990,
+    "author": "雨霖owo",
+    "date": "2024-10-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1iy2HYLE5s",
+        "title": "【MHRS】双刀 烈祸袭来·刚缠兽 4分17秒 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu2vx0fb"
   }
 ];
