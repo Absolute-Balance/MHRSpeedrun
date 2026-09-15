@@ -9893,5 +9893,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu2oblak"
+  },
+  {
+    "questType": "raging",
+    "quest": "q10",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m37",
+    "weaponId": "cb",
+    "timeMs": 213970,
+    "author": "郁_葱",
+    "date": "2026-07-02",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ccTz6hE5b",
+        "title": "【MHRS/PC/水芸杯】 盾斧 烈祸袭来：冰狼长嚎 冰狼龙 3'33''97 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu2ods0r"
   }
 ];
