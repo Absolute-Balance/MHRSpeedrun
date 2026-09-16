@@ -10124,5 +10124,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu45rx4b"
+  },
+  {
+    "questType": "raging",
+    "quest": "q01",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m58",
+    "weaponId": "hammer",
+    "timeMs": 172740,
+    "author": "英俊潇洒李田所",
+    "date": "2025-11-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1AB1EBuEM7",
+        "title": "【MHRS】天地再出世 大锤 烈祸月迅龙 2′52″74 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu45tl5r"
   }
 ];
