@@ -9998,5 +9998,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu2vx0fb"
+  },
+  {
+    "questType": "raging",
+    "quest": "q01",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m58",
+    "weaponId": "lbg",
+    "timeMs": 86990,
+    "author": "Aitalia",
+    "date": "2023-03-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1hT411a7eq",
+        "title": "MHRS 曙光 三无/ta＋怪异炼成 属贯轻弩 烈祸来袭 朦胧之影 没有难度的月迅龙 1:26"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu45q7wm"
   }
 ];
