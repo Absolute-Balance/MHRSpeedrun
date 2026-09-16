@@ -10397,5 +10397,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu46ovmw"
+  },
+  {
+    "questType": "raging",
+    "quest": "q02",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m59",
+    "weaponId": "bow",
+    "timeMs": 146030,
+    "author": "_starcloud_",
+    "date": "2026-05-29",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1UDV46FEUs",
+        "title": "【MHR:Sx明日方舟】梓兰 烈祸袭来：舞于火海的浩劫 三无 2:26"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu46tueq"
   }
 ];
