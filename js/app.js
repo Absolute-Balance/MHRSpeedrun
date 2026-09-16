@@ -16,6 +16,16 @@
   var MONSTER_ICON = CFG.monsterIconDir + '/';
   var WEAPON_ICON = CFG.weaponIconDir + '/';
   var PAGE_SIZE = CFG.axisPageSize || 10;
+  /* 按屏幕宽度决定每页显示多少列（仅窄屏变化，PC 仍用配置值） */
+  function pageSize() {
+    try {
+      if (window.matchMedia) {
+        if (window.matchMedia('(max-width: 640px)').matches) return 5;
+        if (window.matchMedia('(max-width: 900px)').matches) return 7;
+      }
+    } catch (e) { }
+    return PAGE_SIZE;
+  }
 
   var state = {
     questType: 'raging',
@@ -517,9 +527,10 @@
       return;
     }
 
-    var pages = Math.max(1, Math.ceil(axis.length / PAGE_SIZE));
+    var PS = pageSize();
+    var pages = Math.max(1, Math.ceil(axis.length / PS));
     if (state.page > pages) state.page = pages;
-    var slice = axis.slice((state.page - 1) * PAGE_SIZE, state.page * PAGE_SIZE);
+    var slice = axis.slice((state.page - 1) * PS, state.page * PS);
     var n = slice.length;
 
     prompt.classList.add('hidden');
@@ -535,7 +546,7 @@
         (state.page <= 1 ? ' disabled' : '') + '>‹</button>';
       var next = '<button type="button" class="btn btn-mini pager-btn" data-pg="' + (state.page + 1) + '"' +
         (state.page >= pages ? ' disabled' : '') + '>›</button>';
-      pager.innerHTML = prev + '<span class="pager-info"> ' + state.page + ' / ' + pages + ' 页（每页 ' + PAGE_SIZE + ' 个）</span>' + next;
+      pager.innerHTML = prev + '<span class="pager-info"> ' + state.page + ' / ' + pages + ' 页（每页 ' + PS + ' 个）</span>' + next;
       pager.querySelectorAll('.pager-btn').forEach(function (b) {
         b.addEventListener('click', function () {
           if (b.disabled) return;
@@ -575,7 +586,7 @@
       });
     });
     grid.innerHTML = html;
-    grid.style.gridTemplateColumns = '58px repeat(' + n + ', minmax(0, 1fr))';
+    grid.style.gridTemplateColumns = 'var(--mx-lead, 58px) repeat(' + n + ', minmax(var(--mx-col-min, 84px), 1fr))';
 
     grid.querySelectorAll('.mx-head').forEach(function (el) {
       el.addEventListener('click', function () {
@@ -2111,6 +2122,18 @@
     setupSubmitReview();
 
     update();
+
+    /* 屏幕断点变化（横竖屏切换 / 窗口缩放）：矩阵列宽与每页列数自动重排 */
+    if (window.matchMedia) {
+      var onBp = function () { if (state.view === 'matrix') update(); };
+      ['(max-width: 640px)', '(max-width: 900px)'].forEach(function (q) {
+        try {
+          var mq = window.matchMedia(q);
+          if (mq.addEventListener) mq.addEventListener('change', onBp);
+          else if (mq.addListener) mq.addListener(onBp);
+        } catch (e) { }
+      });
+    }
 
     /* 打开网站自动弹出收录规则（本会话内手动关闭后不再自动弹，刷新页面后仍会弹） */
     var rulesSeen = false;
