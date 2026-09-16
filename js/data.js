@@ -10082,5 +10082,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu45qsgi"
+  },
+  {
+    "questType": "raging",
+    "quest": "q01",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m58",
+    "weaponId": "sa",
+    "timeMs": 178990,
+    "author": "-Cin",
+    "date": "2023-05-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Vo4y1M7Un",
+        "title": "【MHRS】斩斧烈祸月迅龙 2：58三无 附文字解说【GDX】"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu45rg06"
   }
 ];
