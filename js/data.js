@@ -10229,5 +10229,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu4682ej"
+  },
+  {
+    "questType": "raging",
+    "quest": "q02",
+    "exStar": null,
+    "rule": "ta",
+    "monsterId": "m59",
+    "weaponId": "gs",
+    "timeMs": 154540,
+    "author": "__Ciel___",
+    "date": "2026-06-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1b17f6tEn2",
+        "title": "【MHRS/第二弹】随变大剑vs烈祸焰狐龙 TA规则 2'34"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu469k64"
   }
 ];
