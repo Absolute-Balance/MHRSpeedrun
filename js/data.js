@@ -10145,5 +10145,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu45tl5r"
+  },
+  {
+    "questType": "raging",
+    "quest": "q01",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m58",
+    "weaponId": "db",
+    "timeMs": 122090,
+    "author": "lost-star-",
+    "date": "2023-06-13",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ku4y1o7BN",
+        "title": "双刀 烈祸月迅 2′02″09 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu45trzu"
   }
 ];
