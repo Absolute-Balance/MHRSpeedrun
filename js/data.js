@@ -10019,5 +10019,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu45q7wm"
+  },
+  {
+    "questType": "raging",
+    "quest": "q01",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m58",
+    "weaponId": "hbg",
+    "timeMs": 178550,
+    "author": "KEPEH3iKOB",
+    "date": "2023-02-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1AL411Z7F8",
+        "title": "L’artiste est mort【MHRS/疾风猎团】新时代勇气重弩 通3篇 M★6烈祸袭来: 朦胧之影 2'58''55 三无规则（无变色虫/环境陷阱）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu45qhb8"
   }
 ];
