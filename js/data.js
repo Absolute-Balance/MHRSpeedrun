@@ -10187,5 +10187,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu45txfi"
+  },
+  {
+    "questType": "raging",
+    "quest": "q01",
+    "exStar": null,
+    "rule": "ta",
+    "monsterId": "m58",
+    "weaponId": "gs",
+    "timeMs": 200130,
+    "author": "__Ciel___",
+    "date": "2026-09-02",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1yotm62EHa",
+        "title": "TA烈祸月迅 320"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu45u2hd"
   }
 ];
