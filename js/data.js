@@ -10292,5 +10292,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu46dso0"
+  },
+  {
+    "questType": "raging",
+    "quest": "q02",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m59",
+    "weaponId": "lbg",
+    "timeMs": 95990,
+    "author": "Aitalia",
+    "date": "2023-03-09",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1uv4y187Ke",
+        "title": "MHRS 曙光 三无/ta＋怪异炼成 属贯轻弩 烈祸来袭 舞于火海的浩劫 焰狐 1:35"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu46iy2e"
   }
 ];
