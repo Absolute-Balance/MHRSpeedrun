@@ -10334,5 +10334,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu46kp8p"
+  },
+  {
+    "questType": "raging",
+    "quest": "q02",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m59",
+    "weaponId": "sa",
+    "timeMs": 192870,
+    "author": "K----J",
+    "date": "2023-03-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1yL411D7vM",
+        "title": "【龙气打磨锐】斩斧 三无规则 3'12\"87 高难度焰狐龙 烈祸来袭 MHRS"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu46m2fc"
   }
 ];
