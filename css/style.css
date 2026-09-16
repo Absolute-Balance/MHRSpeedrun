@@ -534,21 +534,23 @@ html[data-theme="light"] .pa:hover { color: var(--accent-hi); }
 /* ---------- 响应式 ---------- */
 @media (max-width: 900px) {
   .matrix { min-width: 780px; --mx-col-min: 78px; --mx-lead: 50px; }
+  /* 怪物/任务名不换行：保证 7 个字在一行内显示（超长时才省略号兜底） */
+  .mx-head .mxlabel { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .mv-headrow, .mv-row { grid-template-columns: 40px 110px 130px 1fr 18px; }
   .mv-row .mv-date, .mv-headrow .h-date { display: none; }
   .hrow { grid-template-columns: 120px 1fr 90px 20px; }
   .pv-headrow, .prow { grid-template-columns: 86px 80px 1fr 110px 52px 18px; }
   .pv-headrow .h-m, .prow .p-m, .pv-headrow .h-q, .prow .p-q { display: none; }
 }
-/* 手机：列最小宽度 + 更紧凑的间距与字号（PC 不受影响） */
+/* 手机：4 列 + 更宽的列，保证 7 个字一行放得下（PC 不受影响） */
 @media (max-width: 640px) {
-  .matrix { min-width: 0; gap: 4px; padding: 8px; --mx-col-min: 72px; --mx-lead: 44px; }
+  .matrix { min-width: 0; gap: 4px; padding: 8px; --mx-col-min: 80px; --mx-lead: 44px; }
   .mx-cell { padding: 4px 5px; min-height: 50px; }
   .mx-cell .line1 .tm { font-size: 13.5px; }
   .mx-cell .line2 { font-size: 9.5px; gap: 4px; }
   .mx-head { padding: 4px 3px 4px; }
   .mx-head img { width: 32px; height: 32px; }
-  .mx-head .mxlabel { font-size: 9.5px; }
+  .mx-head .mxlabel { font-size: 10px; }
   .mx-head .ex-badge { font-size: 9px; padding: 0 4px; line-height: 14px; }
   .mx-weapon { padding: 3px; }
   .mx-weapon img { width: 22px; height: 22px; }
