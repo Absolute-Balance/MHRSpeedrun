@@ -10250,5 +10250,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu469k64"
+  },
+  {
+    "questType": "raging",
+    "quest": "q02",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m59",
+    "weaponId": "ls",
+    "timeMs": 234060,
+    "author": "Asteria_星芒",
+    "date": "2026-02-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV15QZ4B1Eq3",
+        "title": "【MHRS/ECHO杯】樱威太刀 烈祸焰狐龙 3'54''06 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu46c8ho"
   }
 ];
