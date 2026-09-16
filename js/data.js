@@ -9565,7 +9565,7 @@ window.MHRS_RECORDS = [
     "rule": "sanyou",
     "monsterId": "m23",
     "weaponId": "db",
-    "timeMs": 303810,
+    "timeMs": 299720,
     "author": "BFeather7",
     "date": "2026-09-14",
     "videos": [
