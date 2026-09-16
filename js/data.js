@@ -10166,5 +10166,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu45trzu"
+  },
+  {
+    "questType": "raging",
+    "quest": "q01",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m58",
+    "weaponId": "ls",
+    "timeMs": 176750,
+    "author": "0_regrets",
+    "date": "2023-05-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1im4y1t73j",
+        "title": "【MHRS】太刀 烈祸月迅龙 2'56''75 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu45txfi"
   }
 ];
