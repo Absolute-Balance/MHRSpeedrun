@@ -10355,5 +10355,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu46m2fc"
+  },
+  {
+    "questType": "raging",
+    "quest": "q02",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m59",
+    "weaponId": "cb",
+    "timeMs": 173570,
+    "author": "K----J",
+    "date": "2023-03-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Po4y1q7Zu",
+        "title": "【两分达成!】盾斧 三无规则 2'53\"57 高难度焰狐龙 烈祸袭来 MHRS"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu46msep"
   }
 ];
