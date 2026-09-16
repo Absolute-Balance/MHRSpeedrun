@@ -10376,5 +10376,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu46msep"
+  },
+  {
+    "questType": "raging",
+    "quest": "q02",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m59",
+    "weaponId": "ig",
+    "timeMs": 228560,
+    "author": "糖と咖啡因",
+    "date": "2026-09-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1fXYb6NEdC",
+        "title": "【MHRS】烈祸袭来：舞于火海的浩劫 操虫棍 三无3'48"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu46ovmw"
   }
 ];
