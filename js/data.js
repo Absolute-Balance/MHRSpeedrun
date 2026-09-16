@@ -10208,5 +10208,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu45u2hd"
+  },
+  {
+    "questType": "raging",
+    "quest": "q02",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m59",
+    "weaponId": "sns",
+    "timeMs": 225350,
+    "author": "普通人阿懒",
+    "date": "2023-03-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1H84y137pX",
+        "title": "【MHRS/PC】三无片手剑 烈祸来袭 焰狐 3分45秒35 纯真无怪异防具（无牵制无随从无御龙等）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu4682ej"
   }
 ];
