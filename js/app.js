@@ -17,11 +17,11 @@
   var WEAPON_ICON = CFG.weaponIconDir + '/';
   var PAGE_SIZE = CFG.axisPageSize || 10;
   /* 按屏幕宽度决定每页显示多少列（仅窄屏变化，PC 仍用配置值）
-   * 手机 4 列：保证 7 个字的怪物/任务名能在一行内显示 */
+   * 手机 3 列：格子更宽，7 个字一行显示且不会溢出外层圆角框 */
   function pageSize() {
     try {
       if (window.matchMedia) {
-        if (window.matchMedia('(max-width: 640px)').matches) return 4;
+        if (window.matchMedia('(max-width: 640px)').matches) return 3;
         if (window.matchMedia('(max-width: 900px)').matches) return 7;
       }
     } catch (e) { }
