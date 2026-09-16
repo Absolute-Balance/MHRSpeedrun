@@ -10061,5 +10061,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu45qnj8"
+  },
+  {
+    "questType": "raging",
+    "quest": "q01",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m58",
+    "weaponId": "cb",
+    "timeMs": 116010,
+    "author": "clipp3rs",
+    "date": "2024-06-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1rx4y147pE",
+        "title": "【MHRS】超解盾斧 M6★烈祸袭来：朦胧之影 1'56''01 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu45qsgi"
   }
 ];
