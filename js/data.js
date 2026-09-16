@@ -10313,5 +10313,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu46iy2e"
+  },
+  {
+    "questType": "raging",
+    "quest": "q02",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m59",
+    "weaponId": "lance",
+    "timeMs": 297990,
+    "author": "咩咩羊袭",
+    "date": "2026-08-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1jwtH6bEG2",
+        "title": "【MHRS/真·随便玩玩】长枪 烈祸袭来：舞于火海的浩劫 焰狐龙 4分57秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu46kp8p"
   }
 ];
