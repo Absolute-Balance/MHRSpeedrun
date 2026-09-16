@@ -10103,5 +10103,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu45rg06"
+  },
+  {
+    "questType": "raging",
+    "quest": "q01",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m58",
+    "weaponId": "lance",
+    "timeMs": 216080,
+    "author": "三明治OAO",
+    "date": "2026-08-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1XP8r61E2h",
+        "title": "【MHRS/生庆】长枪 烈祸袭来：朦胧之影 3分36秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu45rx4b"
   }
 ];
