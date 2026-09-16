@@ -10040,5 +10040,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu45qhb8"
+  },
+  {
+    "questType": "raging",
+    "quest": "q01",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m58",
+    "weaponId": "ig",
+    "timeMs": 219990,
+    "author": "fxwof",
+    "date": "2023-03-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1wM411g7SU",
+        "title": "[MHRS] M6 烈祸来袭：朦胧之影 高难月迅龙 操虫棍 三无 3′39″"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu45qnj8"
   }
 ];
