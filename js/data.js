@@ -10922,5 +10922,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5ppvc3"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m15",
+    "weaponId": "sns",
+    "timeMs": 449990,
+    "author": "咩咩羊袭",
+    "date": "2026-05-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1roGU6rEjM",
+        "title": "【MHRS/不打小孩】片手剑 Lv300岩龙 7分29秒 三无规则 石！！！"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5pq2ks"
   }
 ];
