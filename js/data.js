@@ -10460,5 +10460,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5a73mp"
+  },
+  {
+    "questType": "raging",
+    "quest": "q03",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m48",
+    "weaponId": "cb",
+    "timeMs": 154070,
+    "author": "K----J",
+    "date": "2023-06-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Nh4y1d7mn",
+        "title": "【MHRS】盾斧 三无规则 高难度棘茶龙 2'34\"07 烈祸袭来：传奇一击"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5a79i5"
   }
 ];
