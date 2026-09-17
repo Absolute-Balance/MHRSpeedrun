@@ -10733,5 +10733,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5brsp8"
+  },
+  {
+    "questType": "raging",
+    "quest": "q07",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m61",
+    "weaponId": "gl",
+    "timeMs": 461990,
+    "author": "白炎妖光",
+    "date": "2026-08-12",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV19Xu66hEwj",
+        "title": "【生庆】烈祸冰呪 逆推铳枪 三无741"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5brxco"
   }
 ];
