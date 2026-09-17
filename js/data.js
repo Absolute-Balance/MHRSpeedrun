@@ -10523,5 +10523,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5a7ifc"
+  },
+  {
+    "questType": "raging",
+    "quest": "q04",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m44",
+    "weaponId": "bow",
+    "timeMs": 101460,
+    "author": "小林小林小脑瓜",
+    "date": "2023-05-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1QP411y7vb",
+        "title": "【MHRS/PC】弓箭 烈祸袭来：狮子迷人的肉体 金狮子 1′41″46 TA+怪异炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5am2jj"
   }
 ];
