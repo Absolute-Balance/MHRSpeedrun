@@ -10817,5 +10817,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu5izq9s"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "ta",
+    "monsterId": "m62",
+    "weaponId": "ig",
+    "timeMs": 283990,
+    "author": "坐井观月",
+    "date": "2023-11-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1jC4y1J72c",
+        "title": "【MHRS】操虫极意！颠覆舒适区的新纪录——无炼化防具非顶配护石操虫棍TA规则烈祸原初爵银龙4分43"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu5lgbew"
   }
 ];
