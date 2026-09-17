@@ -11090,5 +11090,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5pv1p5"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "ta",
+    "monsterId": "m53",
+    "weaponId": "gl",
+    "timeMs": 394460,
+    "author": "恰鱼鱼的溯汐雨",
+    "date": "2024-02-13",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Ap421d7pR",
+        "title": "帅唐二象性 铳枪 TA 300级怪异克服钢龙 6'34''46"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5pwvxz"
   }
 ];
