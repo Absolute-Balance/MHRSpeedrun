@@ -10901,5 +10901,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5ppi2f"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m27",
+    "weaponId": "sns",
+    "timeMs": 315990,
+    "author": "咩咩羊袭",
+    "date": "2026-08-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1118v6WEsr",
+        "title": "【MHRS/唐片】片手剑 Lv300迅龙 5分15秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5ppvc3"
   }
 ];
