@@ -10838,5 +10838,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu5lgbew"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "ta",
+    "monsterId": "m62",
+    "weaponId": "ig",
+    "timeMs": 247990,
+    "author": "坐井观月",
+    "date": "2025-02-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV11jAXeXE5t",
+        "title": "【MHRS】再见了所有的曙光虫棍——操虫棍TA规则原初爵银龙4分07"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu5lhqz0"
   }
 ];
