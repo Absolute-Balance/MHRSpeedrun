@@ -10943,5 +10943,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5pq2ks"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m14",
+    "weaponId": "sns",
+    "timeMs": 305990,
+    "author": "咩咩羊袭",
+    "date": "2026-04-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ddosBgEoP",
+        "title": "【MHRS】片手剑  Lv300伞鸟 5分05秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5pqadb"
   }
 ];
