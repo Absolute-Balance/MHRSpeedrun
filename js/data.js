@@ -10586,5 +10586,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5au400"
+  },
+  {
+    "questType": "raging",
+    "quest": "q07",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m61",
+    "weaponId": "db",
+    "timeMs": 149220,
+    "author": "拟人态废柴",
+    "date": "2026-03-03",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV17NPFz9ETf",
+        "title": "【MHRS/二前达成】溶翁双剑几何 烈祸袭来：雪花纷飞 冰呪龙 2'29\"22 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5bq4v5"
   }
 ];
