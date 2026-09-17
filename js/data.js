@@ -10607,5 +10607,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5bq4v5"
+  },
+  {
+    "questType": "raging",
+    "quest": "q07",
+    "exStar": null,
+    "rule": "ta",
+    "monsterId": "m61",
+    "weaponId": "ig",
+    "timeMs": 312990,
+    "author": "fxwof",
+    "date": "2023-11-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1mv411c7d7",
+        "title": "【MHRS】操虫棍 烈祸来袭：雪花纷飞 5分12秒 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5br581"
   }
 ];
