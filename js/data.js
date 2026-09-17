@@ -2424,27 +2424,6 @@ window.MHRS_RECORDS = [
     "exStar": null,
     "rule": "sanyou",
     "monsterId": "m62",
-    "weaponId": "ig",
-    "timeMs": 225990,
-    "author": "糖と咖啡因",
-    "date": "2025-11-04",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1X11kBQEPg",
-        "title": "【MHRS/烈祸袭来，原初异音/替a规则】虫棍三无，3分45秒"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmtrbgajo"
-  },
-  {
-    "questType": "raging",
-    "quest": "q08",
-    "exStar": null,
-    "rule": "sanyou",
-    "monsterId": "m62",
     "weaponId": "lbg",
     "timeMs": 210990,
     "author": "墓墓OVO",
