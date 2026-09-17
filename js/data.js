@@ -10775,5 +10775,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5bs2cr"
+  },
+  {
+    "questType": "raging",
+    "quest": "q07",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m61",
+    "weaponId": "gs",
+    "timeMs": 285810,
+    "author": "鬼畜茶走",
+    "date": "2025-03-09",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1qJR4YjEwZ",
+        "title": "[MHRS] 大剑 属性流斩 烈祸袭来：雪花纷飞 冰咒龙 TA+怪异炼化 4'45''81"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5bs6yz"
   }
 ];
