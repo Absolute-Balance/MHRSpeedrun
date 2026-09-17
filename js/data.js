@@ -11069,5 +11069,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5purl3"
+  },
+  {
+    "questType": "raging",
+    "quest": "q02",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m59",
+    "weaponId": "ls",
+    "timeMs": 202430,
+    "author": "msmlr",
+    "date": "2023-04-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1r84y1T7ER",
+        "title": "【MHRS】寒气樱威太刀 高难焰狐 3分22 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5pv1p5"
   }
 ];
