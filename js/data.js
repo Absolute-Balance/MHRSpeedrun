@@ -10565,5 +10565,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5atz9x"
+  },
+  {
+    "questType": "raging",
+    "quest": "q06",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m36",
+    "weaponId": "bow",
+    "timeMs": 140470,
+    "author": "小林小林小脑瓜",
+    "date": "2023-12-19",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1D94y1A7xv",
+        "title": "【MHRS/PC】弓箭 烈祸袭来：超速电导 雷狼龙 2′20″47 TA+极限炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5au400"
   }
 ];
