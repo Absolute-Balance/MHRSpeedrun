@@ -11111,5 +11111,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5pwvxz"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "ta",
+    "monsterId": "m56",
+    "weaponId": "gl",
+    "timeMs": 467690,
+    "author": "征宅真宅争宅真宅",
+    "date": "2025-01-03",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Kz61YLE2o",
+        "title": "你的头会找到我的枪！铳枪 Lv300怪异克服天廻龙 TA 7'47'69。"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5py4s3"
   }
 ];
