@@ -10712,5 +10712,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5brocq"
+  },
+  {
+    "questType": "raging",
+    "quest": "q07",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m61",
+    "weaponId": "sa",
+    "timeMs": 231990,
+    "author": "心安安安w",
+    "date": "2026-06-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1m1jX6gEyd",
+        "title": "斩斧 烈祸冰呪龙 3分51 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5brsp8"
   }
 ];
