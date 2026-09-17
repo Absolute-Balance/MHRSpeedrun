@@ -10439,5 +10439,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu53z69s"
+  },
+  {
+    "questType": "raging",
+    "quest": "q03",
+    "exStar": null,
+    "rule": "ta",
+    "monsterId": "m48",
+    "weaponId": "ig",
+    "timeMs": 195990,
+    "author": "坐井观月",
+    "date": "2024-03-02",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1zC411p79T",
+        "title": "【MHRS】完全镇压，无法还手——操虫棍烈祸棘茶龙TA规则3分15"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5a73mp"
   }
 ];
