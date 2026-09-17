@@ -11132,5 +11132,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5py4s3"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "ta",
+    "monsterId": "m55",
+    "weaponId": "gl",
+    "timeMs": 364910,
+    "author": "征宅真宅争宅真宅",
+    "date": "2024-12-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV157CTYoE4j",
+        "title": "轮回天界，堕入冥府！Lv300混沌黑蚀龙 TA规则 铳枪 6分04秒。"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5pzh04"
   }
 ];
