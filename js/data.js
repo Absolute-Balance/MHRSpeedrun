@@ -10754,5 +10754,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5brxco"
+  },
+  {
+    "questType": "raging",
+    "quest": "q07",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m61",
+    "weaponId": "hammer",
+    "timeMs": 337990,
+    "author": "白炎妖光",
+    "date": "2026-08-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1YF8r6JEr7",
+        "title": "【生庆】烈祸冰呪 大锤三无 537"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5bs2cr"
   }
 ];
