@@ -11006,5 +11006,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5pr6dm"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m09",
+    "weaponId": "sns",
+    "timeMs": 309990,
+    "author": "咩咩羊袭",
+    "date": "2026-08-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1E2gN6kEjC",
+        "title": "【MHRS】片手剑 Lv300天狗兽 5分09秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5prign"
   }
 ];
