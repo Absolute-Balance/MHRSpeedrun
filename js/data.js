@@ -10859,5 +10859,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5plddf"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "ta",
+    "monsterId": "m31",
+    "weaponId": "gl",
+    "timeMs": 375680,
+    "author": "杞柳木昔_",
+    "date": "2026-09-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV16XYM6yEiG",
+        "title": "【MHRS】逆推铳枪 Lv300冰人鱼龙 ta6'15"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5pnbtf"
   }
 ];
