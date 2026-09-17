@@ -10796,5 +10796,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5bs6yz"
+  },
+  {
+    "questType": "raging",
+    "quest": "q07",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m61",
+    "weaponId": "bow",
+    "timeMs": 170990,
+    "author": "白炎妖光",
+    "date": "2026-09-09",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1dxb76JE3n",
+        "title": "【生庆】烈祸冰呪 扩散弓 三无250"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu5hiq7k"
   }
 ];
