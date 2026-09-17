@@ -11027,5 +11027,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5prign"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m02",
+    "weaponId": "sns",
+    "timeMs": 164990,
+    "author": "咩咩羊袭",
+    "date": "2026-05-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV16gRqBkEdh",
+        "title": "【MHRS】片手剑 Lv300眠狗龙王 2分44秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5pukrw"
   }
 ];
