@@ -10880,5 +10880,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5pnbtf"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m62",
+    "weaponId": "gl",
+    "timeMs": 279150,
+    "author": "杞柳木昔_",
+    "date": "2026-06-02",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1XKV66qErt",
+        "title": "【MHRS/补生庆】逆推铳枪 烈祸原初爵银龙 三无4'39"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5ppi2f"
   }
 ];
