@@ -10691,5 +10691,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5brjou"
+  },
+  {
+    "questType": "raging",
+    "quest": "q07",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m61",
+    "weaponId": "cb",
+    "timeMs": 168430,
+    "author": "郁_葱",
+    "date": "2025-01-02",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1fP6rYXE1U",
+        "title": "【MHRS/PC】 盾斧 烈祸袭来：雪花纷飞 冰呪龙 2'48''43 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5brocq"
   }
 ];
