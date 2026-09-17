@@ -10670,5 +10670,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5brf2v"
+  },
+  {
+    "questType": "raging",
+    "quest": "q07",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m61",
+    "weaponId": "sns",
+    "timeMs": 318990,
+    "author": "白炎妖光",
+    "date": "2026-09-13",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV19SYR6AEtv",
+        "title": "【生庆/五前】烈祸冰呪 三无片手 518"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5brjou"
   }
 ];
