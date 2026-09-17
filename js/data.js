@@ -10628,5 +10628,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5br581"
+  },
+  {
+    "questType": "raging",
+    "quest": "q07",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m61",
+    "weaponId": "hbg",
+    "timeMs": 268990,
+    "author": "白炎妖光",
+    "date": "2025-09-20",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV125WLzaEEk",
+        "title": "【MHRS/四前达成】烈祸冰呪 散弹重弩 三无 4分28秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5brae9"
   }
 ];
