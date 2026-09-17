@@ -10502,5 +10502,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5a7ecv"
+  },
+  {
+    "questType": "raging",
+    "quest": "q03",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m48",
+    "weaponId": "ls",
+    "timeMs": 183050,
+    "author": "0_regrets",
+    "date": "2023-06-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1wL411i7Ye",
+        "title": "【MHRS】太刀 烈祸棘茶龙 3'03''05 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5a7ifc"
   }
 ];
