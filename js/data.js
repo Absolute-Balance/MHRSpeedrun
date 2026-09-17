@@ -10985,5 +10985,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5pqwno"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m11",
+    "weaponId": "sns",
+    "timeMs": 344990,
+    "author": "咩咩羊袭",
+    "date": "2026-05-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1pqVW6GEHr",
+        "title": "【MHRS/天牢局】片手剑 Lv300河童蛙 5分44秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5pr6dm"
   }
 ];
