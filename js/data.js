@@ -10489,27 +10489,6 @@ window.MHRS_RECORDS = [
     "rule": "sanyou",
     "monsterId": "m48",
     "weaponId": "ls",
-    "timeMs": 107790,
-    "author": "拟人态废柴",
-    "date": "2026-01-09",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1AwrTB8EHf",
-        "title": "【MHRS】泥=细切 烈祸袭来：传奇一击 棘茶龙 1'47\"79 三无规则"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "smu5a7ecv"
-  },
-  {
-    "questType": "raging",
-    "quest": "q03",
-    "exStar": null,
-    "rule": "sanyou",
-    "monsterId": "m48",
-    "weaponId": "ls",
     "timeMs": 183050,
     "author": "0_regrets",
     "date": "2023-06-05",
