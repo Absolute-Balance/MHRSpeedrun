@@ -10649,5 +10649,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu5brae9"
+  },
+  {
+    "questType": "raging",
+    "quest": "q07",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m61",
+    "weaponId": "lbg",
+    "timeMs": 144990,
+    "author": "白炎妖光",
+    "date": "2026-08-02",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1153d68EcC",
+        "title": "【生庆/三无二前】烈祸冰呪 火贯轻弩 224"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu5brf2v"
   }
 ];
