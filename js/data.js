@@ -11342,5 +11342,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu6ao93f"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m39",
+    "weaponId": "ig",
+    "timeMs": 345990,
+    "author": "坐井观月",
+    "date": "2024-06-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1bT421a7VX",
+        "title": "【MHRS】粉尘！爽！——粉尘虫操虫棍TA规则300轰龙5分45"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu6aropr"
   }
 ];
