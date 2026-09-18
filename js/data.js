@@ -11447,5 +11447,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu6c8qbp"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m11",
+    "weaponId": "sa",
+    "timeMs": 316690,
+    "author": "BFeather7",
+    "date": "2026-09-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Lre16rEtm",
+        "title": "【MHRS】斩斧 特别探究：河童蛙 三无规则 5'16\"69"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu6s8ux1"
   }
 ];
