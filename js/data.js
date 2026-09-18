@@ -11426,5 +11426,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu6aw4qo"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m27",
+    "weaponId": "bow",
+    "timeMs": 230480,
+    "author": "菠萝泡温泉中",
+    "date": "2026-09-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1hNe36METL",
+        "title": "【MHRS/妹妹杯】弓箭 特别探究迅龙 3'50\"48 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu6byxdh"
   }
 ];
