@@ -11174,5 +11174,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu5r7uya"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "ta",
+    "monsterId": "m25",
+    "weaponId": "ig",
+    "timeMs": 339990,
+    "author": "坐井观月",
+    "date": "2026-06-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ZrE86hEkf",
+        "title": "【MHRS】公式速成time！——操虫棍TA规则300刚缠兽5分39秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu6ahysc"
   }
 ];
