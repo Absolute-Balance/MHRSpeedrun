@@ -11279,5 +11279,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu6ansfq"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "ta",
+    "monsterId": "m54",
+    "weaponId": "ig",
+    "timeMs": 318990,
+    "author": "坐井观月",
+    "date": "2025-12-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1AdBLByEQR",
+        "title": "【MHRS】爆爆博弈——操虫棍ta规则300克服炎王龙5分18秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu6any16"
   }
 ];
