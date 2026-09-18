@@ -11321,5 +11321,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu6ao2k3"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m40",
+    "weaponId": "ig",
+    "timeMs": 299990,
+    "author": "坐井观月",
+    "date": "2026-02-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1AWZRBBEke",
+        "title": "【MHRS】爆虫乱舞·改——操虫棍TA规则300角龙4分59秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu6ao93f"
   }
 ];
