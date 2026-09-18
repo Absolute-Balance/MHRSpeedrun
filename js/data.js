@@ -11384,5 +11384,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu6arsyj"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m36",
+    "weaponId": "ig",
+    "timeMs": 446620,
+    "author": "坐井观月",
+    "date": "2024-03-14",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1pi421d7ob",
+        "title": "【MHRS】审片失误差点删了——操虫棍TA规则怪异300雷狼龙7分26"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu6auf8p"
   }
 ];
