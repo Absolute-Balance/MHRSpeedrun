@@ -11363,5 +11363,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu6aropr"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "ta",
+    "monsterId": "m41",
+    "weaponId": "ig",
+    "timeMs": 315990,
+    "author": "坐井观月",
+    "date": "2024-08-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1LU411S7cg",
+        "title": "【MHRS】狂化1的疯狂挣扎——操虫棍TA规则棘龙5分15"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu6arsyj"
   }
 ];
