@@ -11447,5 +11447,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu6byxdh"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m30",
+    "weaponId": "bow",
+    "timeMs": 355660,
+    "author": "鬼畜茶走",
+    "date": "2026-09-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1cgeG69EFk",
+        "title": "【mhrs/妹妹杯】弓箭 特别探究：雪鬼兽 三无 5分55秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu6c8qbp"
   }
 ];
