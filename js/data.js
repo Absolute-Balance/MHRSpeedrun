@@ -11405,5 +11405,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu6auf8p"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "ta",
+    "monsterId": "m46",
+    "weaponId": "ig",
+    "timeMs": 345670,
+    "author": "坐井观月",
+    "date": "2024-01-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1394y1u7qg",
+        "title": "【MHRS】前无古人的抽象纪录——操虫棍TA规则300金火龙5分45秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu6aw4qo"
   }
 ];
