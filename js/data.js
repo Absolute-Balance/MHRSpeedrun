@@ -11258,5 +11258,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu6ann87"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m38",
+    "weaponId": "ig",
+    "timeMs": 278990,
+    "author": "坐井观月",
+    "date": "2025-12-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV14Sm8B7EfT",
+        "title": "【MHRS】捕鸟猛攻——操虫棍TA规则300千刃龙4分38"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu6ansfq"
   }
 ];
