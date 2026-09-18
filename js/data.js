@@ -11300,5 +11300,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu6any16"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "ta",
+    "monsterId": "m52",
+    "weaponId": "ig",
+    "timeMs": 353990,
+    "author": "坐井观月",
+    "date": "2026-01-31",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Yr6nBjEUT",
+        "title": "【MHRS】自锁噩梦——操虫棍TA规则300怪异克服霞龙5分53"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu6ao2k3"
   }
 ];
