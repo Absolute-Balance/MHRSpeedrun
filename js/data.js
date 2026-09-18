@@ -11216,5 +11216,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu6ai8zl"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "ta",
+    "monsterId": "m42",
+    "weaponId": "ig",
+    "timeMs": 340990,
+    "author": "坐井观月",
+    "date": "2024-10-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1E6yXYaEia",
+        "title": "【MHRS】味调加稍——操虫棍TA规则300黑蚀龙5分40"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu6an0p4"
   }
 ];
