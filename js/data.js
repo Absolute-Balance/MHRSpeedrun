@@ -11237,5 +11237,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu6an0p4"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "ta",
+    "monsterId": "m50",
+    "weaponId": "ig",
+    "timeMs": 341990,
+    "author": "坐井观月",
+    "date": "2026-04-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1yUDcBKEao",
+        "title": "【MHRS】更进一步——操虫棍TA规则激昂金狮子5分41"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu6ann87"
   }
 ];
