@@ -11308,7 +11308,7 @@ window.MHRS_RECORDS = [
     "rule": "ta",
     "monsterId": "m52",
     "weaponId": "ig",
-    "timeMs": 353990,
+    "timeMs": 353900,
     "author": "坐井观月",
     "date": "2026-01-31",
     "videos": [
