@@ -11195,5 +11195,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smu6ahysc"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "ta",
+    "monsterId": "m51",
+    "weaponId": "ig",
+    "timeMs": 349990,
+    "author": "坐井观月",
+    "date": "2026-06-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1c7EJ6MEh4",
+        "title": "【MHRS】眠棍立回·貳——操虫棍TA规则300震天怨虎龙5分49秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu6ai8zl"
   }
 ];
