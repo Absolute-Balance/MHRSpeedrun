@@ -11468,5 +11468,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu6s8ux1"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "ta",
+    "monsterId": "m26",
+    "weaponId": "sa",
+    "timeMs": 425410,
+    "author": "時渡",
+    "date": "2026-09-17",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1FweM6CEeK",
+        "title": "【MHRS】斩斧 特别探究：冰牙龙 7分05秒 TA 防具无炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smu8ezx11"
   }
 ];
