@@ -215,6 +215,23 @@ async function handlePending(request, env, cors) {
     } catch (e) { /* 跳过坏数据 */ }
   }
   items.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
+  /* 标注“换源更新”：同一位置（同题材+同规则）+ 同一个 BV，且新成绩更快 → 通过后会自动替换旧记录 */
+  try {
+    const meta = await ghGet('js/data.js', env);
+    if (meta) {
+      const s = meta.text.indexOf('['), e = meta.text.lastIndexOf(']');
+      const arr = JSON.parse(meta.text.slice(s, e + 1));
+      items.forEach(it => {
+        const bv = bvOf((it.videos && it.videos[0] && it.videos[0].url) || '');
+        if (!bv) return;
+        const olds = arr.filter(x => sameCell(x, it) && (x.videos || []).some(v => bvOf(v.url) === bv));
+        const slower = olds.filter(x => Number(it.timeMs) < Number(x.timeMs));
+        if (slower.length && slower.length === olds.length) {
+          it.replaceInfo = { oldTime: fmtMs(slower[0].timeMs), oldAuthor: slower[0].author || '' };
+        }
+      });
+    }
+  } catch (e) { /* 标注失败不影响审核列表 */ }
   return json({ ok: true, list: items }, 200, cors);
 }
 
@@ -269,10 +286,19 @@ function sameCell(a, b) {
     a.monsterId === b.monsterId &&
     a.weaponId === b.weaponId;
 }
+/* 毫秒 → 05'02''52 */
+function fmtMs(ms) {
+  const cs = Math.floor(Number(ms) / 10);
+  const m = Math.floor(cs / 6000);
+  const s = Math.floor((cs % 6000) / 100);
+  const c = cs % 100;
+  return String(m).padStart(2, '0') + "'" + String(s).padStart(2, '0') + "''" + String(c).padStart(2, '0');
+}
 async function publishToGitHub(sub, env) {
   const path = 'js/data.js';
   const meta = await ghGet(path, env);
   let text;
+  let replaceCount = 0;
   if (meta) {
     const start = meta.text.indexOf('[');
     const end = meta.text.lastIndexOf(']');
@@ -287,19 +313,33 @@ async function publishToGitHub(sub, env) {
     if (arr.some(x => recDupKey(x) === recDupKey(rec))) {
       throw new Error('重复投稿：该成绩已存在于正式数据（时间 / 题材 / 怪物 / 武器 / 规则 / 作者 / 日期完全相同），已阻止发布');
     }
-    /* 重复检测：同一个视频（BV 号）已用于同一位置则拒绝发布 */
+    /* 换源更新：同一位置（同题材+同规则）+ 同一个视频（BV）
+       → 新成绩更快则删除旧记录并写入新记录（同一 commit）；不快则拒绝 */
     const newBv = bvOf((rec.videos && rec.videos[0] && rec.videos[0].url) || '');
-    if (newBv && arr.some(x => sameCell(x, rec) && (x.videos || []).some(v => bvOf(v.url) === newBv))) {
-      throw new Error('重复投稿：这个视频（' + newBv + '）已经收录在同一位置，已阻止发布');
+    let replaced = 0;
+    if (newBv) {
+      const olds = arr.filter(x => sameCell(x, rec) && (x.videos || []).some(v => bvOf(v.url) === newBv));
+      if (olds.length) {
+        const notFaster = olds.filter(x => !(Number(rec.timeMs) < Number(x.timeMs)));
+        if (notFaster.length) {
+          throw new Error('该位置（同题材 · 同规则）已有更快或相同的成绩（旧成绩 ' +
+            fmtMs(notFaster[0].timeMs) + '），已阻止发布');
+        }
+        for (let i = arr.length - 1; i >= 0; i--) {
+          if (olds.indexOf(arr[i]) >= 0) { arr.splice(i, 1); replaced++; }
+        }
+      }
     }
     arr.push(rec);
     text = meta.text.slice(0, start) + JSON.stringify(arr, null, 2) + meta.text.slice(end + 1);
+    replaceCount = replaced;
   } else {
     // 文件不存在：建一个基础文件
     const head = '/* MHRS 成绩数据 */\nwindow.MHRS_RECORDS = [\n];\n';
     text = head;
   }
-  const sha = await ghPut(path, meta ? meta.sha : null, text, '审核通过：投稿发布 ' + new Date().toISOString().slice(0, 10), env);
+  const sha = await ghPut(path, meta ? meta.sha : null, text,
+    (replaceCount ? '审核通过：换源替换旧成绩 ' : '审核通过：投稿发布 ') + new Date().toISOString().slice(0, 10), env);
   // 自动刷新资源版本号，避免缓存
   try {
     const idx = await ghGet('index.html', env);
@@ -309,7 +349,7 @@ async function publishToGitHub(sub, env) {
       if (next !== idx.text) await ghPut('index.html', idx.sha, next, '自动刷新资源版本号', env);
     }
   } catch (e) { /* 不阻塞 */ }
-  return sha;
+  return { sha, replaced: replaceCount };
 }
 async function handleApprove(request, env, cors) {
   const b = await readBody(request);
@@ -319,9 +359,9 @@ async function handleApprove(request, env, cors) {
   const raw = await env.SUBMISSIONS.get(id).catch(() => null);
   if (!raw) return json({ ok: false, error: '草稿不存在或已被处理' }, 404, cors);
   const sub = JSON.parse(raw);
-  const sha = await publishToGitHub(sub, env);
+  const r = await publishToGitHub(sub, env);
   await env.SUBMISSIONS.delete(id).catch(() => {});
-  return json({ ok: true, sha }, 200, cors);
+  return json({ ok: true, sha: r.sha, replaced: r.replaced }, 200, cors);
 }
 async function handleReject(request, env, cors) {
   const b = await readBody(request);

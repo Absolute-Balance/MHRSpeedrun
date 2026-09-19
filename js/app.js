@@ -758,11 +758,14 @@
     return hit;
   }
   function sameCell(r, rec) {
+    /* 同位置 = 题材（任务类型 + 任务/EX）+ 怪物 + 武器 + 规则
+       —— 规则不同视为不同赛道（TA 与 三无 各自保留，互不替换） */
     return r.questType === rec.questType &&
       (r.quest || '') === (rec.quest || '') &&
       (r.exStar || '') === (rec.exStar || '') &&
       r.monsterId === rec.monsterId &&
-      r.weaponId === rec.weaponId;
+      r.weaponId === rec.weaponId &&
+      r.rule === rec.rule;
   }
   function openEntry(ctx, editRec) {
     var m = mById[ctx.mid], w = wById[ctx.wid];
@@ -901,10 +904,16 @@
           return sameCell(r, baseRec);
         });
         if (eCell.length) {
-          var force2 = window.confirm('⚠ 这个视频（' + entryBv + '）已收录在同一位置：\n\n' + dupSummary(eCell[0]) +
-            '\n\n确认仍要再录一条吗？');
+          var eSlower = eCell.filter(function (r) { return ms >= r.timeMs; });
+          if (eSlower.length) {
+            msg.textContent = '⚠ 该位置（同题材 · 同规则）已有更快或相同的成绩：' + dupSummary(eSlower[0]) + '。直录会新增一条重复记录，已取消。';
+            msg.style.color = 'var(--danger)';
+            return;
+          }
+          var force2 = window.confirm('ℹ 这个视频（' + entryBv + '）在同一位置已有更慢的记录：\n\n旧：' + dupSummary(eCell[0]) +
+            '\n新：' + dupSummary(baseRec) + '\n\n直录只会新增一条（不会自动替换旧记录）；如需自动替换，请改用「✉ 投稿成绩」并由审核通过。\n\n确认仍要直接录入吗？');
           if (!force2) {
-            msg.textContent = '已取消：该视频已用于同一位置（' + dupSummary(eCell[0]) + '）';
+            msg.textContent = '已取消录入。';
             msg.style.color = 'var(--danger)';
             return;
           }
@@ -1912,16 +1921,26 @@
       sMsg('⚠ 这条成绩网站上已收录：' + dupSummary(dupSub) + '。请勿重复投稿；如果原记录需要更正（视频 / 时间 / 作者等），请联系维护者处理。', false);
       return;
     }
-    /* 查重：同一个视频（BV 号）已用于同一位置 → 阻止；出现在其它成绩 → 需确认 */
+    /* 查重：同一个视频（BV 号）已用于同一位置（同题材+同规则）
+       → 新成绩更快 = 换源更新（允许，审核通过后自动替换）；不快则拦下 */
     var subBv = bvOf($('sBv').value);
     if (subBv) {
       var bvHits = recordsWithBv(subBv);
-      var cellHit = bvHits.filter(function (r) { return sameCell(r, { questType: qt, quest: quest, exStar: ex, monsterId: mid, weaponId: wid }); });
+      var cellHit = bvHits.filter(function (r) {
+        return sameCell(r, { questType: qt, quest: quest, exStar: ex, monsterId: mid, weaponId: wid, rule: rule });
+      });
       if (cellHit.length) {
-        sMsg('⚠ 这个视频（' + subBv + '）已经收录在同一位置：' + dupSummary(cellHit[0]) + '。已阻止重复投稿；如果原记录需要更正，请联系维护者处理。', false);
-        return;
-      }
-      if (bvHits.length) {
+        var slowerOnes = cellHit.filter(function (r) { return ms >= r.timeMs; });
+        if (slowerOnes.length) {
+          sMsg('⚠ 该位置（同题材 · 同规则）已有更快或相同的成绩：' + dupSummary(slowerOnes[0]) +
+            '。无需重复投稿；若是换源更新，请确认用时比现有成绩更快后再提交。', false);
+          return;
+        }
+        var newTmp = { questType: qt, quest: quest, exStar: ex, monsterId: mid, weaponId: wid, rule: rule, timeMs: ms, author: author, date: date };
+        var okUpd = window.confirm('ℹ 检测到同一视频的更快的成绩（换源更新）：\n\n旧：' + dupSummary(cellHit[0]) +
+          '\n新：' + dupSummary(newTmp) + '\n\n投稿经审核通过后会自动替换旧成绩（无需管理员手动删除），确定提交吗？');
+        if (!okUpd) { sMsg('已取消投稿。', false); return; }
+      } else if (bvHits.length) {
         var okBv = window.confirm('⚠ 这个视频（' + subBv + '）已出现在其它成绩中（共 ' + bvHits.length + ' 条）：\n\n' +
           bvHits.slice(0, 5).map(dupSummary).join('\n') + (bvHits.length > 5 ? '\n…' : '') +
           '\n\n确认这不是重复投稿吗？');
@@ -1998,12 +2017,16 @@
           task += ' · ' + s.exStar;
         }
         var v = s.videos && s.videos[0];
+        var replaceTag = s.replaceInfo
+          ? '<div class="rv-meta" style="color:var(--time-ta)">ℹ 换源更新：通过后将自动替换旧成绩 ' + esc(s.replaceInfo.oldTime) + '（' + esc(s.replaceInfo.oldAuthor) + '）</div>'
+          : '';
         listBox.insertAdjacentHTML('beforeend',
           '<div class="rv-item" data-id="' + esc(s.id) + '">' +
           '<div class="rv-top"><span class="rv-time">' + fmtTime(s.timeMs) + '</span>' +
           '<span class="tag rule-' + esc(s.rule) + '">' + esc(ruleLabel(s.rule)) + '</span>' +
           '<span><b>' + esc(s.author) + '</b></span>' +
           '<span class="rv-meta">' + esc(task) + ' · ' + esc(m ? m.name : s.monsterId) + ' × ' + esc(w ? w.label : s.weaponId) + ' · ' + esc(s.date) + ' · ' + esc(platformLabel(s.platform)) + '</span></div>' +
+          replaceTag +
           '<div class="rv-title">' + (v ? '<a class="vbtn" href="' + esc(v.url) + '" target="_blank" rel="noopener"><span class="site site-bilibili">B站</span>' + esc(v.title || '打开视频') + ' ↗</a>' : '（未附视频）') + '</div>' +
           '<div class="rv-actions">' +
           '<button type="button" class="btn btn-mini ok rv-ok">✓ 通过并发布</button>' +
@@ -2031,7 +2054,7 @@
           });
           var j = await res.json();
           if (j.ok) {
-            window.alert('已发布（commit ' + j.sha.slice(0, 7) + '），页面即将刷新。');
+            window.alert((j.replaced ? '已发布，并自动替换旧成绩 ' + j.replaced + ' 条' : '已发布') + '（commit ' + j.sha.slice(0, 7) + '），页面即将刷新。');
             window.location.reload();
           } else {
             rvMsg('发布失败：' + (j.error || ''), false);
