@@ -779,7 +779,7 @@
     }
     /* 访客（无 GitHub 令牌）点「＋」：自动转投稿弹窗并预填 任务/怪物/武器；
        管理员直录（有令牌）与「✏️ 修改」仍走下方原入口 */
-    if (!editRec && !hasToken() && apiBaseOk() && $('submitModal')) {
+    if (!editRec && !hasToken() && !hasAdminKey() && apiBaseOk() && $('submitModal')) {
       openSubmitPrefill(qt, q, m, w);
       return;
     }
@@ -859,11 +859,14 @@
       if (!videoUrl) { msg.textContent = '视频仅支持 B 站（完整链接或 BV 号，自动补全）'; msg.style.color = 'var(--danger)'; return; }
     }
     var videoTitle = $('eTitle').value.trim();
+    /* 令牌（可选）：填了就记住，供 GitHub 直连通道使用；也可只用审核口令走服务器通道 */
+    var tokenInput = ($('eToken').value || '').trim();
     var token = '';
     try { token = localStorage.getItem(TOKEN_KEY) || ''; } catch (e) { }
-    token = ($('eToken').value || '').trim() || token;
-    if (!token) {
-      msg.textContent = '还没有 GitHub 令牌：请在上方填入后重试（获取：Settings → Developer settings → Fine-grained tokens，Contents 读写）';
+    token = tokenInput || token;
+    if (token) { try { localStorage.setItem(TOKEN_KEY, token); } catch (e) { } }
+    if (!token && !hasAdminKey()) {
+      msg.textContent = '还没有保存通道：请填入 GitHub 令牌，或先在顶部「⚖ 审核」里输入一次审核口令（之后即可用服务器通道直录）';
       msg.style.color = 'var(--danger)';
       $('eToken').focus();
       return;
@@ -929,21 +932,18 @@
         }
       }
     }
-    msg.textContent = '正在提交到 GitHub…';
+    var ops = [];
+    if (entryCtx.mode === 'edit') ops.push({ type: 'update', id: entryCtx.id, rec: baseRec });
+    else ops.push({ type: 'add', rec: baseRec });
+    msg.textContent = '正在保存…';
     msg.style.color = 'var(--text-dim)';
     try {
-      var res = await ghTransform(token, function (base) {
-        if (entryCtx.mode === 'edit') {
-          var i = base.findIndex(function (x) { return x.id === entryCtx.id; });
-          if (i >= 0) base[i] = baseRec;
-          else base.push(baseRec);
-        } else {
-          base.push(baseRec);
-        }
-      });
-      try { localStorage.setItem(TOKEN_KEY, token); } catch (e) { }
-      if (applyDataFromText(res.text)) update();
-      msg.textContent = (entryCtx.mode === 'edit' ? '已修改' : '已录入') + '并保存 commit ' + res.sha.slice(0, 7) + '，本页已即时更新；线上约 1~2 分钟后刷新可见';
+      var res = await saveViaChannels(ops);
+      applyOpsToArray(RECORDS, ops);
+      update();
+      var chanName = res.channel === 'worker' ? '服务器通道' : 'GitHub 通道';
+      msg.textContent = (entryCtx.mode === 'edit' ? '已修改' : '已录入') + '（' + chanName + '，commit ' +
+        String(res.sha || '').slice(0, 7) + '），本页已即时更新；线上约 1~2 分钟后刷新可见';
       msg.style.color = 'var(--good)';
       entryCtx = null;
     } catch (e) {
@@ -952,9 +952,9 @@
     }
   }
 
-  /* ---- 管理操作（仅令牌持有者可见） ---- */
+  /* ---- 管理操作（持 GitHub 令牌 或 审核口令者可见） ---- */
   function admHtml(recId) {
-    if (!hasToken()) return '';
+    if (!hasToken() && !hasAdminKey()) return '';
     return '<div class="adm-bar">' +
       '<button type="button" class="btn btn-mini adm-edit" data-id="' + esc(recId) + '">✏️ 修改</button>' +
       '<button type="button" class="btn btn-mini adm-del" data-id="' + esc(recId) + '">🗑 删除</button>' +
@@ -980,17 +980,13 @@
     });
   }
   async function deleteRecordId(id) {
-    if (!window.confirm('确定删除这条成绩吗？确认后将立即提交到 GitHub（可随时从 git 历史找回）。')) return;
-    var token = '';
-    try { token = localStorage.getItem(TOKEN_KEY) || ''; } catch (e) { }
-    if (!token) { window.alert('未找到 GitHub 令牌，无法保存删除。'); return; }
+    if (!window.confirm('确定删除这条成绩吗？确认后将立即提交（可随时从 git 历史找回）。')) return;
+    if (!hasToken() && !hasAdminKey()) { window.alert('没有可用的保存通道：请填入 GitHub 令牌，或先在「⚖ 审核」里输入一次审核口令。'); return; }
     try {
-      var res = await ghTransform(token, function (base) {
-        var i = base.findIndex(function (x) { return x.id === id; });
-        if (i >= 0) base.splice(i, 1);
-      });
-      if (applyDataFromText(res.text)) update();
-      window.alert('已删除该成绩并保存（commit ' + res.sha.slice(0, 7) + '）');
+      var res = await saveViaChannels([{ type: 'delete', id: id }]);
+      applyOpsToArray(RECORDS, [{ type: 'delete', id: id }]);
+      update();
+      window.alert('已删除该成绩（' + (res.channel === 'worker' ? '服务器通道' : 'GitHub 通道') + '，commit ' + String(res.sha || '').slice(0, 7) + '）');
     } catch (e) {
       window.alert('删除失败：' + e.message);
     }
@@ -1407,6 +1403,93 @@
     var text = serializeData(base);
     var sha = await ghSave(text, token);
     return { sha: sha, text: text };
+  }
+
+  /* ================= 管理员保存通道（GitHub 直连 / Worker 服务器）=================
+   * 双通道 + 自动回退：
+   *   auto（默认）: 有令牌优先 GitHub 直连；遇 403 限流/409 冲突/网络错误 → 自动改走服务器
+   *   github      : 只用 GitHub 直连（不方便挂代理的管理员用这个）
+   *   worker      : 只用服务器通道（需要审核口令） */
+  var CHANNEL_KEY = 'mhrs_save_channel';
+  function getChannel() { try { return localStorage.getItem(CHANNEL_KEY) || 'auto'; } catch (e) { return 'auto'; } }
+  function setChannel(v) { try { localStorage.setItem(CHANNEL_KEY, v); } catch (e) { } }
+  function hasAdminKey() { return !!getAdminKey(); }
+  function isNetworkErr(e) {
+    var m = String((e && e.message) || '');
+    return (e instanceof TypeError) || /Failed to fetch|NetworkError|Load failed|network|CORS|超时|timeout/i.test(m);
+  }
+  function isGhRetryable(e) {
+    var m = String((e && e.message) || '');
+    return isNetworkErr(e) || /HTTP (403|409|429)/.test(m) || /rate limit|secondary|conflict|sha/i.test(m);
+  }
+  function applyOpsToArray(base, ops) {
+    ops.forEach(function (op) {
+      if (!op) return;
+      if (op.type === 'add') base.push(op.rec);
+      else if (op.type === 'update') {
+        var i = base.findIndex(function (x) { return x.id === op.id; });
+        if (i >= 0) base[i] = op.rec; else base.push(op.rec);
+      } else if (op.type === 'delete') {
+        for (var k = base.length - 1; k >= 0; k--) if (base[k].id === op.id) base.splice(k, 1);
+      }
+    });
+  }
+  async function workerSave(ops) {
+    if (!apiBaseOk()) throw new Error('保存服务未启用（未配置 Worker 地址）');
+    var key = getAdminKey();
+    if (!key) throw new Error('缺少审核口令：请先在「⚖ 审核」里输入一次');
+    var res;
+    try {
+      res = await fetch(SUB.apiBase + '/admin-save', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-admin-key': key },
+        body: JSON.stringify({ ops: ops })
+      });
+    } catch (e) {
+      throw new TypeError('无法连接保存服务器（' + (e.message || e) + '）');
+    }
+    var j = await res.json().catch(function () { return {}; });
+    if (!j.ok) {
+      if (res.status === 401) { try { localStorage.removeItem(SUB.adminKeyStorage); } catch (e) { } }
+      throw new Error(j.error || ('保存失败（HTTP ' + res.status + '）'));
+    }
+    return { sha: j.sha || '', applied: j.applied || null };
+  }
+  async function githubSaveOps(ops, token) {
+    var res = await ghTransform(token, function (base) { applyOpsToArray(base, ops); });
+    return { sha: res.sha, text: res.text };
+  }
+  async function saveViaChannels(ops) {
+    var token = '';
+    try { token = localStorage.getItem(TOKEN_KEY) || ''; } catch (e) { }
+    var canGh = !!token, canWk = hasAdminKey() && apiBaseOk();
+    var chan = getChannel(), order = [];
+    if (chan === 'github') order = canGh ? ['github'] : (canWk ? ['worker'] : []);
+    else if (chan === 'worker') order = canWk ? ['worker'] : (canGh ? ['github'] : []);
+    else order = (canGh ? ['github'] : []).concat(canWk ? ['worker'] : []);
+    if (!order.length) throw new Error('没有可用的保存通道：请填入 GitHub 令牌，或先在「⚖ 审核」里输入一次审核口令');
+    var lastErr = null;
+    for (var i = 0; i < order.length; i++) {
+      try {
+        if (order[i] === 'github') {
+          var g = await githubSaveOps(ops, token);
+          return { channel: 'github', sha: g.sha, text: g.text };
+        }
+        var w = await workerSave(ops);
+        return { channel: 'worker', sha: w.sha, applied: w.applied };
+      } catch (e) {
+        lastErr = e;
+        var hasNext = i + 1 < order.length;
+        var canFallback = hasNext && (order[i] === 'github' ? isGhRetryable(e) : isNetworkErr(e));
+        if (!canFallback) {
+          if (order[i] === 'github' && !canWk) {
+            throw new Error(e.message + '（提示：在「⚖ 审核」输入一次审核口令后，可自动改用服务器通道）');
+          }
+          throw e;
+        }
+      }
+    }
+    throw lastErr || new Error('保存失败');
   }
   function applyDataFromText(txt) {
     var arr = parseArray(txt);
@@ -2136,6 +2219,12 @@
       op.value = p.id; op.textContent = p.label;
       platSel.appendChild(op);
     });
+    /* 保存通道选择（记忆在浏览器） */
+    var chanSel = $('eChannel');
+    if (chanSel) {
+      chanSel.value = getChannel();
+      chanSel.addEventListener('change', function () { setChannel(chanSel.value); });
+    }
     var eModal = $('entryModal');
     $('entryClose').addEventListener('click', function () { eModal.classList.add('hidden'); });
     eModal.addEventListener('click', function (e) { if (e.target === eModal) eModal.classList.add('hidden'); });

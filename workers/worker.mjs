@@ -43,6 +43,9 @@ export default {
       if (method === 'POST' && p === '/approve') {
         return await handleApprove(request, env, corsHeaders);
       }
+      if (method === 'POST' && p === '/admin-save') {
+        return await handleAdminSave(request, env, corsHeaders);
+      }
       if (method === 'POST' && p === '/reject') {
         return await handleReject(request, env, corsHeaders);
       }
@@ -369,6 +372,81 @@ async function handleReject(request, env, cors) {
   const id = cleanStr(b.id, 200);
   await env.SUBMISSIONS.delete(id).catch(() => {});
   return json({ ok: true }, 200, cors);
+}
+
+/* ---------------- 管理员直录（服务器通道：串行 + 自动重试） ----------------
+ * 请求：POST /admin-save  { ops: [ {type:'add'|'update', rec:{...}} | {type:'delete', id} ] }
+ * 鉴权：x-admin-key（与审核口令相同）
+ * 优点：所有 GitHub 请求在服务端串行执行，遇到 403 限流/409 冲突自动等待重试 */
+async function ghWithRetry(fn, tries = 4) {
+  let lastErr;
+  for (let i = 0; i < tries; i++) {
+    try { return await fn(); }
+    catch (e) {
+      lastErr = e;
+      const msg = String((e && e.message) || '');
+      const retryable = /HTTP (403|409|429)/.test(msg) || /rate limit|secondary|conflict|sha|fetch|network/i.test(msg);
+      if (!retryable || i === tries - 1) throw e;
+      await new Promise(r => setTimeout(r, 1200 * Math.pow(2, i)));
+    }
+  }
+  throw lastErr;
+}
+async function adminApplyOnce(ops, env) {
+  const meta = await ghGet('js/data.js', env);
+  if (!meta) throw new Error('data.js 不存在');
+  const start = meta.text.indexOf('['), end = meta.text.lastIndexOf(']');
+  if (start < 0 || end < 0) throw new Error('data.js 结构异常');
+  const arr = JSON.parse(meta.text.slice(start, end + 1));
+  let added = 0, updated = 0, deleted = 0;
+  for (const op of ops) {
+    if (op.type === 'add' || op.type === 'update') {
+      const src = Object.assign({}, op.rec || {});
+      if (!src.bv && src.videos && src.videos[0] && src.videos[0].url) {
+        src.bv = src.videos[0].url;
+        if (!src.title) src.title = src.videos[0].title || '';
+      }
+      const rec = validateSubmission(src);
+      rec.id = cleanStr((op.rec && op.rec.id) || '', 40) || ('r' + Date.now().toString(36));
+      const i = arr.findIndex(x => x.id === rec.id);
+      if (i >= 0) { arr[i] = rec; updated++; } else { arr.push(rec); added++; }
+    } else if (op.type === 'delete') {
+      const id = cleanStr(op.id, 40);
+      for (let i = arr.length - 1; i >= 0; i--) {
+        if (arr[i].id === id) { arr.splice(i, 1); deleted++; }
+      }
+    }
+  }
+  if (!added && !updated && !deleted) return { sha: '', applied: { added, updated, deleted }, noop: true };
+  const text = meta.text.slice(0, start) + JSON.stringify(arr, null, 2) + meta.text.slice(end + 1);
+  const message = '网页录入：新增' + added + ' 修改' + updated + ' 删除' + deleted + ' ' + new Date().toISOString().slice(0, 10);
+  const sha = await ghPut('js/data.js', meta.sha, text, message, env);
+  /* 刷新资源版本号（失败不阻塞；串行 await，避免并发写触发限流） */
+  try {
+    const idx = await ghGet('index.html', env);
+    if (idx) {
+      const stamp = 'v=' + Date.now();
+      const next = idx.text.replace(/\?v=\d+/g, '?' + stamp);
+      if (next !== idx.text) await ghPut('index.html', idx.sha, next, '自动刷新资源版本号', env);
+    }
+  } catch (e) { /* 不阻塞 */ }
+  return { sha, applied: { added, updated, deleted } };
+}
+async function handleAdminSave(request, env, cors) {
+  if (!adminOk(request, env)) return json({ ok: false, error: '无权限：审核口令不正确' }, 401, cors);
+  let b;
+  try { b = await readBody(request); }
+  catch (e) { return json({ ok: false, error: e.message }, 400, cors); }
+  const ops = Array.isArray(b && b.ops) ? b.ops.filter(x => x && typeof x === 'object') : [];
+  if (!ops.length) return json({ ok: false, error: '没有要保存的改动' }, 400, cors);
+  if (ops.length > 100) return json({ ok: false, error: '一次最多 100 条改动' }, 400, cors);
+  try {
+    const r = await ghWithRetry(() => adminApplyOnce(ops, env), 4);
+    if (r.noop) return json({ ok: false, error: '没有实际改动' }, 400, cors);
+    return json({ ok: true, sha: r.sha, applied: r.applied }, 200, cors);
+  } catch (e) {
+    return json({ ok: false, error: '保存失败：' + e.message }, 500, cors);
+  }
 }
 /* 诊断：用 Worker 里的 GITHUB_TOKEN 试读仓库文件，返回 GitHub 原始报错 */
 async function handleTestGh(request, env, cors) {

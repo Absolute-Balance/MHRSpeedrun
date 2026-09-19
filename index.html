@@ -6,7 +6,7 @@
 <title>MHRS 竞速成绩库</title>
 <link rel="icon" type="image/png" href="MHRS-Logo-Square.png">
 <script>(function(){try{if(localStorage.getItem('mhrs_theme')==='light'){document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();</script>
-<link rel="stylesheet" href="css/style.css?v=1789829874109">
+<link rel="stylesheet" href="css/style.css?v=1789831231970">
 </head>
 <body>
 
@@ -250,10 +250,15 @@
       <label>日期</label><input type="text" id="eDate" placeholder="2026-9-6" autocomplete="off">
       <label>视频链接</label><div class="e-video-row"><input type="text" id="eVideo" placeholder="B站链接或 BV 号（可选，自动补全）" autocomplete="off"><button type="button" class="btn btn-mini" id="eVideoIdentify">识别</button></div>
       <label>平台</label><select id="ePlat"></select>
+      <label>保存通道</label><select id="eChannel">
+        <option value="auto">自动（推荐：GitHub 优先，限流时走服务器）</option>
+        <option value="github">仅 GitHub 直连（不需梯子）</option>
+        <option value="worker">仅服务器（需审核口令）</option>
+      </select>
     </div>
     <div class="modal-actions">
-      <input type="password" id="eToken" placeholder="GitHub 令牌（首次填一次，自动记住）" autocomplete="off">
-      <span class="fg-desc">令牌获取：GitHub → Settings → Developer settings → Fine-grained tokens（本仓库 Contents 读写），仅存于你的浏览器。</span>
+      <input type="password" id="eToken" placeholder="GitHub 令牌（可选；填了可走 GitHub 直连）" autocomplete="off">
+      <span class="fg-desc">两种保存通道：① GitHub 令牌直连（GitHub → Settings → Developer settings → Fine-grained tokens，本仓库 Contents 读写）；② 服务器通道（先在顶部「⚖ 审核」输入一次审核口令即可）。都不需要可以只留其一。</span>
     </div>
     <div class="modal-actions">
       <button type="button" class="btn btn-primary" id="eSave">✓ 录入并保存</button>
@@ -309,9 +314,9 @@
   </div>
 </div>
 
-<script src="js/config.js?v=1789829874109"></script>
-<script src="js/monsters.js?v=1789829874109"></script>
-<script src="js/data.js?v=1789829874109"></script>
-<script src="js/app.js?v=1789829874109"></script>
+<script src="js/config.js?v=1789831231970"></script>
+<script src="js/monsters.js?v=1789831231970"></script>
+<script src="js/data.js?v=1789831231970"></script>
+<script src="js/app.js?v=1789831231970"></script>
 </body>
 </html>
