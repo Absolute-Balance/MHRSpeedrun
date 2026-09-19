@@ -11510,5 +11510,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu8ov1hb"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m39",
+    "weaponId": "gs",
+    "timeMs": 280820,
+    "author": "秋401",
+    "date": "2026-09-19",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1JCeQ6eE2s",
+        "title": "特别探究轰龙"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu8owm3k"
   }
 ];
