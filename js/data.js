@@ -11476,7 +11476,7 @@ window.MHRS_RECORDS = [
     "rule": "ta",
     "monsterId": "m26",
     "weaponId": "sa",
-    "timeMs": 425410,
+    "timeMs": 414410,
     "author": "時渡",
     "date": "2026-09-17",
     "videos": [
