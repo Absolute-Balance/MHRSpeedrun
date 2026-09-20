@@ -11636,5 +11636,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu9aru7a"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "ta",
+    "monsterId": "m46",
+    "weaponId": "gs",
+    "timeMs": 338790,
+    "author": "__Ciel___",
+    "date": "2026-06-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Gwj36bE8N",
+        "title": "TA金火538"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu9asaqx"
   }
 ];
