@@ -11678,5 +11678,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu9b0pze"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "ta",
+    "monsterId": "m57",
+    "weaponId": "gs",
+    "timeMs": 244990,
+    "author": "__Ciel___",
+    "date": "2026-05-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1wRGv6iE4C",
+        "title": "TA300彗404"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu9b22xg"
   }
 ];
