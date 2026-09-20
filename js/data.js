@@ -11846,5 +11846,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmua3wp79"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m03",
+    "weaponId": "sns",
+    "timeMs": 207470,
+    "author": "往日残梦-NLNS",
+    "date": "2026-03-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1skQDB7Epx",
+        "title": "【MHRS】片手剑 Lv300毒狗龙王 3分27秒 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmua3xotq"
   }
 ];
