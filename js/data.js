@@ -11531,5 +11531,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu8owm3k"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "ta",
+    "monsterId": "m45",
+    "weaponId": "gs",
+    "timeMs": 503230,
+    "author": "__Ciel___",
+    "date": "2026-09-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1PCbw6XEgZ",
+        "title": "TA300炽妃蜘蛛823"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu9abbnv"
   }
 ];
