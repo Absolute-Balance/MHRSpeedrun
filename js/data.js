@@ -11699,5 +11699,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu9b22xg"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "ta",
+    "monsterId": "m53",
+    "weaponId": "gs",
+    "timeMs": 216640,
+    "author": "__Ciel___",
+    "date": "2026-06-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1kdEJ63Eye",
+        "title": "你说的对，但是某些怪还没出就已经被某些人打上粪怪的标签了 大剑TA 300钢龙 3'36+坠机片段"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu9b4qe0"
   }
 ];
