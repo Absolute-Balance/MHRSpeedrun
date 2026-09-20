@@ -11720,5 +11720,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu9b4qe0"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "ta",
+    "monsterId": "m47",
+    "weaponId": "gs",
+    "timeMs": 292120,
+    "author": "__Ciel___",
+    "date": "2026-06-12",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1hWE16FEdA",
+        "title": "TA银火452"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu9b5nbj"
   }
 ];
