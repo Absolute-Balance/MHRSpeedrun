@@ -11728,14 +11728,14 @@ window.MHRS_RECORDS = [
     "rule": "sanyou",
     "monsterId": "m11",
     "weaponId": "ls",
-    "timeMs": 325370,
+    "timeMs": 324070,
     "author": "BFeather7",
     "date": "2026-09-20",
     "videos": [
       {
         "site": "bilibili",
         "url": "https://www.bilibili.com/video/BV1KteB6MEwm",
-        "title": "【MHRS】太刀 特别探究：河童蛙 三无规则 5'25\"37"
+        "title": "【MHRS】太刀 特别探究：河童蛙 三无规则 5'24\"07"
       }
     ],
     "platform": "steam",
