@@ -11762,5 +11762,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmua3q28o"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m32",
+    "weaponId": "sns",
+    "timeMs": 297570,
+    "author": "往日残梦-NLNS",
+    "date": "2026-01-12",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1SoiRBbEuw",
+        "title": "【MHRS/生庆】片手剑 Lv300熔翁龙 4分57秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmua3s02y"
   }
 ];
