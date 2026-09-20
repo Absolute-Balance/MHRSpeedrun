@@ -11552,5 +11552,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu9abbnv"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m35",
+    "weaponId": "gs",
+    "timeMs": 355200,
+    "author": "__Ciel___",
+    "date": "2026-09-04",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Mdt66NESL",
+        "title": "TA泡狐555"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu9acb5q"
   }
 ];
