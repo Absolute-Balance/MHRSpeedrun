@@ -11783,5 +11783,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmua3s02y"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "ta",
+    "monsterId": "m49",
+    "weaponId": "sns",
+    "timeMs": 343060,
+    "author": "往日残梦-NLNS",
+    "date": "2026-02-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1tyZtBuEBy",
+        "title": "【MHRS/雪豹杯】片手剑 Lv300红莲爆鳞龙 5分43秒 ta规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmua3tc55"
   }
 ];
