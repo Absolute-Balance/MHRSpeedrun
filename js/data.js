@@ -11594,5 +11594,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu9afh5b"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "ta",
+    "monsterId": "m43",
+    "weaponId": "gs",
+    "timeMs": 262840,
+    "author": "__Ciel___",
+    "date": "2026-08-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1cphF6jEwe",
+        "title": "轰炸机坠机！MHRS无防具炼化 TA打法 大剑LV300爆鳞龙"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu9aix1j"
   }
 ];
