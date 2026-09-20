@@ -11825,5 +11825,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmua3v7pr"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m01",
+    "weaponId": "sns",
+    "timeMs": 314020,
+    "author": "往日残梦-NLNS",
+    "date": "2026-03-18",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1xjwizNEuz",
+        "title": "【MHRS】片手剑 Lv300 骚鸟 5分14秒 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmua3wp79"
   }
 ];
