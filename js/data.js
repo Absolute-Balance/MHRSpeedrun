@@ -11657,5 +11657,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu9asaqx"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m36",
+    "weaponId": "gs",
+    "timeMs": 304590,
+    "author": "__Ciel___",
+    "date": "2026-05-29",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1n9V86RER4",
+        "title": "【MHRS】大剑 Lv300雷狼龙 5分04秒 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu9b0pze"
   }
 ];
