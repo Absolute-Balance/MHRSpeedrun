@@ -1350,7 +1350,7 @@
     });
     if (!res.ok) {
       var err = await res.json().catch(function () { return {}; });
-      throw new Error(err.message || ('保存失败（HTTP ' + res.status + '）'));
+      throw new Error((err.message || '保存失败') + '（HTTP ' + res.status + '）');
     }
     var j = await res.json();
     return j.commit ? j.commit.sha : '';
@@ -1420,7 +1420,8 @@
   }
   function isGhRetryable(e) {
     var m = String((e && e.message) || '');
-    return isNetworkErr(e) || /HTTP (403|409|429)/.test(m) || /rate limit|secondary|conflict|sha/i.test(m);
+    return isNetworkErr(e) || /HTTP (403|409|429|5\d\d)/.test(m) ||
+      /rate limit|secondary|conflict|sha|does not match|not match/i.test(m);
   }
   function applyOpsToArray(base, ops) {
     ops.forEach(function (op) {
