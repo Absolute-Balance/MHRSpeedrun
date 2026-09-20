@@ -11573,5 +11573,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu9acb5q"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "ta",
+    "monsterId": "m57",
+    "weaponId": "gs",
+    "timeMs": 291760,
+    "author": "__Ciel___",
+    "date": "2026-08-21",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1pw8K6wE9j",
+        "title": "无护石无防具炼化TA大剑LV300天彗龙 451"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu9afh5b"
   }
 ];
