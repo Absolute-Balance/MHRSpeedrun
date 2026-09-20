@@ -11615,5 +11615,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmu9aix1j"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m01",
+    "weaponId": "gs",
+    "timeMs": 290330,
+    "author": "__Ciel___",
+    "date": "2026-08-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV15ztP6gEVW",
+        "title": "大剑TA 300 搔鸟  450"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmu9aru7a"
   }
 ];
