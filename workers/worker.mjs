@@ -151,7 +151,7 @@ function validateSubmission(b) {
   if (b.bv && !vUrl) throw new Error('视频仅支持 B 站链接或 BV 号');
   if (!PLATS.includes(b.platform)) b.platform = 'steam';
   if (b.platform === 'ps5') b.platform = 'ps'; // 兼容旧值
-  return {
+  const rec = {
     questType: b.questType,
     quest: b.questType === 'raging' ? cleanStr(b.quest, 10) : null,
     exStar: b.questType === 'raging' ? null : cleanStr(b.exStar, 10),
@@ -165,6 +165,9 @@ function validateSubmission(b) {
     platform: b.platform,
     note: ''
   };
+  /* 5猫任务标记（仅怪异探究 Lv300 / 特别探究 有效；烈祸袭来是官方任务） */
+  if (b.fiveCat === true || b.fiveCat === 'true' || b.fiveCat === 1) rec.fiveCat = true;
+  return rec;
 }
 
 /* ---------------- 限频（可按需调整） ----------------

@@ -580,7 +580,8 @@
           return;
         }
         var best = bestOf(recs);
-        var inner = '<div class="line1"><span class="' + tmCls(best.rule) + '">' + fmtTime(best.timeMs) + '</span></div>';
+        var inner = '<div class="line1"><span class="' + tmCls(best.rule) + '">' + fmtTime(best.timeMs) + '</span>' +
+          (best.fiveCat ? '<span class="five-warn" title="' + esc(FIVECAT_TIP) + '">!</span>' : '') + '</div>';
         inner += '<div class="line2"><span class="mxauthor pa" data-p="' + esc(best.author) + '" title="查看该玩家全部成绩">' + esc(best.author) + '</span></div>';
         html += '<div class="mx-cell" data-mid="' + it.monster.id + '" data-quest="' +
           (it.kind === 'raging' ? it.quest.id : '') + '" data-wid="' + w.id + '">' + inner + '</div>';
@@ -767,6 +768,8 @@
       r.weaponId === rec.weaponId &&
       r.rule === rec.rule;
   }
+  /* 5猫任务（5 次力尽倒下的怪异探究任务）说明文案 */
+  var FIVECAT_TIP = '该任务是 5 次力尽倒下的非法探究任务（不属于官方合法任务），不影响局内处理；在 2026年12月31日 之前的投稿暂时保留';
   function openEntry(ctx, editRec) {
     var m = mById[ctx.mid], w = wById[ctx.wid];
     if (!m || !w) return;
@@ -831,6 +834,14 @@
       $('eMsg').textContent = '提示：投稿后端未启用（部署见 workers/DEPLOY.md），此直录入口需要 GitHub 令牌。';
       $('eMsg').style.color = 'var(--text-dim)';
     }
+    /* 5猫任务：只有怪异探究 Lv300 / 特别探究 需要问（烈祸袭来是官方任务） */
+    var fcSel = $('eFiveCat');
+    if (fcSel) {
+      fcSel.value = (editRec && editRec.fiveCat) ? '1' : '';
+      var showFc = qt !== 'raging';
+      if ($('eFiveCatRow')) $('eFiveCatRow').classList.toggle('hidden', !showFc);
+      if ($('eFiveCatLabel')) $('eFiveCatLabel').classList.toggle('hidden', !showFc);
+    }
     $('entryModal').classList.remove('hidden');
     $('eAuthor').focus();
   }
@@ -887,6 +898,8 @@
     };
     if (entryCtx.mode === 'edit') baseRec.id = entryCtx.id;
     else baseRec.id = 'r' + Date.now().toString(36);
+    /* 5猫任务标记（仅怪异探究赛道会出现该选择） */
+    if ($('eFiveCat') && $('eFiveCat').value === '1') baseRec.fiveCat = true;
     /* 查重：与现有记录完全一致时提示（管理员确认后仍可强制录入） */
     if (entryCtx.mode === 'add') {
       var dupRec = findDuplicate(baseRec);
@@ -1172,6 +1185,9 @@
       html += '<div class="cur-time ' + (current.rule === 'ta' ? 'ta' : current.rule === 'free' ? 'free' : '') + '">' + fmtTime(current.timeMs) + '</div>';
       html += '<div class="cur-meta">';
       html += '<span class="k">规则</span><span>' + esc(ruleLabel(current.rule)) + '</span>';
+      if (current.fiveCat) {
+        html += '<span class="k">任务</span><span class="tag five-tag" title="' + esc(FIVECAT_TIP) + '">5猫任务 !</span>';
+      }
       html += '<span class="k">作者</span><span class="pa" data-p="' + esc(current.author) + '" title="查看该玩家全部成绩">' + esc(current.author) + '</span>';
       html += '<span class="k">日期</span><span>' + esc(current.date) + '</span>';
       html += '<span class="k">平台</span><span>' + esc(platformLabel(current.platform)) + '</span>';
@@ -1203,7 +1219,7 @@
       history.forEach(function (r) {
         var open = expandedIds.has(r.id);
         html += '<div class="hrow' + (open ? ' open' : '') + '" data-id="' + esc(r.id) + '" role="button" tabindex="0">' +
-          '<span class="' + tmCls(r.rule) + '">' + fmtTime(r.timeMs) + '</span>' +
+          '<span class="' + tmCls(r.rule) + '">' + fmtTime(r.timeMs) + (r.fiveCat ? '<span class="five-warn" title="' + esc(FIVECAT_TIP) + '">!</span>' : '') + '</span>' +
           '<span class="h-author pa" data-p="' + esc(r.author) + '" title="查看该玩家全部成绩">' + esc(r.author) + '</span>' +
           '<span class="h-date">' + esc(r.date) + '</span>' +
           '<span class="h-arr">▶</span>' +
@@ -1811,6 +1827,14 @@
     var mv = $('sMonster').value;
     if (mv && submitMonsterIds.indexOf(resolveMonster(mv)) < 0) $('sMonster').value = '';
   }
+  /* 投稿弹窗：5猫任务行的显隐（仅怪异探究 Lv300 / 特别探究） */
+  function syncFiveCatRow() {
+    var qt = $('sQuestType') ? $('sQuestType').value : '';
+    var show = !!qt && qt !== 'raging';
+    if ($('sFiveCatRow')) $('sFiveCatRow').classList.toggle('hidden', !show);
+    if ($('sFiveCatLabel')) $('sFiveCatLabel').classList.toggle('hidden', !show);
+    if (!show && $('sFiveCat')) $('sFiveCat').value = '';
+  }
   function resolveMonster(v) {
     v = String(v || '').trim();
     if (mById[v]) return v;
@@ -1847,6 +1871,8 @@
       }
       $('sQuestType').value = 'special';
       refreshSubmitOptions();
+      syncFiveCatRow();
+      if ($('sFiveCat')) $('sFiveCat').value = '';
       $('sTaskSel').value = '';
       rebuildMonsterDl();
       $('sRule').value = '';
@@ -1857,6 +1883,7 @@
     $('submitModal').addEventListener('click', function (e) { if (e.target === $('submitModal')) $('submitModal').classList.add('hidden'); });
     $('sQuestType').addEventListener('change', function () {
       refreshSubmitOptions();
+      syncFiveCatRow();
       $('sTaskSel').value = '';
       rebuildMonsterDl();
     });
@@ -1894,6 +1921,8 @@
     $('sBv').value = '';
     $('sQuestType').value = qt;
     refreshSubmitOptions();
+    syncFiveCatRow();
+    if ($('sFiveCat')) $('sFiveCat').value = '';
     var filledTask = false;
     if (qt === 'raging') {
       if (q && $('sTaskSel').querySelector('option[value="' + q.id + '"]')) {
@@ -1941,6 +1970,7 @@
         if (questTypeSel.querySelector('option[value="' + info.questType + '"]')) {
           questTypeSel.value = info.questType;
           refreshSubmitOptions();
+          syncFiveCatRow();
           $('sTaskSel').value = '';
           if (info.task && $('sTaskSel').querySelector('option[value="' + info.task + '"]')) {
             $('sTaskSel').value = info.task;
@@ -2046,6 +2076,7 @@
       date: date,
       title: $('sTitle').value.trim(),
       bv: $('sBv').value.trim(),
+      fiveCat: ($('sFiveCat') && $('sFiveCat').value === '1') ? true : false,
       platform: $('sPlat').value || 'steam',
       website: $('sWebsite').value
     };
@@ -2108,6 +2139,7 @@
           '<div class="rv-item" data-id="' + esc(s.id) + '">' +
           '<div class="rv-top"><span class="rv-time">' + fmtTime(s.timeMs) + '</span>' +
           '<span class="tag rule-' + esc(s.rule) + '">' + esc(ruleLabel(s.rule)) + '</span>' +
+          (s.fiveCat ? '<span class="tag five-tag" title="' + esc(FIVECAT_TIP) + '">5猫 !</span>' : '') +
           '<span><b>' + esc(s.author) + '</b></span>' +
           '<span class="rv-meta">' + esc(task) + ' · ' + esc(m ? m.name : s.monsterId) + ' × ' + esc(w ? w.label : s.weaponId) + ' · ' + esc(s.date) + ' · ' + esc(platformLabel(s.platform)) + '</span></div>' +
           replaceTag +
