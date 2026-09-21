@@ -12035,5 +12035,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmualq3hi"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m50",
+    "weaponId": "sns",
+    "timeMs": 288910,
+    "author": "西云绘名名",
+    "date": "2025-09-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV191nhzyE3c",
+        "title": "[MHRS] 零针达成 片手剑 300激昂金狮子 4:48 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmualtwfh"
   }
 ];
