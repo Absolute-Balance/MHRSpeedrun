@@ -11972,5 +11972,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmualjnyf"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "ta",
+    "monsterId": "m46",
+    "weaponId": "sns",
+    "timeMs": 403810,
+    "author": "往日残梦-NLNS",
+    "date": "2026-05-24",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1BGGH6oECg",
+        "title": "【MHRS】重击刃药片手 Lv300金火龙 6分43秒 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmuall68a"
   }
 ];
