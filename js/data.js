@@ -12120,5 +12120,27 @@ window.MHRS_RECORDS = [
     "note": "",
     "fiveCat": true,
     "id": "smube7zo8"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m27",
+    "weaponId": "ig",
+    "timeMs": 275230,
+    "author": "Fallen_sky2",
+    "date": "2026-06-19",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1b7jB6AETX",
+        "title": "【MHRS】操虫棍 Lv300 迅龙 4分35秒 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "fiveCat": true,
+    "id": "smubfmhfs"
   }
 ];
