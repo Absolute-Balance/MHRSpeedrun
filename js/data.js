@@ -12077,5 +12077,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmuaozl27"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m34",
+    "weaponId": "gs",
+    "timeMs": 318150,
+    "author": "秋401",
+    "date": "2026-09-21",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1tMhe69Eq4",
+        "title": "特别探究电龙（暂时）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smuawiip6"
   }
 ];
