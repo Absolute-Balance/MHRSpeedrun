@@ -11993,5 +11993,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmualnih0"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "ta",
+    "monsterId": "m18",
+    "weaponId": "sns",
+    "timeMs": 300960,
+    "author": "往日残梦-NLNS",
+    "date": "2026-06-07",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1htE46CEA8",
+        "title": "【MHRS】片手剑 Lv300将军镰蟹 5分0秒 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmualorf6"
   }
 ];
