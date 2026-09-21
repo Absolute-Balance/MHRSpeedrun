@@ -12118,6 +12118,7 @@ window.MHRS_RECORDS = [
     ],
     "platform": "steam",
     "note": "",
+    "fiveCat": true,
     "id": "smube7zo8"
   }
 ];
