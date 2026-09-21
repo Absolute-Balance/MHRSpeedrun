@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MHRS 竞速成绩库</title>
+<title>MHRS 竞速成绩收录网站</title>
 <link rel="icon" type="image/png" href="MHRS-Logo-Square.png">
 <script>(function(){try{if(localStorage.getItem('mhrs_theme')==='light'){document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();</script>
-<link rel="stylesheet" href="css/style.css?v=1790004682404">
+<link rel="stylesheet" href="css/style.css?v=1790005557698">
 </head>
 <body>
 
 <header class="site-head">
   <div class="wrap head-bar">
     <div class="head-main">
-      <img class="head-logo" src="MHRS-Logo.png" alt="MHRS 竞速成绩库">
+      <img class="head-logo" src="MHRS-Logo.png" alt="MHRS 竞速成绩收录网站">
       <div class="head-text">
-        <h1 id="siteTitle">MHRS 竞速成绩库</h1>
-        <p id="siteSubtitle">怪物猎人 崛起：曙光 · Speedrun 成绩数据库</p>
+        <h1 id="siteTitle">MHRS 竞速成绩收录网站</h1>
+        <p id="siteSubtitle">怪物猎人崛起：曙光 · Speedrun 成绩数据收录</p>
       </div>
     </div>
     <div class="head-right">
@@ -29,30 +29,40 @@
 <!-- ================= 筛选面板 ================= -->
 <section class="filter-panel wrap" id="filterPanel">
 
-  <!-- 任务类型（单选） -->
-  <div class="fgroup">
-    <div class="fg-head">
-      <span class="fg-label">任务类型</span>
-      <span class="fg-desc">单选</span>
-    </div>
-    <div class="row">
-      <div class="radios" id="questTypeRadios"></div>
-    </div>
+  <!-- 任务类型（单选）+ 公告栏 -->
+  <div class="fgroup fgroup-task">
+    <div class="fgroup-main">
+      <div class="fg-head">
+        <span class="fg-label">任务类型</span>
+        <span class="fg-desc">单选</span>
+      </div>
+      <div class="row">
+        <div class="radios" id="questTypeRadios"></div>
+      </div>
 
-    <!-- 联动区：烈祸袭来 → 固定 10 任务（无需额外控件，只有提示） -->
-    <div class="cond-row hidden" id="ragingHint">
-      <span class="cond-label">烈祸袭来共 10 个任务（任务 → 目标怪），已作为横轴展示</span>
-    </div>
+      <!-- 联动区：烈祸袭来 → 固定 10 任务（无需额外控件，只有提示） -->
+      <div class="cond-row hidden" id="ragingHint">
+        <span class="cond-label">烈祸袭来共 10 个任务（任务 → 目标怪），已作为横轴展示</span>
+      </div>
 
-    <!-- 联动区：怪异探究Lv300 / 特别探究 → EX 星级多选 -->
-    <div class="cond-row hidden" id="exWrap">
-      <span class="cond-label">EX 星级：</span>
-      <div class="chips" id="exChips"></div>
-      <div class="inline-btns">
-        <button type="button" class="btn btn-mini" id="exAll">全选</button>
-        <button type="button" class="btn btn-mini" id="exNone">全不选</button>
+      <!-- 联动区：怪异探究Lv300 / 特别探究 → EX 星级多选 -->
+      <div class="cond-row hidden" id="exWrap">
+        <span class="cond-label">EX 星级：</span>
+        <div class="chips" id="exChips"></div>
+        <div class="inline-btns">
+          <button type="button" class="btn btn-mini" id="exAll">全选</button>
+          <button type="button" class="btn btn-mini" id="exNone">全不选</button>
+        </div>
       </div>
     </div>
+
+    <!-- 公告栏（近期改动） -->
+    <aside class="notice-box" id="noticeBox">
+      <div class="notice-head">📢 近期改动</div>
+      <div class="notice-body">
+        关于 5 猫任务的收录：经过讨论，网站目前保留<b>视频日期在 2026 年 12 月 31 日之前</b>的 5 猫任务成绩，之后的 5 猫任务不再接受。
+      </div>
+    </aside>
   </div>
 
   <!-- 狩猎规则（单选） -->
@@ -247,12 +257,12 @@
       <label>视频标题</label><input type="text" id="eTitle" placeholder="按钮上显示的视频标题（可选）" autocomplete="off">
       <label>作者</label><input type="text" id="eAuthor" placeholder="玩家名 / UP主" autocomplete="off">
       <label>用时</label><input type="text" id="eTime" placeholder="如 03'57''85; 也可以输入数字035785 / 0357(99)自动识别" autocomplete="off">
+      <label>日期</label><input type="text" id="eDate" placeholder="2026-9-6" autocomplete="off">
       <label id="eFiveCatLabel" class="hidden">5猫任务</label>
       <div class="e-fivecat hidden" id="eFiveCatRow">
         <select id="eFiveCat"><option value="">否</option><option value="1">是</option></select>
-        <span class="fg-desc">5猫怪异探究任务不属于官方合法任务，在 2026年12月31日 之前的投稿暂时保留</span>
       </div>
-      <label>日期</label><input type="text" id="eDate" placeholder="2026-9-6" autocomplete="off">
+      <div class="e-fivecat-note hidden" id="eFiveCatNote">5猫任务不属于官方合法任务，视频日期在 2026年12月31日 之前的成绩暂时保留</div>
       <label>视频链接</label><div class="e-video-row"><input type="text" id="eVideo" placeholder="B站链接或 BV 号（可选，自动补全）" autocomplete="off"><button type="button" class="btn btn-mini" id="eVideoIdentify">识别</button></div>
       <label>平台</label><select id="ePlat"></select>
       <label>保存通道</label><select id="eChannel">
@@ -287,13 +297,13 @@
       <label>武器</label><select id="sWeapon"></select>
       <label>规则</label><select id="sRule"></select>
       <label>用时</label><input type="text" id="sTime" placeholder="如 03'57''85; 也可以输入数字035785 / 0357(99)自动识别" autocomplete="off">
+      <label>作者</label><input type="text" id="sAuthor" placeholder="玩家名 / UP主" autocomplete="off">
+      <label>日期</label><input type="text" id="sDate" placeholder="2026-9-6" autocomplete="off">
       <label id="sFiveCatLabel" class="hidden">5猫任务</label>
       <div class="e-fivecat hidden" id="sFiveCatRow">
         <select id="sFiveCat"><option value="">否</option><option value="1">是</option></select>
-        <span class="fg-desc">5猫怪异探究任务不属于官方合法任务，在 2026年12月31日 之前的投稿暂时保留</span>
       </div>
-      <label>作者</label><input type="text" id="sAuthor" placeholder="玩家名 / UP主" autocomplete="off">
-      <label>日期</label><input type="text" id="sDate" placeholder="2026-9-6" autocomplete="off">
+      <div class="e-fivecat-note hidden" id="sFiveCatNote">5猫任务不属于官方合法任务，视频日期在 2026年12月31日 之前的成绩暂时保留</div>
       <label>视频标题</label><input type="text" id="sTitle" placeholder="按钮上显示的视频标题（可选）" autocomplete="off">
       <label>视频链接</label><div class="s-video-row"><input type="text" id="sBv" placeholder="B站链接或 BV 号（可选，可自动补全）" autocomplete="off"><button type="button" class="btn btn-mini" id="sVideoIdentify">识别</button></div>
       <label>平台</label><select id="sPlat"></select>
@@ -323,9 +333,9 @@
   </div>
 </div>
 
-<script src="js/config.js?v=1790004682404"></script>
-<script src="js/monsters.js?v=1790004682404"></script>
-<script src="js/data.js?v=1790004682404"></script>
-<script src="js/app.js?v=1790004682404"></script>
+<script src="js/config.js?v=1790005557698"></script>
+<script src="js/monsters.js?v=1790005557698"></script>
+<script src="js/data.js?v=1790005557698"></script>
+<script src="js/app.js?v=1790005557698"></script>
 </body>
 </html>

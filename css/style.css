@@ -109,6 +109,20 @@ code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-si
 .filter-panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px 12px; margin-top: 18px; }
 .fgroup { padding: 10px 0 12px; border-bottom: 1px dashed var(--line); }
 .fgroup:last-of-type { border-bottom: none; }
+/* 任务类型 + 右侧公告栏 */
+.fgroup-task { display: flex; gap: 18px; align-items: flex-start; flex-wrap: wrap; }
+.fgroup-task .fgroup-main { flex: 1 1 480px; min-width: 0; }
+.notice-box {
+  flex: 1 1 280px; max-width: 420px; margin-left: auto;
+  background: var(--panel-2); border: 1px solid var(--line); border-left: 4px solid var(--time-ta);
+  border-radius: 10px; padding: 10px 14px;
+}
+.notice-head { font-size: 13.5px; font-weight: 700; color: var(--accent-hi); margin-bottom: 5px; letter-spacing: .5px; }
+.notice-body { font-size: 13px; line-height: 1.75; color: var(--text); }
+.notice-body b { color: var(--time-ta); }
+@media (max-width: 900px) {
+  .notice-box { flex: 1 1 100%; max-width: none; margin-left: 0; }
+}
 .fg-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
 .fg-label { font-size: 15px; font-weight: 700; color: var(--accent-hi); letter-spacing: 1px; }
 .fg-desc { color: var(--text-dim); font-size: 12px; }
@@ -225,9 +239,10 @@ code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-si
   cursor: help; user-select: none;
 }
 .tag.five-tag { border-color: var(--time-ta); color: var(--time-ta); cursor: help; }
-/* 录入/投稿弹窗里的“5猫任务”一行 */
+/* 录入/投稿弹窗里的“5猫任务”一行（选项与标签对齐，说明另起一行） */
 .e-fivecat { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .e-fivecat select { min-width: 72px; flex: none; }
+.e-fivecat-note { grid-column: 1 / -1; color: var(--text-dim); font-size: 12px; line-height: 1.6; margin: -2px 0 4px; }
 .mx-cell .line2 { display: flex; justify-content: center; gap: 6px; align-items: baseline;
   font-size: 10px; color: var(--text-dim); min-width: 0; }
 .mx-cell .mxauthor { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

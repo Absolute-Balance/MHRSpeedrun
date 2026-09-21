@@ -4,8 +4,8 @@
  * 只需要改这里，页面会自动按新配置渲染。
  * ============================================================ */
 window.MHRS_CONFIG = {
-  siteTitle: 'MHRS 竞速成绩库',
-  siteSubtitle: '怪物猎人 崛起：曙光 · Speedrun 成绩数据库',
+  siteTitle: 'MHRS 竞速成绩收录网站',
+  siteSubtitle: '怪物猎人崛起：曙光 · Speedrun 成绩数据收录',
 
   /* ---- 任务类型（单选，页面按它切换矩阵轴向）----
    * raging    烈祸袭来：横轴固定为下方 ragingQuests 的 10 个任务

@@ -769,7 +769,7 @@
       r.rule === rec.rule;
   }
   /* 5猫任务（5 次力尽倒下的怪异探究任务）说明文案 */
-  var FIVECAT_TIP = '该任务是 5 次力尽倒下的非法探究任务（不属于官方合法任务），不影响局内处理；在 2026年12月31日 之前的投稿暂时保留';
+  var FIVECAT_TIP = '该任务是 5 次力尽倒下的非法探究任务（不属于官方合法任务），不影响局内处理；视频日期在 2026年12月31日 之前的成绩暂时保留';
   function openEntry(ctx, editRec) {
     var m = mById[ctx.mid], w = wById[ctx.wid];
     if (!m || !w) return;
@@ -841,6 +841,7 @@
       var showFc = qt !== 'raging';
       if ($('eFiveCatRow')) $('eFiveCatRow').classList.toggle('hidden', !showFc);
       if ($('eFiveCatLabel')) $('eFiveCatLabel').classList.toggle('hidden', !showFc);
+      if ($('eFiveCatNote')) $('eFiveCatNote').classList.toggle('hidden', !showFc);
     }
     $('entryModal').classList.remove('hidden');
     $('eAuthor').focus();
@@ -1833,6 +1834,7 @@
     var show = !!qt && qt !== 'raging';
     if ($('sFiveCatRow')) $('sFiveCatRow').classList.toggle('hidden', !show);
     if ($('sFiveCatLabel')) $('sFiveCatLabel').classList.toggle('hidden', !show);
+    if ($('sFiveCatNote')) $('sFiveCatNote').classList.toggle('hidden', !show);
     if (!show && $('sFiveCat')) $('sFiveCat').value = '';
   }
   function resolveMonster(v) {
