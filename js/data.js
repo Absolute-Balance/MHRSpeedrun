@@ -11808,27 +11808,6 @@ window.MHRS_RECORDS = [
   {
     "questType": "anomaly300",
     "quest": null,
-    "exStar": "EX3",
-    "rule": "ta",
-    "monsterId": "m19",
-    "weaponId": "sns",
-    "timeMs": 352020,
-    "author": "往日残梦-NLNS",
-    "date": "2026-03-13",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV191cCzeEQR",
-        "title": "【MHRS】片手剑 Lv300 绯天狗兽 5分52秒 TA规则"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmua3v7pr"
-  },
-  {
-    "questType": "anomaly300",
-    "quest": null,
     "exStar": "EX1",
     "rule": "ta",
     "monsterId": "m01",
