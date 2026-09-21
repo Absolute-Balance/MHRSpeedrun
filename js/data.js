@@ -11951,5 +11951,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmualitk6"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "ta",
+    "monsterId": "m08",
+    "weaponId": "sns",
+    "timeMs": 278410,
+    "author": "往日残梦-NLNS",
+    "date": "2026-04-21",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1wqdUBmE2X",
+        "title": "【MHRS】片手剑 Lv300大名盾蟹 4分38秒 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmualjnyf"
   }
 ];
