@@ -12014,5 +12014,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmualorf6"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m40",
+    "weaponId": "sns",
+    "timeMs": 340050,
+    "author": "往日残梦-NLNS",
+    "date": "2026-06-16",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1ovjV6CEx6",
+        "title": "【MHRS/水芸杯】片手剑 Lv300角龙 5分40秒 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmualq3hi"
   }
 ];
