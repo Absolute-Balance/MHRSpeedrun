@@ -11888,5 +11888,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmualeuvx"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "ta",
+    "monsterId": "m06",
+    "weaponId": "sns",
+    "timeMs": 442000,
+    "author": "往日残梦-NLNS",
+    "date": "2026-03-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV17BXWBFENX",
+        "title": "【MHRS】片手剑 Lv300白兔兽 7分22秒 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmualfz89"
   }
 ];
