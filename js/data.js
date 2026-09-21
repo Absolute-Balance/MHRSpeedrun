@@ -12056,5 +12056,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmualtwfh"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m11",
+    "weaponId": "ls",
+    "timeMs": 234770,
+    "author": "BFeather7",
+    "date": "2026-09-06",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1q5bp6AEaJ",
+        "title": "【MHRS】太刀 LV300河童蛙 三无规则 3'54\"77"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmuaozl27"
   }
 ];
