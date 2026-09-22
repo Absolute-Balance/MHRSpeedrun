@@ -12206,5 +12206,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmucxvljv"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "ta",
+    "monsterId": "m12",
+    "weaponId": "ig",
+    "timeMs": 485940,
+    "author": "治愈拽枪兵",
+    "date": "2026-09-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1YEhH6bE5g",
+        "title": "一点特别探究（虫棍）"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmucxxrjv"
   }
 ];
