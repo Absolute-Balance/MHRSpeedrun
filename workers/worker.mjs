@@ -5,6 +5,7 @@
  *   POST /submit   公开投稿（任何人） → 存入草稿区 KV
  *   GET  /pending  审核列表（需 ADMIN_KEY）
  *   POST /approve  审核通过：合并进 GitHub js/data.js（需 ADMIN_KEY）
+ *   POST /approve-edit 审核时修正后发布：改投稿字段后走同一套发布流程（需 ADMIN_KEY）
  *   POST /reject   驳回删除草稿（需 ADMIN_KEY）
  *
  * 环境变量（Workers → Settings → Variables）：
@@ -42,6 +43,9 @@ export default {
       }
       if (method === 'POST' && p === '/approve') {
         return await handleApprove(request, env, corsHeaders);
+      }
+      if (method === 'POST' && p === '/approve-edit') {
+        return await handleApproveEdit(request, env, corsHeaders);
       }
       if (method === 'POST' && p === '/admin-save') {
         return await handleAdminSave(request, env, corsHeaders);
@@ -366,6 +370,36 @@ async function handleApprove(request, env, cors) {
   if (!raw) return json({ ok: false, error: '草稿不存在或已被处理' }, 404, cors);
   const sub = JSON.parse(raw);
   const r = await publishToGitHub(sub, env);
+  await env.SUBMISSIONS.delete(id).catch(() => {});
+  return json({ ok: true, sha: r.sha, replaced: r.replaced }, 200, cors);
+}
+/* 审核时修正后发布：管理员在审核界面直接改投稿字段，改完走与「通过」完全一致的发布流程
+ * 请求：POST /approve-edit  { id: 草稿id, rec: { 要覆盖的字段… } }
+ * 顺序：先校验 → 再发布 → 最后删草稿（发布失败时草稿保留，不会丢投稿） */
+async function handleApproveEdit(request, env, cors) {
+  const b = await readBody(request);
+  if (!adminOk(request, env)) return json({ ok: false, error: '无权限' }, 401, cors);
+  const id = cleanStr(b.id, 200);
+  if (!id) return json({ ok: false, error: '缺少草稿 id' }, 400, cors);
+  const raw = await env.SUBMISSIONS.get(id).catch(() => null);
+  if (!raw) return json({ ok: false, error: '草稿不存在或已被处理' }, 404, cors);
+  let draft;
+  try { draft = JSON.parse(raw); }
+  catch (e) { return json({ ok: false, error: '草稿数据异常' }, 500, cors); }
+  /* 用管理员提交的字段覆盖原投稿，再按投稿同一套规则复校验 */
+  const patch = (b.rec && typeof b.rec === 'object') ? b.rec : {};
+  /* 客户端没提交视频字段时，沿用原投稿的视频，避免「只是改个作者却把视频弄丢」 */
+  if (patch.bv === undefined) {
+    const v0 = (draft.videos && draft.videos[0]) || null;
+    patch.bv = v0 ? v0.url : '';
+    if (patch.title === undefined) patch.title = (v0 && v0.title) || '';
+  }
+  let sub;
+  try { sub = validateSubmission(Object.assign({}, draft, patch)); }
+  catch (e) { return json({ ok: false, error: '修改后的内容有误：' + e.message }, 400, cors); }
+  let r;
+  try { r = await publishToGitHub(sub, env); }
+  catch (e) { return json({ ok: false, error: e.message }, 409, cors); }
   await env.SUBMISSIONS.delete(id).catch(() => {});
   return json({ ok: true, sha: r.sha, replaced: r.replaced }, 200, cors);
 }

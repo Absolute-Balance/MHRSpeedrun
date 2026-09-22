@@ -6,7 +6,7 @@
 <title>MHRS 竞速成绩收录网站</title>
 <link rel="icon" type="image/png" href="MHRS-Logo-Square.png">
 <script>(function(){try{if(localStorage.getItem('mhrs_theme')==='light'){document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();</script>
-<link rel="stylesheet" href="css/style.css?v=1790092507120">
+<link rel="stylesheet" href="css/style.css?v=1790092562456">
 </head>
 <body>
 
@@ -333,6 +333,40 @@
   </div>
 </div>
 
+<!-- ================= 审核：修改后发布弹窗 ================= -->
+<div class="modal-mask hidden" id="rvEditModal">
+  <div class="modal modal-narrow">
+    <div class="modal-head">
+      <b>修改投稿并发布</b>
+      <button type="button" class="btn btn-ghost" id="reClose">✕</button>
+    </div>
+    <p class="fg-desc" id="reOrigin"></p>
+    <div class="eform">
+      <label>任务类型</label><select id="reQuestType"></select>
+      <label id="reTaskLabel">EX星级</label><select id="reTaskSel"></select>
+      <label>怪物</label><input type="text" id="reMonster" list="dlReMonsters" placeholder="选择怪物（仅显示当前任务下的怪物）" autocomplete="off">
+      <datalist id="dlReMonsters"></datalist>
+      <label>武器</label><select id="reWeapon"></select>
+      <label>规则</label><select id="reRule"></select>
+      <label>用时</label><input type="text" id="reTime" placeholder="如 03'57''85；也可输入 035785 / 0357 自动识别" autocomplete="off">
+      <label>作者</label><input type="text" id="reAuthor" autocomplete="off">
+      <label>日期</label><input type="text" id="reDate" placeholder="2026-9-6" autocomplete="off">
+      <label id="reFiveCatLabel">5猫任务</label>
+      <div class="e-fivecat" id="reFiveCatRow">
+        <select id="reFiveCat"><option value="">— 请选择 —</option><option value="0">否</option><option value="1">是</option></select>
+      </div>
+      <label>视频标题</label><input type="text" id="reTitle" placeholder="按钮上显示的视频标题（可选）" autocomplete="off">
+      <label>视频链接</label><input type="text" id="reBv" placeholder="B站链接或 BV 号（可留空）" autocomplete="off">
+      <label>平台</label><select id="rePlat"></select>
+    </div>
+    <div class="modal-actions">
+      <button type="button" class="btn btn-primary" id="reGo">✓ 修正并发布</button>
+      <button type="button" class="btn btn-ghost" id="reCancel">取消</button>
+      <span class="fg-desc" id="reMsg"></span>
+    </div>
+  </div>
+</div>
+
 <!-- ================= 导出清晰度选择弹窗 ================= -->
 <div class="modal-mask hidden" id="exportModal">
   <div class="modal modal-narrow">
@@ -349,9 +383,9 @@
   </div>
 </div>
 
-<script src="js/config.js?v=1790092507120"></script>
-<script src="js/monsters.js?v=1790092507120"></script>
-<script src="js/data.js?v=1790092507120"></script>
-<script src="js/app.js?v=1790092507120"></script>
+<script src="js/config.js?v=1790092562456"></script>
+<script src="js/monsters.js?v=1790092562456"></script>
+<script src="js/data.js?v=1790092562456"></script>
+<script src="js/app.js?v=1790092562456"></script>
 </body>
 </html>

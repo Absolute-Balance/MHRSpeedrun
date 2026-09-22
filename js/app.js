@@ -2320,6 +2320,8 @@
       }
       var list = j.list || [];
       $('rvSub').textContent = '共 ' + list.length + ' 条待审投稿';
+      reviewDrafts = {};
+      list.forEach(function (s) { reviewDrafts[s.id] = s; });
       if (!list.length) {
         listBox.innerHTML = '<div class="wv-sub">暂无待审投稿。</div>';
         rvMsg('', true);
@@ -2349,6 +2351,7 @@
           '<div class="rv-title">' + (v ? '<a class="vbtn" href="' + esc(v.url) + '" target="_blank" rel="noopener"><span class="site site-bilibili">B站</span>' + esc(v.title || '打开视频') + ' ↗</a>' : '（未附视频）') + '</div>' +
           '<div class="rv-actions">' +
           '<button type="button" class="btn btn-mini ok rv-ok">✓ 通过并发布</button>' +
+          '<button type="button" class="btn btn-mini rv-edit">✎ 修改后发布</button>' +
           '<button type="button" class="btn btn-mini no rv-no">✕ 驳回</button>' +
           '</div></div>');
       });
@@ -2357,6 +2360,187 @@
     } catch (e) {
       rvMsg('网络错误：' + e.message, false);
     }
+  }
+  var reviewDrafts = {};      /* 本次待审列表：id → 投稿（供「修改后发布」取原始字段） */
+  var reDraft = null;         /* 正在修改的投稿 */
+  var reMonsterIds = [];      /* 修改弹窗当前可选怪物 */
+  function reMsg(t, ok) {
+    var m = $('reMsg');
+    if (!m) return;
+    m.textContent = t;
+    m.style.color = ok ? 'var(--good)' : 'var(--danger)';
+  }
+  /* 当前任务类型 / EX 星级（或烈祸任务）下的怪物候选，与投稿表单口径一致 */
+  function monsterIdsFor(qt, taskVal) {
+    var ids = [];
+    if (qt === 'raging') {
+      CFG.ragingQuests.forEach(function (q) {
+        var m = mByFile(q.monsterFile);
+        if (m && ids.indexOf(m.id) < 0) ids.push(m.id);
+      });
+    } else if (taskVal) {
+      MONSTERS.forEach(function (m) { if (m.tier === taskVal) ids.push(m.id); });
+    }
+    return ids;
+  }
+  function refreshReTaskOptions() {
+    var qt = $('reQuestType').value;
+    var sel = $('reTaskSel');
+    var keep = sel.value;
+    sel.innerHTML = '';
+    var ph = document.createElement('option');
+    ph.value = '';
+    if (qt === 'raging') {
+      $('reTaskLabel').textContent = '烈祸任务';
+      ph.textContent = '选择烈祸任务';
+      sel.appendChild(ph);
+      CFG.ragingQuests.forEach(function (q) {
+        var op = document.createElement('option');
+        op.value = q.id;
+        op.textContent = q.label;
+        sel.appendChild(op);
+      });
+    } else {
+      $('reTaskLabel').textContent = 'EX星级';
+      ph.textContent = '选择 EX 星级';
+      sel.appendChild(ph);
+      CFG.exStars.forEach(function (s) {
+        var op = document.createElement('option');
+        op.value = s;
+        op.textContent = s;
+        sel.appendChild(op);
+      });
+    }
+    if (keep && sel.querySelector('option[value="' + keep + '"]')) sel.value = keep;
+    refreshReMonsterDl();
+  }
+  function refreshReMonsterDl() {
+    reMonsterIds = monsterIdsFor($('reQuestType').value, $('reTaskSel').value);
+    var dl = $('dlReMonsters');
+    dl.innerHTML = '';
+    reMonsterIds.forEach(function (id) {
+      var op = document.createElement('option');
+      op.value = mById[id] ? mById[id].name : id;
+      dl.appendChild(op);
+    });
+    var mv = $('reMonster').value;
+    if (mv && reMonsterIds.indexOf(resolveMonster(mv)) < 0) $('reMonster').value = '';
+  }
+  /* 5猫行：烈祸是官方任务，不标 5猫；从烈祸切到探究类时要求重新选一次 */
+  function syncReFiveCat() {
+    var show = $('reQuestType').value !== 'raging';
+    $('reFiveCatRow').classList.toggle('hidden', !show);
+    $('reFiveCatLabel').classList.toggle('hidden', !show);
+    var v = $('reFiveCat').value;
+    if (!show) $('reFiveCat').value = '0';
+    else if (v !== '0' && v !== '1') $('reFiveCat').value = '';
+  }
+  function openReviewEdit(draft) {
+    if (!draft) { rvMsg('投稿数据已失效，请重新打开审核区', false); return; }
+    reDraft = draft;
+    reMsg('', true);
+    var v = (draft.videos && draft.videos[0]) || null;
+    var m = mById[draft.monsterId];
+    var w = wById[draft.weaponId];
+    $('reOrigin').textContent = '原投稿：' + fmtTime(draft.timeMs) + ' · ' + ruleLabel(draft.rule) + ' · ' +
+      (draft.author || '') + ' · ' + (draft.date || '') + ' · ' + (m ? m.name : draft.monsterId) +
+      ' × ' + (w ? w.label : draft.weaponId) + (draft.fiveCat ? ' · 5猫' : '');
+    $('reQuestType').value = draft.questType || '';
+    refreshReTaskOptions();
+    $('reTaskSel').value = draft.questType === 'raging' ? (draft.quest || '') : (draft.exStar || '');
+    refreshReMonsterDl();
+    $('reMonster').value = m ? m.name : (draft.monsterId || '');
+    $('reWeapon').value = draft.weaponId || '';
+    $('reRule').value = draft.rule || '';
+    $('reTime').value = fmtTime(draft.timeMs);
+    $('reAuthor').value = draft.author || '';
+    $('reDate').value = draft.date || '';
+    syncReFiveCat();
+    $('reFiveCat').value = draft.questType === 'raging' ? '0' : (draft.fiveCat ? '1' : '0');
+    $('reBv').value = v ? (bvOf(v.url) || v.url || '') : '';
+    $('reTitle').value = (v && v.title) || '';
+    var plat = draft.platform === 'ps5' ? 'ps' : (draft.platform || 'steam');
+    $('rePlat').value = plat;
+    if (!$('rePlat').value) $('rePlat').value = 'steam';
+    $('reGo').disabled = false;
+    $('reviewModal').classList.add('hidden');
+    $('rvEditModal').classList.remove('hidden');
+    $('reTime').focus();
+  }
+  function closeReviewEdit() {
+    $('rvEditModal').classList.add('hidden');
+    var rv = $('reviewModal');
+    if (rv) rv.classList.remove('hidden');
+    reDraft = null;
+  }
+  async function reviewEditSend() {
+    if (!apiBaseOk()) { reMsg('投稿服务未启用', false); return; }
+    if (!reDraft) { reMsg('投稿数据已失效，请关闭后重新打开审核区', false); return; }
+    var qt = $('reQuestType').value;
+    if (!qt) { reMsg('请选择任务类型', false); return; }
+    var quest = null, ex = null;
+    if (qt === 'raging') {
+      quest = $('reTaskSel').value;
+      if (!quest) { reMsg('请选择烈祸任务', false); return; }
+    } else {
+      ex = $('reTaskSel').value;
+      if (!ex) { reMsg('请选择 EX 星级', false); return; }
+    }
+    var mid = resolveMonster($('reMonster').value);
+    if (!mid) { reMsg('请选择怪物（仅显示当前任务下的怪物）', false); return; }
+    if (reMonsterIds.indexOf(mid) < 0) { reMsg('该怪物不属于当前任务/EX 分级，请重新选择', false); return; }
+    var wid = $('reWeapon').value;
+    var rule = $('reRule').value;
+    var author = $('reAuthor').value.trim();
+    var date = normDate($('reDate').value);
+    var ms = parseTime($('reTime').value);
+    if (!wid) { reMsg('请选择武器', false); return; }
+    if (!rule) { reMsg('请选择规则', false); return; }
+    if (!author) { reMsg('请填写作者', false); return; }
+    if (ms == null) { reMsg('用时格式不对（如 05\'02\'\'52）', false); return; }
+    if (!date) { reMsg('日期格式不对（如 2026-9-6）', false); return; }
+    var fiveCat = $('reFiveCat').value;
+    if (qt !== 'raging' && fiveCat !== '0' && fiveCat !== '1') { reMsg('请选择是否为 5猫任务', false); return; }
+    var payload = {
+      questType: qt,
+      quest: quest,
+      exStar: ex,
+      rule: rule,
+      monsterId: mid,
+      weaponId: wid,
+      timeMs: ms,
+      author: author,
+      date: date,
+      title: $('reTitle').value.trim(),
+      bv: $('reBv').value.trim(),
+      fiveCat: fiveCat === '1',
+      platform: $('rePlat').value || 'steam'
+    };
+    var btn = $('reGo');
+    btn.disabled = true;
+    reMsg('正在修正并发布…', true);
+    try {
+      var res = await fetch(SUB.apiBase + '/approve-edit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'x-admin-key': getAdminKey() },
+        body: JSON.stringify({ id: reDraft.id, rec: payload })
+      });
+      var j = await res.json().catch(function () { return {}; });
+      if (j.ok) {
+        window.alert((j.replaced ? '已修正并发布，并自动替换旧成绩 ' + j.replaced + ' 条' : '已修正并发布') +
+          '（commit ' + String(j.sha || '').slice(0, 7) + '），页面即将刷新。');
+        window.location.reload();
+        return;
+      }
+      var err = j.error || ('接口返回异常（HTTP ' + res.status + '）');
+      if (res.status === 404 && String(err).indexOf('接口不存在') >= 0) {
+        err = '接口不存在：请到 Cloudflare 重新部署最新版 Worker 后再试';
+      }
+      reMsg('发布失败：' + err, false);
+    } catch (e) {
+      reMsg('网络错误：' + e.message, false);
+    }
+    btn.disabled = false;
   }
   function bindReviewActions() {
     var listBox = $('rvList');
@@ -2380,6 +2564,11 @@
             b.disabled = false;
           }
         } catch (e) { rvMsg('网络错误：' + e.message, false); b.disabled = false; }
+      });
+    });
+    listBox.querySelectorAll('.rv-edit').forEach(function (b) {
+      b.addEventListener('click', function () {
+        openReviewEdit(reviewDrafts[b.closest('.rv-item').dataset.id]);
       });
     });
     listBox.querySelectorAll('.rv-no').forEach(function (b) {
@@ -2481,6 +2670,22 @@
     $('eSave').addEventListener('click', function () { saveEntry(); });
     var identifyBtn = $('eVideoIdentify');
     if (identifyBtn) identifyBtn.addEventListener('click', identifyBiliVideo);
+
+    /* 审核：修改后发布弹窗 */
+    fillSelect('reQuestType', CFG.questTypes, '');
+    fillSelect('reWeapon', CFG.weapons, '');
+    fillSelect('reRule', CFG.rules, '— 请选择规则 —');
+    fillSelect('rePlat', CFG.platforms, '');
+    $('reQuestType').addEventListener('change', function () { refreshReTaskOptions(); syncReFiveCat(); });
+    $('reTaskSel').addEventListener('change', function () { refreshReMonsterDl(); });
+    var reModal = $('rvEditModal');
+    $('reClose').addEventListener('click', closeReviewEdit);
+    $('reCancel').addEventListener('click', closeReviewEdit);
+    reModal.addEventListener('click', function (e) { if (e.target === reModal) closeReviewEdit(); });
+    $('reGo').addEventListener('click', function () { reviewEditSend(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !reModal.classList.contains('hidden')) closeReviewEdit();
+    });
 
     setupSubmitReview();
 
