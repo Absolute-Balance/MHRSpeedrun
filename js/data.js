@@ -12185,5 +12185,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmucha589"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m39",
+    "weaponId": "gl",
+    "timeMs": 534990,
+    "author": "Marshmollow",
+    "date": "2026-09-22",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1UFhr6GEcG",
+        "title": "【这是我们崛起最有操作的武器】特别探究·轰龙 铳枪 三无规则 8分54秒19"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smucv0blh"
   }
 ];
