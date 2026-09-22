@@ -12172,14 +12172,14 @@ window.MHRS_RECORDS = [
     "rule": "sanyou",
     "monsterId": "m32",
     "weaponId": "ls",
-    "timeMs": 374810,
+    "timeMs": 364220,
     "author": "BFeather7",
     "date": "2026-09-21",
     "videos": [
       {
         "site": "bilibili",
         "url": "https://www.bilibili.com/video/BV11rhq6ZEn2",
-        "title": "【MHRS】太刀 特别探究：熔翁龙 三无规则 6'14\"81"
+        "title": "【MHRS】太刀 特别探究：熔翁龙 三无规则 6'04\"22"
       }
     ],
     "platform": "steam",
