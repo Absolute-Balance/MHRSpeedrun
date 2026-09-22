@@ -1568,7 +1568,7 @@
     var mctx = document.createElement('canvas').getContext('2d');
     mctx.font = '10px "Microsoft YaHei", sans-serif';
     var legText = '白色=三无规则 · 黄色=TA规则';
-    var footText = 'MHRS 竞速成绩库 · @星空柠檬凛';
+    var footText = '怪物猎人崛起曙光 竞速成绩收录网站';
     var extraFoot = (mctx.measureText(legText).width + mctx.measureText(footText).width + pad * 2 + 26 > W) ? 15 : 0;
     var H = pad + topH + gridH + footH + pad + extraFoot;
 
