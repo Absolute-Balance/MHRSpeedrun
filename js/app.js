@@ -1564,11 +1564,16 @@
     var pad = 16, leadW = 66, colW = 126, headH = 88, rowH = 56, topH = 64, footH = 26;
     var gridH = headH + weapons.length * rowH;
     var W = pad * 2 + leadW + axis.length * colW;
-    /* 底部图例/落款宽度预测量（窄图时自动加一行，避免文字重叠） */
+    /* 底部图例/落款宽度预测量：先自动缩小字号保证同一行放得下，实在放不下才换行 */
     var mctx = document.createElement('canvas').getContext('2d');
-    mctx.font = '10px "Microsoft YaHei", sans-serif';
     var legText = '白色=三无规则 · 黄色=TA规则';
-    var footText = '怪物猎人崛起曙光 竞速成绩收录网站';
+    var footText = '怪物猎人崛起曙光 竞速成绩收录';
+    var footFont = 10;
+    while (footFont > 7) {
+      mctx.font = footFont + 'px "Microsoft YaHei", sans-serif';
+      if (mctx.measureText(legText).width + mctx.measureText(footText).width + pad * 2 + 26 <= W) break;
+      footFont -= 0.5;
+    }
     var extraFoot = (mctx.measureText(legText).width + mctx.measureText(footText).width + pad * 2 + 26 > W) ? 15 : 0;
     var H = pad + topH + gridH + footH + pad + extraFoot;
 
@@ -1711,9 +1716,9 @@
     ctx.lineTo(weaponColX + axis.length * colW + 0.5, gy + headH + 0.5);
     ctx.stroke();
 
-    /* 图例 + 页脚（窄图自动分两行，避免重叠） */
+    /* 图例 + 页脚（字号已按宽度自动缩小；极窄时才分两行） */
     ctx.fillStyle = C.dim;
-    ctx.font = '10px "Microsoft YaHei", sans-serif';
+    ctx.font = footFont + 'px "Microsoft YaHei", sans-serif';
     ctx.textAlign = 'left';
     ctx.fillText(legText, pad, gy + gridH + 18);
     ctx.textAlign = 'right';
