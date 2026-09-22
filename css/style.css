@@ -486,6 +486,38 @@ code { background: var(--code-bg); padding: 1px 5px; border-radius: 4px; font-si
 #impMsg { white-space: pre-line; max-height: 120px; overflow: auto; }
 .hint { background: var(--field); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; font-size: 12px; color: var(--text-dim); overflow-x: auto; }
 
+/* 导出清晰度选择 */
+.exp-opts { display: flex; flex-direction: column; gap: 8px; margin: 10px 0 4px; }
+.exp-opt {
+  display: flex; align-items: flex-start; gap: 10px; width: 100%; text-align: left;
+  background: var(--panel-2); border: 1px solid var(--line); border-radius: 10px;
+  padding: 9px 12px; cursor: pointer; color: var(--text); font: inherit;
+  transition: border-color .15s, background .15s;
+}
+.exp-opt:hover { border-color: var(--sel-border); }
+.exp-opt.on { border-color: var(--sel-border); background: var(--hov-sel); }
+.exp-opt.off { opacity: .55; cursor: not-allowed; }
+.exp-opt.off:hover { border-color: var(--line); }
+.exp-radio {
+  flex: 0 0 auto; width: 15px; height: 15px; margin-top: 2px; border-radius: 50%;
+  border: 1px solid var(--line); background: var(--field); position: relative;
+}
+.exp-opt.on .exp-radio { border-color: var(--sel-border); }
+.exp-opt.on .exp-radio::after {
+  content: ''; position: absolute; left: 3px; top: 3px; width: 7px; height: 7px;
+  border-radius: 50%; background: linear-gradient(135deg, var(--btn-grad1), var(--btn-grad2));
+}
+.exp-main { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.exp-name { font-size: 14px; }
+.exp-name em { font-style: normal; color: var(--accent-hi); font-size: 12.5px; margin-left: 2px; }
+.exp-desc { font-size: 12px; color: var(--text-dim); }
+.exp-dim { font-size: 11.5px; color: var(--text-dim); font-family: Consolas, Menlo, monospace; }
+.exp-hint { margin: 2px 0 0; line-height: 1.6; }
+@media (max-width: 640px) {
+  .exp-opt { padding: 10px; }
+  .exp-dim { font-family: inherit; }
+}
+
 /* ================= 怪异探究任务规则页 ================= */
 #anomalyArea { padding-bottom: 34px; }
 .ax-card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 16px 14px; margin-bottom: 14px; }

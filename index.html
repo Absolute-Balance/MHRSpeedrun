@@ -6,7 +6,7 @@
 <title>MHRS 竞速成绩收录网站</title>
 <link rel="icon" type="image/png" href="MHRS-Logo-Square.png">
 <script>(function(){try{if(localStorage.getItem('mhrs_theme')==='light'){document.documentElement.setAttribute('data-theme','light');}}catch(e){}})();</script>
-<link rel="stylesheet" href="css/style.css?v=1790090267209">
+<link rel="stylesheet" href="css/style.css?v=1790091518807">
 </head>
 <body>
 
@@ -333,9 +333,25 @@
   </div>
 </div>
 
-<script src="js/config.js?v=1790090267209"></script>
-<script src="js/monsters.js?v=1790090267209"></script>
-<script src="js/data.js?v=1790090267209"></script>
-<script src="js/app.js?v=1790090267209"></script>
+<!-- ================= 导出清晰度选择弹窗 ================= -->
+<div class="modal-mask hidden" id="exportModal">
+  <div class="modal modal-narrow">
+    <div class="modal-head">
+      <b>导出清晰度</b>
+      <button type="button" class="btn btn-ghost" id="expClose">✕</button>
+    </div>
+    <p class="fg-desc">倍率越高越清晰、文件越大，导出耗时也略增。所选档位会记住，下次默认沿用。</p>
+    <div class="exp-opts" id="expOpts"></div>
+    <p class="fg-desc exp-hint" id="expHint"></p>
+    <div class="modal-actions">
+      <button type="button" class="btn btn-primary" id="expGo">✓ 导出 PNG</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/config.js?v=1790091518807"></script>
+<script src="js/monsters.js?v=1790091518807"></script>
+<script src="js/data.js?v=1790091518807"></script>
+<script src="js/app.js?v=1790091518807"></script>
 </body>
 </html>

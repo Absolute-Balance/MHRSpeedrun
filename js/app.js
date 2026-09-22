@@ -1550,7 +1550,177 @@
     while (s.length > 1 && ctx.measureText(s + '…').width > maxW) s = s.slice(0, -1);
     return s + '…';
   }
-  async function exportMatrixImage() {
+  /* ---- 导出清晰度预设（点导出时弹窗选择，选择记忆在浏览器） ---- */
+  var EXPORT_SCALES = [
+    { sc: 2, name: '标准', tag: '2x', desc: '体积小，适合聊天软件快速预览' },
+    { sc: 3, name: '高清', tag: '3x', desc: '推荐：文字锐利、体积适中' },
+    { sc: 4, name: '超清', tag: '4x', desc: '大屏查看、二次裁剪都够用' }
+  ];
+  var EXPORT_SCALE_KEY = 'mhrs_export_scale';
+  var EXPORT_TIERS = [4, 3, 2];
+  var EXPORT_MAX_SIDE = 32767;    /* 代码侧的保守上限，实际还要受本机画布上限约束 */
+  var EXPORT_MAX_PIXELS = 7.0e7;  /* 安全面积上限，再大容易吃满内存甚至出空白图 */
+  var CANVAS_SIDE_KEY = 'mhrs_canvas_max_side';
+  function getExportScale() {
+    try {
+      var v = parseInt(localStorage.getItem(EXPORT_SCALE_KEY), 10);
+      if (EXPORT_TIERS.indexOf(v) >= 0) return v;
+    } catch (e) { }
+    return 3;
+  }
+  function setExportScale(v) { try { localStorage.setItem(EXPORT_SCALE_KEY, String(v)); } catch (e) { } }
+  function fmtBytes(b) {
+    if (!b) return '';
+    if (b >= 1048576) return (b / 1048576).toFixed(1) + 'MB';
+    return Math.max(1, Math.round(b / 1024)) + 'KB';
+  }
+  function nextLowerTier(sc) {
+    for (var i = 0; i < EXPORT_TIERS.length; i++) {
+      if (EXPORT_TIERS[i] < sc - 0.001) return EXPORT_TIERS[i];
+    }
+    return 0;
+  }
+  /* 画布超限时浏览器不报错、只会静默出空白图，用左上角像素确认真的画上了 */
+  function canvasUsable(ctx) {
+    try {
+      return ctx.getImageData(0, 0, 1, 1).data[3] !== 0;
+    } catch (e) {
+      return true;   /* file:// 等读不到像素的场景，不误判为失败 */
+    }
+  }
+  /* 探测本机画布单边上限（很矮的画布内存极小，试不出副作用），一次会话只测一次 */
+  function canvasMaxSide() {
+    var cached = 0;
+    try { cached = parseInt(sessionStorage.getItem(CANVAS_SIDE_KEY), 10) || 0; } catch (e) { }
+    if (cached) return cached;
+    var cands = [32767, 24576, 16384, 12288, 8192, 6144, 4096, 2048];
+    var found = 1024;
+    for (var i = 0; i < cands.length; i++) {
+      var s = cands[i], c = document.createElement('canvas'), ok = false;
+      try {
+        c.width = s;
+        c.height = 64;
+        var cx = c.getContext('2d');
+        if (cx && c.width === s) {
+          cx.fillStyle = '#fff';
+          cx.fillRect(0, 0, s, 64);
+          ok = canvasUsable(cx);
+        }
+      } catch (e) { ok = false; }
+      c.width = 0;
+      c.height = 0;
+      if (ok) { found = s; break; }
+    }
+    try { sessionStorage.setItem(CANVAS_SIDE_KEY, String(found)); } catch (e) { }
+    return found;
+  }
+  /* 矩阵画布排版尺寸：导出与清晰度弹窗共用，避免两处数字不一致 */
+  function matrixLayout(axisLen) {
+    var pad = 16, leadW = 66, colW = 126, headH = 88, rowH = 56, topH = 64, footH = 26;
+    var W = pad * 2 + leadW + axisLen * colW;
+    var legText = '白色=三无规则 · 黄色=TA规则';
+    var footText = '怪物猎人崛起曙光 竞速成绩收录';
+    /* 底部图例/落款宽度预测量：先自动缩小字号保证同一行放得下，实在放不下才换行 */
+    var mctx = document.createElement('canvas').getContext('2d');
+    var footFont = 10;
+    while (footFont > 7) {
+      mctx.font = footFont + 'px "Microsoft YaHei", sans-serif';
+      if (mctx.measureText(legText).width + mctx.measureText(footText).width + pad * 2 + 26 <= W) break;
+      footFont -= 0.5;
+    }
+    var extraFoot = (mctx.measureText(legText).width + mctx.measureText(footText).width + pad * 2 + 26 > W) ? 15 : 0;
+    var gridH = headH + CFG.weapons.length * rowH;
+    return {
+      W: W, H: pad + topH + gridH + footH + pad + extraFoot, gridH: gridH,
+      pad: pad, leadW: leadW, colW: colW, headH: headH, rowH: rowH, topH: topH, footH: footH,
+      extraFoot: extraFoot, legText: legText, footText: footText, footFont: footFont
+    };
+  }
+  /* 把请求的倍率压到本机画布能吃下的安全值 */
+  function safeScale(sc, W, H) {
+    var side = Math.min(EXPORT_MAX_SIDE, canvasMaxSide());
+    var cap = Math.min(side / W, side / H, Math.sqrt(EXPORT_MAX_PIXELS / (W * H)));
+    if (cap >= sc) return sc;
+    return Math.min(sc, Math.floor(cap * 2) / 2);
+  }
+  /* 清晰度弹窗 */
+  function renderExportOptions() {
+    var box = $('expOpts');
+    if (!box) return;
+    var axis = buildAxis();
+    if (!axis) return;
+    var L = matrixLayout(axis.length);
+    var side = canvasMaxSide();
+    var items = EXPORT_SCALES.map(function (o) {
+      var sc = safeScale(o.sc, L.W, L.H);
+      return { o: o, sc: sc, ok: sc >= 1 };
+    });
+    /* 记忆的档位如果在本机导不出来，就退到能导出的最高档 */
+    var cur = getExportScale();
+    var usable = items.filter(function (it) { return it.ok; });
+    if (!usable.some(function (it) { return it.o.sc === cur; })) {
+      var best = usable.reduce(function (a, b) { return (!a || b.sc > a.sc) ? b : a; }, null);
+      if (best) cur = best.o.sc;
+    }
+    box.innerHTML = '';
+    items.forEach(function (it) {
+      var o = it.o, sc = it.sc, meta;
+      if (it.ok) {
+        meta = Math.round(L.W * sc) + ' × ' + Math.round(L.H * sc) + ' 像素';
+        if (sc < o.sc) meta += '（本机画布上限 ' + side + 'px，实际按 ' + sc + 'x）';
+      } else {
+        meta = '本机画布上限 ' + side + 'px，这档导不出来';
+      }
+      var card = document.createElement('button');
+      card.type = 'button';
+      card.className = 'exp-opt' + (it.ok && o.sc === cur ? ' on' : '') + (it.ok ? '' : ' off');
+      card.dataset.sc = String(o.sc);
+      if (!it.ok) card.disabled = true;
+      card.innerHTML =
+        '<span class="exp-radio"></span>' +
+        '<span class="exp-main">' +
+        '<b class="exp-name">' + o.name + ' <em>' + o.tag + '</em></b>' +
+        '<span class="exp-desc">' + o.desc + '</span>' +
+        '<span class="exp-dim">' + meta + '</span>' +
+        '</span>';
+      card.addEventListener('click', function () {
+        box.querySelectorAll('.exp-opt').forEach(function (el) { el.classList.remove('on'); });
+        card.classList.add('on');
+      });
+      box.appendChild(card);
+    });
+    /* 列数很多时（例如 EX 全选 57 列）会先撞到画布上限，这里直说清楚 */
+    var widest = usable.reduce(function (a, b) { return Math.max(a, b.sc); }, 0);
+    var goBtn = $('expGo');
+    if (goBtn) goBtn.disabled = !usable.length;
+    var hint = $('expHint');
+    if (hint) {
+      if (widest < 1) {
+        hint.textContent = '当前 ' + axis.length + ' 列超过了本机画布上限（' + side +
+          'px），单张导不出来；请少选几个 EX 星级、分几次导出。';
+      } else if (widest < 4) {
+        hint.textContent = '当前 ' + axis.length + ' 列较宽：本机画布上限 ' + side + 'px，最高只能到 ' + widest +
+          'x。想更清晰可以少选几个 EX 星级、分几次导出。';
+      } else {
+        hint.textContent = '';
+      }
+    }
+  }
+  function openExportModal() {
+    var msg = $('exportMsg');
+    var axis = buildAxis();
+    if (!state.questType || !axis) {
+      msg.textContent = '请先选择任务类型（探究类还需勾选 EX 星级）';
+      return;
+    }
+    msg.textContent = '';
+    var hint = $('expHint');
+    if (hint) hint.textContent = '';
+    renderExportOptions();
+    $('exportModal').classList.remove('hidden');
+  }
+  function closeExportModal() { $('exportModal').classList.add('hidden'); }
+  async function exportMatrixImage(scale) {
     var msg = $('exportMsg');
     var axis = buildAxis();
     if (!axis || !state.questType) {
@@ -1560,28 +1730,26 @@
     msg.textContent = '正在生成图片…';
     var weapons = CFG.weapons;
 
-    /* 布局 */
-    var pad = 16, leadW = 66, colW = 126, headH = 88, rowH = 56, topH = 64, footH = 26;
-    var gridH = headH + weapons.length * rowH;
-    var W = pad * 2 + leadW + axis.length * colW;
-    /* 底部图例/落款宽度预测量：先自动缩小字号保证同一行放得下，实在放不下才换行 */
-    var mctx = document.createElement('canvas').getContext('2d');
-    var legText = '白色=三无规则 · 黄色=TA规则';
-    var footText = '怪物猎人崛起曙光 竞速成绩收录';
-    var footFont = 10;
-    while (footFont > 7) {
-      mctx.font = footFont + 'px "Microsoft YaHei", sans-serif';
-      if (mctx.measureText(legText).width + mctx.measureText(footText).width + pad * 2 + 26 <= W) break;
-      footFont -= 0.5;
-    }
-    var extraFoot = (mctx.measureText(legText).width + mctx.measureText(footText).width + pad * 2 + 26 > W) ? 15 : 0;
-    var H = pad + topH + gridH + footH + pad + extraFoot;
+    /* 布局（与清晰度弹窗共用 matrixLayout） */
+    var L = matrixLayout(axis.length);
+    var pad = L.pad, leadW = L.leadW, colW = L.colW, headH = L.headH, rowH = L.rowH, topH = L.topH, footH = L.footH;
+    var gridH = L.gridH, W = L.W, H = L.H;
+    var legText = L.legText, footText = L.footText, footFont = L.footFont, extraFoot = L.extraFoot;
 
+    var SC = safeScale(scale || getExportScale(), W, H);
+    if (SC < 1) {
+      msg.textContent = '无法单张导出：本机画布上限 ' + canvasMaxSide() + 'px，请少选几列后重试';
+      return;
+    }
+    var expW = Math.round(W * SC), expH = Math.round(H * SC);
     var canvas = document.createElement('canvas');
-    var SC = 2;
-    canvas.width = W * SC;
-    canvas.height = H * SC;
+    canvas.width = expW;
+    canvas.height = expH;
     var ctx = canvas.getContext('2d');
+    if (!ctx) {
+      msg.textContent = '生成失败：浏览器无法创建这么大的画布，请选低一档清晰度';
+      return;
+    }
     ctx.scale(SC, SC);
 
     /* 图标加载 */
@@ -1724,7 +1892,22 @@
     ctx.textAlign = 'right';
     ctx.fillText(footText, W - pad, gy + gridH + 18 + extraFoot);
 
+    /* 画布超限时浏览器只会静默出空白图（或被悄悄截断），这里校验一次并自动降档重试 */
+    if (canvas.width !== expW || canvas.height !== expH || !canvasUsable(ctx)) {
+      var lower = nextLowerTier(SC);
+      if (lower) {
+        msg.textContent = '当前清晰度超出本机画布上限（' + canvasMaxSide() + 'px），正按 ' + lower + 'x 重新生成…';
+        return exportMatrixImage(lower);
+      }
+      msg.textContent = '生成失败：图片过大，请选低一档清晰度后重试';
+      return;
+    }
+
     canvas.toBlob(function (blob) {
+      if (!blob) {
+        msg.textContent = '生成失败：图片过大，请选低一档清晰度后重试';
+        return;
+      }
       var a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
       var fn = qtLabel(state.questType).replace(/[\s/\\:：]/g, '');
@@ -1732,7 +1915,8 @@
       document.body.appendChild(a);
       a.click();
       setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 300);
-      msg.textContent = '已导出 ' + axis.length + ' 列 × ' + weapons.length + ' 行 PNG（列数过多时图片较宽，请横向查看）';
+      msg.textContent = '已导出 ' + axis.length + ' 列 × ' + weapons.length + ' 行 PNG（' +
+        canvas.width + '×' + canvas.height + ' · ' + SC + 'x，约 ' + fmtBytes(blob.size) + '）';
     }, 'image/png');
   }
   function updateExportState() {
@@ -2239,7 +2423,21 @@
     $('resetBtn').addEventListener('click', resetAll);
     $('backBtn').addEventListener('click', goBack);
     $('exportBtn').addEventListener('click', function () {
-      exportMatrixImage();
+      openExportModal();
+    });
+    var xModal = $('exportModal');
+    $('expClose').addEventListener('click', closeExportModal);
+    xModal.addEventListener('click', function (e) { if (e.target === xModal) closeExportModal(); });
+    $('expGo').addEventListener('click', function () {
+      var on = xModal.querySelector('.exp-opt.on');
+      var sc = on ? parseInt(on.dataset.sc, 10) : getExportScale();
+      if (sc !== 2 && sc !== 3 && sc !== 4) sc = getExportScale();
+      setExportScale(sc);
+      closeExportModal();
+      exportMatrixImage(sc);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !xModal.classList.contains('hidden')) closeExportModal();
     });
     var rModal = $('rulesModal');
     var RULES_SEEN_KEY = 'mhrs_rules_seen';
