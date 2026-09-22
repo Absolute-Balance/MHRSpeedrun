@@ -1,13 +1,13 @@
-# MHRSpeedrun · MHRS 竞速成绩库
+# MHRSpeedrun · 怪物猎人崛起曙光 竞速成绩收录
 
-> 《怪物猎人 崛起：曙光》中文竞速成绩数据库：任务 × 武器矩阵浏览、玩家时间线、投稿与人工审核发布。
+> 《怪物猎人 崛起：曙光》中文竞速成绩数据库：题材矩阵浏览、玩家时间线、投稿与人工审核发布。
 
 [线上访问](https://absolute-balance.github.io/MHRSpeedrun/)
 
 ## 项目简介
 
 - 以「任务 / 怪物 × 14 种武器」矩阵展示每个位置的**当前最快成绩**
-- 三种赛道：**烈祸袭来**、**怪异探究 Lv300**、**特别探究**（EX1 ~ EX9）
+- 三种赛道：**烈祸袭来**、**怪异探究 Lv300**、**特别探究**
 - 点击成绩可查看视频与历史记录；点击作者可查看个人成绩时间线
 - **访客可投稿**，管理员审核通过后才发布
 
@@ -48,17 +48,6 @@
 6. 有过“恶性老金”事迹玩家的成绩不收录
 7. 未开伤害显示的视频不收录
 8. 未展示结算页毫秒成绩的均以 99 替代毫秒数字
-
-## 本地运行
-
-```bash
-git clone https://github.com/Absolute-Balance/MHRSpeedrun.git
-cd MHRSpeedrun
-node tools/serve.js          # 打开 http://127.0.0.1:8123
-```
-
-- 调整怪物顺序 / 增删怪物：编辑 `data/monster-order.json`，再运行 `node tools/scan-monsters.js` 生成 `js/monsters.js`
-- 怪物固定 id 记录在 `data/monster-ids.json`，调整顺序不会造成成绩错位
 
 ## 技术架构
 
