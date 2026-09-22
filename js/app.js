@@ -837,7 +837,7 @@
     /* 5猫任务：只有怪异探究 Lv300 / 特别探究 需要问（烈祸袭来是官方任务） */
     var fcSel = $('eFiveCat');
     if (fcSel) {
-      fcSel.value = (editRec && editRec.fiveCat) ? '1' : '';
+      fcSel.value = editRec ? (editRec.fiveCat ? '1' : '0') : '';
       var showFc = qt !== 'raging';
       if ($('eFiveCatRow')) $('eFiveCatRow').classList.toggle('hidden', !showFc);
       if ($('eFiveCatLabel')) $('eFiveCatLabel').classList.toggle('hidden', !showFc);
@@ -899,8 +899,14 @@
     };
     if (entryCtx.mode === 'edit') baseRec.id = entryCtx.id;
     else baseRec.id = 'r' + Date.now().toString(36);
-    /* 5猫任务标记（仅怪异探究赛道会出现该选择） */
-    if ($('eFiveCat') && $('eFiveCat').value === '1') baseRec.fiveCat = true;
+    /* 5猫任务标记（仅怪异探究赛道会出现该选择；必须手动选择） */
+    var fiveCatVal = $('eFiveCat') ? $('eFiveCat').value : '0';
+    if (qt !== 'raging' && fiveCatVal !== '0' && fiveCatVal !== '1') {
+      msg.textContent = '请选择是否为 5猫任务';
+      msg.style.color = 'var(--danger)';
+      return;
+    }
+    if (fiveCatVal === '1') baseRec.fiveCat = true;
     /* 查重：与现有记录完全一致时提示（管理员确认后仍可强制录入） */
     if (entryCtx.mode === 'add') {
       var dupRec = findDuplicate(baseRec);
@@ -2031,6 +2037,12 @@
     if (!author) { sMsg('请填写作者', false); return; }
     if (ms == null) { sMsg('用时格式不对（如 05\'02\'\'52）', false); return; }
     if (!date) { sMsg('日期格式不对（如 2026-9-6）', false); return; }
+    /* 5猫任务必须手动选择（仅怪异探究两种赛道） */
+    var fiveCatSel = $('sFiveCat') ? $('sFiveCat').value : '0';
+    if (qt !== 'raging' && fiveCatSel !== '0' && fiveCatSel !== '1') {
+      sMsg('请选择是否为 5猫任务', false);
+      return;
+    }
     /* 查重：网站上已有完全相同的成绩 → 不重复投稿 */
     var dupSub = findDuplicate({ questType: qt, quest: quest, exStar: ex, monsterId: mid, weaponId: wid, rule: rule, timeMs: ms, author: author, date: date });
     if (dupSub) {
@@ -2078,7 +2090,7 @@
       date: date,
       title: $('sTitle').value.trim(),
       bv: $('sBv').value.trim(),
-      fiveCat: ($('sFiveCat') && $('sFiveCat').value === '1') ? true : false,
+      fiveCat: fiveCatSel === '1',
       platform: $('sPlat').value || 'steam',
       website: $('sWebsite').value
     };
