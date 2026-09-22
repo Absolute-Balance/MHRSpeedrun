@@ -9628,14 +9628,14 @@ window.MHRS_RECORDS = [
     "rule": "sanyou",
     "monsterId": "m24",
     "weaponId": "sa",
-    "timeMs": 359260,
+    "timeMs": 352840,
     "author": "东山三千代",
-    "date": "2026-09-14",
+    "date": "2026-09-21",
     "videos": [
       {
         "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1m2Yy6sEp2",
-        "title": "【MHRS】 特别探究：怨虎龙 5分59秒 斩斧 三无"
+        "url": "https://www.bilibili.com/video/BV1JRhz6oE6M",
+        "title": "【MHRS】 特别探究：怨虎龙 斩斧 5分52秒 三无"
       }
     ],
     "platform": "steam",
