@@ -12443,5 +12443,26 @@ window.MHRS_RECORDS = [
     "note": "",
     "fiveCat": true,
     "id": "smue6ywe9"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m39",
+    "weaponId": "sa",
+    "timeMs": 332990,
+    "author": "Marshmollow",
+    "date": "2025-12-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Vr2zBDEme",
+        "title": "【MHRSB】斩斧 特别探究·轰龙  5分32秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smue70rey"
   }
 ];
