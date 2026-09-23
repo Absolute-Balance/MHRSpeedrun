@@ -12377,5 +12377,27 @@ window.MHRS_RECORDS = [
     "note": "",
     "fiveCat": true,
     "id": "smue6xm2d"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m39",
+    "weaponId": "hh",
+    "timeMs": 451990,
+    "author": "Marshmollow",
+    "date": "2026-01-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1PLzvBqEng",
+        "title": "【不战斗就会死】狂化伏魔狩猎笛  特别探究轰龙 7分31秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "fiveCat": true,
+    "id": "smue6yhf6"
   }
 ];
