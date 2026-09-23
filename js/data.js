@@ -12355,5 +12355,27 @@ window.MHRS_RECORDS = [
     "note": "",
     "fiveCat": true,
     "id": "smue6xeih"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "ta",
+    "monsterId": "m39",
+    "weaponId": "gs",
+    "timeMs": 213990,
+    "author": "Marshmollow",
+    "date": "2026-01-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1QsrTBCEi9",
+        "title": "无炼化大剑怪异化LV300轰龙  3分33秒 TA规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "fiveCat": true,
+    "id": "smue6xm2d"
   }
 ];
