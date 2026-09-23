@@ -12333,5 +12333,27 @@ window.MHRS_RECORDS = [
     "note": "",
     "fiveCat": true,
     "id": "smue6x80t"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "sanyou",
+    "monsterId": "m45",
+    "weaponId": "hh",
+    "timeMs": 530990,
+    "author": "Marshmollow",
+    "date": "2026-09-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV19PY86oENS",
+        "title": "【崛起 杂物】"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "fiveCat": true,
+    "id": "smue6xeih"
   }
 ];
