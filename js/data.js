@@ -12399,5 +12399,27 @@ window.MHRS_RECORDS = [
     "note": "",
     "fiveCat": true,
     "id": "smue6yhf6"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m39",
+    "weaponId": "ig",
+    "timeMs": 456990,
+    "author": "Marshmollow",
+    "date": "2026-04-19",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1q1dZBAEnR",
+        "title": "【MHRSB】虫棍 特别探究·轰龙 7分36秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "fiveCat": true,
+    "id": "smue6ypqk"
   }
 ];
