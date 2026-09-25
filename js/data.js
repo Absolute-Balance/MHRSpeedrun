@@ -11701,27 +11701,6 @@ window.MHRS_RECORDS = [
     "id": "rmu9b5nbj"
   },
   {
-    "questType": "special",
-    "quest": null,
-    "exStar": "EX2",
-    "rule": "sanyou",
-    "monsterId": "m11",
-    "weaponId": "ls",
-    "timeMs": 324070,
-    "author": "BFeather7",
-    "date": "2026-09-20",
-    "videos": [
-      {
-        "site": "bilibili",
-        "url": "https://www.bilibili.com/video/BV1KteB6MEwm",
-        "title": "【MHRS】太刀 特别探究：河童蛙 三无规则 5'24\"07"
-      }
-    ],
-    "platform": "steam",
-    "note": "",
-    "id": "rmu9xl1br"
-  },
-  {
     "questType": "anomaly300",
     "quest": null,
     "exStar": "EX2",
