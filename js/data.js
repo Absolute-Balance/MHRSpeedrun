@@ -12486,5 +12486,26 @@ window.MHRS_RECORDS = [
     "note": "",
     "fiveCat": true,
     "id": "smueam5w8"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m11",
+    "weaponId": "ls",
+    "timeMs": 318360,
+    "author": "BFeather7",
+    "date": "2026-09-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1WdhC6kEUV",
+        "title": "【阿尔法杯/三区】太刀 特别探究：河童蛙 三无规则 5'18\"36"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmugx73g3"
   }
 ];
