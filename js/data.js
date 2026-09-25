@@ -12465,5 +12465,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmugx73g3"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m32",
+    "weaponId": "ls",
+    "timeMs": 346330,
+    "author": "BFeather7",
+    "date": "2026-09-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1xdh16nEB8",
+        "title": "【阿尔法杯/二区】太刀 特别探究：熔翁龙 三无规则 5'46\"33"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmugxc9gp"
   }
 ];
