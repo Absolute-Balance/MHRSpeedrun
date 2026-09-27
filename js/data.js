@@ -12528,5 +12528,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmujdryk1"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m31",
+    "weaponId": "gl",
+    "timeMs": 551730,
+    "author": "杞柳木昔_",
+    "date": "2026-09-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV16nab6PEdu",
+        "title": "【MHRS/阿尔法杯/二区】逆推铳枪 特别探究：冰人鱼龙 米线三无9'11"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmujdu9cb"
   }
 ];
