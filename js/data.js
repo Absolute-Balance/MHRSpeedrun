@@ -12486,5 +12486,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmugxc9gp"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m54",
+    "weaponId": "gl",
+    "timeMs": 478740,
+    "author": "杞柳木昔_",
+    "date": "2026-09-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Qjhd6oEmd",
+        "title": "【MHRS/阿尔法杯/一区】逆推铳枪 特别探究：怪异克服炎王龙 米线三无7'58"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmujdqeh6"
   }
 ];
