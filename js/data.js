@@ -12612,5 +12612,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmuje1aon"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX9",
+    "rule": "sanyou",
+    "monsterId": "m56",
+    "weaponId": "hammer",
+    "timeMs": 439470,
+    "author": "Marshmollow",
+    "date": "2026-09-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1QChm6TE9D",
+        "title": "【大锤不是区！】大锤 特别探究天廻龙  7分19秒47  三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmuje3puq"
   }
 ];
