@@ -12612,5 +12612,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmuje3puq"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m29",
+    "weaponId": "ig",
+    "timeMs": 648150,
+    "author": "Fallen_sky2",
+    "date": "2026-09-25",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1U3ag6tEJu",
+        "title": "【MHRS/阿尔法杯/二区】操虫棍 特别探究妃蜘蛛 10分48秒15"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmuje6gz8"
   }
 ];
