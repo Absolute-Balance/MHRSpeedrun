@@ -12549,5 +12549,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmujdu9cb"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX1",
+    "rule": "sanyou",
+    "monsterId": "m06",
+    "weaponId": "bow",
+    "timeMs": 252070,
+    "author": "_starcloud_",
+    "date": "2026-09-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1cFhd6zEcB",
+        "title": "【MHR:S/阿尔法杯/三区】弓箭 特别探究：月兔（白兔兽）4:12 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmujdwduh"
   }
 ];
