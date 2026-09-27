@@ -12591,5 +12591,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmujdz9yy"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "ta",
+    "monsterId": "m20",
+    "weaponId": "ig",
+    "timeMs": 447920,
+    "author": "治愈拽枪兵",
+    "date": "2026-09-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV18mho6xEic",
+        "title": "【MHRS/阿尔法杯】"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmuje1aon"
   }
 ];
