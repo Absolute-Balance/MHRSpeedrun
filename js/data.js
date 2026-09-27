@@ -12507,5 +12507,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmujdqeh6"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m11",
+    "weaponId": "gl",
+    "timeMs": 468680,
+    "author": "杞柳木昔_",
+    "date": "2026-09-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV11Xab6GE5q",
+        "title": "【MHRS/阿尔法杯/三区】逆推铳枪 特别探究：河童蛙 米线三无7'48"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmujdryk1"
   }
 ];
