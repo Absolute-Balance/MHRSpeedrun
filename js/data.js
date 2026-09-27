@@ -12654,5 +12654,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmujefspd"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m29",
+    "weaponId": "hbg",
+    "timeMs": 425800,
+    "author": "快乐蛋头人",
+    "date": "2026-09-26",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1z2hd6TEZF",
+        "title": "【MHRS】重弩 特别探究妃蜘蛛 7'05"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmujw1dmc"
   }
 ];
