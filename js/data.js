@@ -12633,5 +12633,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmuje8g0s"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX8",
+    "rule": "sanyou",
+    "monsterId": "m55",
+    "weaponId": "gs",
+    "timeMs": 348700,
+    "author": "秋401",
+    "date": "2026-09-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1bSab65EKF",
+        "title": "特别探究混沌黑蚀龙"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmujefspd"
   }
 ];
