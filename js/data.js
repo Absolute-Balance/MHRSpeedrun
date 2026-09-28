@@ -12675,5 +12675,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmujw1dmc"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "sanyou",
+    "monsterId": "m10",
+    "weaponId": "ls",
+    "timeMs": 287170,
+    "author": "BFeather7",
+    "date": "2026-09-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1t6ai6aEDo",
+        "title": "【MHRS】太刀 特别探究：奇怪龙 三无规则4'47\"17"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmuks7qs3"
   }
 ];
