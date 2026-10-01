@@ -12696,5 +12696,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smump0pst"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "sanyou",
+    "monsterId": "m47",
+    "weaponId": "gs",
+    "timeMs": 377960,
+    "author": "秋401",
+    "date": "2026-09-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1u7aG6wEAg",
+        "title": "特别探究银火龙"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smuoyer22"
   }
 ];
