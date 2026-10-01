@@ -12717,5 +12717,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smuoyer22"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m29",
+    "weaponId": "ls",
+    "timeMs": 377560,
+    "author": "Asteria_星芒",
+    "date": "2026-09-30",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1k5af6SEtR",
+        "title": "【MHRS】太刀 LV300妃蜘蛛 6'17\"56 三无"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smuoyio3b"
   }
 ];
