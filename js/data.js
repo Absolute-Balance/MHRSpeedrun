@@ -12738,5 +12738,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smuoyio3b"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX6",
+    "rule": "sanyou",
+    "monsterId": "m43",
+    "weaponId": "gs",
+    "timeMs": 294320,
+    "author": "秋401",
+    "date": "2026-10-02",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1bLay6XENw",
+        "title": "特别探究爆鳞龙"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smuqj7t0x"
   }
 ];
