@@ -12801,5 +12801,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmuqz468o"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "ta",
+    "monsterId": "m28",
+    "weaponId": "gs",
+    "timeMs": 267360,
+    "author": "__Ciel___",
+    "date": "2026-10-02",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1SNaQ6kE2t",
+        "title": "大剑TA300泥翁426"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "rmur632ng"
   }
 ];
