@@ -12759,5 +12759,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smuqj7t0x"
+  },
+  {
+    "questType": "raging",
+    "quest": "q08",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m62",
+    "weaponId": "sa",
+    "timeMs": 181970,
+    "author": "海文星麻酱",
+    "date": "2026-09-29",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV11Qa76VEhq",
+        "title": "【MHRS】斩斧 烈祸袭来：原初异音！原初形态爵银龙 3分01秒97 三无规则 极限炼化"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smuqystlf"
   }
 ];
