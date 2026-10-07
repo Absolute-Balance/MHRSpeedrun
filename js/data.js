@@ -12906,5 +12906,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smuyap527"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "ta",
+    "monsterId": "m14",
+    "weaponId": "ig",
+    "timeMs": 345150,
+    "author": "治愈拽枪兵",
+    "date": "2026-09-12",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1FEY96iExE",
+        "title": "虫棍伞鸟"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smuyaq3pu"
   }
 ];
