@@ -12822,5 +12822,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "rmus8cafe"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX7",
+    "rule": "ta",
+    "monsterId": "m49",
+    "weaponId": "ig",
+    "timeMs": 324850,
+    "author": "治愈拽枪兵",
+    "date": "2026-09-10",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV195Y36ME8z",
+        "title": "虫棍红爆"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smuyalw8u"
   }
 ];
