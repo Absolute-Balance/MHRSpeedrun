@@ -12843,5 +12843,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smuyalw8u"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "ta",
+    "monsterId": "m31",
+    "weaponId": "ig",
+    "timeMs": 375750,
+    "author": "治愈拽枪兵",
+    "date": "2026-10-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1v6HW6UESh",
+        "title": "虫棍冰人鱼龙"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smuyanfio"
   }
 ];
