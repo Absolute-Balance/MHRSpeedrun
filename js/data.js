@@ -12927,5 +12927,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smuyaq3pu"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX2",
+    "rule": "ta",
+    "monsterId": "m11",
+    "weaponId": "ig",
+    "timeMs": 334460,
+    "author": "治愈拽枪兵",
+    "date": "2026-09-19",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1t4eQ6LEr3",
+        "title": "虫棍超级蛙蛙"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smuyar879"
   }
 ];
