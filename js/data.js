@@ -12885,5 +12885,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smuyaoghj"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "ta",
+    "monsterId": "m22",
+    "weaponId": "ig",
+    "timeMs": 316550,
+    "author": "治愈拽枪兵",
+    "date": "2026-09-28",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1D9aG6iEX5",
+        "title": "虫棍飞雷"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smuyap527"
   }
 ];
