@@ -12864,5 +12864,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smuyanfio"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "ta",
+    "monsterId": "m26",
+    "weaponId": "ig",
+    "timeMs": 356740,
+    "author": "治愈拽枪兵",
+    "date": "2026-10-05",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV18rH769E8U",
+        "title": "虫棍冰牙"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smuyaoghj"
   }
 ];
