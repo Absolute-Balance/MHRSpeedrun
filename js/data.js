@@ -13011,5 +13011,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smv7gj73d"
+  },
+  {
+    "questType": "raging",
+    "quest": "q02",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m59",
+    "weaponId": "db",
+    "timeMs": 126990,
+    "author": "咩咩羊袭",
+    "date": "2026-10-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV11ZpE6REbv",
+        "title": "【MHRS】双刀 烈祸袭来：舞于火海的浩劫 焰狐龙 2分06秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smv7gjchr"
   }
 ];
