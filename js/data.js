@@ -13032,5 +13032,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smv7gjchr"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m30",
+    "weaponId": "db",
+    "timeMs": 342990,
+    "author": "N酱不带匠",
+    "date": "2026-10-11",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1tZpn6eEV3",
+        "title": "双刀 特别探究雪鬼兽 三无规则 5分42秒"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smv7gk5jq"
   }
 ];
