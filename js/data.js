@@ -12990,5 +12990,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smv7gj04d"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX4",
+    "rule": "sanyou",
+    "monsterId": "m31",
+    "weaponId": "sns",
+    "timeMs": 536990,
+    "author": "咩咩羊袭",
+    "date": "2026-10-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1LLYP6sEuN",
+        "title": "【MHRS】片手剑 特别探究：冰人鱼龙 8分56秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smv7gj73d"
   }
 ];
