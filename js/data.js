@@ -12969,5 +12969,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smv3rlzl1"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m21",
+    "weaponId": "sns",
+    "timeMs": 297990,
+    "author": "咩咩羊袭",
+    "date": "2026-10-08",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1znHQ6KEz2",
+        "title": "【MHRS】风车片手剑 Lv300毒妖鸟 4分57秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smv7gj04d"
   }
 ];
