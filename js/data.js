@@ -13074,5 +13074,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smvepyy8t"
+  },
+  {
+    "questType": "anomaly300",
+    "quest": null,
+    "exStar": "EX5",
+    "rule": "sanyou",
+    "monsterId": "m34",
+    "weaponId": "sns",
+    "timeMs": 353990,
+    "author": "咩咩羊袭",
+    "date": "2026-08-03",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1uRMX6RE68",
+        "title": "【MHRS】片手剑 Lv300电龙 5分53秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smveq1y8d"
   }
 ];
