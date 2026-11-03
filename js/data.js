@@ -13116,5 +13116,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smw0bt9rs"
+  },
+  {
+    "questType": "raging",
+    "quest": "q02",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m59",
+    "weaponId": "hh",
+    "timeMs": 307990,
+    "author": "咩咩羊袭",
+    "date": "2026-10-27",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1BJxg68Edg",
+        "title": "【MHRS/随便玩玩】狩猎笛 烈祸袭来：舞于火海的浩劫 焰狐龙 5分07秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smw0btfe5"
   }
 ];
