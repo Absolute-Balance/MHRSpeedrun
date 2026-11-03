@@ -13158,5 +13158,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smw0btkj1"
+  },
+  {
+    "questType": "special",
+    "quest": null,
+    "exStar": "EX3",
+    "rule": "sanyou",
+    "monsterId": "m21",
+    "weaponId": "sns",
+    "timeMs": 417990,
+    "author": "咩咩羊袭",
+    "date": "2026-11-01",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1Rpxb6gEL8",
+        "title": "【MHRS】风车片手剑 特别探究：毒妖鸟 6分57秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smw0btqci"
   }
 ];
