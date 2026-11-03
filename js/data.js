@@ -13095,5 +13095,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smveq1y8d"
+  },
+  {
+    "questType": "raging",
+    "quest": "q02",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m59",
+    "weaponId": "hammer",
+    "timeMs": 259990,
+    "author": "咩咩羊袭",
+    "date": "2026-10-23",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1G1nb6oED4",
+        "title": "【MHRS】大锤 烈祸袭来：舞于火海的浩劫 焰狐龙 4分19秒 三无规则 我就不会输……"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smw0bt9rs"
   }
 ];
