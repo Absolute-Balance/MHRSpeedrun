@@ -13179,5 +13179,26 @@ window.MHRS_RECORDS = [
     "platform": "steam",
     "note": "",
     "id": "smw0btqci"
+  },
+  {
+    "questType": "raging",
+    "quest": "q02",
+    "exStar": null,
+    "rule": "sanyou",
+    "monsterId": "m59",
+    "weaponId": "sns",
+    "timeMs": 209990,
+    "author": "咩咩羊袭",
+    "date": "2026-11-03",
+    "videos": [
+      {
+        "site": "bilibili",
+        "url": "https://www.bilibili.com/video/BV1df4G6vEYW",
+        "title": "【MHRS/三前达成】片手剑 烈祸袭来：舞于火海的浩劫 焰狐龙 3分29秒 三无规则"
+      }
+    ],
+    "platform": "steam",
+    "note": "",
+    "id": "smw5x8uog"
   }
 ];
